@@ -18,9 +18,9 @@ import (
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 
-	abci "github.com/cometbft/cometbft/abci/types"
-	"github.com/cometbft/cometbft/state/txindex"
-	"github.com/cometbft/cometbft/types"
+	abci "github.com/KYVENetwork/cometbft/v37/abci/types"
+	"github.com/KYVENetwork/cometbft/v37/state/txindex"
+	"github.com/KYVENetwork/cometbft/v37/types"
 
 	// Register the Postgres database driver.
 	_ "github.com/lib/pq"

@@ -14,24 +14,24 @@ import (
 
 	dbm "github.com/cometbft/cometbft-db"
 
-	"github.com/cometbft/cometbft/abci/example/kvstore"
-	cfg "github.com/cometbft/cometbft/config"
-	"github.com/cometbft/cometbft/crypto/ed25519"
-	"github.com/cometbft/cometbft/evidence"
-	"github.com/cometbft/cometbft/libs/log"
-	cmtrand "github.com/cometbft/cometbft/libs/rand"
-	mempl "github.com/cometbft/cometbft/mempool"
-	mempoolv0 "github.com/cometbft/cometbft/mempool/v0"
-	mempoolv1 "github.com/cometbft/cometbft/mempool/v1" //nolint:staticcheck // SA1019 Priority mempool deprecated but still supported in this release.
-	"github.com/cometbft/cometbft/p2p"
-	"github.com/cometbft/cometbft/p2p/conn"
-	p2pmock "github.com/cometbft/cometbft/p2p/mock"
-	"github.com/cometbft/cometbft/privval"
-	"github.com/cometbft/cometbft/proxy"
-	sm "github.com/cometbft/cometbft/state"
-	"github.com/cometbft/cometbft/store"
-	"github.com/cometbft/cometbft/types"
-	cmttime "github.com/cometbft/cometbft/types/time"
+	"github.com/KYVENetwork/cometbft/v37/abci/example/kvstore"
+	cfg "github.com/KYVENetwork/cometbft/v37/config"
+	"github.com/KYVENetwork/cometbft/v37/crypto/ed25519"
+	"github.com/KYVENetwork/cometbft/v37/evidence"
+	"github.com/KYVENetwork/cometbft/v37/libs/log"
+	cmtrand "github.com/KYVENetwork/cometbft/v37/libs/rand"
+	mempl "github.com/KYVENetwork/cometbft/v37/mempool"
+	mempoolv0 "github.com/KYVENetwork/cometbft/v37/mempool/v0"
+	mempoolv1 "github.com/KYVENetwork/cometbft/v37/mempool/v1" //nolint:staticcheck // SA1019 Priority mempool deprecated but still supported in this release.
+	"github.com/KYVENetwork/cometbft/v37/p2p"
+	"github.com/KYVENetwork/cometbft/v37/p2p/conn"
+	p2pmock "github.com/KYVENetwork/cometbft/v37/p2p/mock"
+	"github.com/KYVENetwork/cometbft/v37/privval"
+	"github.com/KYVENetwork/cometbft/v37/proxy"
+	sm "github.com/KYVENetwork/cometbft/v37/state"
+	"github.com/KYVENetwork/cometbft/v37/store"
+	"github.com/KYVENetwork/cometbft/v37/types"
+	cmttime "github.com/KYVENetwork/cometbft/v37/types/time"
 )
 
 func TestNodeStartStop(t *testing.T) {

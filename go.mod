@@ -1,4 +1,4 @@
-module github.com/cometbft/cometbft
+module github.com/KYVENetwork/cometbft/v37
 
 go 1.21
 

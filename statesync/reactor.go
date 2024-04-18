@@ -5,14 +5,14 @@ import (
 	"sort"
 	"time"
 
-	abci "github.com/cometbft/cometbft/abci/types"
-	"github.com/cometbft/cometbft/config"
-	cmtsync "github.com/cometbft/cometbft/libs/sync"
-	"github.com/cometbft/cometbft/p2p"
-	ssproto "github.com/cometbft/cometbft/proto/tendermint/statesync"
-	"github.com/cometbft/cometbft/proxy"
-	sm "github.com/cometbft/cometbft/state"
-	"github.com/cometbft/cometbft/types"
+	abci "github.com/KYVENetwork/cometbft/v37/abci/types"
+	"github.com/KYVENetwork/cometbft/v37/config"
+	cmtsync "github.com/KYVENetwork/cometbft/v37/libs/sync"
+	"github.com/KYVENetwork/cometbft/v37/p2p"
+	ssproto "github.com/KYVENetwork/cometbft/v37/proto/cometbft/v37/statesync"
+	"github.com/KYVENetwork/cometbft/v37/proxy"
+	sm "github.com/KYVENetwork/cometbft/v37/state"
+	"github.com/KYVENetwork/cometbft/v37/types"
 )
 
 const (

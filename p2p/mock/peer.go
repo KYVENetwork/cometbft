@@ -3,10 +3,10 @@ package mock
 import (
 	"net"
 
-	"github.com/cometbft/cometbft/crypto/ed25519"
-	"github.com/cometbft/cometbft/libs/service"
-	"github.com/cometbft/cometbft/p2p"
-	"github.com/cometbft/cometbft/p2p/conn"
+	"github.com/KYVENetwork/cometbft/v37/crypto/ed25519"
+	"github.com/KYVENetwork/cometbft/v37/libs/service"
+	"github.com/KYVENetwork/cometbft/v37/p2p"
+	"github.com/KYVENetwork/cometbft/v37/p2p/conn"
 )
 
 type Peer struct {

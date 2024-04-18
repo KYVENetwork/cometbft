@@ -1,8 +1,8 @@
 package types
 
 import (
-	"github.com/cometbft/cometbft/crypto/ed25519"
-	cmtmath "github.com/cometbft/cometbft/libs/math"
+	"github.com/KYVENetwork/cometbft/v37/crypto/ed25519"
+	cmtmath "github.com/KYVENetwork/cometbft/v37/libs/math"
 )
 
 var (

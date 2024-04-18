@@ -3,7 +3,7 @@ package node
 import (
 	"time"
 
-	"github.com/cometbft/cometbft/crypto"
+	"github.com/KYVENetwork/cometbft/v37/crypto"
 )
 
 type ID struct {

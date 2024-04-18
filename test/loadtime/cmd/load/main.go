@@ -3,7 +3,7 @@ package main
 import (
 	"fmt"
 
-	"github.com/cometbft/cometbft/test/loadtime/payload"
+	"github.com/KYVENetwork/cometbft/v37/test/loadtime/payload"
 	"github.com/google/uuid"
 	"github.com/informalsystems/tm-load-test/pkg/loadtest"
 )

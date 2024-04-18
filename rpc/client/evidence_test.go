@@ -9,16 +9,16 @@ import (
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 
-	abci "github.com/cometbft/cometbft/abci/types"
-	"github.com/cometbft/cometbft/crypto/ed25519"
-	cryptoenc "github.com/cometbft/cometbft/crypto/encoding"
-	"github.com/cometbft/cometbft/crypto/tmhash"
-	cmtrand "github.com/cometbft/cometbft/libs/rand"
-	"github.com/cometbft/cometbft/privval"
-	cmtproto "github.com/cometbft/cometbft/proto/tendermint/types"
-	"github.com/cometbft/cometbft/rpc/client"
-	rpctest "github.com/cometbft/cometbft/rpc/test"
-	"github.com/cometbft/cometbft/types"
+	abci "github.com/KYVENetwork/cometbft/v37/abci/types"
+	"github.com/KYVENetwork/cometbft/v37/crypto/ed25519"
+	cryptoenc "github.com/KYVENetwork/cometbft/v37/crypto/encoding"
+	"github.com/KYVENetwork/cometbft/v37/crypto/tmhash"
+	cmtrand "github.com/KYVENetwork/cometbft/v37/libs/rand"
+	"github.com/KYVENetwork/cometbft/v37/privval"
+	cmtproto "github.com/KYVENetwork/cometbft/v37/proto/cometbft/v37/types"
+	"github.com/KYVENetwork/cometbft/v37/rpc/client"
+	rpctest "github.com/KYVENetwork/cometbft/v37/rpc/test"
+	"github.com/KYVENetwork/cometbft/v37/types"
 )
 
 // For some reason the empty node used in tests has a time of

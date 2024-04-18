@@ -9,7 +9,7 @@ import (
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 
-	cmtrand "github.com/cometbft/cometbft/libs/rand"
+	cmtrand "github.com/KYVENetwork/cometbft/v37/libs/rand"
 )
 
 func randBitArray(bits int) (*BitArray, []byte) {
@@ -290,7 +290,7 @@ func TestBitArrayProtoBuf(t *testing.T) {
 }
 
 // Tests that UnmarshalJSON doesn't crash when no bits are passed into the JSON.
-// See issue https://github.com/cometbft/cometbft/issues/2658
+// See issue https://github.com/KYVENetwork/cometbft/v37/issues/2658
 func TestUnmarshalJSONDoesntCrashOnZeroBits(t *testing.T) {
 	type indexCorpus struct {
 		BitArray *BitArray `json:"ba"`

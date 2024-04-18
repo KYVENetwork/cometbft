@@ -13,12 +13,12 @@ import (
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 
-	"github.com/cometbft/cometbft/consensus/types"
-	"github.com/cometbft/cometbft/crypto/merkle"
-	"github.com/cometbft/cometbft/libs/autofile"
-	"github.com/cometbft/cometbft/libs/log"
-	cmttypes "github.com/cometbft/cometbft/types"
-	cmttime "github.com/cometbft/cometbft/types/time"
+	"github.com/KYVENetwork/cometbft/v37/consensus/types"
+	"github.com/KYVENetwork/cometbft/v37/crypto/merkle"
+	"github.com/KYVENetwork/cometbft/v37/libs/autofile"
+	"github.com/KYVENetwork/cometbft/v37/libs/log"
+	cmttypes "github.com/KYVENetwork/cometbft/v37/types"
+	cmttime "github.com/KYVENetwork/cometbft/v37/types/time"
 )
 
 const (

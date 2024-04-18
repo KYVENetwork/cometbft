@@ -1,15 +1,15 @@
 package types
 
 import (
+	cmtversion "github.com/KYVENetwork/cometbft/v37/proto/cometbft/v37/v37/version"
 	"math"
 	"testing"
 	"time"
 
 	"github.com/stretchr/testify/assert"
 
-	"github.com/cometbft/cometbft/crypto"
-	cmtversion "github.com/cometbft/cometbft/proto/tendermint/version"
-	"github.com/cometbft/cometbft/version"
+	"github.com/KYVENetwork/cometbft/v37/crypto"
+	"github.com/KYVENetwork/cometbft/v37/version"
 )
 
 func TestLightBlockValidateBasic(t *testing.T) {

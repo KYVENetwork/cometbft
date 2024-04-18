@@ -13,14 +13,14 @@ import (
 
 	dbm "github.com/cometbft/cometbft-db"
 
-	abci "github.com/cometbft/cometbft/abci/types"
-	cfg "github.com/cometbft/cometbft/config"
-	"github.com/cometbft/cometbft/crypto/ed25519"
-	cryptoenc "github.com/cometbft/cometbft/crypto/encoding"
-	cmtrand "github.com/cometbft/cometbft/libs/rand"
-	cmtstate "github.com/cometbft/cometbft/proto/tendermint/state"
-	sm "github.com/cometbft/cometbft/state"
-	"github.com/cometbft/cometbft/types"
+	abci "github.com/KYVENetwork/cometbft/v37/abci/types"
+	cfg "github.com/KYVENetwork/cometbft/v37/config"
+	"github.com/KYVENetwork/cometbft/v37/crypto/ed25519"
+	cryptoenc "github.com/KYVENetwork/cometbft/v37/crypto/encoding"
+	cmtrand "github.com/KYVENetwork/cometbft/v37/libs/rand"
+	cmtstate "github.com/KYVENetwork/cometbft/v37/proto/cometbft/v37/state"
+	sm "github.com/KYVENetwork/cometbft/v37/state"
+	"github.com/KYVENetwork/cometbft/v37/types"
 )
 
 // setupTestCase does setup common to all test cases.

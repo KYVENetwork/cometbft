@@ -65,7 +65,7 @@ purposes.
 We'll start a kvstore application, which was installed at the same time
 as `abci-cli` above. The kvstore just stores transactions in a merkle
 tree. Its code can be found
-[here](https://github.com/cometbft/cometbft/blob/v0.37.x/abci/cmd/abci-cli/abci-cli.go)
+[here](https://github.com/KYVENetwork/cometbft/v37/blob/v0.37.x/abci/cmd/abci-cli/abci-cli.go)
 and looks like the following:
 
 ```go
@@ -146,7 +146,7 @@ response.
 
 The server may be generic for a particular language, and we provide a
 [reference implementation in
-Golang](https://github.com/cometbft/cometbft/tree/v0.37.x/abci/server). See the
+Golang](https://github.com/KYVENetwork/cometbft/v37/tree/v0.37.x/abci/server). See the
 [list of other ABCI implementations](https://github.com/tendermint/awesome#ecosystem) for servers in
 other languages.
 
@@ -173,7 +173,7 @@ Try running these commands:
 -> data: hello
 -> data.hex: 0x68656C6C6F
 
-> info 
+> info
 -> code: OK
 -> data: {"size":0}
 -> data.hex: 0x7B2273697A65223A307D
@@ -186,19 +186,19 @@ Try running these commands:
 -> code: OK
 -> status: ACCEPT
 
-> commit 
+> commit
 -> code: OK
 -> data.hex: 0x0000000000000000
 
 > deliver_tx "abc"
 -> code: OK
 
-> info 
+> info
 -> code: OK
 -> data: {"size":1}
 -> data.hex: 0x7B2273697A65223A317D
 
-> commit 
+> commit
 -> code: OK
 -> data.hex: 0x0200000000000000
 
@@ -214,7 +214,7 @@ Try running these commands:
 > deliver_tx "def=xyz"
 -> code: OK
 
-> commit 
+> commit
 -> code: OK
 -> data.hex: 0x0400000000000000
 
@@ -239,13 +239,13 @@ Try running these commands:
 -> code: OK
 -> status: REJECT
 
-> prepare_proposal 
+> prepare_proposal
 
-> process_proposal 
+> process_proposal
 -> code: OK
 -> status: ACCEPT
 
-> commit 
+> commit
 -> code: OK
 -> data.hex: 0x0400000000000000
 ```

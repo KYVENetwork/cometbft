@@ -10,11 +10,11 @@ import (
 	"strconv"
 	"time"
 
-	"github.com/cometbft/cometbft/abci/example/code"
-	abci "github.com/cometbft/cometbft/abci/types"
-	"github.com/cometbft/cometbft/libs/log"
-	cmttypes "github.com/cometbft/cometbft/types"
-	"github.com/cometbft/cometbft/version"
+	"github.com/KYVENetwork/cometbft/v37/abci/example/code"
+	abci "github.com/KYVENetwork/cometbft/v37/abci/types"
+	"github.com/KYVENetwork/cometbft/v37/libs/log"
+	cmttypes "github.com/KYVENetwork/cometbft/v37/types"
+	"github.com/KYVENetwork/cometbft/v37/version"
 )
 
 const appVersion = 1

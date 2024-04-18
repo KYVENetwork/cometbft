@@ -14,23 +14,23 @@ import (
 
 	dbm "github.com/cometbft/cometbft-db"
 
-	abcicli "github.com/cometbft/cometbft/abci/client"
-	abci "github.com/cometbft/cometbft/abci/types"
-	"github.com/cometbft/cometbft/evidence"
-	"github.com/cometbft/cometbft/libs/log"
-	"github.com/cometbft/cometbft/libs/service"
-	cmtsync "github.com/cometbft/cometbft/libs/sync"
-	mempl "github.com/cometbft/cometbft/mempool"
+	abcicli "github.com/KYVENetwork/cometbft/v37/abci/client"
+	abci "github.com/KYVENetwork/cometbft/v37/abci/types"
+	"github.com/KYVENetwork/cometbft/v37/evidence"
+	"github.com/KYVENetwork/cometbft/v37/libs/log"
+	"github.com/KYVENetwork/cometbft/v37/libs/service"
+	cmtsync "github.com/KYVENetwork/cometbft/v37/libs/sync"
+	mempl "github.com/KYVENetwork/cometbft/v37/mempool"
 
-	cfg "github.com/cometbft/cometbft/config"
-	mempoolv0 "github.com/cometbft/cometbft/mempool/v0"
-	mempoolv1 "github.com/cometbft/cometbft/mempool/v1" //nolint:staticcheck // SA1019 Priority mempool deprecated but still supported in this release.
-	"github.com/cometbft/cometbft/p2p"
-	cmtcons "github.com/cometbft/cometbft/proto/tendermint/consensus"
-	cmtproto "github.com/cometbft/cometbft/proto/tendermint/types"
-	sm "github.com/cometbft/cometbft/state"
-	"github.com/cometbft/cometbft/store"
-	"github.com/cometbft/cometbft/types"
+	cfg "github.com/KYVENetwork/cometbft/v37/config"
+	mempoolv0 "github.com/KYVENetwork/cometbft/v37/mempool/v0"
+	mempoolv1 "github.com/KYVENetwork/cometbft/v37/mempool/v1" //nolint:staticcheck // SA1019 Priority mempool deprecated but still supported in this release.
+	"github.com/KYVENetwork/cometbft/v37/p2p"
+	cmtcons "github.com/KYVENetwork/cometbft/v37/proto/cometbft/v37/consensus"
+	cmtproto "github.com/KYVENetwork/cometbft/v37/proto/cometbft/v37/types"
+	sm "github.com/KYVENetwork/cometbft/v37/state"
+	"github.com/KYVENetwork/cometbft/v37/store"
+	"github.com/KYVENetwork/cometbft/v37/types"
 )
 
 //----------------------------------------------

@@ -8,18 +8,18 @@ import (
 	"strings"
 	"time"
 
-	abci "github.com/cometbft/cometbft/abci/types"
-	"github.com/cometbft/cometbft/libs/log"
+	abci "github.com/KYVENetwork/cometbft/v37/abci/types"
+	"github.com/KYVENetwork/cometbft/v37/libs/log"
 
-	cfg "github.com/cometbft/cometbft/config"
-	cmtnet "github.com/cometbft/cometbft/libs/net"
-	nm "github.com/cometbft/cometbft/node"
-	"github.com/cometbft/cometbft/p2p"
-	"github.com/cometbft/cometbft/privval"
-	"github.com/cometbft/cometbft/proxy"
-	ctypes "github.com/cometbft/cometbft/rpc/core/types"
-	core_grpc "github.com/cometbft/cometbft/rpc/grpc"
-	rpcclient "github.com/cometbft/cometbft/rpc/jsonrpc/client"
+	cfg "github.com/KYVENetwork/cometbft/v37/config"
+	cmtnet "github.com/KYVENetwork/cometbft/v37/libs/net"
+	nm "github.com/KYVENetwork/cometbft/v37/node"
+	"github.com/KYVENetwork/cometbft/v37/p2p"
+	"github.com/KYVENetwork/cometbft/v37/privval"
+	"github.com/KYVENetwork/cometbft/v37/proxy"
+	ctypes "github.com/KYVENetwork/cometbft/v37/rpc/core/types"
+	core_grpc "github.com/KYVENetwork/cometbft/v37/rpc/grpc"
+	rpcclient "github.com/KYVENetwork/cometbft/v37/rpc/jsonrpc/client"
 )
 
 // Options helps with specifying some parameters for our RPC testing for greater

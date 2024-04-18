@@ -6,11 +6,11 @@ import (
 	"sync"
 	"time"
 
-	"github.com/cometbft/cometbft/config"
-	"github.com/cometbft/cometbft/libs/cmap"
-	"github.com/cometbft/cometbft/libs/rand"
-	"github.com/cometbft/cometbft/libs/service"
-	"github.com/cometbft/cometbft/p2p/conn"
+	"github.com/KYVENetwork/cometbft/v37/config"
+	"github.com/KYVENetwork/cometbft/v37/libs/cmap"
+	"github.com/KYVENetwork/cometbft/v37/libs/rand"
+	"github.com/KYVENetwork/cometbft/v37/libs/service"
+	"github.com/KYVENetwork/cometbft/v37/p2p/conn"
 	"github.com/cosmos/gogoproto/proto"
 )
 

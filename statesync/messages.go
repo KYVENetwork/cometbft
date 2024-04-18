@@ -6,7 +6,7 @@ import (
 
 	"github.com/cosmos/gogoproto/proto"
 
-	ssproto "github.com/cometbft/cometbft/proto/tendermint/statesync"
+	ssproto "github.com/KYVENetwork/cometbft/v37/proto/cometbft/v37/statesync"
 )
 
 const (

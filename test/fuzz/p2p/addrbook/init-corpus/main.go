@@ -9,8 +9,8 @@ import (
 	"os"
 	"path/filepath"
 
-	"github.com/cometbft/cometbft/crypto/ed25519"
-	"github.com/cometbft/cometbft/p2p"
+	"github.com/KYVENetwork/cometbft/v37/crypto/ed25519"
+	"github.com/KYVENetwork/cometbft/v37/p2p"
 )
 
 func main() {

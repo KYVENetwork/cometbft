@@ -14,9 +14,9 @@ import (
 	"os"
 	"strings"
 
-	cs "github.com/cometbft/cometbft/consensus"
-	cmtjson "github.com/cometbft/cometbft/libs/json"
-	"github.com/cometbft/cometbft/types"
+	cs "github.com/KYVENetwork/cometbft/v37/consensus"
+	cmtjson "github.com/KYVENetwork/cometbft/v37/libs/json"
+	"github.com/KYVENetwork/cometbft/v37/types"
 )
 
 func main() {

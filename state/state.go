@@ -4,16 +4,16 @@ import (
 	"bytes"
 	"errors"
 	"fmt"
+	cmtversion "github.com/KYVENetwork/cometbft/v37/proto/cometbft/v37/version"
 	"os"
 	"time"
 
 	"github.com/cosmos/gogoproto/proto"
 
-	cmtstate "github.com/cometbft/cometbft/proto/tendermint/state"
-	cmtversion "github.com/cometbft/cometbft/proto/tendermint/version"
-	"github.com/cometbft/cometbft/types"
-	cmttime "github.com/cometbft/cometbft/types/time"
-	"github.com/cometbft/cometbft/version"
+	cmtstate "github.com/KYVENetwork/cometbft/v37/proto/cometbft/v37/state"
+	"github.com/KYVENetwork/cometbft/v37/types"
+	cmttime "github.com/KYVENetwork/cometbft/v37/types/time"
+	"github.com/KYVENetwork/cometbft/v37/version"
 )
 
 // database keys

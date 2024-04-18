@@ -8,14 +8,14 @@ import (
 
 	"github.com/stretchr/testify/require"
 
-	"github.com/cometbft/cometbft/libs/log"
-	"github.com/cometbft/cometbft/libs/service"
+	"github.com/KYVENetwork/cometbft/v37/libs/log"
+	"github.com/KYVENetwork/cometbft/v37/libs/service"
 
-	abcicli "github.com/cometbft/cometbft/abci/client"
-	"github.com/cometbft/cometbft/abci/example/code"
-	abciserver "github.com/cometbft/cometbft/abci/server"
-	"github.com/cometbft/cometbft/abci/types"
-	cmtproto "github.com/cometbft/cometbft/proto/tendermint/types"
+	abcicli "github.com/KYVENetwork/cometbft/v37/abci/client"
+	"github.com/KYVENetwork/cometbft/v37/abci/example/code"
+	abciserver "github.com/KYVENetwork/cometbft/v37/abci/server"
+	"github.com/KYVENetwork/cometbft/v37/abci/types"
+	cmtproto "github.com/KYVENetwork/cometbft/v37/proto/cometbft/v37/types"
 )
 
 const (

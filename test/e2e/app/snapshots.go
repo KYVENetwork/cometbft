@@ -9,7 +9,7 @@ import (
 	"path/filepath"
 	"sync"
 
-	abci "github.com/cometbft/cometbft/abci/types"
+	abci "github.com/KYVENetwork/cometbft/v37/abci/types"
 )
 
 const (

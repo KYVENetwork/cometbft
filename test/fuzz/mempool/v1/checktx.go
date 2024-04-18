@@ -1,13 +1,13 @@
 package v1
 
 import (
-	"github.com/cometbft/cometbft/abci/example/kvstore"
-	"github.com/cometbft/cometbft/config"
-	"github.com/cometbft/cometbft/libs/log"
-	mempl "github.com/cometbft/cometbft/mempool"
-	"github.com/cometbft/cometbft/proxy"
+	"github.com/KYVENetwork/cometbft/v37/abci/example/kvstore"
+	"github.com/KYVENetwork/cometbft/v37/config"
+	"github.com/KYVENetwork/cometbft/v37/libs/log"
+	mempl "github.com/KYVENetwork/cometbft/v37/mempool"
+	"github.com/KYVENetwork/cometbft/v37/proxy"
 
-	mempoolv1 "github.com/cometbft/cometbft/mempool/v1" //nolint:staticcheck // SA1019 Priority mempool deprecated but still supported in this release.
+	mempoolv1 "github.com/KYVENetwork/cometbft/v37/mempool/v1" //nolint:staticcheck // SA1019 Priority mempool deprecated but still supported in this release.
 )
 
 var mempool mempl.Mempool

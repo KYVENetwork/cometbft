@@ -89,7 +89,7 @@ Type: "transfer",
    {Key: "balance", Value: "100", Index: true},
    {Key: "note", Value: "nothing", Index: true},
    },
- 
+
 ```
 
 ```
@@ -116,7 +116,7 @@ transferSenderTomEndBlock12          1
 transferRecepientAliceEndBlock12     1
 transferBalance200EndBlock12         1
 transferNodeNothingEndblock12        1
- 
+
 ```
 
 The event number is a local variable kept by the indexer and incremented when a new event is processed.
@@ -253,4 +253,4 @@ Users can use anything as an event value. However, if the even attrbute value is
 - Floating point values are not read from the database even with the introduction of `BigInt`. This was intentionally done
 to keep the same beheaviour as was historically present and not introduce breaking  changes. This will be fixed in the 0.38 series.
 
-[abci-events]: https://github.com/cometbft/cometbft/blob/v0.37.x/spec/abci/abci++_basic_concepts.md#events
+[abci-events]: https://github.com/KYVENetwork/cometbft/v37/blob/v0.37.x/spec/abci/abci++_basic_concepts.md#events

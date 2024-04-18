@@ -5,8 +5,8 @@ import (
 	"fmt"
 	"math/rand"
 
-	"github.com/cometbft/cometbft/p2p"
-	"github.com/cometbft/cometbft/p2p/pex"
+	"github.com/KYVENetwork/cometbft/v37/p2p"
+	"github.com/KYVENetwork/cometbft/v37/p2p/pex"
 )
 
 var addrBook = pex.NewAddrBook("./testdata/addrbook.json", true)

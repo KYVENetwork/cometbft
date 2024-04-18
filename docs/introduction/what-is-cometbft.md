@@ -22,7 +22,7 @@ reformalization of BFT in a more modern setting, with emphasis on
 peer-to-peer networking and cryptographic authentication. The name
 derives from the way transactions are batched in blocks, where each
 block contains a cryptographic hash of the previous one, forming a
-chain. 
+chain.
 
 CometBFT consists of two chief technical components: a blockchain
 consensus engine and a generic application interface.
@@ -57,7 +57,7 @@ atop a classical, non-BFT consensus algorithm. Zookeeper uses an
 algorithm called Zookeeper Atomic Broadcast, while etcd and consul use
 the Raft log replication algorithm. A
 typical cluster contains 3-5 machines, and can tolerate crash failures
-in less than 1/2 of the machines (e.g., 1 out of 3 or 2 out of 5), 
+in less than 1/2 of the machines (e.g., 1 out of 3 or 2 out of 5),
 but even a single Byzantine fault can jeopardize the whole system.
 
 Each offering provides a slightly different implementation of a
@@ -123,7 +123,7 @@ consensus engine, and provides a particular application state.
 ## ABCI Overview
 
 The [Application BlockChain Interface
-(ABCI)](https://github.com/cometbft/cometbft/tree/v0.37.x/abci)
+(ABCI)](https://github.com/KYVENetwork/cometbft/v37/tree/v0.37.x/abci)
 allows for Byzantine Fault Tolerant replication of applications
 written in any programming language.
 
@@ -146,7 +146,7 @@ in design and suffers from "spaghetti code".
 Another problem with monolithic design is that it limits you to the
 language of the blockchain stack (or vice versa). In the case of
 Ethereum which supports a Turing-complete bytecode virtual-machine, it
-limits you to languages that compile down to that bytecode; while the 
+limits you to languages that compile down to that bytecode; while the
 [list](https://github.com/pirapira/awesome-ethereum-virtual-machine#programming-languages-that-compile-into-evm)
 is growing, it is still very limited.
 
@@ -188,7 +188,7 @@ core to the application. The application replies with corresponding
 response messages.
 
 The messages are specified here: [ABCI Message
-Types](https://github.com/cometbft/cometbft/blob/v0.37.x/proto/tendermint/abci/types.proto).
+Types](https://github.com/KYVENetwork/cometbft/v37/blob/v0.37.x/proto/tendermint/abci/types.proto).
 
 The **DeliverTx** message is the work horse of the application. Each
 transaction in the blockchain is delivered with this message. The
@@ -270,7 +270,7 @@ committed in a chain, with one block at each **height**. A block may
 fail to be committed, in which case the algorithm moves to the next
 **round**, and a new validator gets to propose a block for that height.
 Two stages of voting are required to successfully commit a block; we
-call them **pre-vote** and **pre-commit**. 
+call them **pre-vote** and **pre-commit**.
 
 There is a picture of a couple doing the polka because validators are
 doing something like a polka dance. When more than two-thirds of the

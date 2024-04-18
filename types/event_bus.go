@@ -4,10 +4,10 @@ import (
 	"context"
 	"fmt"
 
-	"github.com/cometbft/cometbft/abci/types"
-	"github.com/cometbft/cometbft/libs/log"
-	cmtpubsub "github.com/cometbft/cometbft/libs/pubsub"
-	"github.com/cometbft/cometbft/libs/service"
+	"github.com/KYVENetwork/cometbft/v37/abci/types"
+	"github.com/KYVENetwork/cometbft/v37/libs/log"
+	cmtpubsub "github.com/KYVENetwork/cometbft/v37/libs/pubsub"
+	"github.com/KYVENetwork/cometbft/v37/libs/service"
 )
 
 const defaultCapacity = 0

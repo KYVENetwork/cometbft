@@ -20,7 +20,7 @@ For more background, see [What is CometBFT?](introduction/README.md#what-is-come
 
 To get started quickly with an example application, see the [quick start guide](guides/quick-start.md).
 
-To learn about application development on CometBFT, see the [Application Blockchain Interface](https://github.com/cometbft/cometbft/tree/v0.37.x/spec/abci).
+To learn about application development on CometBFT, see the [Application Blockchain Interface](https://github.com/KYVENetwork/cometbft/v37/tree/v0.37.x/spec/abci).
 
 For more details on using CometBFT, see the respective documentation for
 [CometBFT internals](core/), [benchmarking and monitoring](tools/), and [network deployments](networks/).

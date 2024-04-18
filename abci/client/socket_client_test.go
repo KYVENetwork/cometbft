@@ -9,11 +9,11 @@ import (
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 
-	abcicli "github.com/cometbft/cometbft/abci/client"
-	"github.com/cometbft/cometbft/abci/server"
-	"github.com/cometbft/cometbft/abci/types"
-	cmtrand "github.com/cometbft/cometbft/libs/rand"
-	"github.com/cometbft/cometbft/libs/service"
+	abcicli "github.com/KYVENetwork/cometbft/v37/abci/client"
+	"github.com/KYVENetwork/cometbft/v37/abci/server"
+	"github.com/KYVENetwork/cometbft/v37/abci/types"
+	cmtrand "github.com/KYVENetwork/cometbft/v37/libs/rand"
+	"github.com/KYVENetwork/cometbft/v37/libs/service"
 )
 
 func TestProperSyncCalls(t *testing.T) {

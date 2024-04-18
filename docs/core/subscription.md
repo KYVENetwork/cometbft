@@ -8,7 +8,7 @@ CometBFT emits different events, which you can subscribe to via
 [Websocket](https://en.wikipedia.org/wiki/WebSocket). This can be useful
 for third-party applications (for analysis) or for inspecting state.
 
-[List of events](https://godoc.org/github.com/cometbft/cometbft/types#pkg-constants)
+[List of events](https://godoc.org/github.com/KYVENetwork/cometbft/v37/types#pkg-constants)
 
 To connect to a node via websocket from the CLI, you can use a tool such as
 [wscat](https://github.com/websockets/wscat) and run:
@@ -43,23 +43,23 @@ transactions](../app-dev/indexing-transactions.md) for details.
 
 ## Query parameter and event type restrictions
 
-While CometBFT imposes no restrictions on the application with regards to the type of 
-the event output, there are several restrictions when it comes to querying 
-events whose attribute values are numeric. 
+While CometBFT imposes no restrictions on the application with regards to the type of
+the event output, there are several restrictions when it comes to querying
+events whose attribute values are numeric.
 
 - Queries cannot include negative numbers
 - If floating points are compared to integers, they are converted to an integer
 - Floating point to floating point comparison leads to a loss of precision for very big floating point numbers
-(`10000000000000000000.0` is treated the same as `10000000000000000000.6`) 
+(`10000000000000000000.0` is treated the same as `10000000000000000000.6`)
 - When floating points do get converted to integers, they are not rounded, the decimal part is simply truncated.
-This has been done to preserve the behaviour present before introducing the support for BigInts in the query parameters. 
+This has been done to preserve the behaviour present before introducing the support for BigInts in the query parameters.
 
 ## ValidatorSetUpdates
 
 When validator set changes, ValidatorSetUpdates event is published. The
 event carries a list of pubkey/power pairs. The list is the same
 CometBFT receives from ABCI application (see [EndBlock
-section](https://github.com/cometbft/cometbft/blob/v0.37.x/spec/abci/abci++_methods.md#endblock) in
+section](https://github.com/KYVENetwork/cometbft/v37/blob/v0.37.x/spec/abci/abci++_methods.md#endblock) in
 the ABCI spec).
 
 Response:

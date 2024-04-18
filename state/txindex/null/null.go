@@ -4,9 +4,9 @@ import (
 	"context"
 	"errors"
 
-	abci "github.com/cometbft/cometbft/abci/types"
-	"github.com/cometbft/cometbft/libs/pubsub/query"
-	"github.com/cometbft/cometbft/state/txindex"
+	abci "github.com/KYVENetwork/cometbft/v37/abci/types"
+	"github.com/KYVENetwork/cometbft/v37/libs/pubsub/query"
+	"github.com/KYVENetwork/cometbft/v37/state/txindex"
 )
 
 var _ txindex.TxIndexer = (*TxIndex)(nil)

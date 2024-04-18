@@ -8,11 +8,11 @@ import (
 	"os"
 	"runtime"
 
-	"github.com/cometbft/cometbft/abci/types"
-	cmtlog "github.com/cometbft/cometbft/libs/log"
-	cmtnet "github.com/cometbft/cometbft/libs/net"
-	"github.com/cometbft/cometbft/libs/service"
-	cmtsync "github.com/cometbft/cometbft/libs/sync"
+	"github.com/KYVENetwork/cometbft/v37/abci/types"
+	cmtlog "github.com/KYVENetwork/cometbft/v37/libs/log"
+	cmtnet "github.com/KYVENetwork/cometbft/v37/libs/net"
+	"github.com/KYVENetwork/cometbft/v37/libs/service"
+	cmtsync "github.com/KYVENetwork/cometbft/v37/libs/sync"
 )
 
 // var maxNumberConnections = 2

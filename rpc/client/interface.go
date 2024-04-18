@@ -23,10 +23,10 @@ implementation.
 import (
 	"context"
 
-	"github.com/cometbft/cometbft/libs/bytes"
-	"github.com/cometbft/cometbft/libs/service"
-	ctypes "github.com/cometbft/cometbft/rpc/core/types"
-	"github.com/cometbft/cometbft/types"
+	"github.com/KYVENetwork/cometbft/v37/libs/bytes"
+	"github.com/KYVENetwork/cometbft/v37/libs/service"
+	ctypes "github.com/KYVENetwork/cometbft/v37/rpc/core/types"
+	"github.com/KYVENetwork/cometbft/v37/types"
 )
 
 // Client wraps most important rpc calls a client would make if you want to

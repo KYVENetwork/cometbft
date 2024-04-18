@@ -3,7 +3,7 @@ package crypto_test
 import (
 	"fmt"
 
-	"github.com/cometbft/cometbft/crypto"
+	"github.com/KYVENetwork/cometbft/v37/crypto"
 )
 
 func ExampleSha256() {

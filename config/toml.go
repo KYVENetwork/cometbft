@@ -8,7 +8,7 @@ import (
 	"strings"
 	"text/template"
 
-	cmtos "github.com/cometbft/cometbft/libs/os"
+	cmtos "github.com/KYVENetwork/cometbft/v37/libs/os"
 )
 
 // DefaultDirPerm is the default permissions used when creating directories.
@@ -91,7 +91,7 @@ moniker = "{{ .BaseConfig.Moniker }}"
 # allows them to catchup quickly by downloading blocks in parallel
 # and verifying their commits
 #
-# Deprecated: this key will be removed and BlockSync will be enabled 
+# Deprecated: this key will be removed and BlockSync will be enabled
 # unconditionally in the next major release.
 block_sync = {{ .BaseConfig.BlockSyncMode }}
 
@@ -458,7 +458,7 @@ chunk_fetchers = "{{ .StateSync.ChunkFetchers }}"
 [blocksync]
 
 # Block Sync version to use:
-# 
+#
 # In v0.37, v1 and v2 of the block sync protocols were deprecated.
 # Please use v0 instead.
 #

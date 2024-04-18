@@ -84,7 +84,7 @@ According to the Tendermint consensus algorithm, currently adopted in CometBFT,
 a correct process can broadcast at most one precommit
 message in round *r*, height *h*.
 
-<!-- 
+<!--
 Since, as stated in the [Methods](./abci++_methods.md#extendvote) section, `ResponseExtendVote`
 is only called when the consensus algorithm
 is about to broadcast a non-`nil` precommit message, a correct process can only produce one vote extension
@@ -92,7 +92,7 @@ in round *r*, height *h*.
 Let *e<sup>r</sup><sub>p</sub>* be the vote extension that the Application of a correct process *p* returns via
 `ResponseExtendVote` in round *r*, height *h*.
 Let *w<sup>r</sup><sub>p</sub>* be the proposed block that *p*'s CometBFT passes to the Application via `RequestExtendVote`
-in round *r*, height *h*. 
+in round *r*, height *h*.
 -->
 
 <!--
@@ -134,12 +134,12 @@ As a general rule, `VerifyVoteExtension` SHOULD always accept the vote extension
   `RequestProcessProposal`,
   <!--
 
-  `RequestExtendVote`, and `RequestVerifyVoteExtension` 
+  `RequestExtendVote`, and `RequestVerifyVoteExtension`
   -->
   at height *h* do
   not modify *s<sub>p,h-1</sub>*.
 
-<!-- 
+<!--
 * Requirement 10 [`ExtendVote`, `FinalizeBlock`, non-dependency]: for any correct process *p*,
 and any vote extension *e* that *p* received at height *h*, the computation of
 *s<sub>p,h</sub>* does not depend on *e*.
@@ -224,9 +224,9 @@ the state for each connection, which are synchronized upon `Commit` calls.
 In principle, each of the four ABCI++ connections operates concurrently with one
 another. This means applications need to ensure access to state is
 thread safe. Both the
-[default in-process ABCI client](https://github.com/cometbft/cometbft/blob/v0.37.x/abci/client/local_client.go#L13)
+[default in-process ABCI client](https://github.com/KYVENetwork/cometbft/v37/blob/v0.37.x/abci/client/local_client.go#L13)
 and the
-[default Go ABCI server](https://github.com/cometbft/cometbft/blob/v0.37.x/abci/server/socket_server.go#L20)
+[default Go ABCI server](https://github.com/KYVENetwork/cometbft/v37/blob/v0.37.x/abci/server/socket_server.go#L20)
 use a global lock to guard the handling of events across all connections, so they are not
 concurrent at all. This means whether your app is compiled in-process with
 CometBFT using the `NewLocalClient`, or run out-of-process using the `SocketServer`,
@@ -408,7 +408,7 @@ For each transaction within a block, the Application is expected to return a res
 [`ResponseDeliverTx`](./abci%2B%2B_methods.md#delivertx).
 <!--
 The list of transactions executed must respect the same order as the list of transactions delivered via
-subsequent calls to [`RequestDeliverTx`](./abci%2B%2B_methods.md#delivertx). 
+subsequent calls to [`RequestDeliverTx`](./abci%2B%2B_methods.md#delivertx).
 -->
 This section discusses the fields inside `ResponseDeliverTx` along with the fields in
 [`ResponseCheckTx`](./abci%2B%2B_methods.md#checktx),
@@ -574,7 +574,7 @@ These are the current consensus parameters (as of v0.37.x):
 10. [TimeoutParams.Vote](#timeoutparamsvote)
 11. [TimeoutParams.VoteDelta](#timeoutparamsvotedelta)
 12. [TimeoutParams.Commit](#timeoutparamscommit)
-13. [TimeoutParams.BypassCommitTimeout](#timeoutparamsbypasscommittimeout) 
+13. [TimeoutParams.BypassCommitTimeout](#timeoutparamsbypasscommittimeout)
 -->
 
 ##### BlockParams.MaxBytes

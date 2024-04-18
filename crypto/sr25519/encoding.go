@@ -1,8 +1,8 @@
 package sr25519
 
 import (
-	"github.com/cometbft/cometbft/crypto"
-	cmtjson "github.com/cometbft/cometbft/libs/json"
+	"github.com/KYVENetwork/cometbft/v37/crypto"
+	cmtjson "github.com/KYVENetwork/cometbft/v37/libs/json"
 )
 
 var _ crypto.PrivKey = PrivKey{}

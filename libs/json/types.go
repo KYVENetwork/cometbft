@@ -5,7 +5,7 @@ import (
 	"fmt"
 	"reflect"
 
-	cmtsync "github.com/cometbft/cometbft/libs/sync"
+	cmtsync "github.com/KYVENetwork/cometbft/v37/libs/sync"
 )
 
 var (

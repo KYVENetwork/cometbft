@@ -2,11 +2,11 @@ package types
 
 import (
 	"fmt"
+	cmtversion "github.com/KYVENetwork/cometbft/v37/proto/cometbft/v37/version"
 	"time"
 
-	cmtproto "github.com/cometbft/cometbft/proto/tendermint/types"
-	cmtversion "github.com/cometbft/cometbft/proto/tendermint/version"
-	"github.com/cometbft/cometbft/version"
+	cmtproto "github.com/KYVENetwork/cometbft/v37/proto/cometbft/v37/types"
+	"github.com/KYVENetwork/cometbft/v37/version"
 )
 
 func MakeCommit(blockID BlockID, height int64, round int32,

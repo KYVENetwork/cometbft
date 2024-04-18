@@ -7,8 +7,8 @@ import (
 
 	"context"
 
-	cmtjson "github.com/cometbft/cometbft/libs/json"
-	coregrpc "github.com/cometbft/cometbft/rpc/grpc"
+	cmtjson "github.com/KYVENetwork/cometbft/v37/libs/json"
+	coregrpc "github.com/KYVENetwork/cometbft/v37/rpc/grpc"
 )
 
 var grpcAddr = "tcp://localhost:36656"

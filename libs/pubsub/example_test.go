@@ -6,10 +6,10 @@ import (
 
 	"github.com/stretchr/testify/require"
 
-	"github.com/cometbft/cometbft/libs/log"
+	"github.com/KYVENetwork/cometbft/v37/libs/log"
 
-	"github.com/cometbft/cometbft/libs/pubsub"
-	"github.com/cometbft/cometbft/libs/pubsub/query"
+	"github.com/KYVENetwork/cometbft/v37/libs/pubsub"
+	"github.com/KYVENetwork/cometbft/v37/libs/pubsub/query"
 )
 
 func TestExample(t *testing.T) {

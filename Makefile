@@ -5,7 +5,7 @@ OUTPUT?=$(BUILDDIR)/cometbft
 BUILD_TAGS?=cometbft
 
 COMMIT_HASH := $(shell git rev-parse --short HEAD)
-LD_FLAGS = -X github.com/cometbft/cometbft/version.TMGitCommitHash=$(COMMIT_HASH)
+LD_FLAGS = -X github.com/KYVENetwork/cometbft/v37/version.TMGitCommitHash=$(COMMIT_HASH)
 BUILD_FLAGS = -mod=readonly -ldflags "$(LD_FLAGS)"
 HTTPS_GIT := https://github.com/cometbft/cometbft.git
 CGO_ENABLED ?= 0
@@ -167,8 +167,8 @@ endif
 proto-gen: check-proto-deps
 	@echo "Generating Protobuf files"
 	@go run github.com/bufbuild/buf/cmd/buf generate
-	@mv ./proto/tendermint/abci/types.pb.go ./abci/types/
-	@cp ./proto/tendermint/rpc/grpc/types.pb.go ./rpc/grpc
+	@mv ./proto/cometbft/v37/abci/types.pb.go ./abci/types/
+	@cp ./proto/cometbft/v37/rpc/grpc/types.pb.go ./rpc/grpc
 .PHONY: proto-gen
 
 # These targets are provided for convenience and are intended for local
@@ -230,7 +230,7 @@ go.sum: go.mod
 draw_deps:
 	@# requires brew install graphviz or apt-get install graphviz
 	go get github.com/RobotsAndPencils/goviz
-	@goviz -i github.com/cometbft/cometbft/cmd/cometbft -d 3 | dot -Tpng -o dependency-graph.png
+	@goviz -i github.com/KYVENetwork/cometbft/v37/cmd/cometbft -d 3 | dot -Tpng -o dependency-graph.png
 .PHONY: draw_deps
 
 get_deps_bin_size:

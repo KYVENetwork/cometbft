@@ -13,7 +13,7 @@ For users explicitly making use of the Go APIs provided in the `crypto/merkle`
 package, please note that, in order to fix a potential security issue, we had to
 make a breaking change here. This change should only affect a small minority of
 users. For more details, please see
-[\#557](https://github.com/cometbft/cometbft/issues/557).
+[\#557](https://github.com/KYVENetwork/cometbft/v37/issues/557).
 
 ## v0.37.0
 

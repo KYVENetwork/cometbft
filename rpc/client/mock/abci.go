@@ -3,12 +3,12 @@ package mock
 import (
 	"context"
 
-	abci "github.com/cometbft/cometbft/abci/types"
-	"github.com/cometbft/cometbft/libs/bytes"
-	"github.com/cometbft/cometbft/proxy"
-	"github.com/cometbft/cometbft/rpc/client"
-	ctypes "github.com/cometbft/cometbft/rpc/core/types"
-	"github.com/cometbft/cometbft/types"
+	abci "github.com/KYVENetwork/cometbft/v37/abci/types"
+	"github.com/KYVENetwork/cometbft/v37/libs/bytes"
+	"github.com/KYVENetwork/cometbft/v37/proxy"
+	"github.com/KYVENetwork/cometbft/v37/rpc/client"
+	ctypes "github.com/KYVENetwork/cometbft/v37/rpc/core/types"
+	"github.com/KYVENetwork/cometbft/v37/types"
 )
 
 // ABCIApp will send all abci related request to the named app,

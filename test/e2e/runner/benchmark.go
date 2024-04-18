@@ -6,8 +6,8 @@ import (
 	"math"
 	"time"
 
-	e2e "github.com/cometbft/cometbft/test/e2e/pkg"
-	"github.com/cometbft/cometbft/types"
+	e2e "github.com/KYVENetwork/cometbft/v37/test/e2e/pkg"
+	"github.com/KYVENetwork/cometbft/v37/types"
 )
 
 // Benchmark is a simple function for fetching, calculating and printing

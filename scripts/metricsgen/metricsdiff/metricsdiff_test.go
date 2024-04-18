@@ -7,7 +7,7 @@ import (
 
 	"github.com/stretchr/testify/require"
 
-	metricsdiff "github.com/cometbft/cometbft/scripts/metricsgen/metricsdiff"
+	metricsdiff "github.com/KYVENetwork/cometbft/v37/scripts/metricsgen/metricsdiff"
 )
 
 func TestDiff(t *testing.T) {

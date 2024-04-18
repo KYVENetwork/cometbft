@@ -1,1 +1,1 @@
-- `[node]` Close evidence.db OnStop ([cometbft/cometbft\#1210](https://github.com/cometbft/cometbft/pull/1210): @chillyvee)
+- `[node]` Close evidence.db OnStop ([cometbft/cometbft\#1210](https://github.com/KYVENetwork/cometbft/v37/pull/1210): @chillyvee)

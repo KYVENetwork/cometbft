@@ -7,8 +7,8 @@ import (
 	"fmt"
 	"time"
 
-	"github.com/cometbft/cometbft/light/provider"
-	"github.com/cometbft/cometbft/types"
+	"github.com/KYVENetwork/cometbft/v37/light/provider"
+	"github.com/KYVENetwork/cometbft/v37/types"
 )
 
 // The detector component of the light client detects and handles attacks on the light client.

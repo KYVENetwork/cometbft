@@ -8,7 +8,7 @@ import (
 
 	"github.com/stretchr/testify/require"
 
-	"github.com/cometbft/cometbft/mempool"
+	"github.com/KYVENetwork/cometbft/v37/mempool"
 )
 
 func BenchmarkTxMempool_CheckTx(b *testing.B) {

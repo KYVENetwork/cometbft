@@ -3,11 +3,11 @@ package encoding
 import (
 	"fmt"
 
-	"github.com/cometbft/cometbft/crypto"
-	"github.com/cometbft/cometbft/crypto/ed25519"
-	"github.com/cometbft/cometbft/crypto/secp256k1"
-	"github.com/cometbft/cometbft/libs/json"
-	pc "github.com/cometbft/cometbft/proto/tendermint/crypto"
+	"github.com/KYVENetwork/cometbft/v37/crypto"
+	"github.com/KYVENetwork/cometbft/v37/crypto/ed25519"
+	"github.com/KYVENetwork/cometbft/v37/crypto/secp256k1"
+	"github.com/KYVENetwork/cometbft/v37/libs/json"
+	pc "github.com/KYVENetwork/cometbft/v37/proto/cometbft/v37/crypto"
 )
 
 func init() {
