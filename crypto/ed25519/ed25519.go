@@ -18,8 +18,8 @@ import (
 var _ crypto.PrivKey = PrivKey{}
 
 const (
-	PrivKeyName = "cometbft/PrivKeyEd25519"
-	PubKeyName  = "cometbft/PubKeyEd25519"
+	PrivKeyName = "tendermint/PrivKeyEd25519"
+	PubKeyName  = "tendermint/PubKeyEd25519"
 	// PubKeySize is is the size, in bytes, of public keys as used in this package.
 	PubKeySize = 32
 	// PrivateKeySize is the size, in bytes, of private keys as used in this package.
