@@ -6,11 +6,11 @@ import (
 	"strings"
 	"sync"
 
-	cmtjson "github.com/tendermint/tendermint/libs/json"
-	cmtmath "github.com/tendermint/tendermint/libs/math"
-	"github.com/tendermint/tendermint/p2p"
-	cmtproto "github.com/tendermint/tendermint/proto/tendermint/types"
-	"github.com/tendermint/tendermint/types"
+	cmtjson "github.com/KYVENetwork/cometbft/v034x/libs/json"
+	cmtmath "github.com/KYVENetwork/cometbft/v034x/libs/math"
+	"github.com/KYVENetwork/cometbft/v034x/p2p"
+	cmtproto "github.com/KYVENetwork/cometbft/v034x/proto/cometbft/v034x/types"
+	"github.com/KYVENetwork/cometbft/v034x/types"
 )
 
 type RoundVoteSet struct {

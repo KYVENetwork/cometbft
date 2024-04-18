@@ -11,8 +11,8 @@ import (
 	"net/url"
 	"strings"
 
-	cmtsync "github.com/tendermint/tendermint/libs/sync"
-	types "github.com/tendermint/tendermint/rpc/jsonrpc/types"
+	cmtsync "github.com/KYVENetwork/cometbft/v034x/libs/sync"
+	types "github.com/KYVENetwork/cometbft/v034x/rpc/jsonrpc/types"
 )
 
 const (

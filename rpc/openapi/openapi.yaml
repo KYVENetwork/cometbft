@@ -100,7 +100,7 @@ paths:
         1. malicious node can drop or pretend it had committed your tx
         2. malicious proposer (not necessary the one you're communicating with) can
         drop transactions, which might become valid in the future
-        (https://github.com/tendermint/tendermint/issues/3322)
+        (https://github.com/KYVENetwork/cometbft/v034x/issues/3322)
 
         Please refer to
         https://docs.cometbft.com/v0.34/core/using-cometbft.html#formatting
@@ -144,7 +144,7 @@ paths:
         1. malicious node can drop or pretend it had committed your tx
         2. malicious proposer (not necessary the one you're communicating with) can
         drop transactions, which might become valid in the future
-        (https://github.com/tendermint/tendermint/issues/3322)
+        (https://github.com/KYVENetwork/cometbft/v034x/issues/3322)
         3. node can be offline
 
         Please refer to
@@ -1137,7 +1137,7 @@ components:
       properties:
         type:
           type: string
-          example: "tendermint/PubKeyEd25519"
+          example: "cometbft/PubKeyEd25519"
         value:
           type: string
           example: "A6DoBUypNtUAyEHWtQ9bFjfNg8Bo9CrnkUGl6k6OHN4="
@@ -1581,7 +1581,7 @@ components:
                     properties:
                       type:
                         type: string
-                        example: "tendermint/PubKeyEd25519"
+                        example: "cometbft/PubKeyEd25519"
                       value:
                         type: string
                         example: "9tK9IT+FPdf2qm+5c2qaxi10sWP+3erWTKgftn2PaQM="
@@ -1740,7 +1740,7 @@ components:
                         properties:
                           type:
                             type: string
-                            example: "tendermint/PubKeyEd25519"
+                            example: "cometbft/PubKeyEd25519"
                           value:
                             type: string
                             example: "cOQZvh/h9ZioSeUMZB/1Vy1Xo5x2sjrVjlE/qHnYifM="
@@ -2666,7 +2666,7 @@ components:
           properties:
             type:
               type: string
-              example: "tendermint/PubKeyEd25519"
+              example: "cometbft/PubKeyEd25519"
             value:
               type: string
               example: "9tK9IT+FPdf2qm+5c2qaxi10sWP+3erWTKgftn2PaQM="

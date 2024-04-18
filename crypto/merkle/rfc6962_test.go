@@ -20,7 +20,7 @@ import (
 	"encoding/hex"
 	"testing"
 
-	"github.com/tendermint/tendermint/crypto/tmhash"
+	"github.com/KYVENetwork/cometbft/v034x/crypto/tmhash"
 )
 
 func TestRFC6962Hasher(t *testing.T) {

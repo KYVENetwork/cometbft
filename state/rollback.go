@@ -3,10 +3,10 @@ package state
 import (
 	"errors"
 	"fmt"
+	cmtversion "github.com/KYVENetwork/cometbft/v034x/proto/cometbft/v034x/version"
 
-	cmtstate "github.com/tendermint/tendermint/proto/tendermint/state"
-	cmtversion "github.com/tendermint/tendermint/proto/tendermint/version"
-	"github.com/tendermint/tendermint/version"
+	cmtstate "github.com/KYVENetwork/cometbft/v034x/proto/cometbft/v034x/state"
+	"github.com/KYVENetwork/cometbft/v034x/version"
 )
 
 // Rollback overwrites the current CometBFT state (height n) with the most

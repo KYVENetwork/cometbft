@@ -1,12 +1,12 @@
 package consensus
 
 import (
-	abci "github.com/tendermint/tendermint/abci/types"
-	"github.com/tendermint/tendermint/libs/clist"
-	mempl "github.com/tendermint/tendermint/mempool"
-	cmtstate "github.com/tendermint/tendermint/proto/tendermint/state"
-	"github.com/tendermint/tendermint/proxy"
-	"github.com/tendermint/tendermint/types"
+	abci "github.com/KYVENetwork/cometbft/v034x/abci/types"
+	"github.com/KYVENetwork/cometbft/v034x/libs/clist"
+	mempl "github.com/KYVENetwork/cometbft/v034x/mempool"
+	cmtstate "github.com/KYVENetwork/cometbft/v034x/proto/cometbft/v034x/state"
+	"github.com/KYVENetwork/cometbft/v034x/proxy"
+	"github.com/KYVENetwork/cometbft/v034x/types"
 )
 
 //-----------------------------------------------------------------------------

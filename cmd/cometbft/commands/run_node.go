@@ -9,9 +9,9 @@ import (
 
 	"github.com/spf13/cobra"
 
-	cfg "github.com/tendermint/tendermint/config"
-	cmtos "github.com/tendermint/tendermint/libs/os"
-	nm "github.com/tendermint/tendermint/node"
+	cfg "github.com/KYVENetwork/cometbft/v034x/config"
+	cmtos "github.com/KYVENetwork/cometbft/v034x/libs/os"
+	nm "github.com/KYVENetwork/cometbft/v034x/node"
 )
 
 var (

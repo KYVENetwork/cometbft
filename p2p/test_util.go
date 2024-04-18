@@ -5,14 +5,14 @@ import (
 	"net"
 	"time"
 
-	"github.com/tendermint/tendermint/crypto"
-	"github.com/tendermint/tendermint/crypto/ed25519"
-	"github.com/tendermint/tendermint/libs/log"
-	cmtnet "github.com/tendermint/tendermint/libs/net"
-	cmtrand "github.com/tendermint/tendermint/libs/rand"
+	"github.com/KYVENetwork/cometbft/v034x/crypto"
+	"github.com/KYVENetwork/cometbft/v034x/crypto/ed25519"
+	"github.com/KYVENetwork/cometbft/v034x/libs/log"
+	cmtnet "github.com/KYVENetwork/cometbft/v034x/libs/net"
+	cmtrand "github.com/KYVENetwork/cometbft/v034x/libs/rand"
 
-	"github.com/tendermint/tendermint/config"
-	"github.com/tendermint/tendermint/p2p/conn"
+	"github.com/KYVENetwork/cometbft/v034x/config"
+	"github.com/KYVENetwork/cometbft/v034x/p2p/conn"
 )
 
 const testCh = 0x01

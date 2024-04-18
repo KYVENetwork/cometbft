@@ -13,17 +13,17 @@ import (
 
 	dbm "github.com/cometbft/cometbft-db"
 
-	abci "github.com/tendermint/tendermint/abci/types"
-	cfg "github.com/tendermint/tendermint/config"
-	"github.com/tendermint/tendermint/libs/log"
-	"github.com/tendermint/tendermint/mempool/mock"
-	"github.com/tendermint/tendermint/p2p"
-	bcproto "github.com/tendermint/tendermint/proto/tendermint/blockchain"
-	"github.com/tendermint/tendermint/proxy"
-	sm "github.com/tendermint/tendermint/state"
-	"github.com/tendermint/tendermint/store"
-	"github.com/tendermint/tendermint/types"
-	cmttime "github.com/tendermint/tendermint/types/time"
+	abci "github.com/KYVENetwork/cometbft/v034x/abci/types"
+	cfg "github.com/KYVENetwork/cometbft/v034x/config"
+	"github.com/KYVENetwork/cometbft/v034x/libs/log"
+	"github.com/KYVENetwork/cometbft/v034x/mempool/mock"
+	"github.com/KYVENetwork/cometbft/v034x/p2p"
+	bcproto "github.com/KYVENetwork/cometbft/v034x/proto/cometbft/v034x/blockchain"
+	"github.com/KYVENetwork/cometbft/v034x/proxy"
+	sm "github.com/KYVENetwork/cometbft/v034x/state"
+	"github.com/KYVENetwork/cometbft/v034x/store"
+	"github.com/KYVENetwork/cometbft/v034x/types"
+	cmttime "github.com/KYVENetwork/cometbft/v034x/types/time"
 )
 
 var config *cfg.Config

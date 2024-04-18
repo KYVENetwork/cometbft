@@ -6,10 +6,10 @@ import (
 	"fmt"
 	"reflect"
 
-	cmtbytes "github.com/tendermint/tendermint/libs/bytes"
-	cmtstrings "github.com/tendermint/tendermint/libs/strings"
-	tmp2p "github.com/tendermint/tendermint/proto/tendermint/p2p"
-	"github.com/tendermint/tendermint/version"
+	cmtbytes "github.com/KYVENetwork/cometbft/v034x/libs/bytes"
+	cmtstrings "github.com/KYVENetwork/cometbft/v034x/libs/strings"
+	tmp2p "github.com/KYVENetwork/cometbft/v034x/proto/cometbft/v034x/p2p"
+	"github.com/KYVENetwork/cometbft/v034x/version"
 )
 
 const (

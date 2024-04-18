@@ -3,7 +3,7 @@ package pubsub
 import (
 	"errors"
 
-	cmtsync "github.com/tendermint/tendermint/libs/sync"
+	cmtsync "github.com/KYVENetwork/cometbft/v034x/libs/sync"
 )
 
 var (

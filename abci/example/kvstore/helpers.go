@@ -4,8 +4,8 @@ import (
 	"fmt"
 	"strings"
 
-	"github.com/tendermint/tendermint/abci/types"
-	cmtrand "github.com/tendermint/tendermint/libs/rand"
+	"github.com/KYVENetwork/cometbft/v034x/abci/types"
+	cmtrand "github.com/KYVENetwork/cometbft/v034x/libs/rand"
 )
 
 // RandVal creates one random validator, with a key derived

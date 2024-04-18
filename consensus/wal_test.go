@@ -13,12 +13,12 @@ import (
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 
-	"github.com/tendermint/tendermint/consensus/types"
-	"github.com/tendermint/tendermint/crypto/merkle"
-	"github.com/tendermint/tendermint/libs/autofile"
-	"github.com/tendermint/tendermint/libs/log"
-	cmttypes "github.com/tendermint/tendermint/types"
-	cmttime "github.com/tendermint/tendermint/types/time"
+	"github.com/KYVENetwork/cometbft/v034x/consensus/types"
+	"github.com/KYVENetwork/cometbft/v034x/crypto/merkle"
+	"github.com/KYVENetwork/cometbft/v034x/libs/autofile"
+	"github.com/KYVENetwork/cometbft/v034x/libs/log"
+	cmttypes "github.com/KYVENetwork/cometbft/v034x/types"
+	cmttime "github.com/KYVENetwork/cometbft/v034x/types/time"
 )
 
 const (

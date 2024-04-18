@@ -9,9 +9,9 @@ import (
 
 	dbm "github.com/cometbft/cometbft-db"
 
-	cmtrand "github.com/tendermint/tendermint/libs/rand"
-	sm "github.com/tendermint/tendermint/state"
-	"github.com/tendermint/tendermint/types"
+	cmtrand "github.com/KYVENetwork/cometbft/v034x/libs/rand"
+	sm "github.com/KYVENetwork/cometbft/v034x/state"
+	"github.com/KYVENetwork/cometbft/v034x/types"
 )
 
 func TestTxFilter(t *testing.T) {

@@ -61,7 +61,7 @@ linters-settings:
           - "!$test"
         allow:
           - $gostd
-          - github.com/tendermint
+          - github.com/cometbft
           - github.com/cometbft
           - github.com/cosmos
           - github.com/gogo
@@ -97,7 +97,7 @@ linters-settings:
         allow:
           - $gostd
           - github.com/cosmos
-          - github.com/tendermint
+          - github.com/cometbft
           - github.com/cometbft
           - github.com/gogo
           - github.com/Workiva/go-datastructures

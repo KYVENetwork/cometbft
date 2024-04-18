@@ -8,12 +8,12 @@ import (
 	"os"
 	"time"
 
-	"github.com/tendermint/tendermint/crypto"
-	cmtbytes "github.com/tendermint/tendermint/libs/bytes"
-	cmtjson "github.com/tendermint/tendermint/libs/json"
-	cmtos "github.com/tendermint/tendermint/libs/os"
-	cmtproto "github.com/tendermint/tendermint/proto/tendermint/types"
-	cmttime "github.com/tendermint/tendermint/types/time"
+	"github.com/KYVENetwork/cometbft/v034x/crypto"
+	cmtbytes "github.com/KYVENetwork/cometbft/v034x/libs/bytes"
+	cmtjson "github.com/KYVENetwork/cometbft/v034x/libs/json"
+	cmtos "github.com/KYVENetwork/cometbft/v034x/libs/os"
+	cmtproto "github.com/KYVENetwork/cometbft/v034x/proto/cometbft/v034x/types"
+	cmttime "github.com/KYVENetwork/cometbft/v034x/types/time"
 )
 
 const (

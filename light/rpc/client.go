@@ -10,15 +10,15 @@ import (
 
 	"github.com/gogo/protobuf/proto"
 
-	abci "github.com/tendermint/tendermint/abci/types"
-	"github.com/tendermint/tendermint/crypto/merkle"
-	cmtbytes "github.com/tendermint/tendermint/libs/bytes"
-	cmtmath "github.com/tendermint/tendermint/libs/math"
-	service "github.com/tendermint/tendermint/libs/service"
-	rpcclient "github.com/tendermint/tendermint/rpc/client"
-	ctypes "github.com/tendermint/tendermint/rpc/core/types"
-	rpctypes "github.com/tendermint/tendermint/rpc/jsonrpc/types"
-	"github.com/tendermint/tendermint/types"
+	abci "github.com/KYVENetwork/cometbft/v034x/abci/types"
+	"github.com/KYVENetwork/cometbft/v034x/crypto/merkle"
+	cmtbytes "github.com/KYVENetwork/cometbft/v034x/libs/bytes"
+	cmtmath "github.com/KYVENetwork/cometbft/v034x/libs/math"
+	service "github.com/KYVENetwork/cometbft/v034x/libs/service"
+	rpcclient "github.com/KYVENetwork/cometbft/v034x/rpc/client"
+	ctypes "github.com/KYVENetwork/cometbft/v034x/rpc/core/types"
+	rpctypes "github.com/KYVENetwork/cometbft/v034x/rpc/jsonrpc/types"
+	"github.com/KYVENetwork/cometbft/v034x/types"
 )
 
 var errNegOrZeroHeight = errors.New("negative or zero height")

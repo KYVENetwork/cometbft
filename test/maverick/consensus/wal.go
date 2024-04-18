@@ -11,14 +11,14 @@ import (
 
 	"github.com/gogo/protobuf/proto"
 
-	// cmtjson "github.com/tendermint/tendermint/libs/json"
-	cmtcon "github.com/tendermint/tendermint/consensus"
-	auto "github.com/tendermint/tendermint/libs/autofile"
-	"github.com/tendermint/tendermint/libs/log"
-	cmtos "github.com/tendermint/tendermint/libs/os"
-	"github.com/tendermint/tendermint/libs/service"
-	cmtcons "github.com/tendermint/tendermint/proto/tendermint/consensus"
-	cmttime "github.com/tendermint/tendermint/types/time"
+	// cmtjson "github.com/KYVENetwork/cometbft/v034x/libs/json"
+	cmtcon "github.com/KYVENetwork/cometbft/v034x/consensus"
+	auto "github.com/KYVENetwork/cometbft/v034x/libs/autofile"
+	"github.com/KYVENetwork/cometbft/v034x/libs/log"
+	cmtos "github.com/KYVENetwork/cometbft/v034x/libs/os"
+	"github.com/KYVENetwork/cometbft/v034x/libs/service"
+	cmtcons "github.com/KYVENetwork/cometbft/v034x/proto/cometbft/v034x/consensus"
+	cmttime "github.com/KYVENetwork/cometbft/v034x/types/time"
 )
 
 const (
@@ -32,9 +32,9 @@ const (
 //--------------------------------------------------------
 // types and functions for savings consensus messages
 // func init() {
-// 	cmtjson.RegisterType(msgInfo{}, "tendermint/wal/MsgInfo")
-// 	cmtjson.RegisterType(timeoutInfo{}, "tendermint/wal/TimeoutInfo")
-// 	cmtjson.RegisterType(cmtcon.EndHeightMessage  {}, "tendermint/wal/EndHeightMessage  ")
+// 	cmtjson.RegisterType(msgInfo{}, "cometbft/wal/MsgInfo")
+// 	cmtjson.RegisterType(timeoutInfo{}, "cometbft/wal/TimeoutInfo")
+// 	cmtjson.RegisterType(cmtcon.EndHeightMessage  {}, "cometbft/wal/EndHeightMessage  ")
 // }
 
 // Write ahead logger writes msgs to disk before they are processed.
@@ -177,7 +177,7 @@ func (wal *BaseWAL) WriteSync(msg cmtcon.WALMessage) error {
 	}
 
 	if err := wal.FlushAndSync(); err != nil {
-		wal.Logger.Error(`WriteSync failed to flush consensus wal. 
+		wal.Logger.Error(`WriteSync failed to flush consensus wal.
 		WARNING: may result in creating alternative proposals / votes for the current height iff the node restarted`,
 			"err", err)
 		return err

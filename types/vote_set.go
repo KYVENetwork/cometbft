@@ -5,10 +5,10 @@ import (
 	"fmt"
 	"strings"
 
-	"github.com/tendermint/tendermint/libs/bits"
-	cmtjson "github.com/tendermint/tendermint/libs/json"
-	cmtsync "github.com/tendermint/tendermint/libs/sync"
-	cmtproto "github.com/tendermint/tendermint/proto/tendermint/types"
+	"github.com/KYVENetwork/cometbft/v034x/libs/bits"
+	cmtjson "github.com/KYVENetwork/cometbft/v034x/libs/json"
+	cmtsync "github.com/KYVENetwork/cometbft/v034x/libs/sync"
+	cmtproto "github.com/KYVENetwork/cometbft/v034x/proto/cometbft/v034x/types"
 )
 
 const (

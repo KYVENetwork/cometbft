@@ -3,9 +3,9 @@ package txindex
 import (
 	"context"
 
-	"github.com/tendermint/tendermint/libs/service"
-	"github.com/tendermint/tendermint/state/indexer"
-	"github.com/tendermint/tendermint/types"
+	"github.com/KYVENetwork/cometbft/v034x/libs/service"
+	"github.com/KYVENetwork/cometbft/v034x/state/indexer"
+	"github.com/KYVENetwork/cometbft/v034x/types"
 )
 
 // XXX/TODO: These types should be moved to the indexer package.

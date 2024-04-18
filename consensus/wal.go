@@ -11,13 +11,13 @@ import (
 
 	"github.com/gogo/protobuf/proto"
 
-	auto "github.com/tendermint/tendermint/libs/autofile"
-	cmtjson "github.com/tendermint/tendermint/libs/json"
-	"github.com/tendermint/tendermint/libs/log"
-	cmtos "github.com/tendermint/tendermint/libs/os"
-	"github.com/tendermint/tendermint/libs/service"
-	cmtcons "github.com/tendermint/tendermint/proto/tendermint/consensus"
-	cmttime "github.com/tendermint/tendermint/types/time"
+	auto "github.com/KYVENetwork/cometbft/v034x/libs/autofile"
+	cmtjson "github.com/KYVENetwork/cometbft/v034x/libs/json"
+	"github.com/KYVENetwork/cometbft/v034x/libs/log"
+	cmtos "github.com/KYVENetwork/cometbft/v034x/libs/os"
+	"github.com/KYVENetwork/cometbft/v034x/libs/service"
+	cmtcons "github.com/KYVENetwork/cometbft/v034x/proto/cometbft/v034x/consensus"
+	cmttime "github.com/KYVENetwork/cometbft/v034x/types/time"
 )
 
 const (
@@ -46,9 +46,9 @@ type EndHeightMessage struct {
 type WALMessage interface{}
 
 func init() {
-	cmtjson.RegisterType(msgInfo{}, "tendermint/wal/MsgInfo")
-	cmtjson.RegisterType(timeoutInfo{}, "tendermint/wal/TimeoutInfo")
-	cmtjson.RegisterType(EndHeightMessage{}, "tendermint/wal/EndHeightMessage")
+	cmtjson.RegisterType(msgInfo{}, "cometbft/wal/MsgInfo")
+	cmtjson.RegisterType(timeoutInfo{}, "cometbft/wal/TimeoutInfo")
+	cmtjson.RegisterType(EndHeightMessage{}, "cometbft/wal/EndHeightMessage")
 }
 
 //--------------------------------------------------------

@@ -11,18 +11,18 @@ import (
 
 	"github.com/spf13/cobra"
 
-	"github.com/tendermint/tendermint/libs/log"
-	cmtos "github.com/tendermint/tendermint/libs/os"
+	"github.com/KYVENetwork/cometbft/v034x/libs/log"
+	cmtos "github.com/KYVENetwork/cometbft/v034x/libs/os"
 
-	abcicli "github.com/tendermint/tendermint/abci/client"
-	"github.com/tendermint/tendermint/abci/example/code"
-	"github.com/tendermint/tendermint/abci/example/counter"
-	"github.com/tendermint/tendermint/abci/example/kvstore"
-	"github.com/tendermint/tendermint/abci/server"
-	servertest "github.com/tendermint/tendermint/abci/tests/server"
-	"github.com/tendermint/tendermint/abci/types"
-	"github.com/tendermint/tendermint/abci/version"
-	"github.com/tendermint/tendermint/proto/tendermint/crypto"
+	abcicli "github.com/KYVENetwork/cometbft/v034x/abci/client"
+	"github.com/KYVENetwork/cometbft/v034x/abci/example/code"
+	"github.com/KYVENetwork/cometbft/v034x/abci/example/counter"
+	"github.com/KYVENetwork/cometbft/v034x/abci/example/kvstore"
+	"github.com/KYVENetwork/cometbft/v034x/abci/server"
+	servertest "github.com/KYVENetwork/cometbft/v034x/abci/tests/server"
+	"github.com/KYVENetwork/cometbft/v034x/abci/types"
+	"github.com/KYVENetwork/cometbft/v034x/abci/version"
+	"github.com/KYVENetwork/cometbft/v034x/proto/cometbft/v034x/crypto"
 )
 
 // client is a global variable so it can be reused by the console

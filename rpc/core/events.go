@@ -6,10 +6,10 @@ import (
 	"fmt"
 	"time"
 
-	cmtpubsub "github.com/tendermint/tendermint/libs/pubsub"
-	cmtquery "github.com/tendermint/tendermint/libs/pubsub/query"
-	ctypes "github.com/tendermint/tendermint/rpc/core/types"
-	rpctypes "github.com/tendermint/tendermint/rpc/jsonrpc/types"
+	cmtpubsub "github.com/KYVENetwork/cometbft/v034x/libs/pubsub"
+	cmtquery "github.com/KYVENetwork/cometbft/v034x/libs/pubsub/query"
+	ctypes "github.com/KYVENetwork/cometbft/v034x/rpc/core/types"
+	rpctypes "github.com/KYVENetwork/cometbft/v034x/rpc/jsonrpc/types"
 )
 
 const (

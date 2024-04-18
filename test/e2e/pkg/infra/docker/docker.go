@@ -7,8 +7,8 @@ import (
 	"strconv"
 	"text/template"
 
-	e2e "github.com/tendermint/tendermint/test/e2e/pkg"
-	"github.com/tendermint/tendermint/test/e2e/pkg/infra"
+	e2e "github.com/KYVENetwork/cometbft/v034x/test/e2e/pkg"
+	"github.com/KYVENetwork/cometbft/v034x/test/e2e/pkg/infra"
 )
 
 var _ infra.Provider = &Provider{}
@@ -89,7 +89,7 @@ services:
     - 6060
     volumes:
     - ./{{ .Name }}:/cometbft
-    - ./{{ .Name }}:/tendermint
+    - ./{{ .Name }}:/cometbft
     networks:
       {{ $.Name }}:
         ipv{{ if $.IPv6 }}6{{ else }}4{{ end}}_address: {{ .IP }}
@@ -116,7 +116,7 @@ services:
     - 6060
     volumes:
     - ./{{ .Name }}:/cometbft
-    - ./{{ .Name }}:/tendermint
+    - ./{{ .Name }}:/cometbft
     networks:
       {{ $.Name }}:
         ipv{{ if $.IPv6 }}6{{ else }}4{{ end}}_address: {{ .IP }}

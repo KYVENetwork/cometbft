@@ -1,0 +1,15 @@
+syntax = "proto3";
+package cometbft.v034x.types;
+
+option go_package = "github.com/KYVENetwork/cometbft/v034x/proto/cometbft/v034x/types";
+
+import "gogoproto/gogo.proto";
+import "cometbft/v034x/types/types.proto";
+import "cometbft/v034x/types/evidence.proto";
+
+message Block {
+  Header                        header      = 1 [(gogoproto.nullable) = false];
+  Data                          data        = 2 [(gogoproto.nullable) = false];
+  cometbft.v034x.types.EvidenceList evidence    = 3 [(gogoproto.nullable) = false];
+  Commit                        last_commit = 4;
+}

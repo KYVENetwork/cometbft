@@ -9,12 +9,12 @@ import (
 	"strings"
 	"time"
 
-	abci "github.com/tendermint/tendermint/abci/types"
-	"github.com/tendermint/tendermint/crypto/merkle"
-	"github.com/tendermint/tendermint/crypto/tmhash"
-	cmtjson "github.com/tendermint/tendermint/libs/json"
-	cmtrand "github.com/tendermint/tendermint/libs/rand"
-	cmtproto "github.com/tendermint/tendermint/proto/tendermint/types"
+	abci "github.com/KYVENetwork/cometbft/v034x/abci/types"
+	"github.com/KYVENetwork/cometbft/v034x/crypto/merkle"
+	"github.com/KYVENetwork/cometbft/v034x/crypto/tmhash"
+	cmtjson "github.com/KYVENetwork/cometbft/v034x/libs/json"
+	cmtrand "github.com/KYVENetwork/cometbft/v034x/libs/rand"
+	cmtproto "github.com/KYVENetwork/cometbft/v034x/proto/cometbft/v034x/types"
 )
 
 // Evidence represents any provable malicious activity by a validator.
@@ -318,10 +318,10 @@ func (l *LightClientAttackEvidence) Height() int64 {
 // String returns a string representation of LightClientAttackEvidence
 func (l *LightClientAttackEvidence) String() string {
 	return fmt.Sprintf(`LightClientAttackEvidence{
-		ConflictingBlock: %v, 
-		CommonHeight: %d, 
-		ByzatineValidators: %v, 
-		TotalVotingPower: %d, 
+		ConflictingBlock: %v,
+		CommonHeight: %d,
+		ByzatineValidators: %v,
+		TotalVotingPower: %d,
 		Timestamp: %v}#%X`,
 		l.ConflictingBlock.String(), l.CommonHeight, l.ByzantineValidators,
 		l.TotalVotingPower, l.Timestamp, l.Hash())
@@ -511,8 +511,8 @@ func EvidenceFromProto(evidence *cmtproto.Evidence) (Evidence, error) {
 }
 
 func init() {
-	cmtjson.RegisterType(&DuplicateVoteEvidence{}, "tendermint/DuplicateVoteEvidence")
-	cmtjson.RegisterType(&LightClientAttackEvidence{}, "tendermint/LightClientAttackEvidence")
+	cmtjson.RegisterType(&DuplicateVoteEvidence{}, "cometbft/DuplicateVoteEvidence")
+	cmtjson.RegisterType(&LightClientAttackEvidence{}, "cometbft/LightClientAttackEvidence")
 }
 
 //-------------------------------------------- ERRORS --------------------------------------

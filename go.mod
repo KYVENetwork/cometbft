@@ -1,4 +1,4 @@
-module github.com/tendermint/tendermint
+module github.com/KYVENetwork/cometbft/v034x
 
 go 1.21
 

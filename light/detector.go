@@ -7,8 +7,8 @@ import (
 	"fmt"
 	"time"
 
-	"github.com/tendermint/tendermint/light/provider"
-	"github.com/tendermint/tendermint/types"
+	"github.com/KYVENetwork/cometbft/v034x/light/provider"
+	"github.com/KYVENetwork/cometbft/v034x/types"
 )
 
 // The detector component of the light client detects and handles attacks on the light client.

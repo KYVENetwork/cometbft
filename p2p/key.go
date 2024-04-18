@@ -6,10 +6,10 @@ import (
 	"fmt"
 	"os"
 
-	"github.com/tendermint/tendermint/crypto"
-	"github.com/tendermint/tendermint/crypto/ed25519"
-	cmtjson "github.com/tendermint/tendermint/libs/json"
-	cmtos "github.com/tendermint/tendermint/libs/os"
+	"github.com/KYVENetwork/cometbft/v034x/crypto"
+	"github.com/KYVENetwork/cometbft/v034x/crypto/ed25519"
+	cmtjson "github.com/KYVENetwork/cometbft/v034x/libs/json"
+	cmtos "github.com/KYVENetwork/cometbft/v034x/libs/os"
 )
 
 // ID is a hex-encoded crypto.Address

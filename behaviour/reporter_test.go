@@ -4,8 +4,8 @@ import (
 	"sync"
 	"testing"
 
-	bh "github.com/tendermint/tendermint/behaviour"
-	"github.com/tendermint/tendermint/p2p"
+	bh "github.com/KYVENetwork/cometbft/v034x/behaviour"
+	"github.com/KYVENetwork/cometbft/v034x/p2p"
 )
 
 // TestMockReporter tests the MockReporter's ability to store reported

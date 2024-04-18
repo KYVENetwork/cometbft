@@ -266,7 +266,7 @@ For instance, an ED25519 PubKey would look like:
 
 ```json
 {
-  "type": "tendermint/PubKeyEd25519",
+  "type": "cometbft/PubKeyEd25519",
   "value": "uZ4h63OFWuQ36ZZ4Bd6NF+/w9fWUwrOncrQsackrsTk="
 }
 ```
@@ -301,4 +301,4 @@ in HSMs. It creates fixed offsets for relevant fields that need to be read in th
 
 For more details, see the [signing spec](../consensus/signing.md).
 Also, see the motivating discussion in
-[#1622](https://github.com/tendermint/tendermint/issues/1622).
+[#1622](https://github.com/KYVENetwork/cometbft/v034x/issues/1622).

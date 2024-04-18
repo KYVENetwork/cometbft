@@ -4,9 +4,9 @@ import (
 	"context"
 	"time"
 
-	"github.com/tendermint/tendermint/light/provider"
-	"github.com/tendermint/tendermint/light/provider/http"
-	"github.com/tendermint/tendermint/light/store"
+	"github.com/KYVENetwork/cometbft/v034x/light/provider"
+	"github.com/KYVENetwork/cometbft/v034x/light/provider/http"
+	"github.com/KYVENetwork/cometbft/v034x/light/store"
 )
 
 // NewHTTPClient initiates an instance of a light client using HTTP addresses

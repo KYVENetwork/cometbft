@@ -9,19 +9,19 @@ import (
 
 	"github.com/gogo/protobuf/proto"
 
-	cmtcon "github.com/tendermint/tendermint/consensus"
-	cstypes "github.com/tendermint/tendermint/consensus/types"
-	"github.com/tendermint/tendermint/libs/bits"
-	cmtevents "github.com/tendermint/tendermint/libs/events"
-	cmtjson "github.com/tendermint/tendermint/libs/json"
-	"github.com/tendermint/tendermint/libs/log"
-	cmtsync "github.com/tendermint/tendermint/libs/sync"
-	"github.com/tendermint/tendermint/p2p"
-	cmtcons "github.com/tendermint/tendermint/proto/tendermint/consensus"
-	cmtproto "github.com/tendermint/tendermint/proto/tendermint/types"
-	sm "github.com/tendermint/tendermint/state"
-	"github.com/tendermint/tendermint/types"
-	cmttime "github.com/tendermint/tendermint/types/time"
+	cmtcon "github.com/KYVENetwork/cometbft/v034x/consensus"
+	cstypes "github.com/KYVENetwork/cometbft/v034x/consensus/types"
+	"github.com/KYVENetwork/cometbft/v034x/libs/bits"
+	cmtevents "github.com/KYVENetwork/cometbft/v034x/libs/events"
+	cmtjson "github.com/KYVENetwork/cometbft/v034x/libs/json"
+	"github.com/KYVENetwork/cometbft/v034x/libs/log"
+	cmtsync "github.com/KYVENetwork/cometbft/v034x/libs/sync"
+	"github.com/KYVENetwork/cometbft/v034x/p2p"
+	cmtcons "github.com/KYVENetwork/cometbft/v034x/proto/cometbft/v034x/consensus"
+	cmtproto "github.com/KYVENetwork/cometbft/v034x/proto/cometbft/v034x/types"
+	sm "github.com/KYVENetwork/cometbft/v034x/state"
+	"github.com/KYVENetwork/cometbft/v034x/types"
+	cmttime "github.com/KYVENetwork/cometbft/v034x/types/time"
 )
 
 const (
@@ -1472,13 +1472,13 @@ func (ps *PeerState) StringIndented(indent string) string {
 //-----------------------------------------------------------------------------
 
 // func init() {
-// 	cmtjson.RegisterType(&NewRoundStepMessage{}, "tendermint/NewRoundStepMessage")
-// 	cmtjson.RegisterType(&NewValidBlockMessage{}, "tendermint/NewValidBlockMessage")
-// 	cmtjson.RegisterType(&ProposalMessage{}, "tendermint/Proposal")
-// 	cmtjson.RegisterType(&ProposalPOLMessage{}, "tendermint/ProposalPOL")
-// 	cmtjson.RegisterType(&BlockPartMessage{}, "tendermint/BlockPart")
-// 	cmtjson.RegisterType(&VoteMessage{}, "tendermint/Vote")
-// 	cmtjson.RegisterType(&HasVoteMessage{}, "tendermint/HasVote")
-// 	cmtjson.RegisterType(&VoteSetMaj23Message{}, "tendermint/VoteSetMaj23")
-// 	cmtjson.RegisterType(&VoteSetBitsMessage{}, "tendermint/VoteSetBits")
+// 	cmtjson.RegisterType(&NewRoundStepMessage{}, "cometbft/NewRoundStepMessage")
+// 	cmtjson.RegisterType(&NewValidBlockMessage{}, "cometbft/NewValidBlockMessage")
+// 	cmtjson.RegisterType(&ProposalMessage{}, "cometbft/Proposal")
+// 	cmtjson.RegisterType(&ProposalPOLMessage{}, "cometbft/ProposalPOL")
+// 	cmtjson.RegisterType(&BlockPartMessage{}, "cometbft/BlockPart")
+// 	cmtjson.RegisterType(&VoteMessage{}, "cometbft/Vote")
+// 	cmtjson.RegisterType(&HasVoteMessage{}, "cometbft/HasVote")
+// 	cmtjson.RegisterType(&VoteSetMaj23Message{}, "cometbft/VoteSetMaj23")
+// 	cmtjson.RegisterType(&VoteSetBitsMessage{}, "cometbft/VoteSetBits")
 // }

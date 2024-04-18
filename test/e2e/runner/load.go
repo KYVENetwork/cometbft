@@ -7,12 +7,12 @@ import (
 	"sync"
 	"time"
 
+	"github.com/KYVENetwork/cometbft/v034x/libs/log"
+	rpchttp "github.com/KYVENetwork/cometbft/v034x/rpc/client/http"
+	e2e "github.com/KYVENetwork/cometbft/v034x/test/e2e/pkg"
+	"github.com/KYVENetwork/cometbft/v034x/test/loadtime/payload"
+	"github.com/KYVENetwork/cometbft/v034x/types"
 	"github.com/google/uuid"
-	"github.com/tendermint/tendermint/libs/log"
-	rpchttp "github.com/tendermint/tendermint/rpc/client/http"
-	e2e "github.com/tendermint/tendermint/test/e2e/pkg"
-	"github.com/tendermint/tendermint/test/loadtime/payload"
-	"github.com/tendermint/tendermint/types"
 )
 
 const workerPoolSize = 16

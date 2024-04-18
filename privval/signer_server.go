@@ -3,10 +3,10 @@ package privval
 import (
 	"io"
 
-	"github.com/tendermint/tendermint/libs/service"
-	cmtsync "github.com/tendermint/tendermint/libs/sync"
-	privvalproto "github.com/tendermint/tendermint/proto/tendermint/privval"
-	"github.com/tendermint/tendermint/types"
+	"github.com/KYVENetwork/cometbft/v034x/libs/service"
+	cmtsync "github.com/KYVENetwork/cometbft/v034x/libs/sync"
+	privvalproto "github.com/KYVENetwork/cometbft/v034x/proto/cometbft/v034x/privval"
+	"github.com/KYVENetwork/cometbft/v034x/types"
 )
 
 // ValidationRequestHandlerFunc handles different remoteSigner requests

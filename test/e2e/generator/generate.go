@@ -8,11 +8,11 @@ import (
 	"strconv"
 	"strings"
 
+	e2e "github.com/KYVENetwork/cometbft/v034x/test/e2e/pkg"
+	"github.com/KYVENetwork/cometbft/v034x/version"
 	"github.com/Masterminds/semver/v3"
 	"github.com/go-git/go-git/v5"
 	"github.com/go-git/go-git/v5/plumbing/object"
-	e2e "github.com/tendermint/tendermint/test/e2e/pkg"
-	"github.com/tendermint/tendermint/version"
 )
 
 var (
@@ -34,7 +34,7 @@ var (
 	// The following specify randomly chosen values for testnet nodes.
 	nodeDatabases = uniformChoice{"goleveldb", "cleveldb", "rocksdb", "boltdb", "badgerdb"}
 	ipv6          = uniformChoice{false, true}
-	// FIXME: grpc disabled due to https://github.com/tendermint/tendermint/issues/5439
+	// FIXME: grpc disabled due to https://github.com/KYVENetwork/cometbft/v034x/issues/5439
 	nodeABCIProtocols    = uniformChoice{"unix", "tcp", "builtin"} // "grpc"
 	nodePrivvalProtocols = uniformChoice{"file", "unix", "tcp"}
 	// FIXME: v2 disabled due to flake
@@ -54,7 +54,7 @@ var (
 	nodeMisbehaviors = weightedChoice{
 		// FIXME: evidence disabled due to node panicking when not
 		// having sufficient block history to process evidence.
-		// https://github.com/tendermint/tendermint/issues/5617
+		// https://github.com/KYVENetwork/cometbft/v034x/issues/5617
 		// misbehaviorOption{"double-prevote"}: 1,
 		misbehaviorOption{}: 9,
 	}
@@ -350,7 +350,7 @@ func (m misbehaviorOption) atHeight(height int64) map[string]string {
 // Parses strings like "v0.34.21:1,v0.34.22:2" to represent two versions
 // ("v0.34.21" and "v0.34.22") with weights of 1 and 2 respectively.
 // Versions may be specified as cometbft/e2e-node:v0.34.27-alpha.1:1 or
-// ghcr.io/informalsystems/tendermint:v0.34.26:1.
+// ghcr.io/informalsystems/cometbft:v0.34.26:1.
 // If only the tag and weight are specified, cometbft/e2e-node is assumed.
 // Also returns the last version in the list, which will be used for updates.
 func parseWeightedVersions(s string) (weightedChoice, string, error) {

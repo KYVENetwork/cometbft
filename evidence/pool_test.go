@@ -1,6 +1,7 @@
 package evidence_test
 
 import (
+	cmtversion "github.com/KYVENetwork/cometbft/v034x/proto/cometbft/v034x/v034x/version"
 	"os"
 	"testing"
 	"time"
@@ -11,16 +12,15 @@ import (
 
 	dbm "github.com/cometbft/cometbft-db"
 
-	"github.com/tendermint/tendermint/evidence"
-	"github.com/tendermint/tendermint/evidence/mocks"
-	"github.com/tendermint/tendermint/libs/log"
-	cmtproto "github.com/tendermint/tendermint/proto/tendermint/types"
-	cmtversion "github.com/tendermint/tendermint/proto/tendermint/version"
-	sm "github.com/tendermint/tendermint/state"
-	smmocks "github.com/tendermint/tendermint/state/mocks"
-	"github.com/tendermint/tendermint/store"
-	"github.com/tendermint/tendermint/types"
-	"github.com/tendermint/tendermint/version"
+	"github.com/KYVENetwork/cometbft/v034x/evidence"
+	"github.com/KYVENetwork/cometbft/v034x/evidence/mocks"
+	"github.com/KYVENetwork/cometbft/v034x/libs/log"
+	cmtproto "github.com/KYVENetwork/cometbft/v034x/proto/cometbft/v034x/types"
+	sm "github.com/KYVENetwork/cometbft/v034x/state"
+	smmocks "github.com/KYVENetwork/cometbft/v034x/state/mocks"
+	"github.com/KYVENetwork/cometbft/v034x/store"
+	"github.com/KYVENetwork/cometbft/v034x/types"
+	"github.com/KYVENetwork/cometbft/v034x/version"
 )
 
 func TestMain(m *testing.M) {

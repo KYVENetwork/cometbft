@@ -3,8 +3,8 @@ package behaviour
 import (
 	"errors"
 
-	cmtsync "github.com/tendermint/tendermint/libs/sync"
-	"github.com/tendermint/tendermint/p2p"
+	cmtsync "github.com/KYVENetwork/cometbft/v034x/libs/sync"
+	"github.com/KYVENetwork/cometbft/v034x/p2p"
 )
 
 // Reporter provides an interface for reactors to report the behaviour

@@ -13,25 +13,25 @@ import (
 
 	"github.com/spf13/viper"
 
-	"github.com/tendermint/tendermint/abci/server"
-	"github.com/tendermint/tendermint/config"
-	"github.com/tendermint/tendermint/crypto/ed25519"
-	cmtflags "github.com/tendermint/tendermint/libs/cli/flags"
-	"github.com/tendermint/tendermint/libs/log"
-	cmtnet "github.com/tendermint/tendermint/libs/net"
-	"github.com/tendermint/tendermint/light"
-	lproxy "github.com/tendermint/tendermint/light/proxy"
-	lrpc "github.com/tendermint/tendermint/light/rpc"
-	dbs "github.com/tendermint/tendermint/light/store/db"
-	"github.com/tendermint/tendermint/node"
-	"github.com/tendermint/tendermint/p2p"
-	"github.com/tendermint/tendermint/privval"
-	"github.com/tendermint/tendermint/proxy"
-	rpcserver "github.com/tendermint/tendermint/rpc/jsonrpc/server"
-	"github.com/tendermint/tendermint/test/e2e/app"
-	e2e "github.com/tendermint/tendermint/test/e2e/pkg"
-	mcs "github.com/tendermint/tendermint/test/maverick/consensus"
-	maverick "github.com/tendermint/tendermint/test/maverick/node"
+	"github.com/KYVENetwork/cometbft/v034x/abci/server"
+	"github.com/KYVENetwork/cometbft/v034x/config"
+	"github.com/KYVENetwork/cometbft/v034x/crypto/ed25519"
+	cmtflags "github.com/KYVENetwork/cometbft/v034x/libs/cli/flags"
+	"github.com/KYVENetwork/cometbft/v034x/libs/log"
+	cmtnet "github.com/KYVENetwork/cometbft/v034x/libs/net"
+	"github.com/KYVENetwork/cometbft/v034x/light"
+	lproxy "github.com/KYVENetwork/cometbft/v034x/light/proxy"
+	lrpc "github.com/KYVENetwork/cometbft/v034x/light/rpc"
+	dbs "github.com/KYVENetwork/cometbft/v034x/light/store/db"
+	"github.com/KYVENetwork/cometbft/v034x/node"
+	"github.com/KYVENetwork/cometbft/v034x/p2p"
+	"github.com/KYVENetwork/cometbft/v034x/privval"
+	"github.com/KYVENetwork/cometbft/v034x/proxy"
+	rpcserver "github.com/KYVENetwork/cometbft/v034x/rpc/jsonrpc/server"
+	"github.com/KYVENetwork/cometbft/v034x/test/e2e/app"
+	e2e "github.com/KYVENetwork/cometbft/v034x/test/e2e/pkg"
+	mcs "github.com/KYVENetwork/cometbft/v034x/test/maverick/consensus"
+	maverick "github.com/KYVENetwork/cometbft/v034x/test/maverick/node"
 )
 
 var logger = log.NewTMLogger(log.NewSyncWriter(os.Stdout))
@@ -182,7 +182,7 @@ func startLightClient(cfg *Config) error {
 	rpccfg.MaxOpenConnections = cmtcfg.RPC.MaxOpenConnections
 	// If necessary adjust global WriteTimeout to ensure it's greater than
 	// TimeoutBroadcastTxCommit.
-	// See https://github.com/tendermint/tendermint/issues/3435
+	// See https://github.com/KYVENetwork/cometbft/v034x/issues/3435
 	if rpccfg.WriteTimeout <= cmtcfg.RPC.TimeoutBroadcastTxCommit {
 		rpccfg.WriteTimeout = cmtcfg.RPC.TimeoutBroadcastTxCommit + 1*time.Second
 	}

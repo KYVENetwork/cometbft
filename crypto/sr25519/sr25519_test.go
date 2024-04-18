@@ -6,8 +6,8 @@ import (
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 
-	"github.com/tendermint/tendermint/crypto"
-	"github.com/tendermint/tendermint/crypto/sr25519"
+	"github.com/KYVENetwork/cometbft/v034x/crypto"
+	"github.com/KYVENetwork/cometbft/v034x/crypto/sr25519"
 )
 
 func TestSignAndValidateSr25519(t *testing.T) {
@@ -24,7 +24,7 @@ func TestSignAndValidateSr25519(t *testing.T) {
 	assert.True(t, pubKey.VerifySignature(msg, sig))
 
 	// Mutate the signature, just one bit.
-	// TODO: Replace this with a much better fuzzer, tendermint/ed25519/issues/10
+	// TODO: Replace this with a much better fuzzer, cometbft/ed25519/issues/10
 	sig[7] ^= byte(0x01)
 
 	assert.False(t, pubKey.VerifySignature(msg, sig))

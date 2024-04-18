@@ -4,10 +4,10 @@ import (
 	"fmt"
 	"math/big"
 
+	"github.com/KYVENetwork/cometbft/v034x/libs/pubsub/query"
+	"github.com/KYVENetwork/cometbft/v034x/state/indexer"
+	"github.com/KYVENetwork/cometbft/v034x/types"
 	"github.com/google/orderedcode"
-	"github.com/tendermint/tendermint/libs/pubsub/query"
-	"github.com/tendermint/tendermint/state/indexer"
-	"github.com/tendermint/tendermint/types"
 )
 
 type HeightInfo struct {

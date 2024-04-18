@@ -9,11 +9,11 @@ import (
 
 	dbm "github.com/cometbft/cometbft-db"
 
-	"github.com/tendermint/tendermint/abci/example/code"
-	"github.com/tendermint/tendermint/abci/types"
-	cryptoenc "github.com/tendermint/tendermint/crypto/encoding"
-	"github.com/tendermint/tendermint/libs/log"
-	pc "github.com/tendermint/tendermint/proto/tendermint/crypto"
+	"github.com/KYVENetwork/cometbft/v034x/abci/example/code"
+	"github.com/KYVENetwork/cometbft/v034x/abci/types"
+	cryptoenc "github.com/KYVENetwork/cometbft/v034x/crypto/encoding"
+	"github.com/KYVENetwork/cometbft/v034x/libs/log"
+	pc "github.com/KYVENetwork/cometbft/v034x/proto/cometbft/v034x/crypto"
 )
 
 const (

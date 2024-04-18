@@ -7,9 +7,9 @@ import (
 	"github.com/google/uuid"
 	"google.golang.org/protobuf/types/known/timestamppb"
 
-	"github.com/tendermint/tendermint/test/loadtime/payload"
-	"github.com/tendermint/tendermint/test/loadtime/report"
-	"github.com/tendermint/tendermint/types"
+	"github.com/KYVENetwork/cometbft/v034x/test/loadtime/payload"
+	"github.com/KYVENetwork/cometbft/v034x/test/loadtime/report"
+	"github.com/KYVENetwork/cometbft/v034x/types"
 )
 
 type mockBlockStore struct {

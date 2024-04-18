@@ -13,7 +13,7 @@ v0.34.24, or Informal Systems' public fork), you can upgrade to CometBFT
 v0.34.27 by replacing your dependency in your `go.mod` file:
 
 ```bash
-go mod edit -replace github.com/tendermint/tendermint=github.com/cometbft/cometbft@v0.34.27
+go mod edit -replace github.com/cometbft/cometbft=github.com/cometbft/cometbft@v0.34.27
 ```
 
 We make use of the original module URL in order to minimize the impact of
@@ -41,6 +41,6 @@ subsequent major release of CometBFT.
 If you are building CometBFT from scratch, please note that it must be compiled
 using Go 1.21 or higher.
 
-[v03424]: https://github.com/tendermint/tendermint/releases/tag/v0.34.24
+[v03424]: https://github.com/KYVENetwork/cometbft/v034x/releases/tag/v0.34.24
 [v03425]: https://github.com/informalsystems/tendermint/releases/tag/v0.34.25
 [v03426]: https://github.com/informalsystems/tendermint/releases/tag/v0.34.26
