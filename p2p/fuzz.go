@@ -4,9 +4,9 @@ import (
 	"net"
 	"time"
 
-	"github.com/cometbft/cometbft/config"
-	cmtrand "github.com/cometbft/cometbft/libs/rand"
-	cmtsync "github.com/cometbft/cometbft/libs/sync"
+	"github.com/KYVENetwork/cometbft/v38/config"
+	cmtrand "github.com/KYVENetwork/cometbft/v38/libs/rand"
+	cmtsync "github.com/KYVENetwork/cometbft/v38/libs/sync"
 )
 
 // FuzzedConnection wraps any net.Conn and depending on the mode either delays

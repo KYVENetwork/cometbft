@@ -3,10 +3,10 @@ package mempool
 import (
 	"errors"
 
-	abci "github.com/cometbft/cometbft/abci/types"
-	"github.com/cometbft/cometbft/libs/service"
-	"github.com/cometbft/cometbft/p2p"
-	"github.com/cometbft/cometbft/types"
+	abci "github.com/KYVENetwork/cometbft/v38/abci/types"
+	"github.com/KYVENetwork/cometbft/v38/libs/service"
+	"github.com/KYVENetwork/cometbft/v38/p2p"
+	"github.com/KYVENetwork/cometbft/v38/types"
 )
 
 // NopMempool is a mempool that does nothing.

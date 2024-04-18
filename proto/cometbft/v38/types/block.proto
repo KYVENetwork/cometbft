@@ -1,0 +1,15 @@
+syntax = "proto3";
+package cometbft.v38.types;
+
+option go_package = "github.com/KYVENetwork/cometbft/v38/proto/tendermint/types";
+
+import "gogoproto/gogo.proto";
+import "cometbft/v38/types/types.proto";
+import "cometbft/v38/types/evidence.proto";
+
+message Block {
+  Header                        header      = 1 [(gogoproto.nullable) = false];
+  Data                          data        = 2 [(gogoproto.nullable) = false];
+  cometbft.v38.types.EvidenceList evidence    = 3 [(gogoproto.nullable) = false];
+  Commit                        last_commit = 4;
+}

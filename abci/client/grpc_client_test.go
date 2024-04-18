@@ -14,11 +14,11 @@ import (
 
 	"golang.org/x/net/context"
 
-	"github.com/cometbft/cometbft/libs/log"
-	cmtnet "github.com/cometbft/cometbft/libs/net"
+	"github.com/KYVENetwork/cometbft/v38/libs/log"
+	cmtnet "github.com/KYVENetwork/cometbft/v38/libs/net"
 
-	abciserver "github.com/cometbft/cometbft/abci/server"
-	"github.com/cometbft/cometbft/abci/types"
+	abciserver "github.com/KYVENetwork/cometbft/v38/abci/server"
+	"github.com/KYVENetwork/cometbft/v38/abci/types"
 )
 
 func TestGRPC(t *testing.T) {

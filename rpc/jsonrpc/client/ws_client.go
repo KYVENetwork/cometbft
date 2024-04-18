@@ -13,11 +13,11 @@ import (
 	"github.com/gorilla/websocket"
 	metrics "github.com/rcrowley/go-metrics"
 
-	"github.com/cometbft/cometbft/libs/log"
-	cmtrand "github.com/cometbft/cometbft/libs/rand"
-	"github.com/cometbft/cometbft/libs/service"
-	cmtsync "github.com/cometbft/cometbft/libs/sync"
-	types "github.com/cometbft/cometbft/rpc/jsonrpc/types"
+	"github.com/KYVENetwork/cometbft/v38/libs/log"
+	cmtrand "github.com/KYVENetwork/cometbft/v38/libs/rand"
+	"github.com/KYVENetwork/cometbft/v38/libs/service"
+	cmtsync "github.com/KYVENetwork/cometbft/v38/libs/sync"
+	types "github.com/KYVENetwork/cometbft/v38/rpc/jsonrpc/types"
 )
 
 const (

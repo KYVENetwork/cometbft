@@ -3,7 +3,7 @@ package mempool
 import (
 	"testing"
 
-	"github.com/cometbft/cometbft/types"
+	"github.com/KYVENetwork/cometbft/v38/types"
 	"github.com/stretchr/testify/assert"
 )
 

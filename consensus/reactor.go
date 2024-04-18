@@ -7,18 +7,18 @@ import (
 	"sync"
 	"time"
 
-	cstypes "github.com/cometbft/cometbft/consensus/types"
-	"github.com/cometbft/cometbft/libs/bits"
-	cmtevents "github.com/cometbft/cometbft/libs/events"
-	cmtjson "github.com/cometbft/cometbft/libs/json"
-	"github.com/cometbft/cometbft/libs/log"
-	cmtsync "github.com/cometbft/cometbft/libs/sync"
-	"github.com/cometbft/cometbft/p2p"
-	cmtcons "github.com/cometbft/cometbft/proto/tendermint/consensus"
-	cmtproto "github.com/cometbft/cometbft/proto/tendermint/types"
-	sm "github.com/cometbft/cometbft/state"
-	"github.com/cometbft/cometbft/types"
-	cmttime "github.com/cometbft/cometbft/types/time"
+	cstypes "github.com/KYVENetwork/cometbft/v38/consensus/types"
+	"github.com/KYVENetwork/cometbft/v38/libs/bits"
+	cmtevents "github.com/KYVENetwork/cometbft/v38/libs/events"
+	cmtjson "github.com/KYVENetwork/cometbft/v38/libs/json"
+	"github.com/KYVENetwork/cometbft/v38/libs/log"
+	cmtsync "github.com/KYVENetwork/cometbft/v38/libs/sync"
+	"github.com/KYVENetwork/cometbft/v38/p2p"
+	cmtcons "github.com/KYVENetwork/cometbft/v38/proto/cometbft/v38/consensus"
+	cmtproto "github.com/KYVENetwork/cometbft/v38/proto/cometbft/v38/types"
+	sm "github.com/KYVENetwork/cometbft/v38/state"
+	"github.com/KYVENetwork/cometbft/v38/types"
+	cmttime "github.com/KYVENetwork/cometbft/v38/types/time"
 )
 
 const (
@@ -1507,15 +1507,15 @@ type Message interface {
 }
 
 func init() {
-	cmtjson.RegisterType(&NewRoundStepMessage{}, "tendermint/NewRoundStepMessage")
-	cmtjson.RegisterType(&NewValidBlockMessage{}, "tendermint/NewValidBlockMessage")
-	cmtjson.RegisterType(&ProposalMessage{}, "tendermint/Proposal")
-	cmtjson.RegisterType(&ProposalPOLMessage{}, "tendermint/ProposalPOL")
-	cmtjson.RegisterType(&BlockPartMessage{}, "tendermint/BlockPart")
-	cmtjson.RegisterType(&VoteMessage{}, "tendermint/Vote")
-	cmtjson.RegisterType(&HasVoteMessage{}, "tendermint/HasVote")
-	cmtjson.RegisterType(&VoteSetMaj23Message{}, "tendermint/VoteSetMaj23")
-	cmtjson.RegisterType(&VoteSetBitsMessage{}, "tendermint/VoteSetBits")
+	cmtjson.RegisterType(&NewRoundStepMessage{}, "cometbft/v38/NewRoundStepMessage")
+	cmtjson.RegisterType(&NewValidBlockMessage{}, "cometbft/v38/NewValidBlockMessage")
+	cmtjson.RegisterType(&ProposalMessage{}, "cometbft/v38/Proposal")
+	cmtjson.RegisterType(&ProposalPOLMessage{}, "cometbft/v38/ProposalPOL")
+	cmtjson.RegisterType(&BlockPartMessage{}, "cometbft/v38/BlockPart")
+	cmtjson.RegisterType(&VoteMessage{}, "cometbft/v38/Vote")
+	cmtjson.RegisterType(&HasVoteMessage{}, "cometbft/v38/HasVote")
+	cmtjson.RegisterType(&VoteSetMaj23Message{}, "cometbft/v38/VoteSetMaj23")
+	cmtjson.RegisterType(&VoteSetBitsMessage{}, "cometbft/v38/VoteSetBits")
 }
 
 //-------------------------------------

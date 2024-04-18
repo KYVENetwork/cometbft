@@ -4,7 +4,7 @@ import (
 	"sync"
 	"sync/atomic"
 
-	"github.com/cometbft/cometbft/types"
+	"github.com/KYVENetwork/cometbft/v38/types"
 )
 
 // mempoolTx is an entry in the mempool

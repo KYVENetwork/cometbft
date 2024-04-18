@@ -3,8 +3,8 @@ package mempool
 import (
 	"fmt"
 
-	cmtsync "github.com/cometbft/cometbft/libs/sync"
-	"github.com/cometbft/cometbft/p2p"
+	cmtsync "github.com/KYVENetwork/cometbft/v38/libs/sync"
+	"github.com/KYVENetwork/cometbft/v38/p2p"
 )
 
 type mempoolIDs struct {

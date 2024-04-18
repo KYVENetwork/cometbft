@@ -3,8 +3,8 @@ package consensus
 import (
 	"time"
 
-	"github.com/cometbft/cometbft/libs/log"
-	"github.com/cometbft/cometbft/libs/service"
+	"github.com/KYVENetwork/cometbft/v38/libs/log"
+	"github.com/KYVENetwork/cometbft/v38/libs/service"
 )
 
 var (

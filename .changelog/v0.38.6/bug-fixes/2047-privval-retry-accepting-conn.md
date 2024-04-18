@@ -1,1 +1,1 @@
-- `[privval]` Retry accepting a connection ([\#2047](https://github.com/cometbft/cometbft/pull/2047))
+- `[privval]` Retry accepting a connection ([\#2047](https://github.com/KYVENetwork/cometbft/v38/pull/2047))

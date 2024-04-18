@@ -6,8 +6,8 @@ import (
 	"fmt"
 	"os"
 
-	cmtjson "github.com/cometbft/cometbft/libs/json"
-	coregrpc "github.com/cometbft/cometbft/rpc/grpc"
+	cmtjson "github.com/KYVENetwork/cometbft/v38/libs/json"
+	coregrpc "github.com/KYVENetwork/cometbft/v38/rpc/grpc"
 )
 
 var grpcAddr = "tcp://localhost:36656"

@@ -1,5 +1,5 @@
 .PHONY: docs
-REPO:=github.com/cometbft/cometbft/libs/events
+REPO:=github.com/KYVENetwork/cometbft/v38/libs/events
 
 docs:
 	@go get github.com/davecheney/godoc2md

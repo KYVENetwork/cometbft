@@ -7,7 +7,7 @@ import (
 
 	"github.com/oasisprotocol/curve25519-voi/primitives/sr25519"
 
-	"github.com/cometbft/cometbft/crypto"
+	"github.com/KYVENetwork/cometbft/v38/crypto"
 )
 
 var (

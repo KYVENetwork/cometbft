@@ -7,9 +7,9 @@ import (
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 
-	"github.com/cometbft/cometbft/crypto/ed25519"
-	cmtjson "github.com/cometbft/cometbft/libs/json"
-	cmttime "github.com/cometbft/cometbft/types/time"
+	"github.com/KYVENetwork/cometbft/v38/crypto/ed25519"
+	cmtjson "github.com/KYVENetwork/cometbft/v38/libs/json"
+	cmttime "github.com/KYVENetwork/cometbft/v38/types/time"
 )
 
 func TestGenesisBad(t *testing.T) {
@@ -28,7 +28,7 @@ func TestGenesisBad(t *testing.T) {
 		[]byte(
 			`{"validators":[` +
 				`{"pub_key":{` +
-				`"type":"tendermint/PubKeyEd25519","value":"AT/+aaL1eB0477Mud9JMm8Sh8BIvOYlPGC9KkIUmFaE="` +
+				`"type":"cometbft/v38/PubKeyEd25519","value":"AT/+aaL1eB0477Mud9JMm8Sh8BIvOYlPGC9KkIUmFaE="` +
 				`},"power":"10","name":""}` +
 				`]}`,
 		),
@@ -36,7 +36,7 @@ func TestGenesisBad(t *testing.T) {
 		[]byte(
 			`{"chain_id": "Lorem ipsum dolor sit amet, consectetuer adipiscing", "validators": [` +
 				`{"pub_key":{` +
-				`"type":"tendermint/PubKeyEd25519","value":"AT/+aaL1eB0477Mud9JMm8Sh8BIvOYlPGC9KkIUmFaE="` +
+				`"type":"cometbft/v38/PubKeyEd25519","value":"AT/+aaL1eB0477Mud9JMm8Sh8BIvOYlPGC9KkIUmFaE="` +
 				`},"power":"10","name":""}` +
 				`]}`,
 		),
@@ -44,7 +44,7 @@ func TestGenesisBad(t *testing.T) {
 		[]byte(
 			`{"chain_id":"mychain", "validators":[` +
 				`{"address": "A", "pub_key":{` +
-				`"type":"tendermint/PubKeyEd25519","value":"AT/+aaL1eB0477Mud9JMm8Sh8BIvOYlPGC9KkIUmFaE="` +
+				`"type":"cometbft/v38/PubKeyEd25519","value":"AT/+aaL1eB0477Mud9JMm8Sh8BIvOYlPGC9KkIUmFaE="` +
 				`},"power":"10","name":""}` +
 				`]}`,
 		),
@@ -65,7 +65,7 @@ func TestGenesisGood(t *testing.T) {
 			"initial_height": "1000",
 			"consensus_params": null,
 			"validators": [{
-				"pub_key":{"type":"tendermint/PubKeyEd25519","value":"AT/+aaL1eB0477Mud9JMm8Sh8BIvOYlPGC9KkIUmFaE="},
+				"pub_key":{"type":"cometbft/v38/PubKeyEd25519","value":"AT/+aaL1eB0477Mud9JMm8Sh8BIvOYlPGC9KkIUmFaE="},
 				"power":"10",
 				"name":""
 			}],

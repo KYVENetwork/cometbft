@@ -12,13 +12,13 @@ import (
 
 	dbm "github.com/cometbft/cometbft-db"
 
-	cfg "github.com/cometbft/cometbft/config"
-	"github.com/cometbft/cometbft/libs/log"
-	cmtos "github.com/cometbft/cometbft/libs/os"
-	"github.com/cometbft/cometbft/proxy"
-	sm "github.com/cometbft/cometbft/state"
-	"github.com/cometbft/cometbft/store"
-	"github.com/cometbft/cometbft/types"
+	cfg "github.com/KYVENetwork/cometbft/v38/config"
+	"github.com/KYVENetwork/cometbft/v38/libs/log"
+	cmtos "github.com/KYVENetwork/cometbft/v38/libs/os"
+	"github.com/KYVENetwork/cometbft/v38/proxy"
+	sm "github.com/KYVENetwork/cometbft/v38/state"
+	"github.com/KYVENetwork/cometbft/v38/store"
+	"github.com/KYVENetwork/cometbft/v38/types"
 )
 
 const (

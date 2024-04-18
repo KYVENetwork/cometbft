@@ -8,7 +8,7 @@ import (
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 
-	"github.com/cometbft/cometbft/libs/json"
+	"github.com/KYVENetwork/cometbft/v38/libs/json"
 )
 
 func TestUnmarshal(t *testing.T) {

@@ -6,6 +6,7 @@ import (
 
 	"crypto/rand"
 	"encoding/hex"
+	cmtversion "github.com/KYVENetwork/cometbft/v38/proto/cometbft/v38/v38/version"
 	"math"
 	"os"
 	"reflect"
@@ -16,16 +17,15 @@ import (
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 
-	"github.com/cometbft/cometbft/crypto"
-	"github.com/cometbft/cometbft/crypto/merkle"
-	"github.com/cometbft/cometbft/crypto/tmhash"
-	"github.com/cometbft/cometbft/libs/bits"
-	"github.com/cometbft/cometbft/libs/bytes"
-	cmtrand "github.com/cometbft/cometbft/libs/rand"
-	cmtproto "github.com/cometbft/cometbft/proto/tendermint/types"
-	cmtversion "github.com/cometbft/cometbft/proto/tendermint/version"
-	cmttime "github.com/cometbft/cometbft/types/time"
-	"github.com/cometbft/cometbft/version"
+	"github.com/KYVENetwork/cometbft/v38/crypto"
+	"github.com/KYVENetwork/cometbft/v38/crypto/merkle"
+	"github.com/KYVENetwork/cometbft/v38/crypto/tmhash"
+	"github.com/KYVENetwork/cometbft/v38/libs/bits"
+	"github.com/KYVENetwork/cometbft/v38/libs/bytes"
+	cmtrand "github.com/KYVENetwork/cometbft/v38/libs/rand"
+	cmtproto "github.com/KYVENetwork/cometbft/v38/proto/cometbft/v38/types"
+	cmttime "github.com/KYVENetwork/cometbft/v38/types/time"
+	"github.com/KYVENetwork/cometbft/v38/version"
 )
 
 func TestMain(m *testing.M) {

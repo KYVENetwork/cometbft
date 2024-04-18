@@ -4,10 +4,10 @@ import (
 	"context"
 	"errors"
 
-	"github.com/cometbft/cometbft/libs/log"
-	"github.com/cometbft/cometbft/libs/pubsub/query"
-	"github.com/cometbft/cometbft/state/indexer"
-	"github.com/cometbft/cometbft/types"
+	"github.com/KYVENetwork/cometbft/v38/libs/log"
+	"github.com/KYVENetwork/cometbft/v38/libs/pubsub/query"
+	"github.com/KYVENetwork/cometbft/v38/state/indexer"
+	"github.com/KYVENetwork/cometbft/v38/types"
 )
 
 var _ indexer.BlockIndexer = (*BlockerIndexer)(nil)

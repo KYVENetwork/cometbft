@@ -14,7 +14,7 @@ import (
 	"strings"
 	"time"
 
-	tmp2p "github.com/cometbft/cometbft/proto/tendermint/p2p"
+	tmp2p "github.com/KYVENetwork/cometbft/v38/proto/cometbft/v38/p2p"
 )
 
 // EmptyNetAddress defines the string representation of an empty NetAddress

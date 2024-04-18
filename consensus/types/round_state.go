@@ -5,8 +5,8 @@ import (
 	"fmt"
 	"time"
 
-	"github.com/cometbft/cometbft/libs/bytes"
-	"github.com/cometbft/cometbft/types"
+	"github.com/KYVENetwork/cometbft/v38/libs/bytes"
+	"github.com/KYVENetwork/cometbft/v38/types"
 )
 
 //-----------------------------------------------------------------------------

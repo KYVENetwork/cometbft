@@ -3,11 +3,11 @@ package consensus
 import (
 	"context"
 
-	abci "github.com/cometbft/cometbft/abci/types"
-	"github.com/cometbft/cometbft/libs/clist"
-	mempl "github.com/cometbft/cometbft/mempool"
-	"github.com/cometbft/cometbft/proxy"
-	"github.com/cometbft/cometbft/types"
+	abci "github.com/KYVENetwork/cometbft/v38/abci/types"
+	"github.com/KYVENetwork/cometbft/v38/libs/clist"
+	mempl "github.com/KYVENetwork/cometbft/v38/mempool"
+	"github.com/KYVENetwork/cometbft/v38/proxy"
+	"github.com/KYVENetwork/cometbft/v38/types"
 )
 
 //-----------------------------------------------------------------------------

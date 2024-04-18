@@ -8,8 +8,8 @@ import (
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 
-	"github.com/cometbft/cometbft/crypto"
-	"github.com/cometbft/cometbft/crypto/sr25519"
+	"github.com/KYVENetwork/cometbft/v38/crypto"
+	"github.com/KYVENetwork/cometbft/v38/crypto/sr25519"
 )
 
 func TestSignAndValidateSr25519(t *testing.T) {

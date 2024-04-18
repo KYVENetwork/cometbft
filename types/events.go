@@ -3,10 +3,10 @@ package types
 import (
 	"fmt"
 
-	abci "github.com/cometbft/cometbft/abci/types"
-	cmtjson "github.com/cometbft/cometbft/libs/json"
-	cmtpubsub "github.com/cometbft/cometbft/libs/pubsub"
-	cmtquery "github.com/cometbft/cometbft/libs/pubsub/query"
+	abci "github.com/KYVENetwork/cometbft/v38/abci/types"
+	cmtjson "github.com/KYVENetwork/cometbft/v38/libs/json"
+	cmtpubsub "github.com/KYVENetwork/cometbft/v38/libs/pubsub"
+	cmtquery "github.com/KYVENetwork/cometbft/v38/libs/pubsub/query"
 )
 
 // Reserved event types (alphabetically sorted).
@@ -47,17 +47,17 @@ type TMEventData interface {
 }
 
 func init() {
-	cmtjson.RegisterType(EventDataNewBlock{}, "tendermint/event/NewBlock")
-	cmtjson.RegisterType(EventDataNewBlockHeader{}, "tendermint/event/NewBlockHeader")
-	cmtjson.RegisterType(EventDataNewBlockEvents{}, "tendermint/event/NewBlockEvents")
-	cmtjson.RegisterType(EventDataNewEvidence{}, "tendermint/event/NewEvidence")
-	cmtjson.RegisterType(EventDataTx{}, "tendermint/event/Tx")
-	cmtjson.RegisterType(EventDataRoundState{}, "tendermint/event/RoundState")
-	cmtjson.RegisterType(EventDataNewRound{}, "tendermint/event/NewRound")
-	cmtjson.RegisterType(EventDataCompleteProposal{}, "tendermint/event/CompleteProposal")
-	cmtjson.RegisterType(EventDataVote{}, "tendermint/event/Vote")
-	cmtjson.RegisterType(EventDataValidatorSetUpdates{}, "tendermint/event/ValidatorSetUpdates")
-	cmtjson.RegisterType(EventDataString(""), "tendermint/event/ProposalString")
+	cmtjson.RegisterType(EventDataNewBlock{}, "cometbft/v38/event/NewBlock")
+	cmtjson.RegisterType(EventDataNewBlockHeader{}, "cometbft/v38/event/NewBlockHeader")
+	cmtjson.RegisterType(EventDataNewBlockEvents{}, "cometbft/v38/event/NewBlockEvents")
+	cmtjson.RegisterType(EventDataNewEvidence{}, "cometbft/v38/event/NewEvidence")
+	cmtjson.RegisterType(EventDataTx{}, "cometbft/v38/event/Tx")
+	cmtjson.RegisterType(EventDataRoundState{}, "cometbft/v38/event/RoundState")
+	cmtjson.RegisterType(EventDataNewRound{}, "cometbft/v38/event/NewRound")
+	cmtjson.RegisterType(EventDataCompleteProposal{}, "cometbft/v38/event/CompleteProposal")
+	cmtjson.RegisterType(EventDataVote{}, "cometbft/v38/event/Vote")
+	cmtjson.RegisterType(EventDataValidatorSetUpdates{}, "cometbft/v38/event/ValidatorSetUpdates")
+	cmtjson.RegisterType(EventDataString(""), "cometbft/v38/event/ProposalString")
 }
 
 // Most event messages are basic types (a block, a transaction)

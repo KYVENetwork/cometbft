@@ -1,0 +1,14 @@
+syntax = "proto3";
+package cometbft.v38.mempool;
+
+option go_package = "github.com/KYVENetwork/cometbft/v38/proto/tendermint/mempool";
+
+message Txs {
+  repeated bytes txs = 1;
+}
+
+message Message {
+  oneof sum {
+    Txs txs = 1;
+  }
+}

@@ -4,8 +4,8 @@ import (
 	"fmt"
 	"time"
 
-	cmtproto "github.com/cometbft/cometbft/proto/tendermint/types"
-	"github.com/cometbft/cometbft/types"
+	cmtproto "github.com/KYVENetwork/cometbft/v38/proto/cometbft/v38/types"
+	"github.com/KYVENetwork/cometbft/v38/types"
 )
 
 func MakeCommitFromVoteSet(blockID types.BlockID, voteSet *types.VoteSet, validators []types.PrivValidator, now time.Time) (*types.Commit, error) {

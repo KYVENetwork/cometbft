@@ -15,17 +15,17 @@ import (
 
 	dbm "github.com/cometbft/cometbft-db"
 
-	cfg "github.com/cometbft/cometbft/config"
-	"github.com/cometbft/cometbft/crypto"
-	"github.com/cometbft/cometbft/crypto/tmhash"
-	"github.com/cometbft/cometbft/evidence"
-	"github.com/cometbft/cometbft/evidence/mocks"
-	"github.com/cometbft/cometbft/libs/log"
-	"github.com/cometbft/cometbft/p2p"
-	p2pmocks "github.com/cometbft/cometbft/p2p/mocks"
-	cmtproto "github.com/cometbft/cometbft/proto/tendermint/types"
-	sm "github.com/cometbft/cometbft/state"
-	"github.com/cometbft/cometbft/types"
+	cfg "github.com/KYVENetwork/cometbft/v38/config"
+	"github.com/KYVENetwork/cometbft/v38/crypto"
+	"github.com/KYVENetwork/cometbft/v38/crypto/tmhash"
+	"github.com/KYVENetwork/cometbft/v38/evidence"
+	"github.com/KYVENetwork/cometbft/v38/evidence/mocks"
+	"github.com/KYVENetwork/cometbft/v38/libs/log"
+	"github.com/KYVENetwork/cometbft/v38/p2p"
+	p2pmocks "github.com/KYVENetwork/cometbft/v38/p2p/mocks"
+	cmtproto "github.com/KYVENetwork/cometbft/v38/proto/cometbft/v38/types"
+	sm "github.com/KYVENetwork/cometbft/v38/state"
+	"github.com/KYVENetwork/cometbft/v38/types"
 )
 
 var (

@@ -9,11 +9,11 @@ import (
 
 	dbm "github.com/cometbft/cometbft-db"
 
-	abci "github.com/cometbft/cometbft/abci/types"
-	ctypes "github.com/cometbft/cometbft/rpc/core/types"
-	rpctypes "github.com/cometbft/cometbft/rpc/jsonrpc/types"
-	sm "github.com/cometbft/cometbft/state"
-	"github.com/cometbft/cometbft/state/mocks"
+	abci "github.com/KYVENetwork/cometbft/v38/abci/types"
+	ctypes "github.com/KYVENetwork/cometbft/v38/rpc/core/types"
+	rpctypes "github.com/KYVENetwork/cometbft/v38/rpc/jsonrpc/types"
+	sm "github.com/KYVENetwork/cometbft/v38/state"
+	"github.com/KYVENetwork/cometbft/v38/state/mocks"
 )
 
 func TestBlockchainInfo(t *testing.T) {

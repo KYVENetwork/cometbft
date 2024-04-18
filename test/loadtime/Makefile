@@ -1,4 +1,4 @@
-GOMOD="github.com/cometbft/cometbft/test/loadtime"
+GOMOD="github.com/KYVENetwork/cometbft/v38/test/loadtime"
 OUTPUT?=build/
 
 build:

@@ -9,16 +9,16 @@ import (
 
 	"github.com/cosmos/gogoproto/proto"
 
-	"github.com/cometbft/cometbft/crypto"
-	"github.com/cometbft/cometbft/crypto/ed25519"
-	cmtbytes "github.com/cometbft/cometbft/libs/bytes"
-	cmtjson "github.com/cometbft/cometbft/libs/json"
-	cmtos "github.com/cometbft/cometbft/libs/os"
-	"github.com/cometbft/cometbft/libs/protoio"
-	"github.com/cometbft/cometbft/libs/tempfile"
-	cmtproto "github.com/cometbft/cometbft/proto/tendermint/types"
-	"github.com/cometbft/cometbft/types"
-	cmttime "github.com/cometbft/cometbft/types/time"
+	"github.com/KYVENetwork/cometbft/v38/crypto"
+	"github.com/KYVENetwork/cometbft/v38/crypto/ed25519"
+	cmtbytes "github.com/KYVENetwork/cometbft/v38/libs/bytes"
+	cmtjson "github.com/KYVENetwork/cometbft/v38/libs/json"
+	cmtos "github.com/KYVENetwork/cometbft/v38/libs/os"
+	"github.com/KYVENetwork/cometbft/v38/libs/protoio"
+	"github.com/KYVENetwork/cometbft/v38/libs/tempfile"
+	cmtproto "github.com/KYVENetwork/cometbft/v38/proto/cometbft/v38/types"
+	"github.com/KYVENetwork/cometbft/v38/types"
+	cmttime "github.com/KYVENetwork/cometbft/v38/types/time"
 )
 
 // TODO: type ?

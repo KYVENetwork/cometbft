@@ -39,7 +39,7 @@ cometbft testnet --help
 
 The `genesis.json` file in `$CMTHOME/config/` defines the initial
 CometBFT state upon genesis of the blockchain ([see
-definition](https://github.com/cometbft/cometbft/blob/v0.38.x/types/genesis.go)).
+definition](https://github.com/KYVENetwork/cometbft/v38/blob/v0.38.x/types/genesis.go)).
 
 #### Fields
 
@@ -49,7 +49,7 @@ definition](https://github.com/cometbft/cometbft/blob/v0.38.x/types/genesis.go))
   chain IDs, you will have a bad time. The ChainID must be less than 50 symbols.
 - `initial_height`: Height at which CometBFT should begin at. If a blockchain is conducting a network upgrade,
     starting from the stopped height brings uniqueness to previous heights.
-- `consensus_params` ([see spec](https://github.com/cometbft/cometbft/blob/v0.38.x/spec/core/data_structures.md#consensusparams))
+- `consensus_params` ([see spec](https://github.com/KYVENetwork/cometbft/v38/blob/v0.38.x/spec/core/data_structures.md#consensusparams))
     - `block`
         - `max_bytes`: Max block size, in bytes.
         - `max_gas`: Max gas per block.
@@ -71,7 +71,7 @@ definition](https://github.com/cometbft/cometbft/blob/v0.38.x/types/genesis.go))
   application will initialize the validator set upon `InitChain`.
     - `pub_key`: The first element specifies the key type,
     using the declared `PubKeyName` for the adopted
-    [key type](https://github.com/cometbft/cometbft/blob/v0.38.x/crypto/ed25519/ed25519.go#L36).
+    [key type](https://github.com/KYVENetwork/cometbft/v38/blob/v0.38.x/crypto/ed25519/ed25519.go#L36).
     The second element are the pubkey bytes.
     - `power`: The validator's voting power.
     - `name`: Name of the validator (optional).
@@ -110,7 +110,7 @@ definition](https://github.com/cometbft/cometbft/blob/v0.38.x/types/genesis.go))
     {
       "address": "B547AB87E79F75A4A3198C57A8C2FDAF8628CB47",
       "pub_key": {
-        "type": "tendermint/PubKeyEd25519",
+        "type": "cometbft/v38/PubKeyEd25519",
         "value": "P/V6GHuZrb8rs/k1oBorxc6vyXMlnzhJmv7LmjELDys="
       },
       "power": "10",
@@ -352,7 +352,7 @@ When `cometbft init` is run, both a `genesis.json` and
     {
       "pub_key" : {
         "value" : "h3hk+QE8c6QLTySp8TcfzclJw/BG79ziGB/pIA+DfPE=",
-        "type" : "tendermint/PubKeyEd25519"
+        "type" : "cometbft/v38/PubKeyEd25519"
       },
       "power" : 10,
       "name" : ""
@@ -373,12 +373,12 @@ And the `priv_validator_key.json`:
   "address" : "B788DEDE4F50AD8BC9462DE76741CCAFF87D51E2",
   "pub_key" : {
     "value" : "h3hk+QE8c6QLTySp8TcfzclJw/BG79ziGB/pIA+DfPE=",
-    "type" : "tendermint/PubKeyEd25519"
+    "type" : "cometbft/v38/PubKeyEd25519"
   },
   "last_height" : "0",
   "priv_key" : {
     "value" : "JPivl82x+LfVkp8i3ztoTjY6c6GJ4pBxQexErOCyhwqHeGT5ATxzpAtPJKnxNx/NyUnD8Ebv3OIYH+kgD4N88Q==",
-    "type" : "tendermint/PrivKeyEd25519"
+    "type" : "cometbft/v38/PrivKeyEd25519"
   }
 }
 ```
@@ -498,11 +498,11 @@ Now we can update our genesis file. For instance, if the new
   "address" : "5AF49D2A2D4F5AD4C7C8C4CC2FB020131E9C4902",
   "pub_key" : {
     "value" : "l9X9+fjkeBzDfPGbUM7AMIRE6uJN78zN5+lk5OYotek=",
-    "type" : "tendermint/PubKeyEd25519"
+    "type" : "cometbft/v38/PubKeyEd25519"
   },
   "priv_key" : {
     "value" : "EDJY9W6zlAw+su6ITgTKg2nTZcHAH1NMTW5iwlgmNDuX1f35+OR4HMN88ZtQzsAwhETq4k3vzM3n6WTk5ii16Q==",
-    "type" : "tendermint/PrivKeyEd25519"
+    "type" : "cometbft/v38/PrivKeyEd25519"
   },
   "last_step" : 0,
   "last_round" : "0",
@@ -518,7 +518,7 @@ then the new `genesis.json` will be:
     {
       "pub_key" : {
         "value" : "h3hk+QE8c6QLTySp8TcfzclJw/BG79ziGB/pIA+DfPE=",
-        "type" : "tendermint/PubKeyEd25519"
+        "type" : "cometbft/v38/PubKeyEd25519"
       },
       "power" : 10,
       "name" : ""
@@ -565,7 +565,7 @@ library will deny making connections to peers with the same IP address.
 ### Upgrading
 
 See the
-[UPGRADING.md](https://github.com/cometbft/cometbft/blob/v0.38.x/UPGRADING.md)
+[UPGRADING.md](https://github.com/KYVENetwork/cometbft/v38/blob/v0.38.x/UPGRADING.md)
 guide. You may need to reset your chain between major breaking releases.
 Although, we expect CometBFT to have fewer breaking releases in the future
 (especially after 1.0 release).

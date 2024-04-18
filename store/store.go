@@ -9,12 +9,12 @@ import (
 
 	dbm "github.com/cometbft/cometbft-db"
 
-	"github.com/cometbft/cometbft/evidence"
-	cmtsync "github.com/cometbft/cometbft/libs/sync"
-	cmtstore "github.com/cometbft/cometbft/proto/tendermint/store"
-	cmtproto "github.com/cometbft/cometbft/proto/tendermint/types"
-	sm "github.com/cometbft/cometbft/state"
-	"github.com/cometbft/cometbft/types"
+	"github.com/KYVENetwork/cometbft/v38/evidence"
+	cmtsync "github.com/KYVENetwork/cometbft/v38/libs/sync"
+	cmtstore "github.com/KYVENetwork/cometbft/v38/proto/cometbft/v38/store"
+	cmtproto "github.com/KYVENetwork/cometbft/v38/proto/cometbft/v38/types"
+	sm "github.com/KYVENetwork/cometbft/v38/state"
+	"github.com/KYVENetwork/cometbft/v38/types"
 )
 
 // Assuming the length of a block part is 64kB (`types.BlockPartSizeBytes`),

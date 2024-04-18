@@ -10,18 +10,18 @@ import (
 
 	dbm "github.com/cometbft/cometbft-db"
 
-	abci "github.com/cometbft/cometbft/abci/types"
-	"github.com/cometbft/cometbft/crypto/ed25519"
-	"github.com/cometbft/cometbft/crypto/tmhash"
-	"github.com/cometbft/cometbft/internal/test"
-	"github.com/cometbft/cometbft/libs/log"
-	mpmocks "github.com/cometbft/cometbft/mempool/mocks"
-	cmtproto "github.com/cometbft/cometbft/proto/tendermint/types"
-	sm "github.com/cometbft/cometbft/state"
-	"github.com/cometbft/cometbft/state/mocks"
-	"github.com/cometbft/cometbft/store"
-	"github.com/cometbft/cometbft/types"
-	cmttime "github.com/cometbft/cometbft/types/time"
+	abci "github.com/KYVENetwork/cometbft/v38/abci/types"
+	"github.com/KYVENetwork/cometbft/v38/crypto/ed25519"
+	"github.com/KYVENetwork/cometbft/v38/crypto/tmhash"
+	"github.com/KYVENetwork/cometbft/v38/internal/test"
+	"github.com/KYVENetwork/cometbft/v38/libs/log"
+	mpmocks "github.com/KYVENetwork/cometbft/v38/mempool/mocks"
+	cmtproto "github.com/KYVENetwork/cometbft/v38/proto/cometbft/v38/types"
+	sm "github.com/KYVENetwork/cometbft/v38/state"
+	"github.com/KYVENetwork/cometbft/v38/state/mocks"
+	"github.com/KYVENetwork/cometbft/v38/store"
+	"github.com/KYVENetwork/cometbft/v38/types"
+	cmttime "github.com/KYVENetwork/cometbft/v38/types/time"
 )
 
 const validationTestsStopHeight int64 = 10

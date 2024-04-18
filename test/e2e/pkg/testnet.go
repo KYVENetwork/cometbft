@@ -14,11 +14,11 @@ import (
 	"text/template"
 	"time"
 
-	"github.com/cometbft/cometbft/crypto"
-	"github.com/cometbft/cometbft/crypto/ed25519"
-	"github.com/cometbft/cometbft/crypto/secp256k1"
-	rpchttp "github.com/cometbft/cometbft/rpc/client/http"
-	"github.com/cometbft/cometbft/types"
+	"github.com/KYVENetwork/cometbft/v38/crypto"
+	"github.com/KYVENetwork/cometbft/v38/crypto/ed25519"
+	"github.com/KYVENetwork/cometbft/v38/crypto/secp256k1"
+	rpchttp "github.com/KYVENetwork/cometbft/v38/rpc/client/http"
+	"github.com/KYVENetwork/cometbft/v38/types"
 
 	_ "embed"
 )

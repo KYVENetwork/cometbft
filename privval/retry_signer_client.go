@@ -4,9 +4,9 @@ import (
 	"fmt"
 	"time"
 
-	"github.com/cometbft/cometbft/crypto"
-	cmtproto "github.com/cometbft/cometbft/proto/tendermint/types"
-	"github.com/cometbft/cometbft/types"
+	"github.com/KYVENetwork/cometbft/v38/crypto"
+	cmtproto "github.com/KYVENetwork/cometbft/v38/proto/cometbft/v38/types"
+	"github.com/KYVENetwork/cometbft/v38/types"
 )
 
 // RetrySignerClient wraps SignerClient adding retry for each operation (except

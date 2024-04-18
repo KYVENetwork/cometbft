@@ -2,12 +2,12 @@ package types
 
 import (
 	"fmt"
+	cmtversion "github.com/KYVENetwork/cometbft/v38/proto/cometbft/v38/version"
 	"testing"
 	"time"
 
-	cmtproto "github.com/cometbft/cometbft/proto/tendermint/types"
-	cmtversion "github.com/cometbft/cometbft/proto/tendermint/version"
-	"github.com/cometbft/cometbft/version"
+	cmtproto "github.com/KYVENetwork/cometbft/v38/proto/cometbft/v38/types"
+	"github.com/KYVENetwork/cometbft/v38/version"
 	"github.com/stretchr/testify/require"
 )
 

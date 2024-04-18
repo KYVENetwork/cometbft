@@ -8,7 +8,7 @@ import (
 	"syscall"
 	"time"
 
-	cmtrand "github.com/cometbft/cometbft/libs/rand"
+	cmtrand "github.com/KYVENetwork/cometbft/v38/libs/rand"
 )
 
 /* AutoFile usage

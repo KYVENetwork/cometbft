@@ -11,8 +11,8 @@ import (
 
 	dbm "github.com/cometbft/cometbft-db"
 
-	"github.com/cometbft/cometbft/store"
-	"github.com/cometbft/cometbft/test/loadtime/report"
+	"github.com/KYVENetwork/cometbft/v38/store"
+	"github.com/KYVENetwork/cometbft/v38/test/loadtime/report"
 )
 
 var (

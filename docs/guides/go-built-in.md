@@ -122,7 +122,7 @@ go build
 CometBFT communicates with the application through the Application
 BlockChain Interface (ABCI). The messages exchanged through the interface are
 defined in the ABCI [protobuf
-file](https://github.com/cometbft/cometbft/blob/v0.38.x/proto/tendermint/abci/types.proto).
+file](https://github.com/KYVENetwork/cometbft/v38/blob/v0.38.x/proto/tendermint/abci/types.proto).
 
 We begin by creating the basic scaffolding for an ABCI application by
 creating a new type, `KVStoreApplication`, which implements the
@@ -134,7 +134,7 @@ Create a file called `app.go` with the following contents:
 package main
 
 import (
-    abcitypes "github.com/cometbft/cometbft/abci/types"
+    abcitypes "github.com/KYVENetwork/cometbft/v38/abci/types"
     "context"
 )
 
@@ -261,7 +261,7 @@ Next, update the `import` stanza at the top to include the Badger library:
 ```go
 import(
     "github.com/dgraph-io/badger/v3"
-    abcitypes "github.com/cometbft/cometbft/abci/types"
+    abcitypes "github.com/KYVENetwork/cometbft/v38/abci/types"
 )
 ```
 
@@ -325,7 +325,7 @@ import(
     "bytes"
 
     "github.com/dgraph-io/badger/v3"
-    abcitypes "github.com/cometbft/cometbft/abci/types"
+    abcitypes "github.com/KYVENetwork/cometbft/v38/abci/types"
 )
 ```
 
@@ -407,7 +407,7 @@ import (
     "log"
 
     "github.com/dgraph-io/badger/v3"
-    abcitypes "github.com/cometbft/cometbft/abci/types"
+    abcitypes "github.com/KYVENetwork/cometbft/v38/abci/types"
 )
 ```
 
@@ -502,9 +502,9 @@ package main
 import (
     "flag"
     "fmt"
-    "github.com/cometbft/cometbft/p2p"
-    "github.com/cometbft/cometbft/privval"
-    "github.com/cometbft/cometbft/proxy"
+    "github.com/KYVENetwork/cometbft/v38/p2p"
+    "github.com/KYVENetwork/cometbft/v38/privval"
+    "github.com/KYVENetwork/cometbft/v38/proxy"
     "log"
     "os"
     "os/signal"
@@ -513,10 +513,10 @@ import (
 
     "github.com/dgraph-io/badger/v3"
     "github.com/spf13/viper"
-    cfg "github.com/cometbft/cometbft/config"
-    cmtflags "github.com/cometbft/cometbft/libs/cli/flags"
-    cmtlog "github.com/cometbft/cometbft/libs/log"
-    nm "github.com/cometbft/cometbft/node"
+    cfg "github.com/KYVENetwork/cometbft/v38/config"
+    cmtflags "github.com/KYVENetwork/cometbft/v38/libs/cli/flags"
+    cmtlog "github.com/KYVENetwork/cometbft/v38/libs/log"
+    nm "github.com/KYVENetwork/cometbft/v38/node"
 )
 
 var homeDir string
@@ -702,12 +702,12 @@ signal.Notify(c, os.Interrupt, syscall.SIGTERM)
 
 Our application is almost ready to run, but first we'll need to populate the CometBFT configuration files.
 The following command will create a `cometbft-home` directory in your project and add a basic set of configuration files in `cometbft-home/config/`.
-For more information on what these files contain see [the configuration documentation](https://github.com/cometbft/cometbft/blob/v0.38.x/docs/core/configuration.md).
+For more information on what these files contain see [the configuration documentation](https://github.com/KYVENetwork/cometbft/v38/blob/v0.38.x/docs/core/configuration.md).
 
 From the root of your project, run:
 
 ```bash
-go run github.com/cometbft/cometbft/cmd/cometbft@v0.38.0 init --home /tmp/cometbft-home
+go run github.com/KYVENetwork/cometbft/v38/cmd/cometbft@v0.38.0 init --home /tmp/cometbft-home
 ```
 
 You should see an output similar to the following:
@@ -795,4 +795,4 @@ echo "cm9ja3M=" | base64 -d
 
 ## Outro
 
-Hope you could run everything smoothly. If you have any difficulties running through this tutorial, reach out to us via [discord](https://discord.com/invite/cosmosnetwork) or open a new [issue](https://github.com/cometbft/cometbft/issues/new/choose) on Github.
+Hope you could run everything smoothly. If you have any difficulties running through this tutorial, reach out to us via [discord](https://discord.com/invite/cosmosnetwork) or open a new [issue](https://github.com/KYVENetwork/cometbft/v38/issues/new/choose) on Github.

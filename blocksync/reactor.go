@@ -6,12 +6,12 @@ import (
 	"sync"
 	"time"
 
-	"github.com/cometbft/cometbft/libs/log"
-	"github.com/cometbft/cometbft/p2p"
-	bcproto "github.com/cometbft/cometbft/proto/tendermint/blocksync"
-	sm "github.com/cometbft/cometbft/state"
-	"github.com/cometbft/cometbft/store"
-	"github.com/cometbft/cometbft/types"
+	"github.com/KYVENetwork/cometbft/v38/libs/log"
+	"github.com/KYVENetwork/cometbft/v38/p2p"
+	bcproto "github.com/KYVENetwork/cometbft/v38/proto/cometbft/v38/blocksync"
+	sm "github.com/KYVENetwork/cometbft/v38/state"
+	"github.com/KYVENetwork/cometbft/v38/store"
+	"github.com/KYVENetwork/cometbft/v38/types"
 )
 
 const (

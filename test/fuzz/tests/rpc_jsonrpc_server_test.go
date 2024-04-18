@@ -10,9 +10,9 @@ import (
 	"net/http/httptest"
 	"testing"
 
-	"github.com/cometbft/cometbft/libs/log"
-	rpcserver "github.com/cometbft/cometbft/rpc/jsonrpc/server"
-	rpctypes "github.com/cometbft/cometbft/rpc/jsonrpc/types"
+	"github.com/KYVENetwork/cometbft/v38/libs/log"
+	rpcserver "github.com/KYVENetwork/cometbft/v38/rpc/jsonrpc/server"
+	rpctypes "github.com/KYVENetwork/cometbft/v38/rpc/jsonrpc/types"
 )
 
 func FuzzRPCJSONRPCServer(f *testing.F) {

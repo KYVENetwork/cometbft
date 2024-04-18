@@ -4,8 +4,8 @@ import (
 	"net"
 	"time"
 
-	"github.com/cometbft/cometbft/crypto/ed25519"
-	p2pconn "github.com/cometbft/cometbft/p2p/conn"
+	"github.com/KYVENetwork/cometbft/v38/crypto/ed25519"
+	p2pconn "github.com/KYVENetwork/cometbft/v38/p2p/conn"
 )
 
 const (

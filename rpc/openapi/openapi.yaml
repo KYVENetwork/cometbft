@@ -65,7 +65,7 @@ info:
   version: "v0.38.x"
   license:
     name: Apache 2.0
-    url: https://github.com/cometbft/cometbft/blob/v0.38.x/LICENSE
+    url: https://github.com/KYVENetwork/cometbft/v38/blob/v0.38.x/LICENSE
 servers:
   - url: https://rpc.cosmos.directory/cosmoshub
     description: Interact with the CometBFT RPC from a public node in the Cosmos registry
@@ -750,7 +750,7 @@ paths:
           description: |
             Complete consensus state.
 
-            See https://pkg.go.dev/github.com/cometbft/cometbft/types?tab=doc#Vote.String for Vote string description.
+            See https://pkg.go.dev/github.com/KYVENetwork/cometbft/v38/types?tab=doc#Vote.String for Vote string description.
           content:
             application/json:
               schema:
@@ -1178,7 +1178,7 @@ components:
       properties:
         type:
           type: string
-          example: "tendermint/PubKeyEd25519"
+          example: "cometbft/v38/PubKeyEd25519"
         value:
           type: string
           example: "A6DoBUypNtUAyEHWtQ9bFjfNg8Bo9CrnkUGl6k6OHN4="
@@ -1608,7 +1608,7 @@ components:
                     properties:
                       type:
                         type: string
-                        example: "tendermint/PubKeyEd25519"
+                        example: "cometbft/v38/PubKeyEd25519"
                       value:
                         type: string
                         example: "9tK9IT+FPdf2qm+5c2qaxi10sWP+3erWTKgftn2PaQM="
@@ -1767,7 +1767,7 @@ components:
                         properties:
                           type:
                             type: string
-                            example: "tendermint/PubKeyEd25519"
+                            example: "cometbft/v38/PubKeyEd25519"
                           value:
                             type: string
                             example: "cOQZvh/h9ZioSeUMZB/1Vy1Xo5x2sjrVjlE/qHnYifM="
@@ -2720,7 +2720,7 @@ components:
           properties:
             type:
               type: string
-              example: "tendermint/PubKeyEd25519"
+              example: "cometbft/v38/PubKeyEd25519"
             value:
               type: string
               example: "9tK9IT+FPdf2qm+5c2qaxi10sWP+3erWTKgftn2PaQM="

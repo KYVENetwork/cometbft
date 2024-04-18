@@ -3,7 +3,7 @@
 package mocks
 
 import (
-	types "github.com/cometbft/cometbft/types"
+	types "github.com/KYVENetwork/cometbft/v38/types"
 	mock "github.com/stretchr/testify/mock"
 )
 

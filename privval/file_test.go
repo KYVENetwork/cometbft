@@ -10,13 +10,13 @@ import (
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 
-	"github.com/cometbft/cometbft/crypto/ed25519"
-	"github.com/cometbft/cometbft/crypto/tmhash"
-	cmtjson "github.com/cometbft/cometbft/libs/json"
-	cmtrand "github.com/cometbft/cometbft/libs/rand"
-	cmtproto "github.com/cometbft/cometbft/proto/tendermint/types"
-	"github.com/cometbft/cometbft/types"
-	cmttime "github.com/cometbft/cometbft/types/time"
+	"github.com/KYVENetwork/cometbft/v38/crypto/ed25519"
+	"github.com/KYVENetwork/cometbft/v38/crypto/tmhash"
+	cmtjson "github.com/KYVENetwork/cometbft/v38/libs/json"
+	cmtrand "github.com/KYVENetwork/cometbft/v38/libs/rand"
+	cmtproto "github.com/KYVENetwork/cometbft/v38/proto/cometbft/v38/types"
+	"github.com/KYVENetwork/cometbft/v38/types"
+	cmttime "github.com/KYVENetwork/cometbft/v38/types/time"
 )
 
 func TestGenLoadValidator(t *testing.T) {
@@ -119,11 +119,11 @@ func TestUnmarshalValidatorKey(t *testing.T) {
 	serialized := fmt.Sprintf(`{
   "address": "%s",
   "pub_key": {
-    "type": "tendermint/PubKeyEd25519",
+    "type": "cometbft/v38/PubKeyEd25519",
     "value": "%s"
   },
   "priv_key": {
-    "type": "tendermint/PrivKeyEd25519",
+    "type": "cometbft/v38/PrivKeyEd25519",
     "value": "%s"
   }
 }`, addr, pubB64, privB64)

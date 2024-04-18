@@ -2,6 +2,7 @@ package statesync
 
 import (
 	"errors"
+	cmtversion "github.com/KYVENetwork/cometbft/v38/proto/cometbft/v38/v38/version"
 	"testing"
 	"time"
 
@@ -9,21 +10,20 @@ import (
 	"github.com/stretchr/testify/mock"
 	"github.com/stretchr/testify/require"
 
-	abci "github.com/cometbft/cometbft/abci/types"
-	"github.com/cometbft/cometbft/config"
-	"github.com/cometbft/cometbft/libs/log"
-	cmtsync "github.com/cometbft/cometbft/libs/sync"
-	"github.com/cometbft/cometbft/p2p"
-	p2pmocks "github.com/cometbft/cometbft/p2p/mocks"
-	cmtstate "github.com/cometbft/cometbft/proto/tendermint/state"
-	ssproto "github.com/cometbft/cometbft/proto/tendermint/statesync"
-	cmtversion "github.com/cometbft/cometbft/proto/tendermint/version"
-	"github.com/cometbft/cometbft/proxy"
-	proxymocks "github.com/cometbft/cometbft/proxy/mocks"
-	sm "github.com/cometbft/cometbft/state"
-	"github.com/cometbft/cometbft/statesync/mocks"
-	"github.com/cometbft/cometbft/types"
-	"github.com/cometbft/cometbft/version"
+	abci "github.com/KYVENetwork/cometbft/v38/abci/types"
+	"github.com/KYVENetwork/cometbft/v38/config"
+	"github.com/KYVENetwork/cometbft/v38/libs/log"
+	cmtsync "github.com/KYVENetwork/cometbft/v38/libs/sync"
+	"github.com/KYVENetwork/cometbft/v38/p2p"
+	p2pmocks "github.com/KYVENetwork/cometbft/v38/p2p/mocks"
+	cmtstate "github.com/KYVENetwork/cometbft/v38/proto/cometbft/v38/state"
+	ssproto "github.com/KYVENetwork/cometbft/v38/proto/cometbft/v38/statesync"
+	"github.com/KYVENetwork/cometbft/v38/proxy"
+	proxymocks "github.com/KYVENetwork/cometbft/v38/proxy/mocks"
+	sm "github.com/KYVENetwork/cometbft/v38/state"
+	"github.com/KYVENetwork/cometbft/v38/statesync/mocks"
+	"github.com/KYVENetwork/cometbft/v38/types"
+	"github.com/KYVENetwork/cometbft/v38/version"
 )
 
 const testAppVersion = 9

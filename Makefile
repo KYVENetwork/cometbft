@@ -136,8 +136,8 @@ endif
 proto-gen: check-proto-deps
 	@echo "Generating Protobuf files"
 	@go run github.com/bufbuild/buf/cmd/buf generate
-	@mv ./proto/tendermint/abci/types.pb.go ./abci/types/
-	@cp ./proto/tendermint/rpc/grpc/types.pb.go ./rpc/grpc
+	@mv ./proto/cometbft/v38/abci/types.pb.go ./abci/types/
+	@cp ./proto/cometbft/v38/rpc/grpc/types.pb.go ./rpc/grpc
 .PHONY: proto-gen
 
 # These targets are provided for convenience and are intended for local
@@ -208,7 +208,7 @@ go.sum: go.mod
 draw_deps:
 	@# requires brew install graphviz or apt-get install graphviz
 	go get github.com/RobotsAndPencils/goviz
-	@goviz -i github.com/cometbft/cometbft/cmd/cometbft -d 3 | dot -Tpng -o dependency-graph.png
+	@goviz -i github.com/KYVENetwork/cometbft/v38/cmd/cometbft -d 3 | dot -Tpng -o dependency-graph.png
 .PHONY: draw_deps
 
 get_deps_bin_size:
@@ -253,7 +253,7 @@ lint:
 	@go run github.com/golangci/golangci-lint/cmd/golangci-lint@latest run
 .PHONY: lint
 
-# https://github.com/cometbft/cometbft/pull/1925#issuecomment-1875127862
+# https://github.com/KYVENetwork/cometbft/v38/pull/1925#issuecomment-1875127862
 # Revisit using lint-format after CometBFT v1 release and/or after 2024-06-01.
 #lint-format:
 #	@go run github.com/golangci/golangci-lint/cmd/golangci-lint@latest run --fix

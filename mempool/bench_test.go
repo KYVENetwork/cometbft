@@ -5,8 +5,8 @@ import (
 	"sync/atomic"
 	"testing"
 
-	"github.com/cometbft/cometbft/abci/example/kvstore"
-	"github.com/cometbft/cometbft/proxy"
+	"github.com/KYVENetwork/cometbft/v38/abci/example/kvstore"
+	"github.com/KYVENetwork/cometbft/v38/proxy"
 )
 
 func BenchmarkReap(b *testing.B) {

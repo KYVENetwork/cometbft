@@ -9,9 +9,9 @@ import (
 	"reflect"
 	"sort"
 
-	cmtjson "github.com/cometbft/cometbft/libs/json"
-	"github.com/cometbft/cometbft/libs/log"
-	types "github.com/cometbft/cometbft/rpc/jsonrpc/types"
+	cmtjson "github.com/KYVENetwork/cometbft/v38/libs/json"
+	"github.com/KYVENetwork/cometbft/v38/libs/log"
+	types "github.com/KYVENetwork/cometbft/v38/rpc/jsonrpc/types"
 )
 
 // HTTP + JSON handler

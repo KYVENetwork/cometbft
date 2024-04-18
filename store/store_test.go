@@ -3,6 +3,7 @@ package store
 import (
 	"encoding/json"
 	"fmt"
+	cmtversion "github.com/KYVENetwork/cometbft/v38/proto/cometbft/v38/v38/version"
 	"os"
 	"runtime/debug"
 	"strings"
@@ -15,15 +16,14 @@ import (
 
 	dbm "github.com/cometbft/cometbft-db"
 
-	"github.com/cometbft/cometbft/crypto"
-	"github.com/cometbft/cometbft/internal/test"
-	cmtrand "github.com/cometbft/cometbft/libs/rand"
-	cmtstore "github.com/cometbft/cometbft/proto/tendermint/store"
-	cmtversion "github.com/cometbft/cometbft/proto/tendermint/version"
-	sm "github.com/cometbft/cometbft/state"
-	"github.com/cometbft/cometbft/types"
-	cmttime "github.com/cometbft/cometbft/types/time"
-	"github.com/cometbft/cometbft/version"
+	"github.com/KYVENetwork/cometbft/v38/crypto"
+	"github.com/KYVENetwork/cometbft/v38/internal/test"
+	cmtrand "github.com/KYVENetwork/cometbft/v38/libs/rand"
+	cmtstore "github.com/KYVENetwork/cometbft/v38/proto/cometbft/v38/store"
+	sm "github.com/KYVENetwork/cometbft/v38/state"
+	"github.com/KYVENetwork/cometbft/v38/types"
+	cmttime "github.com/KYVENetwork/cometbft/v38/types/time"
+	"github.com/KYVENetwork/cometbft/v38/version"
 )
 
 // A cleanupFunc cleans up any config / test files created for a particular

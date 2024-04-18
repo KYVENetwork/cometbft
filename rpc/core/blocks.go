@@ -5,13 +5,13 @@ import (
 	"fmt"
 	"sort"
 
-	"github.com/cometbft/cometbft/libs/bytes"
-	cmtmath "github.com/cometbft/cometbft/libs/math"
-	cmtquery "github.com/cometbft/cometbft/libs/pubsub/query"
-	ctypes "github.com/cometbft/cometbft/rpc/core/types"
-	rpctypes "github.com/cometbft/cometbft/rpc/jsonrpc/types"
-	blockidxnull "github.com/cometbft/cometbft/state/indexer/block/null"
-	"github.com/cometbft/cometbft/types"
+	"github.com/KYVENetwork/cometbft/v38/libs/bytes"
+	cmtmath "github.com/KYVENetwork/cometbft/v38/libs/math"
+	cmtquery "github.com/KYVENetwork/cometbft/v38/libs/pubsub/query"
+	ctypes "github.com/KYVENetwork/cometbft/v38/rpc/core/types"
+	rpctypes "github.com/KYVENetwork/cometbft/v38/rpc/jsonrpc/types"
+	blockidxnull "github.com/KYVENetwork/cometbft/v38/state/indexer/block/null"
+	"github.com/KYVENetwork/cometbft/v38/types"
 )
 
 // BlockchainInfo gets block headers for minHeight <= height <= maxHeight.

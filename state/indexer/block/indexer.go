@@ -6,14 +6,14 @@ import (
 
 	dbm "github.com/cometbft/cometbft-db"
 
-	"github.com/cometbft/cometbft/config"
-	"github.com/cometbft/cometbft/state/indexer"
-	blockidxkv "github.com/cometbft/cometbft/state/indexer/block/kv"
-	blockidxnull "github.com/cometbft/cometbft/state/indexer/block/null"
-	"github.com/cometbft/cometbft/state/indexer/sink/psql"
-	"github.com/cometbft/cometbft/state/txindex"
-	"github.com/cometbft/cometbft/state/txindex/kv"
-	"github.com/cometbft/cometbft/state/txindex/null"
+	"github.com/KYVENetwork/cometbft/v38/config"
+	"github.com/KYVENetwork/cometbft/v38/state/indexer"
+	blockidxkv "github.com/KYVENetwork/cometbft/v38/state/indexer/block/kv"
+	blockidxnull "github.com/KYVENetwork/cometbft/v38/state/indexer/block/null"
+	"github.com/KYVENetwork/cometbft/v38/state/indexer/sink/psql"
+	"github.com/KYVENetwork/cometbft/v38/state/txindex"
+	"github.com/KYVENetwork/cometbft/v38/state/txindex/kv"
+	"github.com/KYVENetwork/cometbft/v38/state/txindex/null"
 )
 
 // EventSinksFromConfig constructs a slice of indexer.EventSink using the provided

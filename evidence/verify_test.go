@@ -2,6 +2,7 @@ package evidence_test
 
 import (
 	"bytes"
+	cmtversion "github.com/KYVENetwork/cometbft/v38/proto/cometbft/v38/v38/version"
 	"testing"
 	"time"
 
@@ -10,18 +11,17 @@ import (
 
 	dbm "github.com/cometbft/cometbft-db"
 
-	"github.com/cometbft/cometbft/crypto"
-	"github.com/cometbft/cometbft/crypto/tmhash"
-	"github.com/cometbft/cometbft/evidence"
-	"github.com/cometbft/cometbft/evidence/mocks"
-	"github.com/cometbft/cometbft/internal/test"
-	"github.com/cometbft/cometbft/libs/log"
-	cmtproto "github.com/cometbft/cometbft/proto/tendermint/types"
-	cmtversion "github.com/cometbft/cometbft/proto/tendermint/version"
-	sm "github.com/cometbft/cometbft/state"
-	smmocks "github.com/cometbft/cometbft/state/mocks"
-	"github.com/cometbft/cometbft/types"
-	"github.com/cometbft/cometbft/version"
+	"github.com/KYVENetwork/cometbft/v38/crypto"
+	"github.com/KYVENetwork/cometbft/v38/crypto/tmhash"
+	"github.com/KYVENetwork/cometbft/v38/evidence"
+	"github.com/KYVENetwork/cometbft/v38/evidence/mocks"
+	"github.com/KYVENetwork/cometbft/v38/internal/test"
+	"github.com/KYVENetwork/cometbft/v38/libs/log"
+	cmtproto "github.com/KYVENetwork/cometbft/v38/proto/cometbft/v38/types"
+	sm "github.com/KYVENetwork/cometbft/v38/state"
+	smmocks "github.com/KYVENetwork/cometbft/v38/state/mocks"
+	"github.com/KYVENetwork/cometbft/v38/types"
+	"github.com/KYVENetwork/cometbft/v38/version"
 )
 
 const (

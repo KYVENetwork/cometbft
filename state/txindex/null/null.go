@@ -4,11 +4,11 @@ import (
 	"context"
 	"errors"
 
-	"github.com/cometbft/cometbft/libs/log"
+	"github.com/KYVENetwork/cometbft/v38/libs/log"
 
-	abci "github.com/cometbft/cometbft/abci/types"
-	"github.com/cometbft/cometbft/libs/pubsub/query"
-	"github.com/cometbft/cometbft/state/txindex"
+	abci "github.com/KYVENetwork/cometbft/v38/abci/types"
+	"github.com/KYVENetwork/cometbft/v38/libs/pubsub/query"
+	"github.com/KYVENetwork/cometbft/v38/state/txindex"
 )
 
 var _ txindex.TxIndexer = (*TxIndex)(nil)

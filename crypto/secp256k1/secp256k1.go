@@ -12,14 +12,14 @@ import (
 	"github.com/btcsuite/btcd/btcec/v2/ecdsa"
 	"golang.org/x/crypto/ripemd160" //nolint: staticcheck // necessary for Bitcoin address format
 
-	"github.com/cometbft/cometbft/crypto"
-	cmtjson "github.com/cometbft/cometbft/libs/json"
+	"github.com/KYVENetwork/cometbft/v38/crypto"
+	cmtjson "github.com/KYVENetwork/cometbft/v38/libs/json"
 )
 
 // -------------------------------------
 const (
-	PrivKeyName = "tendermint/PrivKeySecp256k1"
-	PubKeyName  = "tendermint/PubKeySecp256k1"
+	PrivKeyName = "cometbft/v38/PrivKeySecp256k1"
+	PubKeyName  = "cometbft/v38/PubKeySecp256k1"
 
 	KeyType     = "secp256k1"
 	PrivKeySize = 32

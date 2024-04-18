@@ -1,6 +1,7 @@
 package db
 
 import (
+	cmtversion "github.com/KYVENetwork/cometbft/v38/proto/cometbft/v38/v38/version"
 	"sync"
 	"testing"
 	"time"
@@ -10,12 +11,11 @@ import (
 
 	dbm "github.com/cometbft/cometbft-db"
 
-	"github.com/cometbft/cometbft/crypto"
-	"github.com/cometbft/cometbft/crypto/tmhash"
-	cmtrand "github.com/cometbft/cometbft/libs/rand"
-	cmtversion "github.com/cometbft/cometbft/proto/tendermint/version"
-	"github.com/cometbft/cometbft/types"
-	"github.com/cometbft/cometbft/version"
+	"github.com/KYVENetwork/cometbft/v38/crypto"
+	"github.com/KYVENetwork/cometbft/v38/crypto/tmhash"
+	cmtrand "github.com/KYVENetwork/cometbft/v38/libs/rand"
+	"github.com/KYVENetwork/cometbft/v38/types"
+	"github.com/KYVENetwork/cometbft/v38/version"
 )
 
 func TestLast_FirstLightBlockHeight(t *testing.T) {

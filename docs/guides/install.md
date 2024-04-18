@@ -9,18 +9,18 @@ order: 3
 Install the latest version of CometBFT's Go package:
 
 ```sh
-go install github.com/cometbft/cometbft/cmd/cometbft@latest
+go install github.com/KYVENetwork/cometbft/v38/cmd/cometbft@latest
 ```
 
 Install a specific version of CometBFT's Go package:
 
 ```sh
-go install github.com/cometbft/cometbft/cmd/cometbft@v0.38
+go install github.com/KYVENetwork/cometbft/v38/cmd/cometbft@v0.38
 ```
 
 ## From Binary
 
-To download pre-built binaries, see the [releases page](https://github.com/cometbft/cometbft/releases).
+To download pre-built binaries, see the [releases page](https://github.com/KYVENetwork/cometbft/v38/releases).
 
 ## From Source
 
