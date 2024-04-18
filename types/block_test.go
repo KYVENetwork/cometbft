@@ -5,7 +5,7 @@ import (
 	// number generator here and we can run the tests a bit faster
 	"crypto/rand"
 	"encoding/hex"
-	cmtversion "github.com/KYVENetwork/cometbft/v37/proto/cometbft/v37/v37/version"
+	cmtversion "github.com/KYVENetwork/cometbft/v37/proto/cometbft/v37/version"
 	"math"
 	"os"
 	"reflect"

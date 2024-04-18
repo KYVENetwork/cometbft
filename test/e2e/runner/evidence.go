@@ -5,7 +5,7 @@ import (
 	"context"
 	"errors"
 	"fmt"
-	cmtversion "github.com/KYVENetwork/cometbft/v37/proto/cometbft/v37/v37/version"
+	cmtversion "github.com/KYVENetwork/cometbft/v37/proto/cometbft/v37/version"
 	"math/rand"
 	"os"
 	"path/filepath"

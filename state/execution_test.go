@@ -3,7 +3,7 @@ package state_test
 import (
 	"context"
 	"errors"
-	cmtversion "github.com/KYVENetwork/cometbft/v37/proto/cometbft/v37/v37/version"
+	cmtversion "github.com/KYVENetwork/cometbft/v37/proto/cometbft/v37/version"
 	"testing"
 	"time"
 
