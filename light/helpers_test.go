@@ -1,7 +1,7 @@
 package light_test
 
 import (
-	cmtversion "github.com/KYVENetwork/cometbft/v38/proto/cometbft/v38/v38/version"
+	cmtversion "github.com/KYVENetwork/cometbft/v38/proto/cometbft/v38/version"
 	"time"
 
 	"github.com/KYVENetwork/cometbft/v38/crypto"
