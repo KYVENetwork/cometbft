@@ -2,7 +2,7 @@ package state_test
 
 import (
 	"crypto/rand"
-	cmtversion "github.com/KYVENetwork/cometbft/v34/proto/cometbft/v34/v34/version"
+	cmtversion "github.com/KYVENetwork/cometbft/v34/proto/cometbft/v34/version"
 	"testing"
 
 	dbm "github.com/cometbft/cometbft-db"

@@ -1,7 +1,7 @@
 package db
 
 import (
-	cmtversion "github.com/KYVENetwork/cometbft/v34/proto/cometbft/v34/v34/version"
+	cmtversion "github.com/KYVENetwork/cometbft/v34/proto/cometbft/v34/version"
 	"sync"
 	"testing"
 	"time"

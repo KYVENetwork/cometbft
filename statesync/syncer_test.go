@@ -2,7 +2,7 @@ package statesync
 
 import (
 	"errors"
-	cmtversion "github.com/KYVENetwork/cometbft/v34/proto/cometbft/v34/v34/version"
+	cmtversion "github.com/KYVENetwork/cometbft/v34/proto/cometbft/v34/version"
 	"testing"
 	"time"
 
