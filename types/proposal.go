@@ -5,10 +5,10 @@ import (
 	"fmt"
 	"time"
 
-	cmtbytes "github.com/KYVENetwork/cometbft/v034x/libs/bytes"
-	"github.com/KYVENetwork/cometbft/v034x/libs/protoio"
-	cmtproto "github.com/KYVENetwork/cometbft/v034x/proto/cometbft/v034x/types"
-	cmttime "github.com/KYVENetwork/cometbft/v034x/types/time"
+	cmtbytes "github.com/KYVENetwork/cometbft/v34/libs/bytes"
+	"github.com/KYVENetwork/cometbft/v34/libs/protoio"
+	cmtproto "github.com/KYVENetwork/cometbft/v34/proto/cometbft/v34/types"
+	cmttime "github.com/KYVENetwork/cometbft/v34/types/time"
 )
 
 var (

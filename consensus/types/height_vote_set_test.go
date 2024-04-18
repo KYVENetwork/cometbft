@@ -5,12 +5,12 @@ import (
 	"os"
 	"testing"
 
-	cfg "github.com/KYVENetwork/cometbft/v034x/config"
-	"github.com/KYVENetwork/cometbft/v034x/crypto/tmhash"
-	cmtrand "github.com/KYVENetwork/cometbft/v034x/libs/rand"
-	cmtproto "github.com/KYVENetwork/cometbft/v034x/proto/cometbft/v034x/types"
-	"github.com/KYVENetwork/cometbft/v034x/types"
-	cmttime "github.com/KYVENetwork/cometbft/v034x/types/time"
+	cfg "github.com/KYVENetwork/cometbft/v34/config"
+	"github.com/KYVENetwork/cometbft/v34/crypto/tmhash"
+	cmtrand "github.com/KYVENetwork/cometbft/v34/libs/rand"
+	cmtproto "github.com/KYVENetwork/cometbft/v34/proto/cometbft/v34/types"
+	"github.com/KYVENetwork/cometbft/v34/types"
+	cmttime "github.com/KYVENetwork/cometbft/v34/types/time"
 )
 
 var config *cfg.Config // NOTE: must be reset for each _test.go file

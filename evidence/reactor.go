@@ -4,11 +4,11 @@ import (
 	"fmt"
 	"time"
 
-	clist "github.com/KYVENetwork/cometbft/v034x/libs/clist"
-	"github.com/KYVENetwork/cometbft/v034x/libs/log"
-	"github.com/KYVENetwork/cometbft/v034x/p2p"
-	cmtproto "github.com/KYVENetwork/cometbft/v034x/proto/cometbft/v034x/types"
-	"github.com/KYVENetwork/cometbft/v034x/types"
+	clist "github.com/KYVENetwork/cometbft/v34/libs/clist"
+	"github.com/KYVENetwork/cometbft/v34/libs/log"
+	"github.com/KYVENetwork/cometbft/v34/p2p"
+	cmtproto "github.com/KYVENetwork/cometbft/v34/proto/cometbft/v34/types"
+	"github.com/KYVENetwork/cometbft/v34/types"
 	"github.com/gogo/protobuf/proto"
 )
 

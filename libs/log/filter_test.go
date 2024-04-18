@@ -5,7 +5,7 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/KYVENetwork/cometbft/v034x/libs/log"
+	"github.com/KYVENetwork/cometbft/v34/libs/log"
 )
 
 func TestVariousLevels(t *testing.T) {

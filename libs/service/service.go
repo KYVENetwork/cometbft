@@ -5,7 +5,7 @@ import (
 	"fmt"
 	"sync/atomic"
 
-	"github.com/KYVENetwork/cometbft/v034x/libs/log"
+	"github.com/KYVENetwork/cometbft/v34/libs/log"
 )
 
 var (

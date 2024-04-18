@@ -1,7 +1,7 @@
 package state
 
 import (
-	"github.com/KYVENetwork/cometbft/v034x/types"
+	"github.com/KYVENetwork/cometbft/v34/types"
 )
 
 //------------------------------------------------------

@@ -1,8 +1,8 @@
 package types
 
 import (
-	abci "github.com/KYVENetwork/cometbft/v034x/abci/types"
-	"github.com/KYVENetwork/cometbft/v034x/crypto/merkle"
+	abci "github.com/KYVENetwork/cometbft/v34/abci/types"
+	"github.com/KYVENetwork/cometbft/v34/crypto/merkle"
 )
 
 // ABCIResults wraps the deliver tx results to return a proof.

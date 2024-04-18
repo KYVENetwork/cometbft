@@ -12,11 +12,11 @@ import (
 	"github.com/gogo/protobuf/proto"
 	gogotypes "github.com/gogo/protobuf/types"
 
-	clist "github.com/KYVENetwork/cometbft/v034x/libs/clist"
-	"github.com/KYVENetwork/cometbft/v034x/libs/log"
-	cmtproto "github.com/KYVENetwork/cometbft/v034x/proto/cometbft/v034x/types"
-	sm "github.com/KYVENetwork/cometbft/v034x/state"
-	"github.com/KYVENetwork/cometbft/v034x/types"
+	clist "github.com/KYVENetwork/cometbft/v34/libs/clist"
+	"github.com/KYVENetwork/cometbft/v34/libs/log"
+	cmtproto "github.com/KYVENetwork/cometbft/v34/proto/cometbft/v34/types"
+	sm "github.com/KYVENetwork/cometbft/v34/state"
+	"github.com/KYVENetwork/cometbft/v34/types"
 )
 
 const (

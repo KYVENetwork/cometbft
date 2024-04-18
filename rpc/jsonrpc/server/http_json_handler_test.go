@@ -12,8 +12,8 @@ import (
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 
-	"github.com/KYVENetwork/cometbft/v034x/libs/log"
-	types "github.com/KYVENetwork/cometbft/v034x/rpc/jsonrpc/types"
+	"github.com/KYVENetwork/cometbft/v34/libs/log"
+	types "github.com/KYVENetwork/cometbft/v34/rpc/jsonrpc/types"
 )
 
 func testMux() *http.ServeMux {
@@ -33,7 +33,7 @@ func statusOK(code int) bool { return code >= 200 && code <= 299 }
 
 // Ensure that nefarious/unintended inputs to `params`
 // do not crash our RPC handlers.
-// See Issue https://github.com/KYVENetwork/cometbft/v034x/issues/708.
+// See Issue https://github.com/KYVENetwork/cometbft/v34/issues/708.
 func TestRPCParams(t *testing.T) {
 	mux := testMux()
 	tests := []struct {

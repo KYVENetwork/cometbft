@@ -11,15 +11,15 @@ import (
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 
-	"github.com/KYVENetwork/cometbft/v034x/abci/example/counter"
-	cstypes "github.com/KYVENetwork/cometbft/v034x/consensus/types"
-	"github.com/KYVENetwork/cometbft/v034x/crypto/tmhash"
-	"github.com/KYVENetwork/cometbft/v034x/libs/log"
-	cmtpubsub "github.com/KYVENetwork/cometbft/v034x/libs/pubsub"
-	cmtrand "github.com/KYVENetwork/cometbft/v034x/libs/rand"
-	p2pmock "github.com/KYVENetwork/cometbft/v034x/p2p/mock"
-	cmtproto "github.com/KYVENetwork/cometbft/v034x/proto/cometbft/v034x/types"
-	"github.com/KYVENetwork/cometbft/v034x/types"
+	"github.com/KYVENetwork/cometbft/v34/abci/example/counter"
+	cstypes "github.com/KYVENetwork/cometbft/v34/consensus/types"
+	"github.com/KYVENetwork/cometbft/v34/crypto/tmhash"
+	"github.com/KYVENetwork/cometbft/v34/libs/log"
+	cmtpubsub "github.com/KYVENetwork/cometbft/v34/libs/pubsub"
+	cmtrand "github.com/KYVENetwork/cometbft/v34/libs/rand"
+	p2pmock "github.com/KYVENetwork/cometbft/v34/p2p/mock"
+	cmtproto "github.com/KYVENetwork/cometbft/v34/proto/cometbft/v34/types"
+	"github.com/KYVENetwork/cometbft/v34/types"
 )
 
 /*

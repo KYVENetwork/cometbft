@@ -5,8 +5,8 @@ import (
 
 	"github.com/spf13/cobra"
 
-	cmtjson "github.com/KYVENetwork/cometbft/v034x/libs/json"
-	"github.com/KYVENetwork/cometbft/v034x/privval"
+	cmtjson "github.com/KYVENetwork/cometbft/v34/libs/json"
+	"github.com/KYVENetwork/cometbft/v34/privval"
 )
 
 // GenValidatorCmd allows the generation of a keypair for a

@@ -3,13 +3,13 @@ package pex
 import (
 	"net"
 
-	"github.com/KYVENetwork/cometbft/v034x/config"
-	"github.com/KYVENetwork/cometbft/v034x/crypto/ed25519"
-	"github.com/KYVENetwork/cometbft/v034x/libs/log"
-	"github.com/KYVENetwork/cometbft/v034x/libs/service"
-	"github.com/KYVENetwork/cometbft/v034x/p2p"
-	"github.com/KYVENetwork/cometbft/v034x/p2p/pex"
-	"github.com/KYVENetwork/cometbft/v034x/version"
+	"github.com/KYVENetwork/cometbft/v34/config"
+	"github.com/KYVENetwork/cometbft/v34/crypto/ed25519"
+	"github.com/KYVENetwork/cometbft/v34/libs/log"
+	"github.com/KYVENetwork/cometbft/v34/libs/service"
+	"github.com/KYVENetwork/cometbft/v34/p2p"
+	"github.com/KYVENetwork/cometbft/v34/p2p/pex"
+	"github.com/KYVENetwork/cometbft/v34/version"
 )
 
 var (

@@ -5,10 +5,10 @@ import (
 	"net/http"
 	"os"
 
-	"github.com/KYVENetwork/cometbft/v034x/libs/log"
-	cmtos "github.com/KYVENetwork/cometbft/v034x/libs/os"
-	rpcserver "github.com/KYVENetwork/cometbft/v034x/rpc/jsonrpc/server"
-	rpctypes "github.com/KYVENetwork/cometbft/v034x/rpc/jsonrpc/types"
+	"github.com/KYVENetwork/cometbft/v34/libs/log"
+	cmtos "github.com/KYVENetwork/cometbft/v34/libs/os"
+	rpcserver "github.com/KYVENetwork/cometbft/v34/rpc/jsonrpc/server"
+	rpctypes "github.com/KYVENetwork/cometbft/v34/rpc/jsonrpc/types"
 )
 
 var routes = map[string]*rpcserver.RPCFunc{

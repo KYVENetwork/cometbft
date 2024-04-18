@@ -6,8 +6,8 @@ import (
 
 	"github.com/stretchr/testify/require"
 
-	e2e "github.com/KYVENetwork/cometbft/v034x/test/e2e/pkg"
-	"github.com/KYVENetwork/cometbft/v034x/types"
+	e2e "github.com/KYVENetwork/cometbft/v34/test/e2e/pkg"
+	"github.com/KYVENetwork/cometbft/v34/types"
 )
 
 // assert that all nodes that have blocks at the height of a misbehavior has evidence

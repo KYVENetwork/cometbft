@@ -3,8 +3,8 @@ package main
 import (
 	"time"
 
-	"github.com/KYVENetwork/cometbft/v034x/libs/log"
-	e2e "github.com/KYVENetwork/cometbft/v034x/test/e2e/pkg"
+	"github.com/KYVENetwork/cometbft/v34/libs/log"
+	e2e "github.com/KYVENetwork/cometbft/v34/test/e2e/pkg"
 )
 
 // Wait waits for a number of blocks to be produced, and for all nodes to catch

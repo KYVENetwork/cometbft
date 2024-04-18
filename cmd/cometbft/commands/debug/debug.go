@@ -5,7 +5,7 @@ import (
 
 	"github.com/spf13/cobra"
 
-	"github.com/KYVENetwork/cometbft/v034x/libs/log"
+	"github.com/KYVENetwork/cometbft/v34/libs/log"
 )
 
 var (

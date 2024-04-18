@@ -1,8 +1,8 @@
 package p2p
 
 import (
-	"github.com/KYVENetwork/cometbft/v034x/p2p/conn"
-	tmp2p "github.com/KYVENetwork/cometbft/v034x/proto/cometbft/v034x/p2p"
+	"github.com/KYVENetwork/cometbft/v34/p2p/conn"
+	tmp2p "github.com/KYVENetwork/cometbft/v34/proto/cometbft/v34/p2p"
 	"github.com/gogo/protobuf/proto"
 )
 

@@ -5,8 +5,8 @@ import (
 
 	"github.com/spf13/cobra"
 
-	cmtos "github.com/KYVENetwork/cometbft/v034x/libs/os"
-	"github.com/KYVENetwork/cometbft/v034x/p2p"
+	cmtos "github.com/KYVENetwork/cometbft/v34/libs/os"
+	"github.com/KYVENetwork/cometbft/v34/p2p"
 )
 
 // GenNodeKeyCmd allows the generation of a node key. It prints node's ID to

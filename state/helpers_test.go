@@ -7,16 +7,16 @@ import (
 
 	dbm "github.com/cometbft/cometbft-db"
 
-	abci "github.com/KYVENetwork/cometbft/v034x/abci/types"
-	"github.com/KYVENetwork/cometbft/v034x/crypto"
-	"github.com/KYVENetwork/cometbft/v034x/crypto/ed25519"
-	cmtrand "github.com/KYVENetwork/cometbft/v034x/libs/rand"
-	cmtstate "github.com/KYVENetwork/cometbft/v034x/proto/cometbft/v034x/state"
-	cmtproto "github.com/KYVENetwork/cometbft/v034x/proto/cometbft/v034x/types"
-	"github.com/KYVENetwork/cometbft/v034x/proxy"
-	sm "github.com/KYVENetwork/cometbft/v034x/state"
-	"github.com/KYVENetwork/cometbft/v034x/types"
-	cmttime "github.com/KYVENetwork/cometbft/v034x/types/time"
+	abci "github.com/KYVENetwork/cometbft/v34/abci/types"
+	"github.com/KYVENetwork/cometbft/v34/crypto"
+	"github.com/KYVENetwork/cometbft/v34/crypto/ed25519"
+	cmtrand "github.com/KYVENetwork/cometbft/v34/libs/rand"
+	cmtstate "github.com/KYVENetwork/cometbft/v34/proto/cometbft/v34/state"
+	cmtproto "github.com/KYVENetwork/cometbft/v34/proto/cometbft/v34/types"
+	"github.com/KYVENetwork/cometbft/v34/proxy"
+	sm "github.com/KYVENetwork/cometbft/v34/state"
+	"github.com/KYVENetwork/cometbft/v34/types"
+	cmttime "github.com/KYVENetwork/cometbft/v34/types/time"
 )
 
 type paramsChangeTestCase struct {

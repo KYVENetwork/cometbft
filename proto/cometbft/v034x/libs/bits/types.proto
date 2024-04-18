@@ -1,9 +1,0 @@
-syntax = "proto3";
-package cometbft.v034x.libs.bits;
-
-option go_package = "github.com/KYVENetwork/cometbft/v034x/proto/cometbft/v034x/libs/bits";
-
-message BitArray {
-  int64           bits  = 1;
-  repeated uint64 elems = 2;
-}

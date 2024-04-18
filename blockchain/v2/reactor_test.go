@@ -14,20 +14,20 @@ import (
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 
-	abci "github.com/KYVENetwork/cometbft/v034x/abci/types"
-	"github.com/KYVENetwork/cometbft/v034x/behaviour"
-	cfg "github.com/KYVENetwork/cometbft/v034x/config"
-	"github.com/KYVENetwork/cometbft/v034x/libs/log"
-	"github.com/KYVENetwork/cometbft/v034x/libs/service"
-	"github.com/KYVENetwork/cometbft/v034x/mempool/mock"
-	"github.com/KYVENetwork/cometbft/v034x/p2p"
-	"github.com/KYVENetwork/cometbft/v034x/p2p/conn"
-	bcproto "github.com/KYVENetwork/cometbft/v034x/proto/cometbft/v034x/blockchain"
-	"github.com/KYVENetwork/cometbft/v034x/proxy"
-	sm "github.com/KYVENetwork/cometbft/v034x/state"
-	"github.com/KYVENetwork/cometbft/v034x/store"
-	"github.com/KYVENetwork/cometbft/v034x/types"
-	cmttime "github.com/KYVENetwork/cometbft/v034x/types/time"
+	abci "github.com/KYVENetwork/cometbft/v34/abci/types"
+	"github.com/KYVENetwork/cometbft/v34/behaviour"
+	cfg "github.com/KYVENetwork/cometbft/v34/config"
+	"github.com/KYVENetwork/cometbft/v34/libs/log"
+	"github.com/KYVENetwork/cometbft/v34/libs/service"
+	"github.com/KYVENetwork/cometbft/v34/mempool/mock"
+	"github.com/KYVENetwork/cometbft/v34/p2p"
+	"github.com/KYVENetwork/cometbft/v34/p2p/conn"
+	bcproto "github.com/KYVENetwork/cometbft/v34/proto/cometbft/v34/blockchain"
+	"github.com/KYVENetwork/cometbft/v34/proxy"
+	sm "github.com/KYVENetwork/cometbft/v34/state"
+	"github.com/KYVENetwork/cometbft/v34/store"
+	"github.com/KYVENetwork/cometbft/v34/types"
+	cmttime "github.com/KYVENetwork/cometbft/v34/types/time"
 )
 
 type mockPeer struct {
@@ -160,7 +160,7 @@ func newTestReactor(p testReactorParams) *BlockchainReactor {
 }
 
 // This test is left here and not deleted to retain the termination cases for
-// future improvement in [#4482](https://github.com/KYVENetwork/cometbft/v034x/issues/4482).
+// future improvement in [#4482](https://github.com/KYVENetwork/cometbft/v34/issues/4482).
 // func TestReactorTerminationScenarios(t *testing.T) {
 
 // 	config := cfg.ResetTestRoot("blockchain_reactor_v2_test")

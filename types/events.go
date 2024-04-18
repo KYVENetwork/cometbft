@@ -3,10 +3,10 @@ package types
 import (
 	"fmt"
 
-	abci "github.com/KYVENetwork/cometbft/v034x/abci/types"
-	cmtjson "github.com/KYVENetwork/cometbft/v034x/libs/json"
-	cmtpubsub "github.com/KYVENetwork/cometbft/v034x/libs/pubsub"
-	cmtquery "github.com/KYVENetwork/cometbft/v034x/libs/pubsub/query"
+	abci "github.com/KYVENetwork/cometbft/v34/abci/types"
+	cmtjson "github.com/KYVENetwork/cometbft/v34/libs/json"
+	cmtpubsub "github.com/KYVENetwork/cometbft/v34/libs/pubsub"
+	cmtquery "github.com/KYVENetwork/cometbft/v34/libs/pubsub/query"
 )
 
 // Reserved event types (alphabetically sorted).

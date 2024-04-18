@@ -3,10 +3,10 @@ package v2
 import (
 	"fmt"
 
-	"github.com/KYVENetwork/cometbft/v034x/p2p"
-	bcproto "github.com/KYVENetwork/cometbft/v034x/proto/cometbft/v034x/blockchain"
-	"github.com/KYVENetwork/cometbft/v034x/state"
-	"github.com/KYVENetwork/cometbft/v034x/types"
+	"github.com/KYVENetwork/cometbft/v34/p2p"
+	bcproto "github.com/KYVENetwork/cometbft/v34/proto/cometbft/v34/blockchain"
+	"github.com/KYVENetwork/cometbft/v34/state"
+	"github.com/KYVENetwork/cometbft/v34/types"
 )
 
 type iIO interface {

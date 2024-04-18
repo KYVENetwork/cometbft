@@ -12,10 +12,10 @@ import (
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 
-	"github.com/KYVENetwork/cometbft/v034x/libs/log"
-	cmtmath "github.com/KYVENetwork/cometbft/v034x/libs/math"
-	cmtrand "github.com/KYVENetwork/cometbft/v034x/libs/rand"
-	"github.com/KYVENetwork/cometbft/v034x/p2p"
+	"github.com/KYVENetwork/cometbft/v34/libs/log"
+	cmtmath "github.com/KYVENetwork/cometbft/v34/libs/math"
+	cmtrand "github.com/KYVENetwork/cometbft/v34/libs/rand"
+	"github.com/KYVENetwork/cometbft/v34/p2p"
 )
 
 // FIXME These tests should not rely on .(*addrBook) assertions

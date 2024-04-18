@@ -5,9 +5,9 @@ import (
 	"fmt"
 	"net"
 
-	"github.com/KYVENetwork/cometbft/v034x/crypto/ed25519"
-	"github.com/KYVENetwork/cometbft/v034x/libs/log"
-	cmtnet "github.com/KYVENetwork/cometbft/v034x/libs/net"
+	"github.com/KYVENetwork/cometbft/v34/crypto/ed25519"
+	"github.com/KYVENetwork/cometbft/v34/libs/log"
+	cmtnet "github.com/KYVENetwork/cometbft/v34/libs/net"
 )
 
 // IsConnTimeout returns a boolean indicating whether the error is known to

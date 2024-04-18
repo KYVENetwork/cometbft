@@ -14,14 +14,14 @@ import (
 
 	"github.com/gogo/protobuf/proto"
 
-	flow "github.com/KYVENetwork/cometbft/v034x/libs/flowrate"
-	"github.com/KYVENetwork/cometbft/v034x/libs/log"
-	cmtmath "github.com/KYVENetwork/cometbft/v034x/libs/math"
-	"github.com/KYVENetwork/cometbft/v034x/libs/protoio"
-	"github.com/KYVENetwork/cometbft/v034x/libs/service"
-	cmtsync "github.com/KYVENetwork/cometbft/v034x/libs/sync"
-	"github.com/KYVENetwork/cometbft/v034x/libs/timer"
-	tmp2p "github.com/KYVENetwork/cometbft/v034x/proto/cometbft/v034x/p2p"
+	flow "github.com/KYVENetwork/cometbft/v34/libs/flowrate"
+	"github.com/KYVENetwork/cometbft/v34/libs/log"
+	cmtmath "github.com/KYVENetwork/cometbft/v34/libs/math"
+	"github.com/KYVENetwork/cometbft/v34/libs/protoio"
+	"github.com/KYVENetwork/cometbft/v34/libs/service"
+	cmtsync "github.com/KYVENetwork/cometbft/v34/libs/sync"
+	"github.com/KYVENetwork/cometbft/v34/libs/timer"
+	tmp2p "github.com/KYVENetwork/cometbft/v34/proto/cometbft/v34/p2p"
 )
 
 const (
@@ -612,7 +612,7 @@ FOR_LOOP:
 		switch pkt := packet.Sum.(type) {
 		case *tmp2p.Packet_PacketPing:
 			// TODO: prevent abuse, as they cause flush()'s.
-			// https://github.com/KYVENetwork/cometbft/v034x/issues/1190
+			// https://github.com/KYVENetwork/cometbft/v34/issues/1190
 			c.Logger.Debug("Receive Ping")
 			select {
 			case c.pong <- struct{}{}:

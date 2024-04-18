@@ -9,7 +9,7 @@ import (
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 
-	"github.com/KYVENetwork/cometbft/v034x/libs/pubsub/query"
+	"github.com/KYVENetwork/cometbft/v34/libs/pubsub/query"
 )
 
 func TestBigNumbers(t *testing.T) {

@@ -1,11 +1,11 @@
 package v0
 
 import (
-	"github.com/KYVENetwork/cometbft/v034x/abci/example/kvstore"
-	"github.com/KYVENetwork/cometbft/v034x/config"
-	mempl "github.com/KYVENetwork/cometbft/v034x/mempool"
-	mempoolv0 "github.com/KYVENetwork/cometbft/v034x/mempool/v0"
-	"github.com/KYVENetwork/cometbft/v034x/proxy"
+	"github.com/KYVENetwork/cometbft/v34/abci/example/kvstore"
+	"github.com/KYVENetwork/cometbft/v34/config"
+	mempl "github.com/KYVENetwork/cometbft/v34/mempool"
+	mempoolv0 "github.com/KYVENetwork/cometbft/v34/mempool/v0"
+	"github.com/KYVENetwork/cometbft/v34/proxy"
 )
 
 var mempool mempl.Mempool

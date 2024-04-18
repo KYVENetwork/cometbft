@@ -10,11 +10,11 @@ import (
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 
-	abci "github.com/KYVENetwork/cometbft/v034x/abci/types"
-	cmtrand "github.com/KYVENetwork/cometbft/v034x/libs/rand"
-	"github.com/KYVENetwork/cometbft/v034x/rpc/client"
-	ctypes "github.com/KYVENetwork/cometbft/v034x/rpc/core/types"
-	"github.com/KYVENetwork/cometbft/v034x/types"
+	abci "github.com/KYVENetwork/cometbft/v34/abci/types"
+	cmtrand "github.com/KYVENetwork/cometbft/v34/libs/rand"
+	"github.com/KYVENetwork/cometbft/v34/rpc/client"
+	ctypes "github.com/KYVENetwork/cometbft/v34/rpc/core/types"
+	"github.com/KYVENetwork/cometbft/v34/types"
 )
 
 var waitForEventTimeout = 8 * time.Second

@@ -3,10 +3,10 @@ package state
 import (
 	dbm "github.com/cometbft/cometbft-db"
 
-	abci "github.com/KYVENetwork/cometbft/v034x/abci/types"
-	cmtstate "github.com/KYVENetwork/cometbft/v034x/proto/cometbft/v034x/state"
-	cmtproto "github.com/KYVENetwork/cometbft/v034x/proto/cometbft/v034x/types"
-	"github.com/KYVENetwork/cometbft/v034x/types"
+	abci "github.com/KYVENetwork/cometbft/v34/abci/types"
+	cmtstate "github.com/KYVENetwork/cometbft/v34/proto/cometbft/v34/state"
+	cmtproto "github.com/KYVENetwork/cometbft/v34/proto/cometbft/v34/types"
+	"github.com/KYVENetwork/cometbft/v34/types"
 )
 
 //

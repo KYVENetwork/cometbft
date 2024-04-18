@@ -16,17 +16,17 @@ import (
 
 	dbm "github.com/cometbft/cometbft-db"
 
-	cfg "github.com/KYVENetwork/cometbft/v034x/config"
-	"github.com/KYVENetwork/cometbft/v034x/crypto"
-	"github.com/KYVENetwork/cometbft/v034x/crypto/tmhash"
-	"github.com/KYVENetwork/cometbft/v034x/evidence"
-	"github.com/KYVENetwork/cometbft/v034x/evidence/mocks"
-	"github.com/KYVENetwork/cometbft/v034x/libs/log"
-	"github.com/KYVENetwork/cometbft/v034x/p2p"
-	p2pmocks "github.com/KYVENetwork/cometbft/v034x/p2p/mocks"
-	cmtproto "github.com/KYVENetwork/cometbft/v034x/proto/cometbft/v034x/types"
-	sm "github.com/KYVENetwork/cometbft/v034x/state"
-	"github.com/KYVENetwork/cometbft/v034x/types"
+	cfg "github.com/KYVENetwork/cometbft/v34/config"
+	"github.com/KYVENetwork/cometbft/v34/crypto"
+	"github.com/KYVENetwork/cometbft/v34/crypto/tmhash"
+	"github.com/KYVENetwork/cometbft/v34/evidence"
+	"github.com/KYVENetwork/cometbft/v34/evidence/mocks"
+	"github.com/KYVENetwork/cometbft/v34/libs/log"
+	"github.com/KYVENetwork/cometbft/v34/p2p"
+	p2pmocks "github.com/KYVENetwork/cometbft/v34/p2p/mocks"
+	cmtproto "github.com/KYVENetwork/cometbft/v34/proto/cometbft/v34/types"
+	sm "github.com/KYVENetwork/cometbft/v34/state"
+	"github.com/KYVENetwork/cometbft/v34/types"
 )
 
 var (

@@ -4,11 +4,11 @@ import (
 	"os"
 	"path/filepath"
 
-	cmd "github.com/KYVENetwork/cometbft/v034x/cmd/cometbft/commands"
-	"github.com/KYVENetwork/cometbft/v034x/cmd/cometbft/commands/debug"
-	cfg "github.com/KYVENetwork/cometbft/v034x/config"
-	"github.com/KYVENetwork/cometbft/v034x/libs/cli"
-	nm "github.com/KYVENetwork/cometbft/v034x/node"
+	cmd "github.com/KYVENetwork/cometbft/v34/cmd/cometbft/commands"
+	"github.com/KYVENetwork/cometbft/v34/cmd/cometbft/commands/debug"
+	cfg "github.com/KYVENetwork/cometbft/v34/config"
+	"github.com/KYVENetwork/cometbft/v34/libs/cli"
+	nm "github.com/KYVENetwork/cometbft/v34/node"
 )
 
 func main() {

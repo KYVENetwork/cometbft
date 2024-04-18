@@ -3,8 +3,8 @@ package privval
 import (
 	"time"
 
-	"github.com/KYVENetwork/cometbft/v034x/libs/log"
-	"github.com/KYVENetwork/cometbft/v034x/libs/service"
+	"github.com/KYVENetwork/cometbft/v34/libs/log"
+	"github.com/KYVENetwork/cometbft/v34/libs/service"
 )
 
 const (

@@ -6,14 +6,14 @@ import (
 
 	"github.com/gogo/protobuf/proto"
 
-	"github.com/KYVENetwork/cometbft/v034x/behaviour"
-	bc "github.com/KYVENetwork/cometbft/v034x/blockchain"
-	"github.com/KYVENetwork/cometbft/v034x/libs/log"
-	"github.com/KYVENetwork/cometbft/v034x/p2p"
-	bcproto "github.com/KYVENetwork/cometbft/v034x/proto/cometbft/v034x/blockchain"
-	sm "github.com/KYVENetwork/cometbft/v034x/state"
-	"github.com/KYVENetwork/cometbft/v034x/store"
-	"github.com/KYVENetwork/cometbft/v034x/types"
+	"github.com/KYVENetwork/cometbft/v34/behaviour"
+	bc "github.com/KYVENetwork/cometbft/v34/blockchain"
+	"github.com/KYVENetwork/cometbft/v34/libs/log"
+	"github.com/KYVENetwork/cometbft/v34/p2p"
+	bcproto "github.com/KYVENetwork/cometbft/v34/proto/cometbft/v34/blockchain"
+	sm "github.com/KYVENetwork/cometbft/v34/state"
+	"github.com/KYVENetwork/cometbft/v34/store"
+	"github.com/KYVENetwork/cometbft/v34/types"
 )
 
 const (

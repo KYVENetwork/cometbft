@@ -12,11 +12,11 @@ import (
 
 	db "github.com/cometbft/cometbft-db"
 
-	abci "github.com/KYVENetwork/cometbft/v034x/abci/types"
-	"github.com/KYVENetwork/cometbft/v034x/libs/pubsub/query"
-	cmtrand "github.com/KYVENetwork/cometbft/v034x/libs/rand"
-	"github.com/KYVENetwork/cometbft/v034x/state/txindex"
-	"github.com/KYVENetwork/cometbft/v034x/types"
+	abci "github.com/KYVENetwork/cometbft/v34/abci/types"
+	"github.com/KYVENetwork/cometbft/v34/libs/pubsub/query"
+	cmtrand "github.com/KYVENetwork/cometbft/v34/libs/rand"
+	"github.com/KYVENetwork/cometbft/v34/state/txindex"
+	"github.com/KYVENetwork/cometbft/v34/types"
 )
 
 func TestBigInt(t *testing.T) {
@@ -649,7 +649,7 @@ func TestTxSearchMultipleTxs(t *testing.T) {
 	require.NoError(t, err)
 
 	// indexed fourth (to test we don't include txs with similar events)
-	// https://github.com/KYVENetwork/cometbft/v034x/issues/2908
+	// https://github.com/KYVENetwork/cometbft/v34/issues/2908
 	txResult4 := txResultWithEvents([]abci.Event{
 		{Type: "account", Attributes: []abci.EventAttribute{{Key: []byte("number.id"), Value: []byte("1"), Index: true}}},
 	})

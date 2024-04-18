@@ -9,11 +9,11 @@ import (
 
 	dbm "github.com/cometbft/cometbft-db"
 
-	"github.com/KYVENetwork/cometbft/v034x/abci/example/code"
-	"github.com/KYVENetwork/cometbft/v034x/abci/types"
-	cryptoenc "github.com/KYVENetwork/cometbft/v034x/crypto/encoding"
-	"github.com/KYVENetwork/cometbft/v034x/libs/log"
-	pc "github.com/KYVENetwork/cometbft/v034x/proto/cometbft/v034x/crypto"
+	"github.com/KYVENetwork/cometbft/v34/abci/example/code"
+	"github.com/KYVENetwork/cometbft/v34/abci/types"
+	cryptoenc "github.com/KYVENetwork/cometbft/v34/crypto/encoding"
+	"github.com/KYVENetwork/cometbft/v34/libs/log"
+	pc "github.com/KYVENetwork/cometbft/v34/proto/cometbft/v34/crypto"
 )
 
 const (

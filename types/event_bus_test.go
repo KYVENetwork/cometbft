@@ -10,10 +10,10 @@ import (
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 
-	abci "github.com/KYVENetwork/cometbft/v034x/abci/types"
-	cmtpubsub "github.com/KYVENetwork/cometbft/v034x/libs/pubsub"
-	cmtquery "github.com/KYVENetwork/cometbft/v034x/libs/pubsub/query"
-	cmtrand "github.com/KYVENetwork/cometbft/v034x/libs/rand"
+	abci "github.com/KYVENetwork/cometbft/v34/abci/types"
+	cmtpubsub "github.com/KYVENetwork/cometbft/v34/libs/pubsub"
+	cmtquery "github.com/KYVENetwork/cometbft/v34/libs/pubsub/query"
+	cmtrand "github.com/KYVENetwork/cometbft/v34/libs/rand"
 )
 
 func TestEventBusPublishEventTx(t *testing.T) {

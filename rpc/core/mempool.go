@@ -6,11 +6,11 @@ import (
 	"fmt"
 	"time"
 
-	abci "github.com/KYVENetwork/cometbft/v034x/abci/types"
-	mempl "github.com/KYVENetwork/cometbft/v034x/mempool"
-	ctypes "github.com/KYVENetwork/cometbft/v034x/rpc/core/types"
-	rpctypes "github.com/KYVENetwork/cometbft/v034x/rpc/jsonrpc/types"
-	"github.com/KYVENetwork/cometbft/v034x/types"
+	abci "github.com/KYVENetwork/cometbft/v34/abci/types"
+	mempl "github.com/KYVENetwork/cometbft/v34/mempool"
+	ctypes "github.com/KYVENetwork/cometbft/v34/rpc/core/types"
+	rpctypes "github.com/KYVENetwork/cometbft/v34/rpc/jsonrpc/types"
+	"github.com/KYVENetwork/cometbft/v34/types"
 )
 
 //-----------------------------------------------------------------------------

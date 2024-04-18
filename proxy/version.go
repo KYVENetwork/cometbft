@@ -1,8 +1,8 @@
 package proxy
 
 import (
-	abci "github.com/KYVENetwork/cometbft/v034x/abci/types"
-	"github.com/KYVENetwork/cometbft/v034x/version"
+	abci "github.com/KYVENetwork/cometbft/v34/abci/types"
+	"github.com/KYVENetwork/cometbft/v34/version"
 )
 
 // RequestInfo contains all the information for sending

@@ -6,8 +6,8 @@ import (
 
 	"github.com/stretchr/testify/require"
 
-	cfg "github.com/KYVENetwork/cometbft/v034x/config"
-	"github.com/KYVENetwork/cometbft/v034x/privval"
+	cfg "github.com/KYVENetwork/cometbft/v34/config"
+	"github.com/KYVENetwork/cometbft/v34/privval"
 )
 
 func Test_ResetAll(t *testing.T) {

@@ -1,9 +1,9 @@
 package mock
 
 import (
-	"github.com/KYVENetwork/cometbft/v034x/libs/log"
-	"github.com/KYVENetwork/cometbft/v034x/p2p"
-	"github.com/KYVENetwork/cometbft/v034x/p2p/conn"
+	"github.com/KYVENetwork/cometbft/v34/libs/log"
+	"github.com/KYVENetwork/cometbft/v34/p2p"
+	"github.com/KYVENetwork/cometbft/v34/p2p/conn"
 )
 
 type Reactor struct {

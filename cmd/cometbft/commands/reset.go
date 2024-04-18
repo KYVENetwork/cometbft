@@ -6,9 +6,9 @@ import (
 
 	"github.com/spf13/cobra"
 
-	"github.com/KYVENetwork/cometbft/v034x/libs/log"
-	cmtos "github.com/KYVENetwork/cometbft/v034x/libs/os"
-	"github.com/KYVENetwork/cometbft/v034x/privval"
+	"github.com/KYVENetwork/cometbft/v34/libs/log"
+	cmtos "github.com/KYVENetwork/cometbft/v34/libs/os"
+	"github.com/KYVENetwork/cometbft/v34/privval"
 )
 
 // ResetAllCmd removes the database of this CometBFT core

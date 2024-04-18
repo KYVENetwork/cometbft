@@ -13,15 +13,15 @@ import (
 
 	dbm "github.com/cometbft/cometbft-db"
 
-	abci "github.com/KYVENetwork/cometbft/v034x/abci/types"
-	cfg "github.com/KYVENetwork/cometbft/v034x/config"
-	"github.com/KYVENetwork/cometbft/v034x/crypto/ed25519"
-	cryptoenc "github.com/KYVENetwork/cometbft/v034x/crypto/encoding"
-	cmtrand "github.com/KYVENetwork/cometbft/v034x/libs/rand"
-	cmtstate "github.com/KYVENetwork/cometbft/v034x/proto/cometbft/v034x/state"
-	cmtproto "github.com/KYVENetwork/cometbft/v034x/proto/cometbft/v034x/types"
-	sm "github.com/KYVENetwork/cometbft/v034x/state"
-	"github.com/KYVENetwork/cometbft/v034x/types"
+	abci "github.com/KYVENetwork/cometbft/v34/abci/types"
+	cfg "github.com/KYVENetwork/cometbft/v34/config"
+	"github.com/KYVENetwork/cometbft/v34/crypto/ed25519"
+	cryptoenc "github.com/KYVENetwork/cometbft/v34/crypto/encoding"
+	cmtrand "github.com/KYVENetwork/cometbft/v34/libs/rand"
+	cmtstate "github.com/KYVENetwork/cometbft/v34/proto/cometbft/v34/state"
+	cmtproto "github.com/KYVENetwork/cometbft/v34/proto/cometbft/v34/types"
+	sm "github.com/KYVENetwork/cometbft/v34/state"
+	"github.com/KYVENetwork/cometbft/v34/types"
 )
 
 // setupTestCase does setup common to all test cases.
@@ -441,7 +441,7 @@ func testProposerFreq(t *testing.T, caseNum int, valSet *types.ValidatorSet) {
 }
 
 // TestProposerPriorityDoesNotGetResetToZero assert that we preserve accum when calling updateState
-// see https://github.com/KYVENetwork/cometbft/v034x/issues/2718
+// see https://github.com/KYVENetwork/cometbft/v34/issues/2718
 func TestProposerPriorityDoesNotGetResetToZero(t *testing.T) {
 	tearDown, _, state := setupTestCase(t)
 	defer tearDown(t)
@@ -773,7 +773,7 @@ func TestLargeGenesisValidator(t *testing.T) {
 	// add more validators with same voting power as the 2nd
 	// let the genesis validator "unbond",
 	// see how long it takes until the effect wears off and both begin to alternate
-	// see: https://github.com/KYVENetwork/cometbft/v034x/issues/2960
+	// see: https://github.com/KYVENetwork/cometbft/v34/issues/2960
 	firstAddedValPubKey := ed25519.GenPrivKey().PubKey()
 	firstAddedValVotingPower := int64(10)
 	fvp, err := cryptoenc.PubKeyToProto(firstAddedValPubKey)

@@ -8,10 +8,10 @@ import (
 
 	dbm "github.com/cometbft/cometbft-db"
 
-	cmtsync "github.com/KYVENetwork/cometbft/v034x/libs/sync"
-	"github.com/KYVENetwork/cometbft/v034x/light/store"
-	cmtproto "github.com/KYVENetwork/cometbft/v034x/proto/cometbft/v034x/types"
-	"github.com/KYVENetwork/cometbft/v034x/types"
+	cmtsync "github.com/KYVENetwork/cometbft/v34/libs/sync"
+	"github.com/KYVENetwork/cometbft/v34/light/store"
+	cmtproto "github.com/KYVENetwork/cometbft/v34/proto/cometbft/v34/types"
+	"github.com/KYVENetwork/cometbft/v34/types"
 )
 
 var (

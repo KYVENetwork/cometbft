@@ -3,8 +3,8 @@ package v2
 import (
 	"fmt"
 
-	"github.com/KYVENetwork/cometbft/v034x/state"
-	"github.com/KYVENetwork/cometbft/v034x/types"
+	"github.com/KYVENetwork/cometbft/v34/state"
+	"github.com/KYVENetwork/cometbft/v34/types"
 )
 
 type processorContext interface {

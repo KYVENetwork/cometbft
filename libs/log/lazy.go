@@ -3,7 +3,7 @@ package log
 import (
 	"fmt"
 
-	cmtbytes "github.com/KYVENetwork/cometbft/v034x/libs/bytes"
+	cmtbytes "github.com/KYVENetwork/cometbft/v34/libs/bytes"
 )
 
 type LazySprintf struct {

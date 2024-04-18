@@ -8,14 +8,14 @@ import (
 	"github.com/gogo/protobuf/proto"
 	"github.com/stretchr/testify/require"
 
-	"github.com/KYVENetwork/cometbft/v034x/crypto"
-	"github.com/KYVENetwork/cometbft/v034x/crypto/ed25519"
-	cryptoenc "github.com/KYVENetwork/cometbft/v034x/crypto/encoding"
-	"github.com/KYVENetwork/cometbft/v034x/crypto/tmhash"
-	cryptoproto "github.com/KYVENetwork/cometbft/v034x/proto/cometbft/v034x/crypto"
-	privproto "github.com/KYVENetwork/cometbft/v034x/proto/cometbft/v034x/privval"
-	cmtproto "github.com/KYVENetwork/cometbft/v034x/proto/cometbft/v034x/types"
-	"github.com/KYVENetwork/cometbft/v034x/types"
+	"github.com/KYVENetwork/cometbft/v34/crypto"
+	"github.com/KYVENetwork/cometbft/v34/crypto/ed25519"
+	cryptoenc "github.com/KYVENetwork/cometbft/v34/crypto/encoding"
+	"github.com/KYVENetwork/cometbft/v34/crypto/tmhash"
+	cryptoproto "github.com/KYVENetwork/cometbft/v34/proto/cometbft/v34/crypto"
+	privproto "github.com/KYVENetwork/cometbft/v34/proto/cometbft/v34/privval"
+	cmtproto "github.com/KYVENetwork/cometbft/v34/proto/cometbft/v34/types"
+	"github.com/KYVENetwork/cometbft/v34/types"
 )
 
 var stamp = time.Date(2019, 10, 13, 16, 14, 44, 0, time.UTC)

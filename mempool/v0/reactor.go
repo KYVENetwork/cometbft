@@ -8,14 +8,14 @@ import (
 
 	"github.com/gogo/protobuf/proto"
 
-	cfg "github.com/KYVENetwork/cometbft/v034x/config"
-	"github.com/KYVENetwork/cometbft/v034x/libs/clist"
-	"github.com/KYVENetwork/cometbft/v034x/libs/log"
-	cmtsync "github.com/KYVENetwork/cometbft/v034x/libs/sync"
-	"github.com/KYVENetwork/cometbft/v034x/mempool"
-	"github.com/KYVENetwork/cometbft/v034x/p2p"
-	protomem "github.com/KYVENetwork/cometbft/v034x/proto/cometbft/v034x/mempool"
-	"github.com/KYVENetwork/cometbft/v034x/types"
+	cfg "github.com/KYVENetwork/cometbft/v34/config"
+	"github.com/KYVENetwork/cometbft/v34/libs/clist"
+	"github.com/KYVENetwork/cometbft/v34/libs/log"
+	cmtsync "github.com/KYVENetwork/cometbft/v34/libs/sync"
+	"github.com/KYVENetwork/cometbft/v34/mempool"
+	"github.com/KYVENetwork/cometbft/v34/p2p"
+	protomem "github.com/KYVENetwork/cometbft/v34/proto/cometbft/v34/mempool"
+	"github.com/KYVENetwork/cometbft/v34/types"
 	"golang.org/x/sync/semaphore"
 )
 
@@ -305,7 +305,7 @@ func (memR *Reactor) broadcastTxRoutine(peer p2p.Peer) {
 		}
 
 		// NOTE: Transaction batching was disabled due to
-		// https://github.com/KYVENetwork/cometbft/v034x/issues/5796
+		// https://github.com/KYVENetwork/cometbft/v34/issues/5796
 
 		if _, ok := memTx.senders.Load(peerID); !ok {
 			success := p2p.SendEnvelopeShim(peer, p2p.Envelope{ //nolint: staticcheck

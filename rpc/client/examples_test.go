@@ -6,10 +6,10 @@ import (
 	"fmt"
 	"log"
 
-	"github.com/KYVENetwork/cometbft/v034x/abci/example/kvstore"
-	rpchttp "github.com/KYVENetwork/cometbft/v034x/rpc/client/http"
-	ctypes "github.com/KYVENetwork/cometbft/v034x/rpc/core/types"
-	rpctest "github.com/KYVENetwork/cometbft/v034x/rpc/test"
+	"github.com/KYVENetwork/cometbft/v34/abci/example/kvstore"
+	rpchttp "github.com/KYVENetwork/cometbft/v34/rpc/client/http"
+	ctypes "github.com/KYVENetwork/cometbft/v34/rpc/core/types"
+	rpctest "github.com/KYVENetwork/cometbft/v34/rpc/test"
 )
 
 func ExampleHTTP_simple() {

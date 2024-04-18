@@ -6,10 +6,10 @@ import (
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 
-	abci "github.com/KYVENetwork/cometbft/v034x/abci/types"
-	"github.com/KYVENetwork/cometbft/v034x/crypto"
-	"github.com/KYVENetwork/cometbft/v034x/crypto/ed25519"
-	cryptoenc "github.com/KYVENetwork/cometbft/v034x/crypto/encoding"
+	abci "github.com/KYVENetwork/cometbft/v34/abci/types"
+	"github.com/KYVENetwork/cometbft/v34/crypto"
+	"github.com/KYVENetwork/cometbft/v34/crypto/ed25519"
+	cryptoenc "github.com/KYVENetwork/cometbft/v34/crypto/encoding"
 )
 
 func TestABCIPubKey(t *testing.T) {

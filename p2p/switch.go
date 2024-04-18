@@ -6,11 +6,11 @@ import (
 	"sync"
 	"time"
 
-	"github.com/KYVENetwork/cometbft/v034x/config"
-	"github.com/KYVENetwork/cometbft/v034x/libs/cmap"
-	"github.com/KYVENetwork/cometbft/v034x/libs/rand"
-	"github.com/KYVENetwork/cometbft/v034x/libs/service"
-	"github.com/KYVENetwork/cometbft/v034x/p2p/conn"
+	"github.com/KYVENetwork/cometbft/v34/config"
+	"github.com/KYVENetwork/cometbft/v34/libs/cmap"
+	"github.com/KYVENetwork/cometbft/v34/libs/rand"
+	"github.com/KYVENetwork/cometbft/v34/libs/service"
+	"github.com/KYVENetwork/cometbft/v34/p2p/conn"
 	"github.com/gogo/protobuf/proto"
 )
 
@@ -409,7 +409,7 @@ func (sw *Switch) stopAndRemovePeer(peer Peer, reason interface{}) {
 	// Removing a peer should go last to avoid a situation where a peer
 	// reconnect to our node and the switch calls InitPeer before
 	// RemovePeer is finished.
-	// https://github.com/KYVENetwork/cometbft/v034x/issues/3338
+	// https://github.com/KYVENetwork/cometbft/v34/issues/3338
 	if sw.peers.Remove(peer) {
 		sw.metrics.Peers.Add(float64(-1))
 	} else {

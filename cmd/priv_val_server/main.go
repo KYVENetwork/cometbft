@@ -5,12 +5,12 @@ import (
 	"os"
 	"time"
 
-	"github.com/KYVENetwork/cometbft/v034x/crypto/ed25519"
-	"github.com/KYVENetwork/cometbft/v034x/libs/log"
-	cmtnet "github.com/KYVENetwork/cometbft/v034x/libs/net"
-	cmtos "github.com/KYVENetwork/cometbft/v034x/libs/os"
+	"github.com/KYVENetwork/cometbft/v34/crypto/ed25519"
+	"github.com/KYVENetwork/cometbft/v34/libs/log"
+	cmtnet "github.com/KYVENetwork/cometbft/v34/libs/net"
+	cmtos "github.com/KYVENetwork/cometbft/v34/libs/os"
 
-	"github.com/KYVENetwork/cometbft/v034x/privval"
+	"github.com/KYVENetwork/cometbft/v34/privval"
 )
 
 func main() {

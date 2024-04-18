@@ -4,22 +4,22 @@ import (
 	"bytes"
 	"errors"
 	"fmt"
-	cmtversion "github.com/KYVENetwork/cometbft/v034x/proto/cometbft/v034x/version"
+	cmtversion "github.com/KYVENetwork/cometbft/v34/proto/cometbft/v34/version"
 	"strings"
 	"time"
 
 	"github.com/gogo/protobuf/proto"
 	gogotypes "github.com/gogo/protobuf/types"
 
-	"github.com/KYVENetwork/cometbft/v034x/crypto"
-	"github.com/KYVENetwork/cometbft/v034x/crypto/merkle"
-	"github.com/KYVENetwork/cometbft/v034x/crypto/tmhash"
-	"github.com/KYVENetwork/cometbft/v034x/libs/bits"
-	cmtbytes "github.com/KYVENetwork/cometbft/v034x/libs/bytes"
-	cmtmath "github.com/KYVENetwork/cometbft/v034x/libs/math"
-	cmtsync "github.com/KYVENetwork/cometbft/v034x/libs/sync"
-	cmtproto "github.com/KYVENetwork/cometbft/v034x/proto/cometbft/v034x/types"
-	"github.com/KYVENetwork/cometbft/v034x/version"
+	"github.com/KYVENetwork/cometbft/v34/crypto"
+	"github.com/KYVENetwork/cometbft/v34/crypto/merkle"
+	"github.com/KYVENetwork/cometbft/v34/crypto/tmhash"
+	"github.com/KYVENetwork/cometbft/v34/libs/bits"
+	cmtbytes "github.com/KYVENetwork/cometbft/v34/libs/bytes"
+	cmtmath "github.com/KYVENetwork/cometbft/v34/libs/math"
+	cmtsync "github.com/KYVENetwork/cometbft/v34/libs/sync"
+	cmtproto "github.com/KYVENetwork/cometbft/v34/proto/cometbft/v34/types"
+	"github.com/KYVENetwork/cometbft/v34/version"
 )
 
 const (
@@ -321,7 +321,7 @@ func MaxDataBytesNoEvidence(maxBytes int64, valsCount int) int64 {
 // NOTE: changes to the Header should be duplicated in:
 // - header.Hash()
 // - abci.Header
-// - https://github.com/KYVENetwork/cometbft/v034x/blob/v0.34.x/spec/blockchain/blockchain.md
+// - https://github.com/KYVENetwork/cometbft/v34/blob/v0.34.x/spec/blockchain/blockchain.md
 type Header struct {
 	// basic block info
 	Version cmtversion.Consensus `json:"version"`

@@ -5,9 +5,9 @@ import (
 	"fmt"
 	"os"
 
-	abcicli "github.com/KYVENetwork/cometbft/v034x/abci/client"
-	"github.com/KYVENetwork/cometbft/v034x/abci/types"
-	"github.com/KYVENetwork/cometbft/v034x/libs/log"
+	abcicli "github.com/KYVENetwork/cometbft/v34/abci/client"
+	"github.com/KYVENetwork/cometbft/v34/abci/types"
+	"github.com/KYVENetwork/cometbft/v34/libs/log"
 )
 
 func startClient(abciType string) abcicli.Client {

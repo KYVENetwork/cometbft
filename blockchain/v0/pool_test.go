@@ -8,10 +8,10 @@ import (
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 
-	"github.com/KYVENetwork/cometbft/v034x/libs/log"
-	cmtrand "github.com/KYVENetwork/cometbft/v034x/libs/rand"
-	"github.com/KYVENetwork/cometbft/v034x/p2p"
-	"github.com/KYVENetwork/cometbft/v034x/types"
+	"github.com/KYVENetwork/cometbft/v34/libs/log"
+	cmtrand "github.com/KYVENetwork/cometbft/v34/libs/rand"
+	"github.com/KYVENetwork/cometbft/v34/p2p"
+	"github.com/KYVENetwork/cometbft/v34/types"
 )
 
 func init() {
@@ -45,7 +45,7 @@ func (p testPeer) simulateInput(input inputData) {
 	input.pool.AddBlock(input.request.PeerID, block, 123)
 	// TODO: uncommenting this creates a race which is detected by:
 	// https://github.com/golang/go/blob/2bd767b1022dd3254bcec469f0ee164024726486/src/testing/testing.go#L854-L856
-	// see: https://github.com/KYVENetwork/cometbft/v034x/issues/3390#issue-418379890
+	// see: https://github.com/KYVENetwork/cometbft/v34/issues/3390#issue-418379890
 	// input.t.Logf("Added block from peer %v (height: %v)", input.request.PeerID, input.request.Height)
 }
 

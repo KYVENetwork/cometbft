@@ -4,8 +4,8 @@ import (
 	"sync"
 	"testing"
 
-	bh "github.com/KYVENetwork/cometbft/v034x/behaviour"
-	"github.com/KYVENetwork/cometbft/v034x/p2p"
+	bh "github.com/KYVENetwork/cometbft/v34/behaviour"
+	"github.com/KYVENetwork/cometbft/v34/p2p"
 )
 
 // TestMockReporter tests the MockReporter's ability to store reported

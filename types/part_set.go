@@ -6,13 +6,13 @@ import (
 	"fmt"
 	"io"
 
-	"github.com/KYVENetwork/cometbft/v034x/crypto/merkle"
-	"github.com/KYVENetwork/cometbft/v034x/libs/bits"
-	cmtbytes "github.com/KYVENetwork/cometbft/v034x/libs/bytes"
-	cmtjson "github.com/KYVENetwork/cometbft/v034x/libs/json"
-	cmtmath "github.com/KYVENetwork/cometbft/v034x/libs/math"
-	cmtsync "github.com/KYVENetwork/cometbft/v034x/libs/sync"
-	cmtproto "github.com/KYVENetwork/cometbft/v034x/proto/cometbft/v034x/types"
+	"github.com/KYVENetwork/cometbft/v34/crypto/merkle"
+	"github.com/KYVENetwork/cometbft/v34/libs/bits"
+	cmtbytes "github.com/KYVENetwork/cometbft/v34/libs/bytes"
+	cmtjson "github.com/KYVENetwork/cometbft/v34/libs/json"
+	cmtmath "github.com/KYVENetwork/cometbft/v34/libs/math"
+	cmtsync "github.com/KYVENetwork/cometbft/v34/libs/sync"
+	cmtproto "github.com/KYVENetwork/cometbft/v34/proto/cometbft/v34/types"
 )
 
 var (

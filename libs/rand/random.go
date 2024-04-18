@@ -5,7 +5,7 @@ import (
 	mrand "math/rand"
 	"time"
 
-	cmtsync "github.com/KYVENetwork/cometbft/v034x/libs/sync"
+	cmtsync "github.com/KYVENetwork/cometbft/v34/libs/sync"
 )
 
 const (
@@ -300,7 +300,7 @@ func (r *Rand) Perm(n int) []int {
 
 // NOTE: This relies on the os's random number generator.
 // For real security, we should salt that with some seed.
-// See github.com/KYVENetwork/cometbft/v034x/crypto for a more secure reader.
+// See github.com/KYVENetwork/cometbft/v34/crypto for a more secure reader.
 func cRandBytes(numBytes int) []byte {
 	b := make([]byte, numBytes)
 	_, err := crand.Read(b)

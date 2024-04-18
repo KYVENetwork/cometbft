@@ -12,9 +12,9 @@ import (
 
 	"github.com/gorilla/websocket"
 
-	"github.com/KYVENetwork/cometbft/v034x/libs/log"
-	"github.com/KYVENetwork/cometbft/v034x/libs/service"
-	types "github.com/KYVENetwork/cometbft/v034x/rpc/jsonrpc/types"
+	"github.com/KYVENetwork/cometbft/v34/libs/log"
+	"github.com/KYVENetwork/cometbft/v34/libs/service"
+	types "github.com/KYVENetwork/cometbft/v34/rpc/jsonrpc/types"
 )
 
 // WebSocket handler
@@ -449,7 +449,7 @@ func (wsc *wsConnection) writeRoutine() {
 
 // All writes to the websocket must (re)set the write deadline.
 // If some writes don't set it while others do, they may timeout incorrectly
-// (https://github.com/KYVENetwork/cometbft/v034x/issues/553)
+// (https://github.com/KYVENetwork/cometbft/v34/issues/553)
 func (wsc *wsConnection) writeMessageWithDeadline(msgType int, msg []byte) error {
 	if err := wsc.baseConn.SetWriteDeadline(time.Now().Add(wsc.writeWait)); err != nil {
 		return err

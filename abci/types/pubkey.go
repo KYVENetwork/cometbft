@@ -3,9 +3,9 @@ package types
 import (
 	fmt "fmt"
 
-	"github.com/KYVENetwork/cometbft/v034x/crypto/ed25519"
-	cryptoenc "github.com/KYVENetwork/cometbft/v034x/crypto/encoding"
-	"github.com/KYVENetwork/cometbft/v034x/crypto/secp256k1"
+	"github.com/KYVENetwork/cometbft/v34/crypto/ed25519"
+	cryptoenc "github.com/KYVENetwork/cometbft/v34/crypto/encoding"
+	"github.com/KYVENetwork/cometbft/v34/crypto/secp256k1"
 )
 
 func Ed25519ValidatorUpdate(pk []byte, power int64) ValidatorUpdate {

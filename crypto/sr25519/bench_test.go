@@ -4,8 +4,8 @@ import (
 	"io"
 	"testing"
 
-	"github.com/KYVENetwork/cometbft/v034x/crypto"
-	"github.com/KYVENetwork/cometbft/v034x/crypto/internal/benchmarking"
+	"github.com/KYVENetwork/cometbft/v34/crypto"
+	"github.com/KYVENetwork/cometbft/v34/crypto/internal/benchmarking"
 )
 
 func BenchmarkKeyGeneration(b *testing.B) {

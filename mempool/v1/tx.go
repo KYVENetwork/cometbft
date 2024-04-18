@@ -4,7 +4,7 @@ import (
 	"sync"
 	"time"
 
-	"github.com/KYVENetwork/cometbft/v034x/types"
+	"github.com/KYVENetwork/cometbft/v34/types"
 )
 
 // WrappedTx defines a wrapper around a raw transaction with additional metadata

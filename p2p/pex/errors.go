@@ -4,7 +4,7 @@ import (
 	"errors"
 	"fmt"
 
-	"github.com/KYVENetwork/cometbft/v034x/p2p"
+	"github.com/KYVENetwork/cometbft/v34/p2p"
 )
 
 type ErrAddrBookNonRoutable struct {

@@ -5,12 +5,12 @@ import (
 	"fmt"
 	"sort"
 
-	cmtmath "github.com/KYVENetwork/cometbft/v034x/libs/math"
-	cmtquery "github.com/KYVENetwork/cometbft/v034x/libs/pubsub/query"
-	ctypes "github.com/KYVENetwork/cometbft/v034x/rpc/core/types"
-	rpctypes "github.com/KYVENetwork/cometbft/v034x/rpc/jsonrpc/types"
-	"github.com/KYVENetwork/cometbft/v034x/state/txindex/null"
-	"github.com/KYVENetwork/cometbft/v034x/types"
+	cmtmath "github.com/KYVENetwork/cometbft/v34/libs/math"
+	cmtquery "github.com/KYVENetwork/cometbft/v34/libs/pubsub/query"
+	ctypes "github.com/KYVENetwork/cometbft/v34/rpc/core/types"
+	rpctypes "github.com/KYVENetwork/cometbft/v34/rpc/jsonrpc/types"
+	"github.com/KYVENetwork/cometbft/v34/state/txindex/null"
+	"github.com/KYVENetwork/cometbft/v34/types"
 )
 
 // Tx allows you to query the transaction results. `nil` could mean the

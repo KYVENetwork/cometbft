@@ -4,8 +4,8 @@ import (
 	"context"
 	"errors"
 
-	abci "github.com/KYVENetwork/cometbft/v034x/abci/types"
-	"github.com/KYVENetwork/cometbft/v034x/libs/pubsub/query"
+	abci "github.com/KYVENetwork/cometbft/v34/abci/types"
+	"github.com/KYVENetwork/cometbft/v34/libs/pubsub/query"
 )
 
 // XXX/TODO: These types should be moved to the indexer package.

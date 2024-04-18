@@ -3,7 +3,7 @@ package json_test
 import (
 	"time"
 
-	"github.com/KYVENetwork/cometbft/v034x/libs/json"
+	"github.com/KYVENetwork/cometbft/v34/libs/json"
 )
 
 // Register Car, an instance of the Vehicle interface.

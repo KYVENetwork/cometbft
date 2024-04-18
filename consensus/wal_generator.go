@@ -11,15 +11,15 @@ import (
 
 	db "github.com/cometbft/cometbft-db"
 
-	"github.com/KYVENetwork/cometbft/v034x/abci/example/kvstore"
-	cfg "github.com/KYVENetwork/cometbft/v034x/config"
-	"github.com/KYVENetwork/cometbft/v034x/libs/log"
-	cmtrand "github.com/KYVENetwork/cometbft/v034x/libs/rand"
-	"github.com/KYVENetwork/cometbft/v034x/privval"
-	"github.com/KYVENetwork/cometbft/v034x/proxy"
-	sm "github.com/KYVENetwork/cometbft/v034x/state"
-	"github.com/KYVENetwork/cometbft/v034x/store"
-	"github.com/KYVENetwork/cometbft/v034x/types"
+	"github.com/KYVENetwork/cometbft/v34/abci/example/kvstore"
+	cfg "github.com/KYVENetwork/cometbft/v34/config"
+	"github.com/KYVENetwork/cometbft/v34/libs/log"
+	cmtrand "github.com/KYVENetwork/cometbft/v34/libs/rand"
+	"github.com/KYVENetwork/cometbft/v34/privval"
+	"github.com/KYVENetwork/cometbft/v34/proxy"
+	sm "github.com/KYVENetwork/cometbft/v34/state"
+	"github.com/KYVENetwork/cometbft/v34/store"
+	"github.com/KYVENetwork/cometbft/v34/types"
 )
 
 // WALGenerateNBlocks generates a consensus WAL. It does this by spinning up a

@@ -8,9 +8,9 @@ import (
 
 	"golang.org/x/crypto/ed25519"
 
-	"github.com/KYVENetwork/cometbft/v034x/crypto"
-	"github.com/KYVENetwork/cometbft/v034x/crypto/tmhash"
-	cmtjson "github.com/KYVENetwork/cometbft/v034x/libs/json"
+	"github.com/KYVENetwork/cometbft/v34/crypto"
+	"github.com/KYVENetwork/cometbft/v34/crypto/tmhash"
+	cmtjson "github.com/KYVENetwork/cometbft/v34/libs/json"
 )
 
 //-------------------------------------

@@ -9,12 +9,12 @@ import (
 	"strings"
 	"time"
 
-	abci "github.com/KYVENetwork/cometbft/v034x/abci/types"
-	"github.com/KYVENetwork/cometbft/v034x/crypto/merkle"
-	"github.com/KYVENetwork/cometbft/v034x/crypto/tmhash"
-	cmtjson "github.com/KYVENetwork/cometbft/v034x/libs/json"
-	cmtrand "github.com/KYVENetwork/cometbft/v034x/libs/rand"
-	cmtproto "github.com/KYVENetwork/cometbft/v034x/proto/cometbft/v034x/types"
+	abci "github.com/KYVENetwork/cometbft/v34/abci/types"
+	"github.com/KYVENetwork/cometbft/v34/crypto/merkle"
+	"github.com/KYVENetwork/cometbft/v34/crypto/tmhash"
+	cmtjson "github.com/KYVENetwork/cometbft/v34/libs/json"
+	cmtrand "github.com/KYVENetwork/cometbft/v34/libs/rand"
+	cmtproto "github.com/KYVENetwork/cometbft/v34/proto/cometbft/v34/types"
 )
 
 // Evidence represents any provable malicious activity by a validator.

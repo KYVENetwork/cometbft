@@ -1,8 +1,8 @@
 package crypto
 
 import (
-	"github.com/KYVENetwork/cometbft/v034x/crypto/tmhash"
-	"github.com/KYVENetwork/cometbft/v034x/libs/bytes"
+	"github.com/KYVENetwork/cometbft/v34/crypto/tmhash"
+	"github.com/KYVENetwork/cometbft/v34/libs/bytes"
 )
 
 const (

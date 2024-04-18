@@ -4,13 +4,13 @@ import (
 	"errors"
 	"fmt"
 
-	cmtcon "github.com/KYVENetwork/cometbft/v034x/consensus"
-	cstypes "github.com/KYVENetwork/cometbft/v034x/consensus/types"
-	cmtmath "github.com/KYVENetwork/cometbft/v034x/libs/math"
-	"github.com/KYVENetwork/cometbft/v034x/p2p"
-	cmtcons "github.com/KYVENetwork/cometbft/v034x/proto/cometbft/v034x/consensus"
-	cmtproto "github.com/KYVENetwork/cometbft/v034x/proto/cometbft/v034x/types"
-	"github.com/KYVENetwork/cometbft/v034x/types"
+	cmtcon "github.com/KYVENetwork/cometbft/v34/consensus"
+	cstypes "github.com/KYVENetwork/cometbft/v34/consensus/types"
+	cmtmath "github.com/KYVENetwork/cometbft/v34/libs/math"
+	"github.com/KYVENetwork/cometbft/v34/p2p"
+	cmtcons "github.com/KYVENetwork/cometbft/v34/proto/cometbft/v34/consensus"
+	cmtproto "github.com/KYVENetwork/cometbft/v34/proto/cometbft/v34/types"
+	"github.com/KYVENetwork/cometbft/v34/types"
 )
 
 func WALToProto(msg cmtcon.WALMessage) (*cmtcons.WALMessage, error) {

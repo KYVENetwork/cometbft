@@ -10,8 +10,8 @@ package server
 import (
 	"fmt"
 
-	"github.com/KYVENetwork/cometbft/v034x/abci/types"
-	"github.com/KYVENetwork/cometbft/v034x/libs/service"
+	"github.com/KYVENetwork/cometbft/v34/abci/types"
+	"github.com/KYVENetwork/cometbft/v34/libs/service"
 )
 
 func NewServer(protoAddr, transport string, app types.Application) (service.Service, error) {

@@ -6,12 +6,12 @@ import (
 	"net"
 	"net/http"
 
-	"github.com/KYVENetwork/cometbft/v034x/libs/log"
-	cmtpubsub "github.com/KYVENetwork/cometbft/v034x/libs/pubsub"
-	"github.com/KYVENetwork/cometbft/v034x/light"
-	lrpc "github.com/KYVENetwork/cometbft/v034x/light/rpc"
-	rpchttp "github.com/KYVENetwork/cometbft/v034x/rpc/client/http"
-	rpcserver "github.com/KYVENetwork/cometbft/v034x/rpc/jsonrpc/server"
+	"github.com/KYVENetwork/cometbft/v34/libs/log"
+	cmtpubsub "github.com/KYVENetwork/cometbft/v34/libs/pubsub"
+	"github.com/KYVENetwork/cometbft/v34/light"
+	lrpc "github.com/KYVENetwork/cometbft/v34/light/rpc"
+	rpchttp "github.com/KYVENetwork/cometbft/v34/rpc/client/http"
+	rpcserver "github.com/KYVENetwork/cometbft/v34/rpc/jsonrpc/server"
 )
 
 // A Proxy defines parameters for running an HTTP server proxy.

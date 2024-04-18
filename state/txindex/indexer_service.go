@@ -3,9 +3,9 @@ package txindex
 import (
 	"context"
 
-	"github.com/KYVENetwork/cometbft/v034x/libs/service"
-	"github.com/KYVENetwork/cometbft/v034x/state/indexer"
-	"github.com/KYVENetwork/cometbft/v034x/types"
+	"github.com/KYVENetwork/cometbft/v34/libs/service"
+	"github.com/KYVENetwork/cometbft/v34/state/indexer"
+	"github.com/KYVENetwork/cometbft/v34/types"
 )
 
 // XXX/TODO: These types should be moved to the indexer package.

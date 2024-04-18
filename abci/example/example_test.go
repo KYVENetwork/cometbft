@@ -15,14 +15,14 @@ import (
 
 	"golang.org/x/net/context"
 
-	"github.com/KYVENetwork/cometbft/v034x/libs/log"
-	cmtnet "github.com/KYVENetwork/cometbft/v034x/libs/net"
+	"github.com/KYVENetwork/cometbft/v34/libs/log"
+	cmtnet "github.com/KYVENetwork/cometbft/v34/libs/net"
 
-	abcicli "github.com/KYVENetwork/cometbft/v034x/abci/client"
-	"github.com/KYVENetwork/cometbft/v034x/abci/example/code"
-	"github.com/KYVENetwork/cometbft/v034x/abci/example/kvstore"
-	abciserver "github.com/KYVENetwork/cometbft/v034x/abci/server"
-	"github.com/KYVENetwork/cometbft/v034x/abci/types"
+	abcicli "github.com/KYVENetwork/cometbft/v34/abci/client"
+	"github.com/KYVENetwork/cometbft/v34/abci/example/code"
+	"github.com/KYVENetwork/cometbft/v34/abci/example/kvstore"
+	abciserver "github.com/KYVENetwork/cometbft/v34/abci/server"
+	"github.com/KYVENetwork/cometbft/v34/abci/types"
 )
 
 func init() {

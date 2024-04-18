@@ -45,4 +45,4 @@ version = "v0"
 ```
 
 If we're lagging sufficiently, we should go back to fast syncing, but
-this is an [open issue](https://github.com/KYVENetwork/cometbft/v034x/issues/129).
+this is an [open issue](https://github.com/KYVENetwork/cometbft/v34/issues/129).

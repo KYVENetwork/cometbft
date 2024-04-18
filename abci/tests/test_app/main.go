@@ -7,8 +7,8 @@ import (
 	"os/exec"
 	"time"
 
-	"github.com/KYVENetwork/cometbft/v034x/abci/example/code"
-	"github.com/KYVENetwork/cometbft/v034x/abci/types"
+	"github.com/KYVENetwork/cometbft/v34/abci/example/code"
+	"github.com/KYVENetwork/cometbft/v34/abci/types"
 )
 
 var abciType string

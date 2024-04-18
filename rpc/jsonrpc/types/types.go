@@ -8,7 +8,7 @@ import (
 	"reflect"
 	"strings"
 
-	cmtjson "github.com/KYVENetwork/cometbft/v034x/libs/json"
+	cmtjson "github.com/KYVENetwork/cometbft/v34/libs/json"
 )
 
 // a wrapper to emulate a sum type: jsonrpcid = string | int

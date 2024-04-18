@@ -3,8 +3,8 @@ package mock
 import (
 	"context"
 
-	"github.com/KYVENetwork/cometbft/v034x/rpc/client"
-	ctypes "github.com/KYVENetwork/cometbft/v034x/rpc/core/types"
+	"github.com/KYVENetwork/cometbft/v34/rpc/client"
+	ctypes "github.com/KYVENetwork/cometbft/v34/rpc/core/types"
 )
 
 // StatusMock returns the result specified by the Call

@@ -2,19 +2,19 @@ package state_test
 
 import (
 	"crypto/rand"
-	cmtversion "github.com/KYVENetwork/cometbft/v034x/proto/cometbft/v034x/v034x/version"
+	cmtversion "github.com/KYVENetwork/cometbft/v34/proto/cometbft/v34/v34/version"
 	"testing"
 
 	dbm "github.com/cometbft/cometbft-db"
 	"github.com/stretchr/testify/require"
 
-	"github.com/KYVENetwork/cometbft/v034x/crypto"
-	"github.com/KYVENetwork/cometbft/v034x/crypto/tmhash"
-	cmtstate "github.com/KYVENetwork/cometbft/v034x/proto/cometbft/v034x/state"
-	"github.com/KYVENetwork/cometbft/v034x/state"
-	"github.com/KYVENetwork/cometbft/v034x/state/mocks"
-	"github.com/KYVENetwork/cometbft/v034x/types"
-	"github.com/KYVENetwork/cometbft/v034x/version"
+	"github.com/KYVENetwork/cometbft/v34/crypto"
+	"github.com/KYVENetwork/cometbft/v34/crypto/tmhash"
+	cmtstate "github.com/KYVENetwork/cometbft/v34/proto/cometbft/v34/state"
+	"github.com/KYVENetwork/cometbft/v34/state"
+	"github.com/KYVENetwork/cometbft/v34/state/mocks"
+	"github.com/KYVENetwork/cometbft/v34/types"
+	"github.com/KYVENetwork/cometbft/v34/version"
 )
 
 func TestRollback(t *testing.T) {

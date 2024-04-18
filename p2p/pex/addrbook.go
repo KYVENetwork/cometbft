@@ -16,13 +16,13 @@ import (
 
 	"github.com/minio/highwayhash"
 
-	"github.com/KYVENetwork/cometbft/v034x/crypto"
-	"github.com/KYVENetwork/cometbft/v034x/libs/log"
-	cmtmath "github.com/KYVENetwork/cometbft/v034x/libs/math"
-	cmtrand "github.com/KYVENetwork/cometbft/v034x/libs/rand"
-	"github.com/KYVENetwork/cometbft/v034x/libs/service"
-	cmtsync "github.com/KYVENetwork/cometbft/v034x/libs/sync"
-	"github.com/KYVENetwork/cometbft/v034x/p2p"
+	"github.com/KYVENetwork/cometbft/v34/crypto"
+	"github.com/KYVENetwork/cometbft/v34/libs/log"
+	cmtmath "github.com/KYVENetwork/cometbft/v34/libs/math"
+	cmtrand "github.com/KYVENetwork/cometbft/v34/libs/rand"
+	"github.com/KYVENetwork/cometbft/v34/libs/service"
+	cmtsync "github.com/KYVENetwork/cometbft/v34/libs/sync"
+	"github.com/KYVENetwork/cometbft/v34/p2p"
 )
 
 const (

@@ -11,11 +11,11 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/KYVENetwork/cometbft/v034x/crypto"
-	"github.com/KYVENetwork/cometbft/v034x/crypto/ed25519"
-	"github.com/KYVENetwork/cometbft/v034x/crypto/secp256k1"
-	rpchttp "github.com/KYVENetwork/cometbft/v034x/rpc/client/http"
-	mcs "github.com/KYVENetwork/cometbft/v034x/test/maverick/consensus"
+	"github.com/KYVENetwork/cometbft/v34/crypto"
+	"github.com/KYVENetwork/cometbft/v34/crypto/ed25519"
+	"github.com/KYVENetwork/cometbft/v34/crypto/secp256k1"
+	rpchttp "github.com/KYVENetwork/cometbft/v34/rpc/client/http"
+	mcs "github.com/KYVENetwork/cometbft/v34/test/maverick/consensus"
 )
 
 const (

@@ -1,7 +1,7 @@
 package behaviour
 
 import (
-	"github.com/KYVENetwork/cometbft/v034x/p2p"
+	"github.com/KYVENetwork/cometbft/v34/p2p"
 )
 
 // PeerBehaviour is a struct describing a behaviour a peer performed.

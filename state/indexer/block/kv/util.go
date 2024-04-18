@@ -8,9 +8,9 @@ import (
 
 	"github.com/google/orderedcode"
 
-	"github.com/KYVENetwork/cometbft/v034x/libs/pubsub/query"
-	"github.com/KYVENetwork/cometbft/v034x/state/indexer"
-	"github.com/KYVENetwork/cometbft/v034x/types"
+	"github.com/KYVENetwork/cometbft/v34/libs/pubsub/query"
+	"github.com/KYVENetwork/cometbft/v34/state/indexer"
+	"github.com/KYVENetwork/cometbft/v34/types"
 )
 
 type HeightInfo struct {

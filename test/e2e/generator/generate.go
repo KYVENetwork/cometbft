@@ -8,8 +8,8 @@ import (
 	"strconv"
 	"strings"
 
-	e2e "github.com/KYVENetwork/cometbft/v034x/test/e2e/pkg"
-	"github.com/KYVENetwork/cometbft/v034x/version"
+	e2e "github.com/KYVENetwork/cometbft/v34/test/e2e/pkg"
+	"github.com/KYVENetwork/cometbft/v34/version"
 	"github.com/Masterminds/semver/v3"
 	"github.com/go-git/go-git/v5"
 	"github.com/go-git/go-git/v5/plumbing/object"
@@ -34,7 +34,7 @@ var (
 	// The following specify randomly chosen values for testnet nodes.
 	nodeDatabases = uniformChoice{"goleveldb", "cleveldb", "rocksdb", "boltdb", "badgerdb"}
 	ipv6          = uniformChoice{false, true}
-	// FIXME: grpc disabled due to https://github.com/KYVENetwork/cometbft/v034x/issues/5439
+	// FIXME: grpc disabled due to https://github.com/KYVENetwork/cometbft/v34/issues/5439
 	nodeABCIProtocols    = uniformChoice{"unix", "tcp", "builtin"} // "grpc"
 	nodePrivvalProtocols = uniformChoice{"file", "unix", "tcp"}
 	// FIXME: v2 disabled due to flake
@@ -54,7 +54,7 @@ var (
 	nodeMisbehaviors = weightedChoice{
 		// FIXME: evidence disabled due to node panicking when not
 		// having sufficient block history to process evidence.
-		// https://github.com/KYVENetwork/cometbft/v034x/issues/5617
+		// https://github.com/KYVENetwork/cometbft/v34/issues/5617
 		// misbehaviorOption{"double-prevote"}: 1,
 		misbehaviorOption{}: 9,
 	}

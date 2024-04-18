@@ -6,11 +6,11 @@ import (
 
 	"github.com/stretchr/testify/require"
 
-	"github.com/KYVENetwork/cometbft/v034x/abci/example/kvstore"
-	abci "github.com/KYVENetwork/cometbft/v034x/abci/types"
-	"github.com/KYVENetwork/cometbft/v034x/mempool"
-	"github.com/KYVENetwork/cometbft/v034x/proxy"
-	"github.com/KYVENetwork/cometbft/v034x/types"
+	"github.com/KYVENetwork/cometbft/v34/abci/example/kvstore"
+	abci "github.com/KYVENetwork/cometbft/v34/abci/types"
+	"github.com/KYVENetwork/cometbft/v34/mempool"
+	"github.com/KYVENetwork/cometbft/v34/proxy"
+	"github.com/KYVENetwork/cometbft/v34/types"
 )
 
 func TestCacheAfterUpdate(t *testing.T) {

@@ -4,9 +4,9 @@ import (
 	"fmt"
 	"time"
 
-	"github.com/KYVENetwork/cometbft/v034x/libs/log"
-	rpctypes "github.com/KYVENetwork/cometbft/v034x/rpc/core/types"
-	e2e "github.com/KYVENetwork/cometbft/v034x/test/e2e/pkg"
+	"github.com/KYVENetwork/cometbft/v34/libs/log"
+	rpctypes "github.com/KYVENetwork/cometbft/v34/rpc/core/types"
+	e2e "github.com/KYVENetwork/cometbft/v34/test/e2e/pkg"
 )
 
 // Perturbs a running testnet.

@@ -5,15 +5,15 @@ import (
 	"fmt"
 	"time"
 
-	abci "github.com/KYVENetwork/cometbft/v034x/abci/types"
-	cryptoenc "github.com/KYVENetwork/cometbft/v034x/crypto/encoding"
-	"github.com/KYVENetwork/cometbft/v034x/libs/fail"
-	"github.com/KYVENetwork/cometbft/v034x/libs/log"
-	mempl "github.com/KYVENetwork/cometbft/v034x/mempool"
-	cmtstate "github.com/KYVENetwork/cometbft/v034x/proto/cometbft/v034x/state"
-	cmtproto "github.com/KYVENetwork/cometbft/v034x/proto/cometbft/v034x/types"
-	"github.com/KYVENetwork/cometbft/v034x/proxy"
-	"github.com/KYVENetwork/cometbft/v034x/types"
+	abci "github.com/KYVENetwork/cometbft/v34/abci/types"
+	cryptoenc "github.com/KYVENetwork/cometbft/v34/crypto/encoding"
+	"github.com/KYVENetwork/cometbft/v34/libs/fail"
+	"github.com/KYVENetwork/cometbft/v34/libs/log"
+	mempl "github.com/KYVENetwork/cometbft/v34/mempool"
+	cmtstate "github.com/KYVENetwork/cometbft/v34/proto/cometbft/v34/state"
+	cmtproto "github.com/KYVENetwork/cometbft/v34/proto/cometbft/v34/types"
+	"github.com/KYVENetwork/cometbft/v34/proxy"
+	"github.com/KYVENetwork/cometbft/v34/types"
 )
 
 //-----------------------------------------------------------------------------

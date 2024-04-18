@@ -8,13 +8,13 @@ import (
 	"reflect"
 	"time"
 
-	abci "github.com/KYVENetwork/cometbft/v034x/abci/types"
-	cmtcon "github.com/KYVENetwork/cometbft/v034x/consensus"
-	"github.com/KYVENetwork/cometbft/v034x/crypto/merkle"
-	"github.com/KYVENetwork/cometbft/v034x/libs/log"
-	"github.com/KYVENetwork/cometbft/v034x/proxy"
-	sm "github.com/KYVENetwork/cometbft/v034x/state"
-	"github.com/KYVENetwork/cometbft/v034x/types"
+	abci "github.com/KYVENetwork/cometbft/v34/abci/types"
+	cmtcon "github.com/KYVENetwork/cometbft/v34/consensus"
+	"github.com/KYVENetwork/cometbft/v34/crypto/merkle"
+	"github.com/KYVENetwork/cometbft/v34/libs/log"
+	"github.com/KYVENetwork/cometbft/v34/proxy"
+	sm "github.com/KYVENetwork/cometbft/v34/state"
+	"github.com/KYVENetwork/cometbft/v34/types"
 )
 
 var crc32c = crc32.MakeTable(crc32.Castagnoli)

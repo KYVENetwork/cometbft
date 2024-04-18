@@ -41,6 +41,6 @@ subsequent major release of CometBFT.
 If you are building CometBFT from scratch, please note that it must be compiled
 using Go 1.21 or higher.
 
-[v03424]: https://github.com/KYVENetwork/cometbft/v034x/releases/tag/v0.34.24
+[v03424]: https://github.com/KYVENetwork/cometbft/v34/releases/tag/v0.34.24
 [v03425]: https://github.com/informalsystems/tendermint/releases/tag/v0.34.25
 [v03426]: https://github.com/informalsystems/tendermint/releases/tag/v0.34.26

@@ -8,16 +8,16 @@ import (
 	dbm "github.com/cometbft/cometbft-db"
 	"github.com/spf13/cobra"
 
-	abcitypes "github.com/KYVENetwork/cometbft/v034x/abci/types"
-	cmtcfg "github.com/KYVENetwork/cometbft/v034x/config"
-	"github.com/KYVENetwork/cometbft/v034x/libs/progressbar"
-	"github.com/KYVENetwork/cometbft/v034x/state"
-	"github.com/KYVENetwork/cometbft/v034x/state/indexer"
-	blockidxkv "github.com/KYVENetwork/cometbft/v034x/state/indexer/block/kv"
-	"github.com/KYVENetwork/cometbft/v034x/state/indexer/sink/psql"
-	"github.com/KYVENetwork/cometbft/v034x/state/txindex"
-	"github.com/KYVENetwork/cometbft/v034x/state/txindex/kv"
-	"github.com/KYVENetwork/cometbft/v034x/types"
+	abcitypes "github.com/KYVENetwork/cometbft/v34/abci/types"
+	cmtcfg "github.com/KYVENetwork/cometbft/v34/config"
+	"github.com/KYVENetwork/cometbft/v34/libs/progressbar"
+	"github.com/KYVENetwork/cometbft/v34/state"
+	"github.com/KYVENetwork/cometbft/v34/state/indexer"
+	blockidxkv "github.com/KYVENetwork/cometbft/v34/state/indexer/block/kv"
+	"github.com/KYVENetwork/cometbft/v34/state/indexer/sink/psql"
+	"github.com/KYVENetwork/cometbft/v34/state/txindex"
+	"github.com/KYVENetwork/cometbft/v34/state/txindex/kv"
+	"github.com/KYVENetwork/cometbft/v34/types"
 )
 
 const (

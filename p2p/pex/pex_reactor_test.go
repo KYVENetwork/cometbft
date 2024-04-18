@@ -12,11 +12,11 @@ import (
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 
-	"github.com/KYVENetwork/cometbft/v034x/config"
-	"github.com/KYVENetwork/cometbft/v034x/libs/log"
-	"github.com/KYVENetwork/cometbft/v034x/p2p"
-	"github.com/KYVENetwork/cometbft/v034x/p2p/mock"
-	tmp2p "github.com/KYVENetwork/cometbft/v034x/proto/cometbft/v034x/p2p"
+	"github.com/KYVENetwork/cometbft/v34/config"
+	"github.com/KYVENetwork/cometbft/v34/libs/log"
+	"github.com/KYVENetwork/cometbft/v34/p2p"
+	"github.com/KYVENetwork/cometbft/v34/p2p/mock"
+	tmp2p "github.com/KYVENetwork/cometbft/v34/proto/cometbft/v34/p2p"
 )
 
 var cfg *config.P2PConfig
@@ -402,7 +402,7 @@ func TestPEXReactorDialsPeerUpToMaxAttemptsInSeedMode(t *testing.T) {
 // this should give it time to request addrs and for the seed
 // to call FlushStop, and allows us to test calling Stop concurrently
 // with FlushStop. Before a fix, this non-deterministically reproduced
-// https://github.com/KYVENetwork/cometbft/v034x/issues/3231.
+// https://github.com/KYVENetwork/cometbft/v34/issues/3231.
 func TestPEXReactorSeedModeFlushStop(t *testing.T) {
 	N := 2
 	switches := make([]*p2p.Switch, N)

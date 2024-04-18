@@ -7,7 +7,7 @@ import (
 	context "context"
 	fmt "fmt"
 	proto "github.com/gogo/protobuf/proto"
-	types "github.com/KYVENetwork/cometbft/v034x/abci/types"
+	types "github.com/KYVENetwork/cometbft/v34/abci/types"
 	grpc "google.golang.org/grpc"
 	codes "google.golang.org/grpc/codes"
 	status "google.golang.org/grpc/status"

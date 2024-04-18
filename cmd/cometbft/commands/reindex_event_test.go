@@ -11,13 +11,13 @@ import (
 
 	dbm "github.com/cometbft/cometbft-db"
 
-	abcitypes "github.com/KYVENetwork/cometbft/v034x/abci/types"
-	cmtcfg "github.com/KYVENetwork/cometbft/v034x/config"
-	protocmtstate "github.com/KYVENetwork/cometbft/v034x/proto/cometbft/v034x/state"
-	blockmocks "github.com/KYVENetwork/cometbft/v034x/state/indexer/mocks"
-	"github.com/KYVENetwork/cometbft/v034x/state/mocks"
-	txmocks "github.com/KYVENetwork/cometbft/v034x/state/txindex/mocks"
-	"github.com/KYVENetwork/cometbft/v034x/types"
+	abcitypes "github.com/KYVENetwork/cometbft/v34/abci/types"
+	cmtcfg "github.com/KYVENetwork/cometbft/v34/config"
+	protocmtstate "github.com/KYVENetwork/cometbft/v34/proto/cometbft/v34/state"
+	blockmocks "github.com/KYVENetwork/cometbft/v34/state/indexer/mocks"
+	"github.com/KYVENetwork/cometbft/v34/state/mocks"
+	txmocks "github.com/KYVENetwork/cometbft/v34/state/txindex/mocks"
+	"github.com/KYVENetwork/cometbft/v34/types"
 )
 
 const (

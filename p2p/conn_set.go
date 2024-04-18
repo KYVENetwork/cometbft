@@ -3,7 +3,7 @@ package p2p
 import (
 	"net"
 
-	cmtsync "github.com/KYVENetwork/cometbft/v034x/libs/sync"
+	cmtsync "github.com/KYVENetwork/cometbft/v34/libs/sync"
 )
 
 // ConnSet is a lookup table for connections and all their ips.

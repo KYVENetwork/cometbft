@@ -1,7 +1,7 @@
 package mempool
 
 import (
-	"github.com/KYVENetwork/cometbft/v034x/p2p"
+	"github.com/KYVENetwork/cometbft/v34/p2p"
 )
 
 // TxInfo are parameters that get passed when attempting to add a tx to the

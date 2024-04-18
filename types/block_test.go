@@ -5,7 +5,7 @@ import (
 	// number generator here and we can run the tests a bit faster
 	"crypto/rand"
 	"encoding/hex"
-	cmtversion "github.com/KYVENetwork/cometbft/v034x/proto/cometbft/v034x/v034x/version"
+	cmtversion "github.com/KYVENetwork/cometbft/v34/proto/cometbft/v34/v34/version"
 	"math"
 	"os"
 	"reflect"
@@ -16,15 +16,15 @@ import (
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 
-	"github.com/KYVENetwork/cometbft/v034x/crypto"
-	"github.com/KYVENetwork/cometbft/v034x/crypto/merkle"
-	"github.com/KYVENetwork/cometbft/v034x/crypto/tmhash"
-	"github.com/KYVENetwork/cometbft/v034x/libs/bits"
-	"github.com/KYVENetwork/cometbft/v034x/libs/bytes"
-	cmtrand "github.com/KYVENetwork/cometbft/v034x/libs/rand"
-	cmtproto "github.com/KYVENetwork/cometbft/v034x/proto/cometbft/v034x/types"
-	cmttime "github.com/KYVENetwork/cometbft/v034x/types/time"
-	"github.com/KYVENetwork/cometbft/v034x/version"
+	"github.com/KYVENetwork/cometbft/v34/crypto"
+	"github.com/KYVENetwork/cometbft/v34/crypto/merkle"
+	"github.com/KYVENetwork/cometbft/v34/crypto/tmhash"
+	"github.com/KYVENetwork/cometbft/v34/libs/bits"
+	"github.com/KYVENetwork/cometbft/v34/libs/bytes"
+	cmtrand "github.com/KYVENetwork/cometbft/v34/libs/rand"
+	cmtproto "github.com/KYVENetwork/cometbft/v34/proto/cometbft/v34/types"
+	cmttime "github.com/KYVENetwork/cometbft/v34/types/time"
+	"github.com/KYVENetwork/cometbft/v34/version"
 )
 
 func TestMain(m *testing.M) {

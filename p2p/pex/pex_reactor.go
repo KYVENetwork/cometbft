@@ -8,13 +8,13 @@ import (
 
 	"github.com/gogo/protobuf/proto"
 
-	"github.com/KYVENetwork/cometbft/v034x/libs/cmap"
-	cmtmath "github.com/KYVENetwork/cometbft/v034x/libs/math"
-	cmtrand "github.com/KYVENetwork/cometbft/v034x/libs/rand"
-	"github.com/KYVENetwork/cometbft/v034x/libs/service"
-	"github.com/KYVENetwork/cometbft/v034x/p2p"
-	"github.com/KYVENetwork/cometbft/v034x/p2p/conn"
-	tmp2p "github.com/KYVENetwork/cometbft/v034x/proto/cometbft/v034x/p2p"
+	"github.com/KYVENetwork/cometbft/v34/libs/cmap"
+	cmtmath "github.com/KYVENetwork/cometbft/v34/libs/math"
+	cmtrand "github.com/KYVENetwork/cometbft/v34/libs/rand"
+	"github.com/KYVENetwork/cometbft/v34/libs/service"
+	"github.com/KYVENetwork/cometbft/v34/p2p"
+	"github.com/KYVENetwork/cometbft/v34/p2p/conn"
+	tmp2p "github.com/KYVENetwork/cometbft/v34/proto/cometbft/v34/p2p"
 )
 
 type Peer = p2p.Peer

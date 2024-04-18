@@ -1,8 +1,8 @@
 package state
 
 import (
-	mempl "github.com/KYVENetwork/cometbft/v034x/mempool"
-	"github.com/KYVENetwork/cometbft/v034x/types"
+	mempl "github.com/KYVENetwork/cometbft/v34/mempool"
+	"github.com/KYVENetwork/cometbft/v34/types"
 )
 
 // TxPreCheck returns a function to filter transactions before processing.

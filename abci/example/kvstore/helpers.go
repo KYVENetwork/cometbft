@@ -4,8 +4,8 @@ import (
 	"fmt"
 	"strings"
 
-	"github.com/KYVENetwork/cometbft/v034x/abci/types"
-	cmtrand "github.com/KYVENetwork/cometbft/v034x/libs/rand"
+	"github.com/KYVENetwork/cometbft/v34/abci/types"
+	cmtrand "github.com/KYVENetwork/cometbft/v34/libs/rand"
 )
 
 // RandVal creates one random validator, with a key derived

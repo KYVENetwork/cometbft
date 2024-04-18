@@ -1,7 +1,7 @@
 package evidence
 
 import (
-	"github.com/KYVENetwork/cometbft/v034x/types"
+	"github.com/KYVENetwork/cometbft/v34/types"
 )
 
 //go:generate ../scripts/mockery_generate.sh BlockStore

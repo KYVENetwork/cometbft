@@ -7,9 +7,9 @@ import (
 
 	"github.com/stretchr/testify/assert"
 
-	cmtmath "github.com/KYVENetwork/cometbft/v034x/libs/math"
-	"github.com/KYVENetwork/cometbft/v034x/light"
-	"github.com/KYVENetwork/cometbft/v034x/types"
+	cmtmath "github.com/KYVENetwork/cometbft/v34/libs/math"
+	"github.com/KYVENetwork/cometbft/v34/light"
+	"github.com/KYVENetwork/cometbft/v34/types"
 )
 
 const (

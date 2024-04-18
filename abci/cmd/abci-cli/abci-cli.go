@@ -11,18 +11,18 @@ import (
 
 	"github.com/spf13/cobra"
 
-	"github.com/KYVENetwork/cometbft/v034x/libs/log"
-	cmtos "github.com/KYVENetwork/cometbft/v034x/libs/os"
+	"github.com/KYVENetwork/cometbft/v34/libs/log"
+	cmtos "github.com/KYVENetwork/cometbft/v34/libs/os"
 
-	abcicli "github.com/KYVENetwork/cometbft/v034x/abci/client"
-	"github.com/KYVENetwork/cometbft/v034x/abci/example/code"
-	"github.com/KYVENetwork/cometbft/v034x/abci/example/counter"
-	"github.com/KYVENetwork/cometbft/v034x/abci/example/kvstore"
-	"github.com/KYVENetwork/cometbft/v034x/abci/server"
-	servertest "github.com/KYVENetwork/cometbft/v034x/abci/tests/server"
-	"github.com/KYVENetwork/cometbft/v034x/abci/types"
-	"github.com/KYVENetwork/cometbft/v034x/abci/version"
-	"github.com/KYVENetwork/cometbft/v034x/proto/cometbft/v034x/crypto"
+	abcicli "github.com/KYVENetwork/cometbft/v34/abci/client"
+	"github.com/KYVENetwork/cometbft/v34/abci/example/code"
+	"github.com/KYVENetwork/cometbft/v34/abci/example/counter"
+	"github.com/KYVENetwork/cometbft/v34/abci/example/kvstore"
+	"github.com/KYVENetwork/cometbft/v34/abci/server"
+	servertest "github.com/KYVENetwork/cometbft/v34/abci/tests/server"
+	"github.com/KYVENetwork/cometbft/v34/abci/types"
+	"github.com/KYVENetwork/cometbft/v34/abci/version"
+	"github.com/KYVENetwork/cometbft/v34/proto/cometbft/v34/crypto"
 )
 
 // client is a global variable so it can be reused by the console

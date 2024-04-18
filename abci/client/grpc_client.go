@@ -9,10 +9,10 @@ import (
 	"golang.org/x/net/context"
 	"google.golang.org/grpc"
 
-	"github.com/KYVENetwork/cometbft/v034x/abci/types"
-	cmtnet "github.com/KYVENetwork/cometbft/v034x/libs/net"
-	"github.com/KYVENetwork/cometbft/v034x/libs/service"
-	cmtsync "github.com/KYVENetwork/cometbft/v034x/libs/sync"
+	"github.com/KYVENetwork/cometbft/v34/abci/types"
+	cmtnet "github.com/KYVENetwork/cometbft/v34/libs/net"
+	"github.com/KYVENetwork/cometbft/v34/libs/service"
+	cmtsync "github.com/KYVENetwork/cometbft/v34/libs/sync"
 )
 
 var _ Client = (*grpcClient)(nil)

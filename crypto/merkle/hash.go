@@ -1,7 +1,7 @@
 package merkle
 
 import (
-	"github.com/KYVENetwork/cometbft/v034x/crypto/tmhash"
+	"github.com/KYVENetwork/cometbft/v34/crypto/tmhash"
 )
 
 // TODO: make these have a large predefined capacity

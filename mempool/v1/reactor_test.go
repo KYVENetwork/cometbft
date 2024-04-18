@@ -12,17 +12,17 @@ import (
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 
-	"github.com/KYVENetwork/cometbft/v034x/abci/example/kvstore"
-	"github.com/KYVENetwork/cometbft/v034x/p2p/mock"
+	"github.com/KYVENetwork/cometbft/v34/abci/example/kvstore"
+	"github.com/KYVENetwork/cometbft/v34/p2p/mock"
 
-	cfg "github.com/KYVENetwork/cometbft/v034x/config"
+	cfg "github.com/KYVENetwork/cometbft/v34/config"
 
-	"github.com/KYVENetwork/cometbft/v034x/libs/log"
-	"github.com/KYVENetwork/cometbft/v034x/mempool"
-	"github.com/KYVENetwork/cometbft/v034x/p2p"
-	memproto "github.com/KYVENetwork/cometbft/v034x/proto/cometbft/v034x/mempool"
-	"github.com/KYVENetwork/cometbft/v034x/proxy"
-	"github.com/KYVENetwork/cometbft/v034x/types"
+	"github.com/KYVENetwork/cometbft/v34/libs/log"
+	"github.com/KYVENetwork/cometbft/v34/mempool"
+	"github.com/KYVENetwork/cometbft/v34/p2p"
+	memproto "github.com/KYVENetwork/cometbft/v34/proto/cometbft/v34/mempool"
+	"github.com/KYVENetwork/cometbft/v34/proxy"
+	"github.com/KYVENetwork/cometbft/v34/types"
 )
 
 const (

@@ -4,9 +4,9 @@ import (
 	"reflect"
 	"testing"
 
-	"github.com/KYVENetwork/cometbft/v034x/crypto/tmhash"
-	cmtrand "github.com/KYVENetwork/cometbft/v034x/libs/rand"
-	cmtproto "github.com/KYVENetwork/cometbft/v034x/proto/cometbft/v034x/types"
+	"github.com/KYVENetwork/cometbft/v34/crypto/tmhash"
+	cmtrand "github.com/KYVENetwork/cometbft/v34/libs/rand"
+	cmtproto "github.com/KYVENetwork/cometbft/v34/proto/cometbft/v34/types"
 )
 
 func TestCanonicalizeBlockID(t *testing.T) {

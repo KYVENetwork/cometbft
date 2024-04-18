@@ -6,7 +6,7 @@ import (
 	"github.com/google/uuid"
 	"github.com/informalsystems/tm-load-test/pkg/loadtest"
 
-	"github.com/KYVENetwork/cometbft/v034x/test/loadtime/payload"
+	"github.com/KYVENetwork/cometbft/v34/test/loadtime/payload"
 )
 
 // Ensure all of the interfaces are correctly satisfied.

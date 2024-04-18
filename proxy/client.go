@@ -3,12 +3,12 @@ package proxy
 import (
 	"fmt"
 
-	abcicli "github.com/KYVENetwork/cometbft/v034x/abci/client"
-	"github.com/KYVENetwork/cometbft/v034x/abci/example/counter"
-	"github.com/KYVENetwork/cometbft/v034x/abci/example/kvstore"
-	"github.com/KYVENetwork/cometbft/v034x/abci/types"
-	cmtsync "github.com/KYVENetwork/cometbft/v034x/libs/sync"
-	e2e "github.com/KYVENetwork/cometbft/v034x/test/e2e/app"
+	abcicli "github.com/KYVENetwork/cometbft/v34/abci/client"
+	"github.com/KYVENetwork/cometbft/v34/abci/example/counter"
+	"github.com/KYVENetwork/cometbft/v34/abci/example/kvstore"
+	"github.com/KYVENetwork/cometbft/v34/abci/types"
+	cmtsync "github.com/KYVENetwork/cometbft/v34/libs/sync"
+	e2e "github.com/KYVENetwork/cometbft/v34/test/e2e/app"
 )
 
 //go:generate ../scripts/mockery_generate.sh ClientCreator

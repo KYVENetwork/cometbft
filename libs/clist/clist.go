@@ -15,7 +15,7 @@ import (
 	"fmt"
 	"sync"
 
-	cmtsync "github.com/KYVENetwork/cometbft/v034x/libs/sync"
+	cmtsync "github.com/KYVENetwork/cometbft/v34/libs/sync"
 )
 
 // MaxLength is the max allowed number of elements a linked list is

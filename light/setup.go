@@ -4,9 +4,9 @@ import (
 	"context"
 	"time"
 
-	"github.com/KYVENetwork/cometbft/v034x/light/provider"
-	"github.com/KYVENetwork/cometbft/v034x/light/provider/http"
-	"github.com/KYVENetwork/cometbft/v034x/light/store"
+	"github.com/KYVENetwork/cometbft/v34/light/provider"
+	"github.com/KYVENetwork/cometbft/v34/light/provider/http"
+	"github.com/KYVENetwork/cometbft/v34/light/store"
 )
 
 // NewHTTPClient initiates an instance of a light client using HTTP addresses

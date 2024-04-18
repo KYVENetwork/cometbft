@@ -1,7 +1,7 @@
 package core
 
 import (
-	rpc "github.com/KYVENetwork/cometbft/v034x/rpc/jsonrpc/server"
+	rpc "github.com/KYVENetwork/cometbft/v34/rpc/jsonrpc/server"
 )
 
 // TODO: better system than "unsafe" prefix

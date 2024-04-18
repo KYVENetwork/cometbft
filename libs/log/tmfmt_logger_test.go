@@ -11,7 +11,7 @@ import (
 	kitlog "github.com/go-kit/log"
 	"github.com/stretchr/testify/assert"
 
-	"github.com/KYVENetwork/cometbft/v034x/libs/log"
+	"github.com/KYVENetwork/cometbft/v34/libs/log"
 )
 
 func TestTMFmtLogger(t *testing.T) {

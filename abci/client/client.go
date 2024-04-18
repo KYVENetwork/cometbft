@@ -4,9 +4,9 @@ import (
 	"fmt"
 	"sync"
 
-	"github.com/KYVENetwork/cometbft/v034x/abci/types"
-	"github.com/KYVENetwork/cometbft/v034x/libs/service"
-	cmtsync "github.com/KYVENetwork/cometbft/v034x/libs/sync"
+	"github.com/KYVENetwork/cometbft/v34/abci/types"
+	"github.com/KYVENetwork/cometbft/v34/libs/service"
+	cmtsync "github.com/KYVENetwork/cometbft/v34/libs/sync"
 )
 
 const (
@@ -136,7 +136,7 @@ func (r *ReqRes) InvokeCallback() {
 // marked done and SetCallback is called before calling GetCallback as that
 // will invoke the callback twice and create a potential race condition.
 //
-// ref: https://github.com/KYVENetwork/cometbft/v034x/issues/5439
+// ref: https://github.com/KYVENetwork/cometbft/v34/issues/5439
 func (r *ReqRes) GetCallback() func(*types.Response) {
 	r.mtx.Lock()
 	defer r.mtx.Unlock()

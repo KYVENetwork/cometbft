@@ -7,10 +7,10 @@ import (
 	dbm "github.com/cometbft/cometbft-db"
 	"github.com/gogo/protobuf/proto"
 
-	cmtsync "github.com/KYVENetwork/cometbft/v034x/libs/sync"
-	cmtstore "github.com/KYVENetwork/cometbft/v034x/proto/cometbft/v034x/store"
-	cmtproto "github.com/KYVENetwork/cometbft/v034x/proto/cometbft/v034x/types"
-	"github.com/KYVENetwork/cometbft/v034x/types"
+	cmtsync "github.com/KYVENetwork/cometbft/v34/libs/sync"
+	cmtstore "github.com/KYVENetwork/cometbft/v34/proto/cometbft/v34/store"
+	cmtproto "github.com/KYVENetwork/cometbft/v34/proto/cometbft/v34/types"
+	"github.com/KYVENetwork/cometbft/v34/types"
 )
 
 /*
@@ -37,7 +37,7 @@ type BlockStore struct {
 	// fine-grained concurrency control for its data, and thus this mutex does not apply to
 	// database contents. The only reason for keeping these fields in the struct is that the data
 	// can't efficiently be queried from the database since the key encoding we use is not
-	// lexicographically ordered (see https://github.com/KYVENetwork/cometbft/v034x/issues/4567).
+	// lexicographically ordered (see https://github.com/KYVENetwork/cometbft/v34/issues/4567).
 	mtx    cmtsync.RWMutex
 	base   int64
 	height int64

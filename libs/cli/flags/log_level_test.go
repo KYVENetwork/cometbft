@@ -5,8 +5,8 @@ import (
 	"strings"
 	"testing"
 
-	cmtflags "github.com/KYVENetwork/cometbft/v034x/libs/cli/flags"
-	"github.com/KYVENetwork/cometbft/v034x/libs/log"
+	cmtflags "github.com/KYVENetwork/cometbft/v34/libs/cli/flags"
+	"github.com/KYVENetwork/cometbft/v34/libs/log"
 )
 
 const (

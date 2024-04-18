@@ -6,16 +6,16 @@ import (
 	"sync"
 	"sync/atomic"
 
-	abci "github.com/KYVENetwork/cometbft/v034x/abci/types"
-	"github.com/KYVENetwork/cometbft/v034x/config"
-	"github.com/KYVENetwork/cometbft/v034x/libs/clist"
-	"github.com/KYVENetwork/cometbft/v034x/libs/log"
-	cmtmath "github.com/KYVENetwork/cometbft/v034x/libs/math"
-	cmtsync "github.com/KYVENetwork/cometbft/v034x/libs/sync"
-	"github.com/KYVENetwork/cometbft/v034x/mempool"
-	"github.com/KYVENetwork/cometbft/v034x/p2p"
-	"github.com/KYVENetwork/cometbft/v034x/proxy"
-	"github.com/KYVENetwork/cometbft/v034x/types"
+	abci "github.com/KYVENetwork/cometbft/v34/abci/types"
+	"github.com/KYVENetwork/cometbft/v34/config"
+	"github.com/KYVENetwork/cometbft/v34/libs/clist"
+	"github.com/KYVENetwork/cometbft/v34/libs/log"
+	cmtmath "github.com/KYVENetwork/cometbft/v34/libs/math"
+	cmtsync "github.com/KYVENetwork/cometbft/v34/libs/sync"
+	"github.com/KYVENetwork/cometbft/v34/mempool"
+	"github.com/KYVENetwork/cometbft/v34/p2p"
+	"github.com/KYVENetwork/cometbft/v34/proxy"
+	"github.com/KYVENetwork/cometbft/v34/types"
 )
 
 // CListMempool is an ordered in-memory pool for transactions before they are
@@ -627,7 +627,7 @@ func (mem *CListMempool) Update(
 		//   101 -> 102
 		// Mempool after:
 		//   100
-		// https://github.com/KYVENetwork/cometbft/v034x/issues/3322.
+		// https://github.com/KYVENetwork/cometbft/v34/issues/3322.
 		if e, ok := mem.txsMap.Load(tx.Key()); ok {
 			mem.removeTx(tx, e.(*clist.CElement), false)
 		}

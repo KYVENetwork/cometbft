@@ -15,18 +15,18 @@ import (
 	"github.com/stretchr/testify/mock"
 	"github.com/stretchr/testify/require"
 
-	abciclient "github.com/KYVENetwork/cometbft/v034x/abci/client"
-	abciclimocks "github.com/KYVENetwork/cometbft/v034x/abci/client/mocks"
-	"github.com/KYVENetwork/cometbft/v034x/abci/example/kvstore"
-	abciserver "github.com/KYVENetwork/cometbft/v034x/abci/server"
-	abci "github.com/KYVENetwork/cometbft/v034x/abci/types"
-	"github.com/KYVENetwork/cometbft/v034x/config"
-	"github.com/KYVENetwork/cometbft/v034x/libs/log"
-	cmtrand "github.com/KYVENetwork/cometbft/v034x/libs/rand"
-	"github.com/KYVENetwork/cometbft/v034x/libs/service"
-	"github.com/KYVENetwork/cometbft/v034x/mempool"
-	"github.com/KYVENetwork/cometbft/v034x/proxy"
-	"github.com/KYVENetwork/cometbft/v034x/types"
+	abciclient "github.com/KYVENetwork/cometbft/v34/abci/client"
+	abciclimocks "github.com/KYVENetwork/cometbft/v34/abci/client/mocks"
+	"github.com/KYVENetwork/cometbft/v34/abci/example/kvstore"
+	abciserver "github.com/KYVENetwork/cometbft/v34/abci/server"
+	abci "github.com/KYVENetwork/cometbft/v34/abci/types"
+	"github.com/KYVENetwork/cometbft/v34/config"
+	"github.com/KYVENetwork/cometbft/v34/libs/log"
+	cmtrand "github.com/KYVENetwork/cometbft/v34/libs/rand"
+	"github.com/KYVENetwork/cometbft/v34/libs/service"
+	"github.com/KYVENetwork/cometbft/v34/mempool"
+	"github.com/KYVENetwork/cometbft/v34/proxy"
+	"github.com/KYVENetwork/cometbft/v34/types"
 )
 
 // A cleanupFunc cleans up any config / test files created for a particular
@@ -695,7 +695,7 @@ func TestMempoolNoCacheOverflow(t *testing.T) {
 }
 
 // This will non-deterministically catch some concurrency failures like
-// https://github.com/KYVENetwork/cometbft/v034x/issues/3509
+// https://github.com/KYVENetwork/cometbft/v34/issues/3509
 // TODO: all of the tests should probably also run using the remote proxy app
 // since otherwise we're not actually testing the concurrency of the mempool here!
 func TestMempoolRemoteAppConcurrency(t *testing.T) {

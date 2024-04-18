@@ -8,10 +8,10 @@ import (
 
 	"golang.org/x/net/netutil"
 
-	"github.com/KYVENetwork/cometbft/v034x/crypto"
-	"github.com/KYVENetwork/cometbft/v034x/libs/protoio"
-	"github.com/KYVENetwork/cometbft/v034x/p2p/conn"
-	tmp2p "github.com/KYVENetwork/cometbft/v034x/proto/cometbft/v034x/p2p"
+	"github.com/KYVENetwork/cometbft/v34/crypto"
+	"github.com/KYVENetwork/cometbft/v34/libs/protoio"
+	"github.com/KYVENetwork/cometbft/v34/p2p/conn"
+	tmp2p "github.com/KYVENetwork/cometbft/v34/proto/cometbft/v34/p2p"
 	"github.com/gogo/protobuf/proto"
 )
 
@@ -297,7 +297,7 @@ func (mt *MultiplexTransport) acceptPeers() {
 
 		// Connection upgrade and filtering should be asynchronous to avoid
 		// Head-of-line blocking[0].
-		// Reference:  https://github.com/KYVENetwork/cometbft/v034x/issues/2047
+		// Reference:  https://github.com/KYVENetwork/cometbft/v34/issues/2047
 		//
 		// [0] https://en.wikipedia.org/wiki/Head-of-line_blocking
 		go func(c net.Conn) {

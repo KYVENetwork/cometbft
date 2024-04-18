@@ -14,17 +14,17 @@ import (
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 
-	"github.com/KYVENetwork/cometbft/v034x/abci/example/kvstore"
-	abci "github.com/KYVENetwork/cometbft/v034x/abci/types"
-	cfg "github.com/KYVENetwork/cometbft/v034x/config"
-	"github.com/KYVENetwork/cometbft/v034x/libs/log"
-	cmtrand "github.com/KYVENetwork/cometbft/v034x/libs/rand"
-	"github.com/KYVENetwork/cometbft/v034x/mempool"
-	"github.com/KYVENetwork/cometbft/v034x/p2p"
-	"github.com/KYVENetwork/cometbft/v034x/p2p/mock"
-	memproto "github.com/KYVENetwork/cometbft/v034x/proto/cometbft/v034x/mempool"
-	"github.com/KYVENetwork/cometbft/v034x/proxy"
-	"github.com/KYVENetwork/cometbft/v034x/types"
+	"github.com/KYVENetwork/cometbft/v34/abci/example/kvstore"
+	abci "github.com/KYVENetwork/cometbft/v34/abci/types"
+	cfg "github.com/KYVENetwork/cometbft/v34/config"
+	"github.com/KYVENetwork/cometbft/v34/libs/log"
+	cmtrand "github.com/KYVENetwork/cometbft/v34/libs/rand"
+	"github.com/KYVENetwork/cometbft/v34/mempool"
+	"github.com/KYVENetwork/cometbft/v34/p2p"
+	"github.com/KYVENetwork/cometbft/v34/p2p/mock"
+	memproto "github.com/KYVENetwork/cometbft/v34/proto/cometbft/v34/mempool"
+	"github.com/KYVENetwork/cometbft/v34/proxy"
+	"github.com/KYVENetwork/cometbft/v34/types"
 )
 
 const (
@@ -67,7 +67,7 @@ func TestReactorBroadcastTxsMessage(t *testing.T) {
 	waitForTxsOnReactors(t, txs, reactors)
 }
 
-// regression test for https://github.com/KYVENetwork/cometbft/v034x/issues/5408
+// regression test for https://github.com/KYVENetwork/cometbft/v34/issues/5408
 func TestReactorConcurrency(t *testing.T) {
 	config := cfg.TestConfig()
 	const N = 2
@@ -268,7 +268,7 @@ func TestMempoolIDsPanicsIfNodeRequestsOvermaxActiveIDs(t *testing.T) {
 // TODO: This test tests that we don't panic and are able to generate new
 // PeerIDs for each peer we add. It seems as though we should be able to test
 // this in a much more direct way.
-// https://github.com/KYVENetwork/cometbft/v034x/issues/9639
+// https://github.com/KYVENetwork/cometbft/v34/issues/9639
 func TestDontExhaustMaxActiveIDs(t *testing.T) {
 	config := cfg.TestConfig()
 	const N = 1

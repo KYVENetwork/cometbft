@@ -10,7 +10,7 @@ import (
 	"math"
 	"time"
 
-	cmtsync "github.com/KYVENetwork/cometbft/v034x/libs/sync"
+	cmtsync "github.com/KYVENetwork/cometbft/v34/libs/sync"
 )
 
 // Monitor monitors and limits the transfer rate of a data stream.
