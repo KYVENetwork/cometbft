@@ -540,8 +540,8 @@ func EvidenceFromProto(evidence *cmtproto.Evidence) (Evidence, error) {
 }
 
 func init() {
-	cmtjson.RegisterType(&DuplicateVoteEvidence{}, "cometbft/v38/DuplicateVoteEvidence")
-	cmtjson.RegisterType(&LightClientAttackEvidence{}, "cometbft/v38/LightClientAttackEvidence")
+	cmtjson.RegisterType(&DuplicateVoteEvidence{}, "tendermint/DuplicateVoteEvidence")
+	cmtjson.RegisterType(&LightClientAttackEvidence{}, "tendermint/LightClientAttackEvidence")
 }
 
 //-------------------------------------------- ERRORS --------------------------------------
