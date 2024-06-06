@@ -51,6 +51,14 @@ type (
 	ErrNoABCIResponsesForHeight struct {
 		Height int64
 	}
+
+	ErrABCIResponseResponseUnmarshalForHeight struct {
+		Height int64
+	}
+
+	ErrABCIResponseCorruptedOrSpecChangeForHeight struct {
+		Height int64
+	}
 )
 
 func (e ErrUnknownBlock) Error() string {
@@ -101,6 +109,14 @@ func (e ErrNoConsensusParamsForHeight) Error() string {
 
 func (e ErrNoABCIResponsesForHeight) Error() string {
 	return fmt.Sprintf("could not find results for height #%d", e.Height)
+}
+
+func (e ErrABCIResponseResponseUnmarshalForHeight) Error() string {
+	return fmt.Sprintf("could not decode results for height %d", e.Height)
+}
+
+func (e ErrABCIResponseCorruptedOrSpecChangeForHeight) Error() string {
+	return fmt.Sprintf("could not retrieve results for height %d", e.Height)
 }
 
 var ErrFinalizeBlockResponsesNotPersisted = errors.New("node is not persisting finalize block responses")

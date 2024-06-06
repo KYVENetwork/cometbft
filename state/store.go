@@ -63,7 +63,7 @@ type Store interface {
 	LoadValidators(int64) (*types.ValidatorSet, error)
 	// LoadFinalizeBlockResponse loads the abciResponse for a given height
 	LoadFinalizeBlockResponse(int64) (*abci.ResponseFinalizeBlock, error)
-	// LoadLastABCIResponse loads the last abciResponse for a given height
+	// LoadLastFinalizeBlockResponse loads the last abciResponse for a given height
 	LoadLastFinalizeBlockResponse(int64) (*abci.ResponseFinalizeBlock, error)
 	// LoadConsensusParams loads the consensus params for a given height
 	LoadConsensusParams(int64) (types.ConsensusParams, error)
@@ -430,15 +430,14 @@ func (store dbStore) LoadFinalizeBlockResponse(height int64) (*abci.ResponseFina
 
 	resp := new(abci.ResponseFinalizeBlock)
 	err = resp.Unmarshal(buf)
-	if err != nil {
+	if err != nil || resp.AppHash == nil {
 		// The data might be of the legacy ABCI response type, so
 		// we try to unmarshal that
 		legacyResp := new(cmtstate.LegacyABCIResponses)
-		rerr := legacyResp.Unmarshal(buf)
-		if rerr != nil {
-			// DATA HAS BEEN CORRUPTED OR THE SPEC HAS CHANGED
-			cmtos.Exit(fmt.Sprintf(`LoadFinalizeBlockResponse: Data has been corrupted or its spec has
-					changed: %v\n`, err))
+		if err := legacyResp.Unmarshal(buf); err != nil {
+			// only return an error, this method is only invoked through the `/block_results` not for state logic and
+			// some tests, so no need to exit cometbft if there's an error, just return it.
+			return nil, ErrABCIResponseCorruptedOrSpecChangeForHeight{Height: height}
 		}
 		// The state store contains the old format. Migrate to
 		// the new ResponseFinalizeBlock format. Note that the
@@ -761,6 +760,25 @@ func min(a int64, b int64) int64 {
 // responseFinalizeBlockFromLegacy is a convenience function that takes the old abci responses and morphs
 // it to the finalize block response. Note that the app hash is missing
 func responseFinalizeBlockFromLegacy(legacyResp *cmtstate.LegacyABCIResponses) *abci.ResponseFinalizeBlock {
+
+	// Add BeginBlock attribute to BeginBlock events
+	for idx, event := range legacyResp.BeginBlock.Events {
+		legacyResp.BeginBlock.Events[idx].Attributes = append(event.Attributes, abci.EventAttribute{
+			Key:   "mode",
+			Value: "BeginBlock",
+			Index: false,
+		})
+	}
+
+	// Add EndBlock attribute to BeginBlock events
+	for idx, event := range legacyResp.EndBlock.Events {
+		legacyResp.EndBlock.Events[idx].Attributes = append(event.Attributes, abci.EventAttribute{
+			Key:   "mode",
+			Value: "EndBlock",
+			Index: false,
+		})
+	}
+
 	return &abci.ResponseFinalizeBlock{
 		TxResults:             legacyResp.DeliverTxs,
 		ValidatorUpdates:      legacyResp.EndBlock.ValidatorUpdates,
