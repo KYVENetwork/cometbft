@@ -4,7 +4,7 @@ import (
 	"io"
 	"testing"
 
-	"github.com/cometbft/cometbft/crypto"
+	"github.com/KYVENetwork/cometbft/v1/crypto"
 )
 
 // The code in this file is adapted from agl/ed25519.

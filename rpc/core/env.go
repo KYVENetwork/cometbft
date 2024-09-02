@@ -5,17 +5,17 @@ import (
 	"fmt"
 	"time"
 
-	cfg "github.com/cometbft/cometbft/config"
-	"github.com/cometbft/cometbft/crypto"
-	cmtjson "github.com/cometbft/cometbft/libs/json"
-	"github.com/cometbft/cometbft/libs/log"
-	mempl "github.com/cometbft/cometbft/mempool"
-	"github.com/cometbft/cometbft/p2p"
-	"github.com/cometbft/cometbft/proxy"
-	sm "github.com/cometbft/cometbft/state"
-	"github.com/cometbft/cometbft/state/indexer"
-	"github.com/cometbft/cometbft/state/txindex"
-	"github.com/cometbft/cometbft/types"
+	cfg "github.com/KYVENetwork/cometbft/v1/config"
+	"github.com/KYVENetwork/cometbft/v1/crypto"
+	cmtjson "github.com/KYVENetwork/cometbft/v1/libs/json"
+	"github.com/KYVENetwork/cometbft/v1/libs/log"
+	mempl "github.com/KYVENetwork/cometbft/v1/mempool"
+	"github.com/KYVENetwork/cometbft/v1/p2p"
+	"github.com/KYVENetwork/cometbft/v1/proxy"
+	sm "github.com/KYVENetwork/cometbft/v1/state"
+	"github.com/KYVENetwork/cometbft/v1/state/indexer"
+	"github.com/KYVENetwork/cometbft/v1/state/txindex"
+	"github.com/KYVENetwork/cometbft/v1/types"
 )
 
 const (

@@ -5,9 +5,9 @@ import (
 
 	"github.com/stretchr/testify/require"
 
-	"github.com/cometbft/cometbft/internal/test"
-	"github.com/cometbft/cometbft/types"
-	cmttime "github.com/cometbft/cometbft/types/time"
+	"github.com/KYVENetwork/cometbft/v1/internal/test"
+	"github.com/KYVENetwork/cometbft/v1/types"
+	cmttime "github.com/KYVENetwork/cometbft/v1/types/time"
 )
 
 // TestLoadBlockExtendedCommit tests loading the extended commit for a previously

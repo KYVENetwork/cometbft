@@ -8,16 +8,16 @@ import (
 	"sync/atomic"
 	"time"
 
-	abcicli "github.com/cometbft/cometbft/abci/client"
-	abci "github.com/cometbft/cometbft/abci/types"
-	"github.com/cometbft/cometbft/config"
-	"github.com/cometbft/cometbft/internal/clist"
-	"github.com/cometbft/cometbft/libs/log"
-	cmtmath "github.com/cometbft/cometbft/libs/math"
-	cmtsync "github.com/cometbft/cometbft/libs/sync"
-	"github.com/cometbft/cometbft/p2p"
-	"github.com/cometbft/cometbft/proxy"
-	"github.com/cometbft/cometbft/types"
+	abcicli "github.com/KYVENetwork/cometbft/v1/abci/client"
+	abci "github.com/KYVENetwork/cometbft/v1/abci/types"
+	"github.com/KYVENetwork/cometbft/v1/config"
+	"github.com/KYVENetwork/cometbft/v1/internal/clist"
+	"github.com/KYVENetwork/cometbft/v1/libs/log"
+	cmtmath "github.com/KYVENetwork/cometbft/v1/libs/math"
+	cmtsync "github.com/KYVENetwork/cometbft/v1/libs/sync"
+	"github.com/KYVENetwork/cometbft/v1/p2p"
+	"github.com/KYVENetwork/cometbft/v1/proxy"
+	"github.com/KYVENetwork/cometbft/v1/types"
 )
 
 // CListMempool is an ordered in-memory pool for transactions before they are

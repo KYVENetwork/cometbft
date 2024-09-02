@@ -12,9 +12,9 @@ import (
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 
-	cmtbytes "github.com/cometbft/cometbft/libs/bytes"
-	e2e "github.com/cometbft/cometbft/test/e2e/pkg"
-	"github.com/cometbft/cometbft/types"
+	cmtbytes "github.com/KYVENetwork/cometbft/v1/libs/bytes"
+	e2e "github.com/KYVENetwork/cometbft/v1/test/e2e/pkg"
+	"github.com/KYVENetwork/cometbft/v1/types"
 )
 
 // Tests that any initial state given in genesis has made it into the app.

@@ -8,17 +8,17 @@ import (
 
 	"golang.org/x/sync/errgroup"
 
-	"github.com/cometbft/cometbft/config"
-	"github.com/cometbft/cometbft/internal/inspect/rpc"
-	cmtstrings "github.com/cometbft/cometbft/internal/strings"
-	"github.com/cometbft/cometbft/libs/log"
-	rpccore "github.com/cometbft/cometbft/rpc/core"
-	"github.com/cometbft/cometbft/state"
-	"github.com/cometbft/cometbft/state/indexer"
-	"github.com/cometbft/cometbft/state/indexer/block"
-	"github.com/cometbft/cometbft/state/txindex"
-	"github.com/cometbft/cometbft/store"
-	"github.com/cometbft/cometbft/types"
+	"github.com/KYVENetwork/cometbft/v1/config"
+	"github.com/KYVENetwork/cometbft/v1/internal/inspect/rpc"
+	cmtstrings "github.com/KYVENetwork/cometbft/v1/internal/strings"
+	"github.com/KYVENetwork/cometbft/v1/libs/log"
+	rpccore "github.com/KYVENetwork/cometbft/v1/rpc/core"
+	"github.com/KYVENetwork/cometbft/v1/state"
+	"github.com/KYVENetwork/cometbft/v1/state/indexer"
+	"github.com/KYVENetwork/cometbft/v1/state/indexer/block"
+	"github.com/KYVENetwork/cometbft/v1/state/txindex"
+	"github.com/KYVENetwork/cometbft/v1/store"
+	"github.com/KYVENetwork/cometbft/v1/types"
 )
 
 var logger = log.NewTMLogger(log.NewSyncWriter(os.Stdout))

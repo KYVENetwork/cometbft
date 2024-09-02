@@ -6,9 +6,9 @@ import (
 	"fmt"
 	"strings"
 
-	"github.com/cometbft/cometbft/abci/types"
-	"github.com/cometbft/cometbft/crypto/ed25519"
-	cmtrand "github.com/cometbft/cometbft/internal/rand"
+	"github.com/KYVENetwork/cometbft/v1/abci/types"
+	"github.com/KYVENetwork/cometbft/v1/crypto/ed25519"
+	cmtrand "github.com/KYVENetwork/cometbft/v1/internal/rand"
 )
 
 // RandVal creates one random validator, with a key derived

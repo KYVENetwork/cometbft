@@ -4,9 +4,9 @@ import (
 	"context"
 	"sync"
 
-	"github.com/cometbft/cometbft/abci/types"
-	"github.com/cometbft/cometbft/libs/service"
-	cmtsync "github.com/cometbft/cometbft/libs/sync"
+	"github.com/KYVENetwork/cometbft/v1/abci/types"
+	"github.com/KYVENetwork/cometbft/v1/libs/service"
+	cmtsync "github.com/KYVENetwork/cometbft/v1/libs/sync"
 )
 
 const (

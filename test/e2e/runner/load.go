@@ -9,11 +9,11 @@ import (
 
 	"github.com/google/uuid"
 
-	"github.com/cometbft/cometbft/libs/log"
-	rpchttp "github.com/cometbft/cometbft/rpc/client/http"
-	e2e "github.com/cometbft/cometbft/test/e2e/pkg"
-	"github.com/cometbft/cometbft/test/loadtime/payload"
-	"github.com/cometbft/cometbft/types"
+	"github.com/KYVENetwork/cometbft/v1/libs/log"
+	rpchttp "github.com/KYVENetwork/cometbft/v1/rpc/client/http"
+	e2e "github.com/KYVENetwork/cometbft/v1/test/e2e/pkg"
+	"github.com/KYVENetwork/cometbft/v1/test/loadtime/payload"
+	"github.com/KYVENetwork/cometbft/v1/types"
 )
 
 const workerPoolSize = 16

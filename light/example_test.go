@@ -8,15 +8,15 @@ import (
 	"testing"
 	"time"
 
+	"github.com/KYVENetwork/cometbft/v1/abci/example/kvstore"
+	"github.com/KYVENetwork/cometbft/v1/libs/log"
+	"github.com/KYVENetwork/cometbft/v1/light"
+	"github.com/KYVENetwork/cometbft/v1/light/provider"
+	httpp "github.com/KYVENetwork/cometbft/v1/light/provider/http"
+	dbs "github.com/KYVENetwork/cometbft/v1/light/store/db"
+	rpctest "github.com/KYVENetwork/cometbft/v1/rpc/test"
+	cmttime "github.com/KYVENetwork/cometbft/v1/types/time"
 	dbm "github.com/cometbft/cometbft-db"
-	"github.com/cometbft/cometbft/abci/example/kvstore"
-	"github.com/cometbft/cometbft/libs/log"
-	"github.com/cometbft/cometbft/light"
-	"github.com/cometbft/cometbft/light/provider"
-	httpp "github.com/cometbft/cometbft/light/provider/http"
-	dbs "github.com/cometbft/cometbft/light/store/db"
-	rpctest "github.com/cometbft/cometbft/rpc/test"
-	cmttime "github.com/cometbft/cometbft/types/time"
 )
 
 // Automatically getting new headers and verifying them.

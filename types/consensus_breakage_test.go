@@ -7,10 +7,10 @@ import (
 
 	"github.com/stretchr/testify/require"
 
-	cmtversion "github.com/cometbft/cometbft/api/cometbft/version/v1"
-	"github.com/cometbft/cometbft/crypto"
-	"github.com/cometbft/cometbft/crypto/ed25519"
-	"github.com/cometbft/cometbft/crypto/tmhash"
+	cmtversion "github.com/KYVENetwork/cometbft/v1/api/cometbft/version/v1"
+	"github.com/KYVENetwork/cometbft/v1/crypto"
+	"github.com/KYVENetwork/cometbft/v1/crypto/ed25519"
+	"github.com/KYVENetwork/cometbft/v1/crypto/tmhash"
 )
 
 // Ensure validators_hash and next_validators_hash are deterministic.

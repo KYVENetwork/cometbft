@@ -13,8 +13,8 @@ import (
 	"io"
 	"os"
 
-	cs "github.com/cometbft/cometbft/internal/consensus"
-	cmtjson "github.com/cometbft/cometbft/libs/json"
+	cs "github.com/KYVENetwork/cometbft/v1/internal/consensus"
+	cmtjson "github.com/KYVENetwork/cometbft/v1/libs/json"
 )
 
 func main() {

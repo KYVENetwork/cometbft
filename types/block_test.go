@@ -13,15 +13,15 @@ import (
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 
-	cmtversion "github.com/cometbft/cometbft/api/cometbft/version/v1"
-	"github.com/cometbft/cometbft/crypto"
-	"github.com/cometbft/cometbft/crypto/merkle"
-	"github.com/cometbft/cometbft/crypto/tmhash"
-	"github.com/cometbft/cometbft/internal/bits"
-	cmtrand "github.com/cometbft/cometbft/internal/rand"
-	"github.com/cometbft/cometbft/libs/bytes"
-	cmttime "github.com/cometbft/cometbft/types/time"
-	"github.com/cometbft/cometbft/version"
+	cmtversion "github.com/KYVENetwork/cometbft/v1/api/cometbft/version/v1"
+	"github.com/KYVENetwork/cometbft/v1/crypto"
+	"github.com/KYVENetwork/cometbft/v1/crypto/merkle"
+	"github.com/KYVENetwork/cometbft/v1/crypto/tmhash"
+	"github.com/KYVENetwork/cometbft/v1/internal/bits"
+	cmtrand "github.com/KYVENetwork/cometbft/v1/internal/rand"
+	"github.com/KYVENetwork/cometbft/v1/libs/bytes"
+	cmttime "github.com/KYVENetwork/cometbft/v1/types/time"
+	"github.com/KYVENetwork/cometbft/v1/version"
 )
 
 func TestMain(m *testing.M) {

@@ -10,13 +10,13 @@ import (
 	"github.com/spf13/cobra"
 	"github.com/spf13/viper"
 
-	cfg "github.com/cometbft/cometbft/config"
-	cmtrand "github.com/cometbft/cometbft/internal/rand"
-	"github.com/cometbft/cometbft/libs/bytes"
-	"github.com/cometbft/cometbft/p2p"
-	"github.com/cometbft/cometbft/privval"
-	"github.com/cometbft/cometbft/types"
-	cmttime "github.com/cometbft/cometbft/types/time"
+	cfg "github.com/KYVENetwork/cometbft/v1/config"
+	cmtrand "github.com/KYVENetwork/cometbft/v1/internal/rand"
+	"github.com/KYVENetwork/cometbft/v1/libs/bytes"
+	"github.com/KYVENetwork/cometbft/v1/p2p"
+	"github.com/KYVENetwork/cometbft/v1/privval"
+	"github.com/KYVENetwork/cometbft/v1/types"
+	cmttime "github.com/KYVENetwork/cometbft/v1/types/time"
 )
 
 var (

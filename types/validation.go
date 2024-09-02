@@ -4,10 +4,10 @@ import (
 	"errors"
 	"fmt"
 
-	"github.com/cometbft/cometbft/crypto/batch"
-	"github.com/cometbft/cometbft/crypto/tmhash"
-	cmtmath "github.com/cometbft/cometbft/libs/math"
-	cmterrors "github.com/cometbft/cometbft/types/errors"
+	"github.com/KYVENetwork/cometbft/v1/crypto/batch"
+	"github.com/KYVENetwork/cometbft/v1/crypto/tmhash"
+	cmtmath "github.com/KYVENetwork/cometbft/v1/libs/math"
+	cmterrors "github.com/KYVENetwork/cometbft/v1/types/errors"
 )
 
 const batchVerifyThreshold = 2

@@ -6,8 +6,8 @@ import (
 	"math/rand"
 	"sort"
 
-	cmtsync "github.com/cometbft/cometbft/libs/sync"
-	"github.com/cometbft/cometbft/p2p"
+	cmtsync "github.com/KYVENetwork/cometbft/v1/libs/sync"
+	"github.com/KYVENetwork/cometbft/v1/p2p"
 )
 
 // snapshotKey is a snapshot key used for lookups.

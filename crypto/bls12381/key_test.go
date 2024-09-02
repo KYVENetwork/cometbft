@@ -8,8 +8,8 @@ import (
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 
-	"github.com/cometbft/cometbft/crypto"
-	"github.com/cometbft/cometbft/crypto/bls12381"
+	"github.com/KYVENetwork/cometbft/v1/crypto"
+	"github.com/KYVENetwork/cometbft/v1/crypto/bls12381"
 )
 
 func TestNewPrivateKeyFromBytes(t *testing.T) {

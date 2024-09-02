@@ -12,13 +12,13 @@ import (
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 
-	p2p "github.com/cometbft/cometbft/api/cometbft/p2p/v1"
-	"github.com/cometbft/cometbft/config"
-	"github.com/cometbft/cometbft/crypto"
-	"github.com/cometbft/cometbft/crypto/ed25519"
-	"github.com/cometbft/cometbft/libs/bytes"
-	"github.com/cometbft/cometbft/libs/log"
-	cmtconn "github.com/cometbft/cometbft/p2p/conn"
+	p2p "github.com/KYVENetwork/cometbft/v1/api/cometbft/p2p/v1"
+	"github.com/KYVENetwork/cometbft/v1/config"
+	"github.com/KYVENetwork/cometbft/v1/crypto"
+	"github.com/KYVENetwork/cometbft/v1/crypto/ed25519"
+	"github.com/KYVENetwork/cometbft/v1/libs/bytes"
+	"github.com/KYVENetwork/cometbft/v1/libs/log"
+	cmtconn "github.com/KYVENetwork/cometbft/v1/p2p/conn"
 )
 
 func TestPeerBasic(t *testing.T) {

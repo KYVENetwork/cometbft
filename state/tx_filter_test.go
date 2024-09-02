@@ -6,10 +6,10 @@ import (
 
 	"github.com/stretchr/testify/require"
 
+	cmtrand "github.com/KYVENetwork/cometbft/v1/internal/rand"
+	sm "github.com/KYVENetwork/cometbft/v1/state"
+	"github.com/KYVENetwork/cometbft/v1/types"
 	dbm "github.com/cometbft/cometbft-db"
-	cmtrand "github.com/cometbft/cometbft/internal/rand"
-	sm "github.com/cometbft/cometbft/state"
-	"github.com/cometbft/cometbft/types"
 )
 
 func TestTxFilter(t *testing.T) {

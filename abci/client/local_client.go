@@ -3,9 +3,9 @@ package abcicli
 import (
 	"context"
 
-	"github.com/cometbft/cometbft/abci/types"
-	"github.com/cometbft/cometbft/libs/service"
-	cmtsync "github.com/cometbft/cometbft/libs/sync"
+	"github.com/KYVENetwork/cometbft/v1/abci/types"
+	"github.com/KYVENetwork/cometbft/v1/libs/service"
+	cmtsync "github.com/KYVENetwork/cometbft/v1/libs/sync"
 )
 
 // NOTE: use defer to unlock mutex because Application might panic (e.g., in

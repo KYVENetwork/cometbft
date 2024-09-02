@@ -6,11 +6,11 @@ import (
 	"fmt"
 	"time"
 
-	cmtcons "github.com/cometbft/cometbft/api/cometbft/consensus/v1"
-	cmtproto "github.com/cometbft/cometbft/api/cometbft/types/v1"
-	"github.com/cometbft/cometbft/crypto"
-	cmtbytes "github.com/cometbft/cometbft/libs/bytes"
-	"github.com/cometbft/cometbft/libs/protoio"
+	cmtcons "github.com/KYVENetwork/cometbft/v1/api/cometbft/consensus/v1"
+	cmtproto "github.com/KYVENetwork/cometbft/v1/api/cometbft/types/v1"
+	"github.com/KYVENetwork/cometbft/v1/crypto"
+	cmtbytes "github.com/KYVENetwork/cometbft/v1/libs/bytes"
+	"github.com/KYVENetwork/cometbft/v1/libs/protoio"
 )
 
 const (

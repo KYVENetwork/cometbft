@@ -11,13 +11,13 @@ import (
 	gogotypes "github.com/cosmos/gogoproto/types"
 	"github.com/google/orderedcode"
 
+	cmtproto "github.com/KYVENetwork/cometbft/v1/api/cometbft/types/v1"
+	"github.com/KYVENetwork/cometbft/v1/internal/clist"
+	"github.com/KYVENetwork/cometbft/v1/libs/log"
+	sm "github.com/KYVENetwork/cometbft/v1/state"
+	"github.com/KYVENetwork/cometbft/v1/types"
+	cmterrors "github.com/KYVENetwork/cometbft/v1/types/errors"
 	dbm "github.com/cometbft/cometbft-db"
-	cmtproto "github.com/cometbft/cometbft/api/cometbft/types/v1"
-	"github.com/cometbft/cometbft/internal/clist"
-	"github.com/cometbft/cometbft/libs/log"
-	sm "github.com/cometbft/cometbft/state"
-	"github.com/cometbft/cometbft/types"
-	cmterrors "github.com/cometbft/cometbft/types/errors"
 )
 
 // Pool maintains a pool of valid evidence to be broadcasted and committed.

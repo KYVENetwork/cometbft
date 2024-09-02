@@ -5,11 +5,11 @@ import (
 	"sync"
 	"time"
 
-	"github.com/cometbft/cometbft/config"
-	"github.com/cometbft/cometbft/libs/log"
-	"github.com/cometbft/cometbft/libs/service"
-	"github.com/cometbft/cometbft/state/indexer"
-	"github.com/cometbft/cometbft/state/txindex"
+	"github.com/KYVENetwork/cometbft/v1/config"
+	"github.com/KYVENetwork/cometbft/v1/libs/log"
+	"github.com/KYVENetwork/cometbft/v1/libs/service"
+	"github.com/KYVENetwork/cometbft/v1/state/indexer"
+	"github.com/KYVENetwork/cometbft/v1/state/txindex"
 )
 
 var (

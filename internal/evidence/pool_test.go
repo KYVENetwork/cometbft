@@ -9,17 +9,17 @@ import (
 	"github.com/stretchr/testify/mock"
 	"github.com/stretchr/testify/require"
 
+	cmtversion "github.com/KYVENetwork/cometbft/v1/api/cometbft/version/v1"
+	"github.com/KYVENetwork/cometbft/v1/internal/evidence"
+	"github.com/KYVENetwork/cometbft/v1/internal/evidence/mocks"
+	"github.com/KYVENetwork/cometbft/v1/internal/test"
+	"github.com/KYVENetwork/cometbft/v1/libs/log"
+	sm "github.com/KYVENetwork/cometbft/v1/state"
+	smmocks "github.com/KYVENetwork/cometbft/v1/state/mocks"
+	"github.com/KYVENetwork/cometbft/v1/store"
+	"github.com/KYVENetwork/cometbft/v1/types"
+	"github.com/KYVENetwork/cometbft/v1/version"
 	dbm "github.com/cometbft/cometbft-db"
-	cmtversion "github.com/cometbft/cometbft/api/cometbft/version/v1"
-	"github.com/cometbft/cometbft/internal/evidence"
-	"github.com/cometbft/cometbft/internal/evidence/mocks"
-	"github.com/cometbft/cometbft/internal/test"
-	"github.com/cometbft/cometbft/libs/log"
-	sm "github.com/cometbft/cometbft/state"
-	smmocks "github.com/cometbft/cometbft/state/mocks"
-	"github.com/cometbft/cometbft/store"
-	"github.com/cometbft/cometbft/types"
-	"github.com/cometbft/cometbft/version"
 )
 
 func TestMain(m *testing.M) {

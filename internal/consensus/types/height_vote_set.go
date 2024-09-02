@@ -6,10 +6,10 @@ import (
 	"strings"
 	"sync"
 
-	cmtjson "github.com/cometbft/cometbft/libs/json"
-	cmtmath "github.com/cometbft/cometbft/libs/math"
-	"github.com/cometbft/cometbft/p2p"
-	"github.com/cometbft/cometbft/types"
+	cmtjson "github.com/KYVENetwork/cometbft/v1/libs/json"
+	cmtmath "github.com/KYVENetwork/cometbft/v1/libs/math"
+	"github.com/KYVENetwork/cometbft/v1/p2p"
+	"github.com/KYVENetwork/cometbft/v1/types"
 )
 
 type RoundVoteSet struct {

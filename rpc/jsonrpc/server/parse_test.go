@@ -10,8 +10,8 @@ import (
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 
-	"github.com/cometbft/cometbft/libs/bytes"
-	"github.com/cometbft/cometbft/rpc/jsonrpc/types"
+	"github.com/KYVENetwork/cometbft/v1/libs/bytes"
+	"github.com/KYVENetwork/cometbft/v1/rpc/jsonrpc/types"
 )
 
 func TestParseJSONMap(t *testing.T) {

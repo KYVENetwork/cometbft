@@ -9,8 +9,8 @@ import (
 	"strconv"
 	"strings"
 
-	auto "github.com/cometbft/cometbft/internal/autofile"
-	cmtos "github.com/cometbft/cometbft/internal/os"
+	auto "github.com/KYVENetwork/cometbft/v1/internal/autofile"
+	cmtos "github.com/KYVENetwork/cometbft/v1/internal/os"
 )
 
 const (

@@ -6,13 +6,13 @@ import (
 	"sync"
 	"time"
 
-	tmp2p "github.com/cometbft/cometbft/api/cometbft/p2p/v1"
-	"github.com/cometbft/cometbft/internal/cmap"
-	cmtrand "github.com/cometbft/cometbft/internal/rand"
-	cmtmath "github.com/cometbft/cometbft/libs/math"
-	"github.com/cometbft/cometbft/libs/service"
-	"github.com/cometbft/cometbft/p2p"
-	"github.com/cometbft/cometbft/p2p/conn"
+	tmp2p "github.com/KYVENetwork/cometbft/v1/api/cometbft/p2p/v1"
+	"github.com/KYVENetwork/cometbft/v1/internal/cmap"
+	cmtrand "github.com/KYVENetwork/cometbft/v1/internal/rand"
+	cmtmath "github.com/KYVENetwork/cometbft/v1/libs/math"
+	"github.com/KYVENetwork/cometbft/v1/libs/service"
+	"github.com/KYVENetwork/cometbft/v1/p2p"
+	"github.com/KYVENetwork/cometbft/v1/p2p/conn"
 )
 
 type Peer = p2p.Peer

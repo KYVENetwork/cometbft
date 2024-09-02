@@ -9,13 +9,13 @@ import (
 	"strings"
 	"time"
 
-	abci "github.com/cometbft/cometbft/abci/types"
-	cmtproto "github.com/cometbft/cometbft/api/cometbft/types/v1"
-	"github.com/cometbft/cometbft/crypto/merkle"
-	"github.com/cometbft/cometbft/crypto/tmhash"
-	cmtrand "github.com/cometbft/cometbft/internal/rand"
-	cmtjson "github.com/cometbft/cometbft/libs/json"
-	cmterrors "github.com/cometbft/cometbft/types/errors"
+	abci "github.com/KYVENetwork/cometbft/v1/abci/types"
+	cmtproto "github.com/KYVENetwork/cometbft/v1/api/cometbft/types/v1"
+	"github.com/KYVENetwork/cometbft/v1/crypto/merkle"
+	"github.com/KYVENetwork/cometbft/v1/crypto/tmhash"
+	cmtrand "github.com/KYVENetwork/cometbft/v1/internal/rand"
+	cmtjson "github.com/KYVENetwork/cometbft/v1/libs/json"
+	cmterrors "github.com/KYVENetwork/cometbft/v1/types/errors"
 )
 
 // Evidence represents any provable misbehavior committed by a validator.

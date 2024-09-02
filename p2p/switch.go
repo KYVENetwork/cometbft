@@ -9,11 +9,11 @@ import (
 
 	"github.com/cosmos/gogoproto/proto"
 
-	"github.com/cometbft/cometbft/config"
-	"github.com/cometbft/cometbft/internal/cmap"
-	"github.com/cometbft/cometbft/internal/rand"
-	"github.com/cometbft/cometbft/libs/service"
-	"github.com/cometbft/cometbft/p2p/conn"
+	"github.com/KYVENetwork/cometbft/v1/config"
+	"github.com/KYVENetwork/cometbft/v1/internal/cmap"
+	"github.com/KYVENetwork/cometbft/v1/internal/rand"
+	"github.com/KYVENetwork/cometbft/v1/libs/service"
+	"github.com/KYVENetwork/cometbft/v1/p2p/conn"
 )
 
 const (

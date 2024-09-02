@@ -80,5 +80,5 @@
 //
 // # Examples
 //
-// - [CometBFT](https://github.com/cometbft/cometbft/blob/main/rpc/core/routes.go)
+// - [CometBFT](https://github.com/KYVENetwork/cometbft/v1/blob/main/rpc/core/routes.go)
 package jsonrpc

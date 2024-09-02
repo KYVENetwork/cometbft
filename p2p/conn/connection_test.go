@@ -11,10 +11,10 @@ import (
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 
-	tmp2p "github.com/cometbft/cometbft/api/cometbft/p2p/v1"
-	pbtypes "github.com/cometbft/cometbft/api/cometbft/types/v1"
-	"github.com/cometbft/cometbft/libs/log"
-	"github.com/cometbft/cometbft/libs/protoio"
+	tmp2p "github.com/KYVENetwork/cometbft/v1/api/cometbft/p2p/v1"
+	pbtypes "github.com/KYVENetwork/cometbft/v1/api/cometbft/types/v1"
+	"github.com/KYVENetwork/cometbft/v1/libs/log"
+	"github.com/KYVENetwork/cometbft/v1/libs/protoio"
 )
 
 const maxPingPongPacketSize = 1024 // bytes

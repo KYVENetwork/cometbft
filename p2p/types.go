@@ -3,9 +3,9 @@ package p2p
 import (
 	"github.com/cosmos/gogoproto/proto"
 
-	tmp2p "github.com/cometbft/cometbft/api/cometbft/p2p/v1"
-	"github.com/cometbft/cometbft/p2p/conn"
-	"github.com/cometbft/cometbft/types"
+	tmp2p "github.com/KYVENetwork/cometbft/v1/api/cometbft/p2p/v1"
+	"github.com/KYVENetwork/cometbft/v1/p2p/conn"
+	"github.com/KYVENetwork/cometbft/v1/types"
 )
 
 type (

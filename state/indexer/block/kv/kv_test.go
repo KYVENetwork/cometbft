@@ -12,13 +12,13 @@ import (
 	"github.com/stretchr/testify/require"
 	"golang.org/x/exp/slices"
 
+	abci "github.com/KYVENetwork/cometbft/v1/abci/types"
+	"github.com/KYVENetwork/cometbft/v1/internal/test"
+	"github.com/KYVENetwork/cometbft/v1/libs/pubsub/query"
+	blockidxkv "github.com/KYVENetwork/cometbft/v1/state/indexer/block/kv"
+	"github.com/KYVENetwork/cometbft/v1/state/txindex/kv"
+	"github.com/KYVENetwork/cometbft/v1/types"
 	db "github.com/cometbft/cometbft-db"
-	abci "github.com/cometbft/cometbft/abci/types"
-	"github.com/cometbft/cometbft/internal/test"
-	"github.com/cometbft/cometbft/libs/pubsub/query"
-	blockidxkv "github.com/cometbft/cometbft/state/indexer/block/kv"
-	"github.com/cometbft/cometbft/state/txindex/kv"
-	"github.com/cometbft/cometbft/types"
 )
 
 func TestBlockerIndexer_Prune(t *testing.T) {

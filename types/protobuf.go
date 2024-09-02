@@ -1,9 +1,9 @@
 package types
 
 import (
-	abci "github.com/cometbft/cometbft/abci/types"
-	cmtproto "github.com/cometbft/cometbft/api/cometbft/types/v1"
-	cryptoenc "github.com/cometbft/cometbft/crypto/encoding"
+	abci "github.com/KYVENetwork/cometbft/v1/abci/types"
+	cmtproto "github.com/KYVENetwork/cometbft/v1/api/cometbft/types/v1"
+	cryptoenc "github.com/KYVENetwork/cometbft/v1/crypto/encoding"
 )
 
 // -------------------------------------------------------

@@ -10,14 +10,14 @@ import (
 	"github.com/go-kit/kit/metrics"
 	"github.com/google/orderedcode"
 
+	abci "github.com/KYVENetwork/cometbft/v1/abci/types"
+	cmtstate "github.com/KYVENetwork/cometbft/v1/api/cometbft/state/v1"
+	cmtproto "github.com/KYVENetwork/cometbft/v1/api/cometbft/types/v1"
+	cmtos "github.com/KYVENetwork/cometbft/v1/internal/os"
+	"github.com/KYVENetwork/cometbft/v1/libs/log"
+	cmtmath "github.com/KYVENetwork/cometbft/v1/libs/math"
+	"github.com/KYVENetwork/cometbft/v1/types"
 	dbm "github.com/cometbft/cometbft-db"
-	abci "github.com/cometbft/cometbft/abci/types"
-	cmtstate "github.com/cometbft/cometbft/api/cometbft/state/v1"
-	cmtproto "github.com/cometbft/cometbft/api/cometbft/types/v1"
-	cmtos "github.com/cometbft/cometbft/internal/os"
-	"github.com/cometbft/cometbft/libs/log"
-	cmtmath "github.com/cometbft/cometbft/libs/math"
-	"github.com/cometbft/cometbft/types"
 )
 
 const (

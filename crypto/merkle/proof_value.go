@@ -5,8 +5,8 @@ import (
 	"errors"
 	"fmt"
 
-	cmtcrypto "github.com/cometbft/cometbft/api/cometbft/crypto/v1"
-	"github.com/cometbft/cometbft/crypto/tmhash"
+	cmtcrypto "github.com/KYVENetwork/cometbft/v1/api/cometbft/crypto/v1"
+	"github.com/KYVENetwork/cometbft/v1/crypto/tmhash"
 )
 
 const ProofOpValue = "simple:v"

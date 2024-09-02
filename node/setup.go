@@ -15,29 +15,29 @@ import (
 
 	_ "github.com/lib/pq" //nolint: gci // provide the psql db driver.
 
+	abci "github.com/KYVENetwork/cometbft/v1/abci/types"
+	cfg "github.com/KYVENetwork/cometbft/v1/config"
+	"github.com/KYVENetwork/cometbft/v1/crypto"
+	"github.com/KYVENetwork/cometbft/v1/crypto/tmhash"
+	"github.com/KYVENetwork/cometbft/v1/internal/blocksync"
+	cs "github.com/KYVENetwork/cometbft/v1/internal/consensus"
+	"github.com/KYVENetwork/cometbft/v1/internal/evidence"
+	"github.com/KYVENetwork/cometbft/v1/libs/log"
+	"github.com/KYVENetwork/cometbft/v1/light"
+	mempl "github.com/KYVENetwork/cometbft/v1/mempool"
+	"github.com/KYVENetwork/cometbft/v1/p2p"
+	"github.com/KYVENetwork/cometbft/v1/p2p/pex"
+	"github.com/KYVENetwork/cometbft/v1/privval"
+	"github.com/KYVENetwork/cometbft/v1/proxy"
+	sm "github.com/KYVENetwork/cometbft/v1/state"
+	"github.com/KYVENetwork/cometbft/v1/state/indexer"
+	"github.com/KYVENetwork/cometbft/v1/state/indexer/block"
+	"github.com/KYVENetwork/cometbft/v1/state/txindex"
+	"github.com/KYVENetwork/cometbft/v1/statesync"
+	"github.com/KYVENetwork/cometbft/v1/store"
+	"github.com/KYVENetwork/cometbft/v1/types"
+	"github.com/KYVENetwork/cometbft/v1/version"
 	dbm "github.com/cometbft/cometbft-db"
-	abci "github.com/cometbft/cometbft/abci/types"
-	cfg "github.com/cometbft/cometbft/config"
-	"github.com/cometbft/cometbft/crypto"
-	"github.com/cometbft/cometbft/crypto/tmhash"
-	"github.com/cometbft/cometbft/internal/blocksync"
-	cs "github.com/cometbft/cometbft/internal/consensus"
-	"github.com/cometbft/cometbft/internal/evidence"
-	"github.com/cometbft/cometbft/libs/log"
-	"github.com/cometbft/cometbft/light"
-	mempl "github.com/cometbft/cometbft/mempool"
-	"github.com/cometbft/cometbft/p2p"
-	"github.com/cometbft/cometbft/p2p/pex"
-	"github.com/cometbft/cometbft/privval"
-	"github.com/cometbft/cometbft/proxy"
-	sm "github.com/cometbft/cometbft/state"
-	"github.com/cometbft/cometbft/state/indexer"
-	"github.com/cometbft/cometbft/state/indexer/block"
-	"github.com/cometbft/cometbft/state/txindex"
-	"github.com/cometbft/cometbft/statesync"
-	"github.com/cometbft/cometbft/store"
-	"github.com/cometbft/cometbft/types"
-	"github.com/cometbft/cometbft/version"
 )
 
 const readHeaderTimeout = 10 * time.Second
@@ -60,7 +60,7 @@ func DefaultGenesisDocProviderFunc(config *cfg.Config) GenesisDocProvider {
 	return func() (ChecksummedGenesisDoc, error) {
 		// FIXME: find a way to stream the file incrementally,
 		// for the JSON	parser and the checksum computation.
-		// https://github.com/cometbft/cometbft/issues/1302
+		// https://github.com/KYVENetwork/cometbft/v1/issues/1302
 		jsonBlob, err := os.ReadFile(config.GenesisFile())
 		if err != nil {
 			return ChecksummedGenesisDoc{}, fmt.Errorf("couldn't read GenesisDoc file: %w", err)

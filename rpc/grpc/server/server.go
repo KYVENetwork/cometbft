@@ -7,16 +7,16 @@ import (
 
 	"google.golang.org/grpc"
 
-	pbblocksvc "github.com/cometbft/cometbft/api/cometbft/services/block/v1"
-	brs "github.com/cometbft/cometbft/api/cometbft/services/block_results/v1"
-	pbversionsvc "github.com/cometbft/cometbft/api/cometbft/services/version/v1"
-	"github.com/cometbft/cometbft/libs/log"
-	"github.com/cometbft/cometbft/rpc/grpc/server/services/blockresultservice"
-	"github.com/cometbft/cometbft/rpc/grpc/server/services/blockservice"
-	"github.com/cometbft/cometbft/rpc/grpc/server/services/versionservice"
-	sm "github.com/cometbft/cometbft/state"
-	"github.com/cometbft/cometbft/store"
-	"github.com/cometbft/cometbft/types"
+	pbblocksvc "github.com/KYVENetwork/cometbft/v1/api/cometbft/services/block/v1"
+	brs "github.com/KYVENetwork/cometbft/v1/api/cometbft/services/block_results/v1"
+	pbversionsvc "github.com/KYVENetwork/cometbft/v1/api/cometbft/services/version/v1"
+	"github.com/KYVENetwork/cometbft/v1/libs/log"
+	"github.com/KYVENetwork/cometbft/v1/rpc/grpc/server/services/blockresultservice"
+	"github.com/KYVENetwork/cometbft/v1/rpc/grpc/server/services/blockservice"
+	"github.com/KYVENetwork/cometbft/v1/rpc/grpc/server/services/versionservice"
+	sm "github.com/KYVENetwork/cometbft/v1/state"
+	"github.com/KYVENetwork/cometbft/v1/store"
+	"github.com/KYVENetwork/cometbft/v1/types"
 )
 
 // Option is any function that allows for configuration of the gRPC server

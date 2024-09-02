@@ -7,10 +7,10 @@ import (
 	"os"
 	"testing"
 
+	abci "github.com/KYVENetwork/cometbft/v1/abci/types"
+	"github.com/KYVENetwork/cometbft/v1/libs/pubsub/query"
+	"github.com/KYVENetwork/cometbft/v1/types"
 	dbm "github.com/cometbft/cometbft-db"
-	abci "github.com/cometbft/cometbft/abci/types"
-	"github.com/cometbft/cometbft/libs/pubsub/query"
-	"github.com/cometbft/cometbft/types"
 )
 
 func BenchmarkTxSearch(b *testing.B) {

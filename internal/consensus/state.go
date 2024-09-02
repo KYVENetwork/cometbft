@@ -14,23 +14,23 @@ import (
 
 	"github.com/cosmos/gogoproto/proto"
 
-	cmtproto "github.com/cometbft/cometbft/api/cometbft/types/v1"
-	cfg "github.com/cometbft/cometbft/config"
-	"github.com/cometbft/cometbft/crypto"
-	cstypes "github.com/cometbft/cometbft/internal/consensus/types"
-	cmtevents "github.com/cometbft/cometbft/internal/events"
-	"github.com/cometbft/cometbft/internal/fail"
-	cmtos "github.com/cometbft/cometbft/internal/os"
-	cmtjson "github.com/cometbft/cometbft/libs/json"
-	"github.com/cometbft/cometbft/libs/log"
-	cmtmath "github.com/cometbft/cometbft/libs/math"
-	"github.com/cometbft/cometbft/libs/service"
-	cmtsync "github.com/cometbft/cometbft/libs/sync"
-	"github.com/cometbft/cometbft/p2p"
-	sm "github.com/cometbft/cometbft/state"
-	"github.com/cometbft/cometbft/types"
-	cmterrors "github.com/cometbft/cometbft/types/errors"
-	cmttime "github.com/cometbft/cometbft/types/time"
+	cmtproto "github.com/KYVENetwork/cometbft/v1/api/cometbft/types/v1"
+	cfg "github.com/KYVENetwork/cometbft/v1/config"
+	"github.com/KYVENetwork/cometbft/v1/crypto"
+	cstypes "github.com/KYVENetwork/cometbft/v1/internal/consensus/types"
+	cmtevents "github.com/KYVENetwork/cometbft/v1/internal/events"
+	"github.com/KYVENetwork/cometbft/v1/internal/fail"
+	cmtos "github.com/KYVENetwork/cometbft/v1/internal/os"
+	cmtjson "github.com/KYVENetwork/cometbft/v1/libs/json"
+	"github.com/KYVENetwork/cometbft/v1/libs/log"
+	cmtmath "github.com/KYVENetwork/cometbft/v1/libs/math"
+	"github.com/KYVENetwork/cometbft/v1/libs/service"
+	cmtsync "github.com/KYVENetwork/cometbft/v1/libs/sync"
+	"github.com/KYVENetwork/cometbft/v1/p2p"
+	sm "github.com/KYVENetwork/cometbft/v1/state"
+	"github.com/KYVENetwork/cometbft/v1/types"
+	cmterrors "github.com/KYVENetwork/cometbft/v1/types/errors"
+	cmttime "github.com/KYVENetwork/cometbft/v1/types/time"
 )
 
 var msgQueueSize = 1000
@@ -1116,7 +1116,7 @@ func (cs *State) needProofBlock(height int64) bool {
 
 	lastBlockMeta := cs.blockStore.LoadBlockMeta(height - 1)
 	if lastBlockMeta == nil {
-		// See https://github.com/cometbft/cometbft/issues/370
+		// See https://github.com/KYVENetwork/cometbft/v1/issues/370
 		cs.Logger.Info("Short-circuited needProofBlock", "height", height, "InitialHeight", cs.state.InitialHeight)
 		return true
 	}
@@ -1383,7 +1383,7 @@ func (cs *State) defaultDoPrevote(height int64, round int32) {
 	}
 
 	// Timestamp validation using Proposed-Based TimeStamp (PBTS) algorithm.
-	// See: https://github.com/cometbft/cometbft/blob/main/spec/consensus/proposer-based-timestamp/
+	// See: https://github.com/KYVENetwork/cometbft/v1/blob/main/spec/consensus/proposer-based-timestamp/
 	if cs.isPBTSEnabled(height) {
 		if !cs.Proposal.Timestamp.Equal(cs.ProposalBlock.Header.Time) {
 			logger.Debug("prevote step: proposal timestamp not equal; prevoting nil")
@@ -1538,7 +1538,7 @@ func (cs *State) defaultDoPrevote(height int64, round int32) {
 		// If v_r = lockedRound_p we expect v to match lockedValue_p. If it is not the case,
 		// we have two 2/3+ majorities for different values at round v_r, meaning that the
 		// assumption of a 2/3+ majority of honest processes was violated. We should at
-		// least log this scenario, see: https://github.com/cometbft/cometbft/issues/1309.
+		// least log this scenario, see: https://github.com/KYVENetwork/cometbft/v1/issues/1309.
 		if cs.LockedRound == cs.Proposal.POLRound {
 			logger.Info("Prevote step: ProposalBlock is valid and received a 2/3" +
 				"majority at our locked round, while not matching our locked value;" +
@@ -2531,10 +2531,10 @@ func (cs *State) voteTime(height int64) time.Time {
 	// Minimum time increment between blocks
 	const timeIota = time.Millisecond
 	// TODO: We should remove next line in case we don't vote for v in case cs.ProposalBlock == nil,
-	// even if cs.LockedBlock != nil. See https://github.com/cometbft/cometbft/tree/main/spec/.
+	// even if cs.LockedBlock != nil. See https://github.com/KYVENetwork/cometbft/v1/tree/main/spec/.
 	if cs.LockedBlock != nil {
 		// See the BFT time spec
-		// https://github.com/cometbft/cometbft/blob/main/spec/consensus/bft-time.md
+		// https://github.com/KYVENetwork/cometbft/v1/blob/main/spec/consensus/bft-time.md
 		minVoteTime = cs.LockedBlock.Time.Add(timeIota)
 	} else if cs.ProposalBlock != nil {
 		minVoteTime = cs.ProposalBlock.Time.Add(timeIota)

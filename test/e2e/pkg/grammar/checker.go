@@ -6,11 +6,11 @@ import (
 	"os"
 	"strings"
 
-	abci "github.com/cometbft/cometbft/abci/types"
-	"github.com/cometbft/cometbft/libs/log"
-	"github.com/cometbft/cometbft/test/e2e/pkg/grammar/grammar-auto/lexer"
-	"github.com/cometbft/cometbft/test/e2e/pkg/grammar/grammar-auto/parser"
-	"github.com/cometbft/cometbft/test/e2e/pkg/grammar/grammar-auto/parser/symbols"
+	abci "github.com/KYVENetwork/cometbft/v1/abci/types"
+	"github.com/KYVENetwork/cometbft/v1/libs/log"
+	"github.com/KYVENetwork/cometbft/v1/test/e2e/pkg/grammar/grammar-auto/lexer"
+	"github.com/KYVENetwork/cometbft/v1/test/e2e/pkg/grammar/grammar-auto/parser"
+	"github.com/KYVENetwork/cometbft/v1/test/e2e/pkg/grammar/grammar-auto/parser/symbols"
 )
 
 const Commit = "commit"

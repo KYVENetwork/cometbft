@@ -4,12 +4,12 @@ import (
 	"errors"
 	"fmt"
 
-	cmtquery "github.com/cometbft/cometbft/libs/pubsub/query"
-	ctypes "github.com/cometbft/cometbft/rpc/core/types"
-	rpctypes "github.com/cometbft/cometbft/rpc/jsonrpc/types"
-	"github.com/cometbft/cometbft/state/txindex"
-	"github.com/cometbft/cometbft/state/txindex/null"
-	"github.com/cometbft/cometbft/types"
+	cmtquery "github.com/KYVENetwork/cometbft/v1/libs/pubsub/query"
+	ctypes "github.com/KYVENetwork/cometbft/v1/rpc/core/types"
+	rpctypes "github.com/KYVENetwork/cometbft/v1/rpc/jsonrpc/types"
+	"github.com/KYVENetwork/cometbft/v1/state/txindex"
+	"github.com/KYVENetwork/cometbft/v1/state/txindex/null"
+	"github.com/KYVENetwork/cometbft/v1/types"
 )
 
 const (

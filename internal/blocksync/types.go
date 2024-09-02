@@ -1,8 +1,8 @@
 package blocksync
 
 import (
-	cmtbs "github.com/cometbft/cometbft/api/cometbft/blocksync/v1"
-	"github.com/cometbft/cometbft/types"
+	cmtbs "github.com/KYVENetwork/cometbft/v1/api/cometbft/blocksync/v1"
+	"github.com/KYVENetwork/cometbft/v1/types"
 )
 
 var (

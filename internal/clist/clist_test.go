@@ -9,7 +9,7 @@ import (
 
 	"github.com/stretchr/testify/assert"
 
-	cmtrand "github.com/cometbft/cometbft/internal/rand"
+	cmtrand "github.com/KYVENetwork/cometbft/v1/internal/rand"
 )
 
 func TestPanicOnMaxLength(t *testing.T) {

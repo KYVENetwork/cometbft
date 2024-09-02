@@ -2,7 +2,7 @@
 Package core defines the CometBFT RPC endpoints.
 
 CometBFT ships with its own JSONRPC library -
-https://github.com/cometbft/cometbft/tree/main/rpc/jsonrpc.
+https://github.com/KYVENetwork/cometbft/v1/tree/main/rpc/jsonrpc.
 
 ## Get the list
 

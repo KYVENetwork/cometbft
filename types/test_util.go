@@ -7,8 +7,8 @@ import (
 
 	"github.com/stretchr/testify/require"
 
-	cmtversion "github.com/cometbft/cometbft/api/cometbft/version/v1"
-	"github.com/cometbft/cometbft/version"
+	cmtversion "github.com/KYVENetwork/cometbft/v1/api/cometbft/version/v1"
+	"github.com/KYVENetwork/cometbft/v1/version"
 )
 
 func MakeExtCommit(blockID BlockID, height int64, round int32,

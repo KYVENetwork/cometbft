@@ -12,15 +12,15 @@ import (
 
 	"github.com/google/orderedcode"
 
+	abci "github.com/KYVENetwork/cometbft/v1/abci/types"
+	idxutil "github.com/KYVENetwork/cometbft/v1/internal/indexer"
+	"github.com/KYVENetwork/cometbft/v1/libs/log"
+	"github.com/KYVENetwork/cometbft/v1/libs/pubsub/query"
+	"github.com/KYVENetwork/cometbft/v1/libs/pubsub/query/syntax"
+	"github.com/KYVENetwork/cometbft/v1/state"
+	"github.com/KYVENetwork/cometbft/v1/state/indexer"
+	"github.com/KYVENetwork/cometbft/v1/types"
 	dbm "github.com/cometbft/cometbft-db"
-	abci "github.com/cometbft/cometbft/abci/types"
-	idxutil "github.com/cometbft/cometbft/internal/indexer"
-	"github.com/cometbft/cometbft/libs/log"
-	"github.com/cometbft/cometbft/libs/pubsub/query"
-	"github.com/cometbft/cometbft/libs/pubsub/query/syntax"
-	"github.com/cometbft/cometbft/state"
-	"github.com/cometbft/cometbft/state/indexer"
-	"github.com/cometbft/cometbft/types"
 )
 
 var (

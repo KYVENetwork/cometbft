@@ -1,8 +1,8 @@
 package p2p
 
 import (
-	"github.com/cometbft/cometbft/libs/service"
-	"github.com/cometbft/cometbft/p2p/conn"
+	"github.com/KYVENetwork/cometbft/v1/libs/service"
+	"github.com/KYVENetwork/cometbft/v1/p2p/conn"
 )
 
 // Reactor is responsible for handling incoming messages on one or more

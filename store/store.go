@@ -10,14 +10,14 @@ import (
 	"github.com/go-kit/kit/metrics"
 	lru "github.com/hashicorp/golang-lru/v2"
 
+	cmtstore "github.com/KYVENetwork/cometbft/v1/api/cometbft/store/v1"
+	cmtproto "github.com/KYVENetwork/cometbft/v1/api/cometbft/types/v1"
+	"github.com/KYVENetwork/cometbft/v1/internal/evidence"
+	cmtsync "github.com/KYVENetwork/cometbft/v1/libs/sync"
+	sm "github.com/KYVENetwork/cometbft/v1/state"
+	"github.com/KYVENetwork/cometbft/v1/types"
+	cmterrors "github.com/KYVENetwork/cometbft/v1/types/errors"
 	dbm "github.com/cometbft/cometbft-db"
-	cmtstore "github.com/cometbft/cometbft/api/cometbft/store/v1"
-	cmtproto "github.com/cometbft/cometbft/api/cometbft/types/v1"
-	"github.com/cometbft/cometbft/internal/evidence"
-	cmtsync "github.com/cometbft/cometbft/libs/sync"
-	sm "github.com/cometbft/cometbft/state"
-	"github.com/cometbft/cometbft/types"
-	cmterrors "github.com/cometbft/cometbft/types/errors"
 )
 
 // Assuming the length of a block part is 64kB (`types.BlockPartSizeBytes`),

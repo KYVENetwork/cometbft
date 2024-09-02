@@ -1,8 +1,8 @@
 package mempool
 
 import (
-	memprotos "github.com/cometbft/cometbft/api/cometbft/mempool/v1"
-	"github.com/cometbft/cometbft/types"
+	memprotos "github.com/KYVENetwork/cometbft/v1/api/cometbft/mempool/v1"
+	"github.com/KYVENetwork/cometbft/v1/types"
 )
 
 var (
