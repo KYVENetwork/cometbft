@@ -14,8 +14,8 @@ import (
 	"github.com/lib/pq"
 
 	abci "github.com/KYVENetwork/cometbft/v100/abci/types"
-	"github.com/KYVENetwork/cometbft/v100/internal/rand"
 	"github.com/KYVENetwork/cometbft/v100/libs/pubsub/query"
+	"github.com/KYVENetwork/cometbft/v100/rand"
 	"github.com/KYVENetwork/cometbft/v100/types"
 )
 

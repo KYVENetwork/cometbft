@@ -13,9 +13,9 @@ import (
 	cmtversion "github.com/KYVENetwork/cometbft/v100/api/cometbft/version/v1"
 	"github.com/KYVENetwork/cometbft/v100/crypto"
 	"github.com/KYVENetwork/cometbft/v100/crypto/tmhash"
-	"github.com/KYVENetwork/cometbft/v100/internal/test"
 	cmtjson "github.com/KYVENetwork/cometbft/v100/libs/json"
 	"github.com/KYVENetwork/cometbft/v100/privval"
+	"github.com/KYVENetwork/cometbft/v100/test-2"
 	e2e "github.com/KYVENetwork/cometbft/v100/test/e2e/pkg"
 	"github.com/KYVENetwork/cometbft/v100/types"
 	"github.com/KYVENetwork/cometbft/v100/version"
@@ -186,7 +186,7 @@ func generateLightClientAttackEvidence(
 	// create a commit for the forged header
 	blockID := makeBlockID(header.Hash(), 1000, []byte("partshash"))
 	voteSet := types.NewVoteSet(chainID, forgedHeight, 0, types.SignedMsgType(2), conflictingVals)
-	commit, err := test.MakeCommitFromVoteSet(blockID, voteSet, pv, forgedTime)
+	commit, err := test_2.MakeCommitFromVoteSet(blockID, voteSet, pv, forgedTime)
 	if err != nil {
 		return nil, err
 	}
@@ -315,7 +315,7 @@ func mutateValidatorSet(
 	vals *types.ValidatorSet,
 	nop bool,
 ) ([]types.PrivValidator, *types.ValidatorSet, error) {
-	newVal, newPrivVal, err := test.Validator(ctx, 10)
+	newVal, newPrivVal, err := test_2.Validator(ctx, 10)
 	if err != nil {
 		return nil, nil, err
 	}

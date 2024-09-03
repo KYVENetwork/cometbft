@@ -666,7 +666,7 @@ func testSetupMultiplexTransport(t *testing.T) *MultiplexTransport {
 type testTransportAddr struct{}
 
 func (*testTransportAddr) Network() string { return "tcp" }
-func (*testTransportAddr) String() string  { return "test.local:1234" }
+func (*testTransportAddr) String() string  { return "test-2.local:1234" }
 
 type testTransportConn struct{}
 

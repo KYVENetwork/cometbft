@@ -83,7 +83,7 @@ I[10-04|13:54:30.404] enterCommit(91/0). Current: 91/0/RoundStepPrecommit module
 I[10-04|13:54:30.405] Finalizing commit of block with 0 txs        module=consensus height=91 hash=F671D562C7B9242900A286E1882EE64E5556FE9E root=E0FBAFBF6FCED8B9786DDFEB1A0D4FA2501BADAD
 I[10-04|13:54:30.405] Block{
   Header{
-    ChainID:        test-chain-3MNw2N
+    ChainID:        test-2-chain-3MNw2N
     Height:         91
     Time:           2017-10-04 13:54:30.393 +0000 UTC
     NumTxs:         0

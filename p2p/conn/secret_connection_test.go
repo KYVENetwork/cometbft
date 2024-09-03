@@ -18,16 +18,16 @@ import (
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 
+	"github.com/KYVENetwork/cometbft/v100/async"
 	"github.com/KYVENetwork/cometbft/v100/crypto"
 	"github.com/KYVENetwork/cometbft/v100/crypto/ed25519"
 	"github.com/KYVENetwork/cometbft/v100/crypto/sr25519"
-	"github.com/KYVENetwork/cometbft/v100/internal/async"
-	cmtos "github.com/KYVENetwork/cometbft/v100/internal/os"
-	cmtrand "github.com/KYVENetwork/cometbft/v100/internal/rand"
+	cmtos "github.com/KYVENetwork/cometbft/v100/os"
+	cmtrand "github.com/KYVENetwork/cometbft/v100/rand"
 )
 
-// Run go test -update from within this module
-// to update the golden test vector file.
+// Run go test-2 -update from within this module
+// to update the golden test-2 vector file.
 var update = flag.Bool("update", false, "update .golden files")
 
 type kvstoreConn struct {
@@ -228,7 +228,7 @@ func TestSecretConnectionReadWrite(t *testing.T) {
 func TestDeriveSecretsAndChallengeGolden(t *testing.T) {
 	goldenFilepath := filepath.Join("testdata", t.Name()+".golden")
 	if *update {
-		t.Logf("Updating golden test vector file %s", goldenFilepath)
+		t.Logf("Updating golden test-2 vector file %s", goldenFilepath)
 		data := createGoldenTestVectors(t)
 		err := cmtos.WriteFile(goldenFilepath, []byte(data), 0o644)
 		require.NoError(t, err)
@@ -309,7 +309,7 @@ func readLots(t *testing.T, wg *sync.WaitGroup, conn io.Reader, n int) {
 	wg.Done()
 }
 
-// Creates the data for a test vector file.
+// Creates the data for a test-2 vector file.
 // The file format is:
 // Hex(diffie_hellman_secret), loc_is_least, Hex(recvSecret), Hex(sendSecret), Hex(challenge).
 func createGoldenTestVectors(*testing.T) string {

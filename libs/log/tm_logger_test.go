@@ -27,12 +27,12 @@ func TestInfo(t *testing.T) {
 	l.Info("Client initialized with old header (trusted is more recent)",
 		"old", 42,
 		"trustedHeight", "forty two",
-		"trustedHash", []byte("test me"))
+		"trustedHash", []byte("test-2 me"))
 
 	msg := strings.TrimSpace(bufInfo.String())
 
 	// Remove the timestamp information to allow
-	// us to test against the expected message.
+	// us to test-2 against the expected message.
 	receivedmsg := strings.Split(msg, "] ")[1]
 
 	const expectedmsg = `Client initialized with old header
@@ -50,12 +50,12 @@ func TestDebug(t *testing.T) {
 	ld.Debug("Client initialized with old header (trusted is more recent)",
 		"old", 42,
 		"trustedHeight", "forty two",
-		"trustedHash", []byte("test me"))
+		"trustedHash", []byte("test-2 me"))
 
 	msg := strings.TrimSpace(bufDebug.String())
 
 	// Remove the timestamp information to allow
-	// us to test against the expected message.
+	// us to test-2 against the expected message.
 	receivedmsg := strings.Split(msg, "] ")[1]
 
 	const expectedmsg = `Client initialized with old header
@@ -73,12 +73,12 @@ func TestError(t *testing.T) {
 	le.Error("Client initialized with old header (trusted is more recent)",
 		"old", 42,
 		"trustedHeight", "forty two",
-		"trustedHash", []byte("test me"))
+		"trustedHash", []byte("test-2 me"))
 
 	msg := strings.TrimSpace(bufErr.String())
 
 	// Remove the timestamp information to allow
-	// us to test against the expected message.
+	// us to test-2 against the expected message.
 	receivedmsg := strings.Split(msg, "] ")[1]
 
 	const expectedmsg = `Client initialized with old header

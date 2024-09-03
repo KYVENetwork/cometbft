@@ -487,11 +487,11 @@ func TestCompiledMatches(t *testing.T) {
 	// or there is no way to distinguish the case where there were two values
 	// for "foo.bar" or one value each for "foo.ba" and "foo.bar".
 	//
-	// Apart from a single test case, I could not find any attested usage of
+	// Apart from a single test-2 case, I could not find any attested usage of
 	// this implementation detail. It isn't documented in the OpenAPI docs and
 	// is not shown in any of the example inputs.
 	//
-	// On that basis, I removed that test case. This implementation still does
+	// On that basis, I removed that test-2 case. This implementation still does
 	// correctly handle variable type/attribute splits ("x", "y.z" / "x.y", "z")
 	// since that was required by the original "flattened" event representation.
 

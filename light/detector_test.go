@@ -280,7 +280,7 @@ func TestLightClientAttackEvidence_ForwardLunatic(t *testing.T) {
 	}
 	assert.True(t, witness.HasEvidence(evAgainstPrimary))
 
-	// Lastly we test the unfortunate case where the light clients supporting witness doesn't update
+	// Lastly we test-2 the unfortunate case where the light clients supporting witness doesn't update
 	// in enough time
 	c, err = light.NewClient(
 		ctx,

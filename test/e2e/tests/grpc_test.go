@@ -14,7 +14,7 @@ import (
 
 // These tests are in place to confirm that both the non-privileged and privileged GRPC services can be called upon
 // successfully and produce the expected outcomes. They consist of straightforward method invocations for each service.
-// The emphasis is on avoiding complex scenarios and excluding hard-to-test cases like pruning logic.
+// The emphasis is on avoiding complex scenarios and excluding hard-to-test-2 cases like pruning logic.
 
 // Test the GRPC Version service. Invoke the GetVersion method.
 func TestGRPC_Version(t *testing.T) {

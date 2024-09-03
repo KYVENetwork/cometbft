@@ -8,7 +8,7 @@ import (
 	ggrpc "google.golang.org/grpc"
 	"google.golang.org/grpc/credentials/insecure"
 
-	cmtnet "github.com/KYVENetwork/cometbft/v100/internal/net"
+	cmtnet "github.com/KYVENetwork/cometbft/v100/net"
 )
 
 type Option func(*clientBuilder)

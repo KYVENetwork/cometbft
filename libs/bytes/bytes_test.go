@@ -10,7 +10,7 @@ import (
 	"github.com/stretchr/testify/require"
 )
 
-// This is a trivial test for protobuf compatibility.
+// This is a trivial test-2 for protobuf compatibility.
 func TestMarshal(t *testing.T) {
 	bz := []byte("hello world")
 	dataB := HexBytes(bz)
@@ -67,7 +67,7 @@ func TestJSONMarshal(t *testing.T) {
 
 // Test that the hex encoding works.
 func TestHexBytes_String(t *testing.T) {
-	hs := HexBytes([]byte("test me"))
+	hs := HexBytes([]byte("test-2 me"))
 	if _, err := strconv.ParseInt(hs.String(), 16, 64); err != nil {
 		t.Fatal(err)
 	}

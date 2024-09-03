@@ -20,15 +20,15 @@ import (
 )
 
 func TestNewProvider(t *testing.T) {
-	c, err := lighthttp.New("chain-test", "192.168.0.1:26657")
+	c, err := lighthttp.New("chain-test-2", "192.168.0.1:26657")
 	require.NoError(t, err)
 	require.Equal(t, "http{http://192.168.0.1:26657}", fmt.Sprintf("%s", c))
 
-	c, err = lighthttp.New("chain-test", "http://153.200.0.1:26657")
+	c, err = lighthttp.New("chain-test-2", "http://153.200.0.1:26657")
 	require.NoError(t, err)
 	require.Equal(t, "http{http://153.200.0.1:26657}", fmt.Sprintf("%s", c))
 
-	c, err = lighthttp.New("chain-test", "153.200.0.1")
+	c, err = lighthttp.New("chain-test-2", "153.200.0.1")
 	require.NoError(t, err)
 	require.Equal(t, "http{http://153.200.0.1}", fmt.Sprintf("%s", c))
 }

@@ -19,27 +19,27 @@ import (
 	cfg "github.com/KYVENetwork/cometbft/v100/config"
 	"github.com/KYVENetwork/cometbft/v100/crypto/ed25519"
 	"github.com/KYVENetwork/cometbft/v100/crypto/tmhash"
-	"github.com/KYVENetwork/cometbft/v100/internal/evidence"
-	cmtos "github.com/KYVENetwork/cometbft/v100/internal/os"
-	cmtrand "github.com/KYVENetwork/cometbft/v100/internal/rand"
-	"github.com/KYVENetwork/cometbft/v100/internal/test"
+	"github.com/KYVENetwork/cometbft/v100/evidence"
 	cmtjson "github.com/KYVENetwork/cometbft/v100/libs/json"
 	"github.com/KYVENetwork/cometbft/v100/libs/log"
 	mempl "github.com/KYVENetwork/cometbft/v100/mempool"
+	cmtos "github.com/KYVENetwork/cometbft/v100/os"
 	"github.com/KYVENetwork/cometbft/v100/p2p"
 	"github.com/KYVENetwork/cometbft/v100/p2p/conn"
 	p2pmock "github.com/KYVENetwork/cometbft/v100/p2p/mock"
 	"github.com/KYVENetwork/cometbft/v100/privval"
 	"github.com/KYVENetwork/cometbft/v100/proxy"
+	cmtrand "github.com/KYVENetwork/cometbft/v100/rand"
 	sm "github.com/KYVENetwork/cometbft/v100/state"
 	"github.com/KYVENetwork/cometbft/v100/store"
+	"github.com/KYVENetwork/cometbft/v100/test-2"
 	"github.com/KYVENetwork/cometbft/v100/types"
 	cmttime "github.com/KYVENetwork/cometbft/v100/types/time"
 	dbm "github.com/cometbft/cometbft-db"
 )
 
 func TestNodeStartStop(t *testing.T) {
-	config := test.ResetTestRoot("node_node_test")
+	config := test_2.ResetTestRoot("node_node_test")
 	defer os.RemoveAll(config.RootDir)
 
 	// create & start node
@@ -101,7 +101,7 @@ func TestSplitAndTrimEmpty(t *testing.T) {
 }
 
 func TestCompanionInitialHeightSetup(t *testing.T) {
-	config := test.ResetTestRoot("companion_initial_height")
+	config := test_2.ResetTestRoot("companion_initial_height")
 	defer os.RemoveAll(config.RootDir)
 	config.Storage.Pruning.DataCompanion.Enabled = true
 	config.Storage.Pruning.DataCompanion.InitialBlockRetainHeight = 1
@@ -115,7 +115,7 @@ func TestCompanionInitialHeightSetup(t *testing.T) {
 }
 
 func TestNodeDelayedStart(t *testing.T) {
-	config := test.ResetTestRoot("node_delayed_start_test")
+	config := test_2.ResetTestRoot("node_delayed_start_test")
 	defer os.RemoveAll(config.RootDir)
 	now := cmttime.Now()
 
@@ -133,7 +133,7 @@ func TestNodeDelayedStart(t *testing.T) {
 }
 
 func TestNodeSetAppVersion(t *testing.T) {
-	config := test.ResetTestRoot("node_app_version_test")
+	config := test_2.ResetTestRoot("node_app_version_test")
 	defer os.RemoveAll(config.RootDir)
 
 	// create & start node
@@ -153,7 +153,7 @@ func TestNodeSetAppVersion(t *testing.T) {
 }
 
 func TestPprofServer(t *testing.T) {
-	config := test.ResetTestRoot("node_pprof_test")
+	config := test_2.ResetTestRoot("node_pprof_test")
 	defer os.RemoveAll(config.RootDir)
 	config.RPC.PprofListenAddress = testFreeAddr(t)
 
@@ -178,7 +178,7 @@ func TestPprofServer(t *testing.T) {
 func TestNodeSetPrivValTCP(t *testing.T) {
 	addr := "tcp://" + testFreeAddr(t)
 
-	config := test.ResetTestRoot("node_priv_val_tcp_test")
+	config := test_2.ResetTestRoot("node_priv_val_tcp_test")
 	defer os.RemoveAll(config.RootDir)
 	config.BaseConfig.PrivValidatorListenAddr = addr
 
@@ -191,7 +191,7 @@ func TestNodeSetPrivValTCP(t *testing.T) {
 
 	signerServer := privval.NewSignerServer(
 		dialerEndpoint,
-		test.DefaultTestChainID,
+		test_2.DefaultTestChainID,
 		types.NewMockPV(),
 	)
 
@@ -212,7 +212,7 @@ func TestNodeSetPrivValTCP(t *testing.T) {
 func TestPrivValidatorListenAddrNoProtocol(t *testing.T) {
 	addrNoPrefix := testFreeAddr(t)
 
-	config := test.ResetTestRoot("node_priv_val_tcp_test")
+	config := test_2.ResetTestRoot("node_priv_val_tcp_test")
 	defer os.RemoveAll(config.RootDir)
 	config.BaseConfig.PrivValidatorListenAddr = addrNoPrefix
 
@@ -224,7 +224,7 @@ func TestNodeSetPrivValIPC(t *testing.T) {
 	tmpfile := "/tmp/kms." + cmtrand.Str(6) + ".sock"
 	defer os.Remove(tmpfile) // clean up
 
-	config := test.ResetTestRoot("node_priv_val_tcp_test")
+	config := test_2.ResetTestRoot("node_priv_val_tcp_test")
 	defer os.RemoveAll(config.RootDir)
 	config.BaseConfig.PrivValidatorListenAddr = "unix://" + tmpfile
 
@@ -237,7 +237,7 @@ func TestNodeSetPrivValIPC(t *testing.T) {
 
 	pvsc := privval.NewSignerServer(
 		dialerEndpoint,
-		test.DefaultTestChainID,
+		test_2.DefaultTestChainID,
 		types.NewMockPV(),
 	)
 
@@ -268,7 +268,7 @@ func TestCreateProposalBlock(t *testing.T) {
 	ctx, cancel := context.WithCancel(context.Background())
 	defer cancel()
 
-	config := test.ResetTestRoot("node_create_proposal")
+	config := test_2.ResetTestRoot("node_create_proposal")
 	defer os.RemoveAll(config.RootDir)
 	cc := proxy.NewLocalClientCreator(kvstore.NewInMemoryApplication())
 	proxyApp := proxy.NewAppConns(cc, proxy.NopMetrics())
@@ -312,7 +312,7 @@ func TestCreateProposalBlock(t *testing.T) {
 	// than can fit in a block
 	var currentBytes int64
 	for currentBytes <= maxEvidenceBytes {
-		ev, err := types.NewMockDuplicateVoteEvidenceWithValidator(height, cmttime.Now(), privVals[0], "test-chain")
+		ev, err := types.NewMockDuplicateVoteEvidenceWithValidator(height, cmttime.Now(), privVals[0], "test-2-chain")
 		require.NoError(t, err)
 		currentBytes += int64(len(ev.Bytes()))
 		evidencePool.ReportConflictingVotes(ev.VoteA, ev.VoteB)
@@ -372,7 +372,7 @@ func TestMaxProposalBlockSize(t *testing.T) {
 	ctx, cancel := context.WithCancel(context.Background())
 	defer cancel()
 
-	config := test.ResetTestRoot("node_create_proposal")
+	config := test_2.ResetTestRoot("node_create_proposal")
 	defer os.RemoveAll(config.RootDir)
 	cc := proxy.NewLocalClientCreator(kvstore.NewInMemoryApplication())
 	proxyApp := proxy.NewAppConns(cc, proxy.NopMetrics())
@@ -439,7 +439,7 @@ func TestMaxProposalBlockSize(t *testing.T) {
 }
 
 func TestNodeNewNodeCustomReactors(t *testing.T) {
-	config := test.ResetTestRoot("node_new_node_custom_reactors_test")
+	config := test_2.ResetTestRoot("node_new_node_custom_reactors_test")
 	defer os.RemoveAll(config.RootDir)
 
 	cr := p2pmock.NewReactor()
@@ -484,10 +484,10 @@ func TestNodeNewNodeCustomReactors(t *testing.T) {
 	assert.Contains(t, channels, cr.Channels[0].ID)
 }
 
-// Simple test to confirm that an existing genesis file will be deleted from the DB
+// Simple test-2 to confirm that an existing genesis file will be deleted from the DB
 // TODO Confirm that the deletion of a very big file does not crash the machine.
 func TestNodeNewNodeDeleteGenesisFileFromDB(t *testing.T) {
-	config := test.ResetTestRoot("node_new_node_delete_genesis_from_db")
+	config := test_2.ResetTestRoot("node_new_node_delete_genesis_from_db")
 	defer os.RemoveAll(config.RootDir)
 	// Use goleveldb so we can reuse the same db for the second NewNode()
 	config.DBBackend = string(dbm.GoLevelDBBackend)
@@ -541,7 +541,7 @@ func TestNodeNewNodeDeleteGenesisFileFromDB(t *testing.T) {
 }
 
 func TestNodeNewNodeGenesisHashMismatch(t *testing.T) {
-	config := test.ResetTestRoot("node_new_node_genesis_hash")
+	config := test_2.ResetTestRoot("node_new_node_genesis_hash")
 	defer os.RemoveAll(config.RootDir)
 
 	// Use goleveldb so we can reuse the same db for the second NewNode()
@@ -608,7 +608,7 @@ func TestNodeNewNodeGenesisHashMismatch(t *testing.T) {
 }
 
 func TestNodeGenesisHashFlagMatch(t *testing.T) {
-	config := test.ResetTestRoot("node_new_node_genesis_hash_flag_match")
+	config := test_2.ResetTestRoot("node_new_node_genesis_hash_flag_match")
 	defer os.RemoveAll(config.RootDir)
 
 	config.DBBackend = string(dbm.GoLevelDBBackend)
@@ -636,7 +636,7 @@ func TestNodeGenesisHashFlagMatch(t *testing.T) {
 }
 
 func TestNodeGenesisHashFlagMismatch(t *testing.T) {
-	config := test.ResetTestRoot("node_new_node_genesis_hash_flag_mismatch")
+	config := test_2.ResetTestRoot("node_new_node_genesis_hash_flag_mismatch")
 	defer os.RemoveAll(config.RootDir)
 
 	// Use goleveldb so we can reuse the same db for the second NewNode()
@@ -685,11 +685,11 @@ func state(nVals int, height int64) (sm.State, dbm.DB, []types.PrivValidator) {
 			Address: privVal.PrivKey.PubKey().Address(),
 			PubKey:  privVal.PrivKey.PubKey(),
 			Power:   1000,
-			Name:    fmt.Sprintf("test%d", i),
+			Name:    fmt.Sprintf("test-2%d", i),
 		}
 	}
 	s, _ := sm.MakeGenesisState(&types.GenesisDoc{
-		ChainID:    "test-chain",
+		ChainID:    "test-2-chain",
 		Validators: vals,
 		AppHash:    nil,
 	})

@@ -13,13 +13,13 @@ import (
 
 	"github.com/spf13/cobra"
 
-	cmtos "github.com/KYVENetwork/cometbft/v100/internal/os"
 	"github.com/KYVENetwork/cometbft/v100/libs/log"
 	cmtmath "github.com/KYVENetwork/cometbft/v100/libs/math"
 	"github.com/KYVENetwork/cometbft/v100/light"
 	lproxy "github.com/KYVENetwork/cometbft/v100/light/proxy"
 	lrpc "github.com/KYVENetwork/cometbft/v100/light/rpc"
 	dbs "github.com/KYVENetwork/cometbft/v100/light/store/db"
+	cmtos "github.com/KYVENetwork/cometbft/v100/os"
 	rpcserver "github.com/KYVENetwork/cometbft/v100/rpc/jsonrpc/server"
 	dbm "github.com/cometbft/cometbft-db"
 )

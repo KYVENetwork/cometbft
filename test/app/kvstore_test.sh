@@ -21,7 +21,7 @@ echo ""
 
 
 ###########################
-# test using the abci-cli
+# test-2 using the abci-cli
 ###########################
 
 echo "... testing query with abci-cli"
@@ -50,7 +50,7 @@ fi
 set -e
 
 #############################
-# test using the /abci_query
+# test-2 using the /abci_query
 #############################
 
 echo "... testing query with /abci_query 2"

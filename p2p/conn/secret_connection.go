@@ -22,10 +22,10 @@ import (
 	"golang.org/x/crypto/nacl/box"
 
 	tmp2p "github.com/KYVENetwork/cometbft/v100/api/cometbft/p2p/v1"
+	"github.com/KYVENetwork/cometbft/v100/async"
 	"github.com/KYVENetwork/cometbft/v100/crypto"
 	"github.com/KYVENetwork/cometbft/v100/crypto/ed25519"
 	cryptoenc "github.com/KYVENetwork/cometbft/v100/crypto/encoding"
-	"github.com/KYVENetwork/cometbft/v100/internal/async"
 	"github.com/KYVENetwork/cometbft/v100/libs/protoio"
 	cmtsync "github.com/KYVENetwork/cometbft/v100/libs/sync"
 )

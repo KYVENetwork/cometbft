@@ -9,7 +9,7 @@ import (
 	"github.com/spf13/cobra"
 
 	cfg "github.com/KYVENetwork/cometbft/v100/config"
-	"github.com/KYVENetwork/cometbft/v100/internal/inspect"
+	"github.com/KYVENetwork/cometbft/v100/inspect"
 	"github.com/KYVENetwork/cometbft/v100/state"
 	"github.com/KYVENetwork/cometbft/v100/state/indexer/block"
 	"github.com/KYVENetwork/cometbft/v100/store"

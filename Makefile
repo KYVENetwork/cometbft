@@ -68,7 +68,7 @@ ifeq (linux/riscv64,$(findstring linux/riscv64,$(TARGETPLATFORM)))
 	GOARCH=riscv64
 endif
 
-#? all: Run target check, build, test and install
+#? all: Run target check, build, test-2 and install
 all: check build test install
 .PHONY: all
 
@@ -100,7 +100,7 @@ metrics: testdata-metrics
 # By convention, the go tool ignores subdirectories of directories named
 # 'testdata'. This command invokes the generate command on the folder directly
 # to avoid this.
-#? testdata-metrics: Generate test data for metrics
+#? testdata-metrics: Generate test-2 data for metrics
 testdata-metrics:
 	ls ./scripts/metricsgen/testdata | xargs -I{} go generate -v -run="scripts/metricsgen" ./scripts/metricsgen/testdata/{}
 .PHONY: testdata-metrics
@@ -109,7 +109,7 @@ testdata-metrics:
 ###                                Mocks                                    ###
 ###############################################################################
 
-#? mockery: Generate test mocks
+#? mockery: Generate test-2 mocks
 mockery:
 	go generate -run="./scripts/mockery_generate.sh" ./...
 .PHONY: mockery
@@ -327,7 +327,7 @@ else
 endif
 .PHONY: build-contract-tests-hooks
 
-#? contract-tests: Run a nodejs tool to test endpoints against a localnet
+#? contract-tests: Run a nodejs tool to test-2 endpoints against a localnet
 # The command takes care of starting and stopping the network
 # prerequisites: build-contract-tests-hooks build-linux
 # the two build commands were not added to let this command run from generic containers or machines.
@@ -336,7 +336,7 @@ contract-tests:
 	dredd
 .PHONY: contract-tests
 
-# Implements test splitting and running. This is pulled directly from
+# Implements test-2 splitting and running. This is pulled directly from
 # the github action workflows for better local reproducibility.
 
 GO_TEST_FILES != find $(CURDIR) -name "*_test.go"

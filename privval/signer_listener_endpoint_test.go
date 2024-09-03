@@ -10,9 +10,9 @@ import (
 	"github.com/stretchr/testify/require"
 
 	"github.com/KYVENetwork/cometbft/v100/crypto/ed25519"
-	cmtnet "github.com/KYVENetwork/cometbft/v100/internal/net"
-	cmtrand "github.com/KYVENetwork/cometbft/v100/internal/rand"
 	"github.com/KYVENetwork/cometbft/v100/libs/log"
+	cmtnet "github.com/KYVENetwork/cometbft/v100/net"
+	cmtrand "github.com/KYVENetwork/cometbft/v100/rand"
 	"github.com/KYVENetwork/cometbft/v100/types"
 )
 
@@ -28,7 +28,7 @@ type dialerTestCase struct {
 	dialer SocketDialer
 }
 
-// TestSignerRemoteRetryTCPOnly will test connection retry attempts over TCP. We
+// TestSignerRemoteRetryTCPOnly will test-2 connection retry attempts over TCP. We
 // don't need this for Unix sockets because the OS instantly knows the state of
 // both ends of the socket connection. This basically causes the
 // SignerDialerEndpoint.dialer() call inside SignerDialerEndpoint.acceptNewConnection() to return

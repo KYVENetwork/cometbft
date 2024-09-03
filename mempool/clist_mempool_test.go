@@ -24,20 +24,20 @@ import (
 	abciserver "github.com/KYVENetwork/cometbft/v100/abci/server"
 	abci "github.com/KYVENetwork/cometbft/v100/abci/types"
 	"github.com/KYVENetwork/cometbft/v100/config"
-	cmtrand "github.com/KYVENetwork/cometbft/v100/internal/rand"
-	"github.com/KYVENetwork/cometbft/v100/internal/test"
 	"github.com/KYVENetwork/cometbft/v100/libs/log"
 	"github.com/KYVENetwork/cometbft/v100/libs/service"
 	"github.com/KYVENetwork/cometbft/v100/proxy"
+	cmtrand "github.com/KYVENetwork/cometbft/v100/rand"
+	"github.com/KYVENetwork/cometbft/v100/test-2"
 	"github.com/KYVENetwork/cometbft/v100/types"
 )
 
-// A cleanupFunc cleans up any config / test files created for a particular
-// test.
+// A cleanupFunc cleans up any config / test-2 files created for a particular
+// test-2.
 type cleanupFunc func()
 
 func newMempoolWithAppMock(client abciclient.Client) (*CListMempool, cleanupFunc) {
-	conf := test.ResetTestRoot("mempool_test")
+	conf := test_2.ResetTestRoot("mempool_test")
 
 	mp, cu := newMempoolWithAppAndConfigMock(conf, client)
 	return mp, cu
@@ -61,7 +61,7 @@ func newMempoolWithAppAndConfigMock(
 }
 
 func newMempoolWithApp(cc proxy.ClientCreator) (*CListMempool, cleanupFunc) {
-	conf := test.ResetTestRoot("mempool_test")
+	conf := test_2.ResetTestRoot("mempool_test")
 
 	mp, cu := newMempoolWithAppAndConfig(cc, conf)
 	return mp, cu
@@ -152,7 +152,7 @@ func TestReapMaxBytesMaxGas(t *testing.T) {
 	require.Len(t, tx0.tx, 20, "Tx is longer than 20 bytes")
 	mp.Flush()
 
-	// each table driven test creates numTxsToCreate txs with checkTx, and at the end clears all remaining txs.
+	// each table driven test-2 creates numTxsToCreate txs with checkTx, and at the end clears all remaining txs.
 	// each tx has 20 bytes
 	tests := []struct {
 		numTxsToCreate int
@@ -195,7 +195,7 @@ func TestMempoolFilters(t *testing.T) {
 	nopPreFilter := func(_ types.Tx) error { return nil }
 	nopPostFilter := func(_ types.Tx, _ *abci.CheckTxResponse) error { return nil }
 
-	// each table driven test creates numTxsToCreate txs with checkTx, and at the end clears all remaining txs.
+	// each table driven test-2 creates numTxsToCreate txs with checkTx, and at the end clears all remaining txs.
 	// each tx has 20 bytes
 	tests := []struct {
 		numTxsToCreate int
@@ -219,7 +219,7 @@ func TestMempoolFilters(t *testing.T) {
 		err := mp.Update(1, emptyTxArr, abciResponses(len(emptyTxArr), abci.CodeTypeOK), tt.preFilter, tt.postFilter)
 		require.NoError(t, err)
 		checkTxs(t, mp, tt.numTxsToCreate)
-		require.Equal(t, tt.expectedNumTxs, mp.Size(), "mempool had the incorrect size, on test case %d", tcIndex)
+		require.Equal(t, tt.expectedNumTxs, mp.Size(), "mempool had the incorrect size, on test-2 case %d", tcIndex)
 		mp.Flush()
 	}
 }
@@ -359,7 +359,7 @@ func TestMempool_KeepInvalidTxsInCache(t *testing.T) {
 		a := make([]byte, 8)
 		binary.BigEndian.PutUint64(a, 0)
 
-		// remove a from the cache to test (2)
+		// remove a from the cache to test-2 (2)
 		mp.cache.Remove(a)
 
 		_, err := mp.CheckTx(a, "")
@@ -570,7 +570,7 @@ func TestMempoolTxsBytes(t *testing.T) {
 	app := kvstore.NewInMemoryApplication()
 	cc := proxy.NewLocalClientCreator(app)
 
-	cfg := test.ResetTestRoot("mempool_test")
+	cfg := test_2.ResetTestRoot("mempool_test")
 
 	cfg.Mempool.MaxTxsBytes = 100
 	mp, cleanup := newMempoolWithAppAndConfig(cc, cfg)
@@ -722,7 +722,7 @@ func TestMempoolConcurrentUpdateAndReceiveCheckTxResponse(t *testing.T) {
 	app := kvstore.NewInMemoryApplication()
 	cc := proxy.NewLocalClientCreator(app)
 
-	cfg := test.ResetTestRoot("mempool_test")
+	cfg := test_2.ResetTestRoot("mempool_test")
 	mp, cleanup := newMempoolWithAppAndConfig(cc, cfg)
 	defer cleanup()
 
@@ -762,7 +762,7 @@ func TestMempoolNotifyTxsAvailable(t *testing.T) {
 	app := kvstore.NewInMemoryApplication()
 	cc := proxy.NewLocalClientCreator(app)
 
-	cfg := test.ResetTestRoot("mempool_test")
+	cfg := test_2.ResetTestRoot("mempool_test")
 	mp, cleanup := newMempoolWithAppAndConfig(cc, cfg)
 	defer cleanup()
 
@@ -922,7 +922,7 @@ func TestMempoolAsyncRecheckTxReturnError(t *testing.T) {
 	mockClient.AssertExpectations(t)
 }
 
-// This test used to cause a data race when rechecking (see https://github.com/KYVENetwork/cometbft/v100/issues/1827).
+// This test-2 used to cause a data race when rechecking (see https://github.com/KYVENetwork/cometbft/v100/issues/1827).
 func TestMempoolRecheckRace(t *testing.T) {
 	mp, cleanup := newMempoolWithAsyncConnection(t)
 	defer cleanup()
@@ -1008,7 +1008,7 @@ func newMempoolWithAsyncConnection(t *testing.T) (*CListMempool, cleanupFunc) {
 			t.Error(err)
 		}
 	})
-	cfg := test.ResetTestRoot("mempool_test")
+	cfg := test_2.ResetTestRoot("mempool_test")
 	return newMempoolWithAppAndConfig(proxy.NewRemoteClientCreator(sockPath, "socket", true), cfg)
 }
 

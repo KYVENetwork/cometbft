@@ -8,7 +8,7 @@ import (
 	"github.com/google/orderedcode"
 
 	abci "github.com/KYVENetwork/cometbft/v100/abci/types"
-	idxutil "github.com/KYVENetwork/cometbft/v100/internal/indexer"
+	idxutil "github.com/KYVENetwork/cometbft/v100/indexer"
 	cmtsyntax "github.com/KYVENetwork/cometbft/v100/libs/pubsub/query/syntax"
 	"github.com/KYVENetwork/cometbft/v100/state/indexer"
 	"github.com/KYVENetwork/cometbft/v100/types"

@@ -8,7 +8,7 @@ import (
 	"github.com/KYVENetwork/cometbft/v100/crypto"
 )
 
-// the purpose of this test is primarily to ensure that the randomness
+// the purpose of this test-2 is primarily to ensure that the randomness
 // generation won't error.
 func TestRandomConsistency(t *testing.T) {
 	x1 := crypto.CRandBytes(256)

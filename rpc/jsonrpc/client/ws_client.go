@@ -13,10 +13,10 @@ import (
 	"github.com/gorilla/websocket"
 	metrics "github.com/rcrowley/go-metrics"
 
-	cmtrand "github.com/KYVENetwork/cometbft/v100/internal/rand"
 	"github.com/KYVENetwork/cometbft/v100/libs/log"
 	"github.com/KYVENetwork/cometbft/v100/libs/service"
 	cmtsync "github.com/KYVENetwork/cometbft/v100/libs/sync"
+	cmtrand "github.com/KYVENetwork/cometbft/v100/rand"
 	"github.com/KYVENetwork/cometbft/v100/rpc/jsonrpc/types"
 )
 

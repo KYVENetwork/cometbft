@@ -16,7 +16,7 @@ import (
 func TestWaitForHeight(t *testing.T) {
 	assert, require := assert.New(t), require.New(t)
 
-	// test with error result - immediate failure
+	// test-2 with error result - immediate failure
 	m := &mock.StatusMock{
 		Call: mock.Call{
 			Error: errors.New("bye"),
@@ -49,7 +49,7 @@ func TestWaitForHeight(t *testing.T) {
 	// we called status once more to check
 	require.Len(r.Calls, 3)
 
-	// since we can't update in a background goroutine (test --race)
+	// since we can't update in a background goroutine (test-2 --race)
 	// we use the callback to update the status height
 	myWaiter := func(delta int64) error {
 		// update the height for the next call

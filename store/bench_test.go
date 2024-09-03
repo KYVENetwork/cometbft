@@ -5,7 +5,7 @@ import (
 
 	"github.com/stretchr/testify/require"
 
-	"github.com/KYVENetwork/cometbft/v100/internal/test"
+	"github.com/KYVENetwork/cometbft/v100/test-2"
 	"github.com/KYVENetwork/cometbft/v100/types"
 	cmttime "github.com/KYVENetwork/cometbft/v100/types/time"
 )
@@ -17,7 +17,7 @@ func BenchmarkRepeatedLoadSeenCommitSameBlock(b *testing.B) {
 	state, bs, _, _, cleanup, _ := makeStateAndBlockStoreAndIndexers()
 	defer cleanup()
 	h := bs.Height() + 1
-	block := state.MakeBlock(h, test.MakeNTxs(h, 10), new(types.Commit), nil, state.Validators.GetProposer().Address)
+	block := state.MakeBlock(h, test_2.MakeNTxs(h, 10), new(types.Commit), nil, state.Validators.GetProposer().Address)
 	seenCommit := makeTestExtCommitWithNumSigs(block.Header.Height, cmttime.Now(), 100).ToCommit()
 	ps, err := block.MakePartSet(types.BlockPartSizeBytes)
 	require.NoError(b, err)

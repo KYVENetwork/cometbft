@@ -1,4 +1,4 @@
-# Manually run the nightly E2E tests for a particular branch, but test with
+# Manually run the nightly E2E tests for a particular branch, but test-2 with
 # multiple versions.
 name: e2e-manual-multiversion
 on:
@@ -22,13 +22,13 @@ jobs:
       - uses: actions/checkout@v4
 
       - name: Build
-        working-directory: test/e2e
+        working-directory: test-2/e2e
         # Run make jobs in parallel, since we can't run steps in parallel.
         run: make -j2 docker generator runner tests
 
       - name: Generate testnets
         if: matrix.group != 5
-        working-directory: test/e2e
+        working-directory: test-2/e2e
         # When changing -g, also change the matrix groups above
         # Generate multi-version tests with double the quantity of E2E nodes
         # based on the current branch as compared to the latest version.
@@ -36,10 +36,10 @@ jobs:
 
       - name: Run p2p testnets (${{ matrix.group }})
         if: matrix.group != 5
-        working-directory: test/e2e
+        working-directory: test-2/e2e
         run: ./run-multiple.sh networks/nightly/*-group${{ matrix.group }}-*.toml
 
       - name: Run p2p testnets (regression)
         if: matrix.group == 5
-        working-directory: test/e2e
+        working-directory: test-2/e2e
         run: ./run-multiple.sh networks_regressions/*.toml

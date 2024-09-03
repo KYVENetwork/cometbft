@@ -8,10 +8,10 @@ import (
 	"github.com/KYVENetwork/cometbft/v100/config"
 	"github.com/KYVENetwork/cometbft/v100/crypto"
 	"github.com/KYVENetwork/cometbft/v100/crypto/ed25519"
-	cmtnet "github.com/KYVENetwork/cometbft/v100/internal/net"
-	cmtrand "github.com/KYVENetwork/cometbft/v100/internal/rand"
 	"github.com/KYVENetwork/cometbft/v100/libs/log"
+	cmtnet "github.com/KYVENetwork/cometbft/v100/net"
 	"github.com/KYVENetwork/cometbft/v100/p2p/conn"
+	cmtrand "github.com/KYVENetwork/cometbft/v100/rand"
 )
 
 const testCh = 0x01

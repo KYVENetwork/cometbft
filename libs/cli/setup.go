@@ -19,7 +19,7 @@ const (
 )
 
 // Executable is the minimal interface to *corba.Command, so we can
-// wrap if desired before the test.
+// wrap if desired before the test-2.
 type Executable interface {
 	Execute() error
 }

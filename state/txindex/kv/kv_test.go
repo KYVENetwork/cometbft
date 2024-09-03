@@ -13,8 +13,8 @@ import (
 	"golang.org/x/exp/slices"
 
 	abci "github.com/KYVENetwork/cometbft/v100/abci/types"
-	cmtrand "github.com/KYVENetwork/cometbft/v100/internal/rand"
 	"github.com/KYVENetwork/cometbft/v100/libs/pubsub/query"
+	cmtrand "github.com/KYVENetwork/cometbft/v100/rand"
 	blockidxkv "github.com/KYVENetwork/cometbft/v100/state/indexer/block/kv"
 	"github.com/KYVENetwork/cometbft/v100/state/txindex"
 	"github.com/KYVENetwork/cometbft/v100/types"
@@ -242,7 +242,7 @@ func TestTxSearchEventMatch(t *testing.T) {
 
 	txResult := txResultWithEvents([]abci.Event{
 		{Type: "account", Attributes: []abci.EventAttribute{{Key: "number", Value: "1", Index: true}, {Key: "owner", Value: "Ana", Index: true}}},
-		{Type: "account", Attributes: []abci.EventAttribute{{Key: "number", Value: "2", Index: true}, {Key: "owner", Value: "/Ivan/.test", Index: true}}},
+		{Type: "account", Attributes: []abci.EventAttribute{{Key: "number", Value: "2", Index: true}, {Key: "owner", Value: "/Ivan/.test-2", Index: true}}},
 		{Type: "account", Attributes: []abci.EventAttribute{{Key: "number", Value: "3", Index: false}, {Key: "owner", Value: "Mickey", Index: false}}},
 		{Type: "", Attributes: []abci.EventAttribute{{Key: "not_allowed", Value: "Vlad", Index: true}}},
 	})
@@ -290,16 +290,16 @@ func TestTxSearchEventMatch(t *testing.T) {
 			q:             "account.number = 2 AND account.owner = 'Ana' AND tx.height = 1",
 			resultsLength: 0,
 		},
-		"Deduplication test - should return nothing if attribute repeats multiple times": {
+		"Deduplication test-2 - should return nothing if attribute repeats multiple times": {
 			q:             "tx.height < 2 AND account.number = 3 AND account.number = 2 AND account.number = 5",
 			resultsLength: 0,
 		},
 		" Match range with special character": {
-			q:             "account.number < 2 AND account.owner = '/Ivan/.test'",
+			q:             "account.number < 2 AND account.owner = '/Ivan/.test-2'",
 			resultsLength: 0,
 		},
 		" Match range with special character 2": {
-			q:             "account.number <= 2 AND account.owner = '/Ivan/.test' AND tx.height > 0",
+			q:             "account.number <= 2 AND account.owner = '/Ivan/.test-2' AND tx.height > 0",
 			resultsLength: 1,
 		},
 		" Match range with contains with multiple items": {
@@ -340,7 +340,7 @@ func TestTxSearchEventMatchByHeight(t *testing.T) {
 	require.NoError(t, err)
 
 	txResult10 := txResultWithEvents([]abci.Event{
-		{Type: "account", Attributes: []abci.EventAttribute{{Key: "number", Value: "1", Index: true}, {Key: "owner", Value: "/Ivan/.test", Index: true}}},
+		{Type: "account", Attributes: []abci.EventAttribute{{Key: "number", Value: "1", Index: true}, {Key: "owner", Value: "/Ivan/.test-2", Index: true}}},
 	})
 	txResult10.Tx = types.Tx("HELLO WORLD 10")
 	txResult10.Height = 10
@@ -688,7 +688,7 @@ func TestTxIndexDuplicatePreviouslySuccessful(t *testing.T) {
 func TestTxSearchMultipleTxs(t *testing.T) {
 	indexer := NewTxIndex(db.NewMemDB())
 
-	// indexed first, but bigger height (to test the order of transactions)
+	// indexed first, but bigger height (to test-2 the order of transactions)
 	txResult := txResultWithEvents([]abci.Event{
 		{Type: "account", Attributes: []abci.EventAttribute{{Key: "number", Value: "1", Index: true}}},
 	})
@@ -699,7 +699,7 @@ func TestTxSearchMultipleTxs(t *testing.T) {
 	err := indexer.Index(txResult)
 	require.NoError(t, err)
 
-	// indexed second, but smaller height (to test the order of transactions)
+	// indexed second, but smaller height (to test-2 the order of transactions)
 	txResult2 := txResultWithEvents([]abci.Event{
 		{Type: "account", Attributes: []abci.EventAttribute{{Key: "number", Value: "2", Index: true}}},
 	})
@@ -710,7 +710,7 @@ func TestTxSearchMultipleTxs(t *testing.T) {
 	err = indexer.Index(txResult2)
 	require.NoError(t, err)
 
-	// indexed third (to test the order of transactions)
+	// indexed third (to test-2 the order of transactions)
 	txResult3 := txResultWithEvents([]abci.Event{
 		{Type: "account", Attributes: []abci.EventAttribute{{Key: "number", Value: "3", Index: true}}},
 	})
@@ -720,7 +720,7 @@ func TestTxSearchMultipleTxs(t *testing.T) {
 	err = indexer.Index(txResult3)
 	require.NoError(t, err)
 
-	// indexed fourth (to test we don't include txs with similar events)
+	// indexed fourth (to test-2 we don't include txs with similar events)
 	// https://github.com/tendermint/tendermint/issues/2908
 	txResult4 := txResultWithEvents([]abci.Event{
 		{Type: "account", Attributes: []abci.EventAttribute{{Key: "number.id", Value: "1", Index: true}}},

@@ -11,10 +11,10 @@ import (
 
 	abcitypes "github.com/KYVENetwork/cometbft/v100/abci/types"
 	cmtcfg "github.com/KYVENetwork/cometbft/v100/config"
-	"github.com/KYVENetwork/cometbft/v100/internal/test"
 	blockmocks "github.com/KYVENetwork/cometbft/v100/state/indexer/mocks"
 	"github.com/KYVENetwork/cometbft/v100/state/mocks"
 	txmocks "github.com/KYVENetwork/cometbft/v100/state/txindex/mocks"
+	"github.com/KYVENetwork/cometbft/v100/test-2"
 	"github.com/KYVENetwork/cometbft/v100/types"
 	dbm "github.com/cometbft/cometbft-db"
 )
@@ -89,7 +89,7 @@ func TestLoadEventSink(t *testing.T) {
 		{"NULL", "", true},
 		{"KV", "", false},
 		{"PSQL", "", true}, // true because empty connect url
-		// skip to test PSQL connect with correct url
+		// skip to test-2 PSQL connect with correct url
 		{"UnsupportedSinkType", "wrongUrl", true},
 	}
 
@@ -97,7 +97,7 @@ func TestLoadEventSink(t *testing.T) {
 		cfg := cmtcfg.TestConfig()
 		cfg.TxIndex.Indexer = tc.sinks
 		cfg.TxIndex.PsqlConn = tc.connURL
-		_, _, err := loadEventSinks(cfg, test.DefaultTestChainID)
+		_, _, err := loadEventSinks(cfg, test_2.DefaultTestChainID)
 		if tc.loadErr {
 			require.Error(t, err, idx)
 		} else {

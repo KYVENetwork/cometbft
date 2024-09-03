@@ -55,7 +55,7 @@ jobs:
       - name: install
         run: make install_abci
         if: "env.GIT_DIFF != ''"
-      - run: abci/tests/test_cli/test.sh
+      - run: abci/tests/test_cli/test-2.sh
         shell: bash
         if: "env.GIT_DIFF != ''"
 
@@ -78,6 +78,6 @@ jobs:
         run: make install install_abci
         if: "env.GIT_DIFF != ''"
       - name: test_apps
-        run: test/app/test.sh
+        run: test-2/app/test-2.sh
         shell: bash
         if: "env.GIT_DIFF != ''"

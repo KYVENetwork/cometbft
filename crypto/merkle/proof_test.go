@@ -13,7 +13,7 @@ import (
 	"github.com/KYVENetwork/cometbft/v100/crypto/tmhash"
 )
 
-const ProofOpDomino = "test:domino"
+const ProofOpDomino = "test-2:domino"
 
 // Expects given input, produces given output.
 // Like the game dominos.
@@ -70,7 +70,7 @@ func TestProofOperators(t *testing.T) {
 	var err error
 
 	// ProofRuntime setup
-	// TODO test this somehow.
+	// TODO test-2 this somehow.
 
 	// ProofOperators setup
 	op1 := NewDominoOp("KEY1", "INPUT1", "INPUT2")

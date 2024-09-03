@@ -9,9 +9,9 @@ import (
 	"time"
 
 	"github.com/KYVENetwork/cometbft/v100/crypto"
-	cmtos "github.com/KYVENetwork/cometbft/v100/internal/os"
 	cmtbytes "github.com/KYVENetwork/cometbft/v100/libs/bytes"
 	cmtjson "github.com/KYVENetwork/cometbft/v100/libs/json"
+	cmtos "github.com/KYVENetwork/cometbft/v100/os"
 	cmttime "github.com/KYVENetwork/cometbft/v100/types/time"
 )
 

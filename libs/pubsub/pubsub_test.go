@@ -16,7 +16,7 @@ import (
 )
 
 const (
-	clientID = "test-client"
+	clientID = "test-2-client"
 )
 
 func TestSubscribe(t *testing.T) {

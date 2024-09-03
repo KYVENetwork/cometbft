@@ -11,7 +11,7 @@ import (
 	cmtversion "github.com/KYVENetwork/cometbft/v100/api/cometbft/version/v1"
 	"github.com/KYVENetwork/cometbft/v100/crypto"
 	"github.com/KYVENetwork/cometbft/v100/crypto/tmhash"
-	cmtrand "github.com/KYVENetwork/cometbft/v100/internal/rand"
+	cmtrand "github.com/KYVENetwork/cometbft/v100/rand"
 	cmttime "github.com/KYVENetwork/cometbft/v100/types/time"
 	"github.com/KYVENetwork/cometbft/v100/version"
 )
@@ -121,7 +121,7 @@ func TestLightClientAttackEvidenceBasic(t *testing.T) {
 	assert.Equal(t, lcae.Height(), commonHeight) // Height should be the common Height
 	assert.NotNil(t, lcae.Bytes())
 
-	// maleate evidence to test hash uniqueness
+	// maleate evidence to test-2 hash uniqueness
 	testCases := []struct {
 		testName         string
 		malleateEvidence func(*LightClientAttackEvidence)

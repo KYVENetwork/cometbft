@@ -18,8 +18,8 @@ import (
 	"github.com/KYVENetwork/cometbft/v100/abci/types"
 	"github.com/KYVENetwork/cometbft/v100/abci/version"
 	crypto "github.com/KYVENetwork/cometbft/v100/api/cometbft/crypto/v1"
-	cmtos "github.com/KYVENetwork/cometbft/v100/internal/os"
 	"github.com/KYVENetwork/cometbft/v100/libs/log"
+	cmtos "github.com/KYVENetwork/cometbft/v100/os"
 )
 
 // client is a global variable so it can be reused by the console.
@@ -271,7 +271,7 @@ var kvstoreCmd = &cobra.Command{
 }
 
 var testCmd = &cobra.Command{
-	Use:   "test",
+	Use:   "test-2",
 	Short: "run integration tests",
 	Long:  "run integration tests",
 	Args:  cobra.ExactArgs(0),

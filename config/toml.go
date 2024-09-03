@@ -8,7 +8,7 @@ import (
 
 	_ "embed"
 
-	cmtos "github.com/KYVENetwork/cometbft/v100/internal/os"
+	cmtos "github.com/KYVENetwork/cometbft/v100/os"
 )
 
 // DefaultDirPerm is the default permissions used when creating directories.

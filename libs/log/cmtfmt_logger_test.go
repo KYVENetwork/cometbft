@@ -54,7 +54,7 @@ func TestTMFmtLogger(t *testing.T) {
 	assert.Regexp(t, regexp.MustCompile(`N\[.+\] unknown \s+module=wire\s+\n$`), buf.String())
 
 	buf.Reset()
-	if err := logger.Log("hash", []byte("test me")); err != nil {
+	if err := logger.Log("hash", []byte("test-2 me")); err != nil {
 		t.Fatal(err)
 	}
 	assert.Regexp(t, regexp.MustCompile(`N\[.+\] unknown \s+ hash=74657374206D65\n$`), buf.String())
@@ -87,7 +87,7 @@ var (
 	withMessage = func(logger kitlog.Logger) { kitlog.With(logger, "a", "b").Log("d", "f") } //nolint:errcheck
 )
 
-// These test are designed to be run with the race detector.
+// These test-2 are designed to be run with the race detector.
 
 func testConcurrency(t *testing.T, logger kitlog.Logger, total int) {
 	t.Helper()

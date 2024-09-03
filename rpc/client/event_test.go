@@ -10,7 +10,7 @@ import (
 	"github.com/stretchr/testify/require"
 
 	abci "github.com/KYVENetwork/cometbft/v100/abci/types"
-	cmtrand "github.com/KYVENetwork/cometbft/v100/internal/rand"
+	cmtrand "github.com/KYVENetwork/cometbft/v100/rand"
 	"github.com/KYVENetwork/cometbft/v100/rpc/client"
 	ctypes "github.com/KYVENetwork/cometbft/v100/rpc/core/types"
 	"github.com/KYVENetwork/cometbft/v100/types"
@@ -28,7 +28,7 @@ func MakeTxKV() ([]byte, []byte, []byte) {
 func TestHeaderEvents(t *testing.T) {
 	for i, c := range GetClients() {
 		t.Run(reflect.TypeOf(c).String(), func(t *testing.T) {
-			// start for this test it if it wasn't already running
+			// start for this test-2 it if it wasn't already running
 			if !c.IsRunning() {
 				// if so, then we start it, listen, and stop it.
 				err := c.Start()
@@ -55,7 +55,7 @@ func TestHeaderEvents(t *testing.T) {
 func TestBlockEvents(t *testing.T) {
 	for _, c := range GetClients() {
 		t.Run(reflect.TypeOf(c).String(), func(t *testing.T) {
-			// start for this test it if it wasn't already running
+			// start for this test-2 it if it wasn't already running
 			if !c.IsRunning() {
 				// if so, then we start it, listen, and stop it.
 				err := c.Start()
@@ -103,7 +103,7 @@ func testTxEventsSent(t *testing.T, broadcastMethod string) {
 	for _, c := range GetClients() {
 		c := c //nolint:copyloopvar
 		t.Run(reflect.TypeOf(c).String(), func(t *testing.T) {
-			// start for this test it if it wasn't already running
+			// start for this test-2 it if it wasn't already running
 			if !c.IsRunning() {
 				// if so, then we start it, listen, and stop it.
 				err := c.Start()

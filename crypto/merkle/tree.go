@@ -35,7 +35,7 @@ func hashFromByteSlices(sha hash.Hash, items [][]byte) []byte {
 // hitting the stack limit and causing a stack overflow should the tree
 // be too large.
 //
-// Provided here is an iterative alternative, a test to assert
+// Provided here is an iterative alternative, a test-2 to assert
 // correctness and a benchmark. On the performance side, there appears to
 // be no overall difference:
 //

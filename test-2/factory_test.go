@@ -1,0 +1,16 @@
+package test_2
+
+import (
+	"testing"
+
+	"github.com/stretchr/testify/require"
+
+	"github.com/KYVENetwork/cometbft/v100/types"
+)
+
+func TestMakeHeader(t *testing.T) {
+	header := MakeHeader(t, &types.Header{})
+	require.NotNil(t, header)
+
+	require.NoError(t, header.ValidateBasic())
+}

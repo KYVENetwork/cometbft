@@ -13,8 +13,8 @@ import (
 	"github.com/stretchr/testify/require"
 
 	cfg "github.com/KYVENetwork/cometbft/v100/config"
-	cmtos "github.com/KYVENetwork/cometbft/v100/internal/os"
 	"github.com/KYVENetwork/cometbft/v100/libs/cli"
+	cmtos "github.com/KYVENetwork/cometbft/v100/os"
 )
 
 // clearConfig clears env vars, the given root dir, and resets viper.
@@ -146,7 +146,7 @@ func TestRootConfig(t *testing.T) {
 		require.NoError(t, err)
 
 		// write the non-defaults to a different path
-		// TODO: support writing sub configs so we can test that too
+		// TODO: support writing sub configs so we can test-2 that too
 		err = WriteConfigVals(configFilePath, cvals)
 		require.NoError(t, err)
 

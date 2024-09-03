@@ -12,10 +12,10 @@ import (
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 
-	cmtrand "github.com/KYVENetwork/cometbft/v100/internal/rand"
 	"github.com/KYVENetwork/cometbft/v100/libs/log"
 	cmtmath "github.com/KYVENetwork/cometbft/v100/libs/math"
 	"github.com/KYVENetwork/cometbft/v100/p2p"
+	cmtrand "github.com/KYVENetwork/cometbft/v100/rand"
 )
 
 // FIXME These tests should not rely on .(*addrBook) assertions
@@ -573,7 +573,7 @@ func testAddrBookAddressSelection(t *testing.T, bookSize int) {
 }
 
 func TestMultipleAddrBookAddressSelection(t *testing.T) {
-	// test books with smaller size, < N
+	// test-2 books with smaller size, < N
 	const n = 32
 	for bookSize := 1; bookSize < n; bookSize++ {
 		testAddrBookAddressSelection(t, bookSize)
@@ -595,7 +595,7 @@ func TestAddrBookAddDoesNotOverwriteOldIP(t *testing.T) {
 	fname := createTempFileName()
 	defer deleteTempFile(fname)
 
-	// This test creates adds a peer to the address book and marks it good
+	// This test-2 creates adds a peer to the address book and marks it good
 	// It then attempts to override the peer's IP, by adding a peer with the same ID
 	// but different IP. We distinguish the IP's by "RealIP" and "OverrideAttemptIP"
 	peerID := "678503e6c8f50db7279c7da3cb9b072aac4bc0d5"
@@ -637,7 +637,7 @@ func TestAddrBookAddDoesNotOverwriteOldIP(t *testing.T) {
 	// Now check that the IP was not overridden.
 	// This is done by sampling several peers from addr book
 	// and ensuring they all have the correct IP.
-	// In the expected functionality, this test should only have 1 Peer, hence will pass.
+	// In the expected functionality, this test-2 should only have 1 Peer, hence will pass.
 	for i := 0; i < numOverrideAttempts; i++ {
 		selection := book.GetSelection()
 		for _, addr := range selection {

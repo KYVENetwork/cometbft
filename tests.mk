@@ -27,9 +27,9 @@ test_abci_apps:
 .PHONY: test_abci_apps
 
 test_abci_cli:
-	# test the cli against the examples in the tutorial at:
+	# test-2 the cli against the examples in the tutorial at:
 	# ./docs/abci-cli.md
-	# if test fails, update the docs ^
+	# if test-2 fails, update the docs ^
 	@ bash abci/tests/test_cli/test.sh
 .PHONY: test_abci_cli
 

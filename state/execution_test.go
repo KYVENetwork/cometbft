@@ -18,7 +18,6 @@ import (
 	"github.com/KYVENetwork/cometbft/v100/crypto"
 	"github.com/KYVENetwork/cometbft/v100/crypto/ed25519"
 	"github.com/KYVENetwork/cometbft/v100/crypto/tmhash"
-	"github.com/KYVENetwork/cometbft/v100/internal/test"
 	"github.com/KYVENetwork/cometbft/v100/libs/log"
 	mpmocks "github.com/KYVENetwork/cometbft/v100/mempool/mocks"
 	"github.com/KYVENetwork/cometbft/v100/proxy"
@@ -26,6 +25,7 @@ import (
 	sm "github.com/KYVENetwork/cometbft/v100/state"
 	"github.com/KYVENetwork/cometbft/v100/state/mocks"
 	"github.com/KYVENetwork/cometbft/v100/store"
+	"github.com/KYVENetwork/cometbft/v100/test-2"
 	"github.com/KYVENetwork/cometbft/v100/types"
 	cmttime "github.com/KYVENetwork/cometbft/v100/types/time"
 	"github.com/KYVENetwork/cometbft/v100/version"
@@ -79,7 +79,7 @@ func TestApplyBlock(t *testing.T) {
 }
 
 // TestFinalizeBlockDecidedLastCommit ensures we correctly send the
-// DecidedLastCommit to the application. The test ensures that the
+// DecidedLastCommit to the application. The test-2 ensures that the
 // DecidedLastCommit properly reflects which validators signed the preceding
 // block.
 func TestFinalizeBlockDecidedLastCommit(t *testing.T) {
@@ -364,7 +364,7 @@ func TestFinalizeBlockMisbehavior(t *testing.T) {
 
 func TestProcessProposal(t *testing.T) {
 	const height = 2
-	txs := test.MakeNTxs(height, 10)
+	txs := test_2.MakeNTxs(height, 10)
 
 	logger := log.NewNopLogger()
 	app := &abcimocks.Application{}
@@ -627,7 +627,7 @@ func TestFinalizeBlockValidatorUpdates(t *testing.T) {
 
 	state, err = blockExec.ApplyBlock(state, blockID, block, block.Height)
 	require.NoError(t, err)
-	// test new validator was added to NextValidators
+	// test-2 new validator was added to NextValidators
 	if assert.Equal(t, state.Validators.Size()+1, state.NextValidators.Size()) {
 		idx, _ := state.NextValidators.GetByAddress(pubkey.Address())
 		if idx < 0 {
@@ -635,7 +635,7 @@ func TestFinalizeBlockValidatorUpdates(t *testing.T) {
 		}
 	}
 
-	// test we threw an event
+	// test-2 we threw an event
 	select {
 	case msg := <-updatesSub.Out():
 		event, ok := msg.Data().(types.EventDataValidatorSetUpdates)
@@ -753,7 +753,7 @@ func TestPrepareProposalTxsAllIncluded(t *testing.T) {
 	evpool := &mocks.EvidencePool{}
 	evpool.On("PendingEvidence", mock.Anything).Return([]types.Evidence{}, int64(0))
 
-	txs := test.MakeNTxs(height, 10)
+	txs := test_2.MakeNTxs(height, 10)
 	mp := &mpmocks.Mempool{}
 	mp.On("ReapMaxBytesMaxGas", mock.Anything, mock.Anything).Return(txs[2:])
 
@@ -804,7 +804,7 @@ func TestPrepareProposalReorderTxs(t *testing.T) {
 	evpool := &mocks.EvidencePool{}
 	evpool.On("PendingEvidence", mock.Anything).Return([]types.Evidence{}, int64(0))
 
-	txs := test.MakeNTxs(height, 10)
+	txs := test_2.MakeNTxs(height, 10)
 	mp := &mpmocks.Mempool{}
 	mp.On("ReapMaxBytesMaxGas", mock.Anything, mock.Anything).Return(txs)
 
@@ -863,7 +863,7 @@ func TestPrepareProposalErrorOnTooManyTxs(t *testing.T) {
 	const nValidators = 1
 	var bytesPerTx int64 = 3
 	maxDataBytes := types.MaxDataBytes(state.ConsensusParams.Block.MaxBytes, 0, nValidators)
-	txs := test.MakeNTxs(height, maxDataBytes/bytesPerTx+2) // +2 so that tx don't fit
+	txs := test_2.MakeNTxs(height, maxDataBytes/bytesPerTx+2) // +2 so that tx don't fit
 	mp := &mpmocks.Mempool{}
 	mp.On("ReapMaxBytesMaxGas", mock.Anything, mock.Anything).Return(txs)
 
@@ -920,7 +920,7 @@ func TestPrepareProposalCountSerializationOverhead(t *testing.T) {
 	evpool := &mocks.EvidencePool{}
 	evpool.On("PendingEvidence", mock.Anything).Return([]types.Evidence{}, int64(0))
 
-	txs := test.MakeNTxs(height, maxDataBytes/bytesPerTx)
+	txs := test_2.MakeNTxs(height, maxDataBytes/bytesPerTx)
 	mp := &mpmocks.Mempool{}
 	mp.On("ReapMaxBytesMaxGas", mock.Anything, mock.Anything).Return(txs)
 
@@ -969,7 +969,7 @@ func TestPrepareProposalErrorOnPrepareProposalError(t *testing.T) {
 	evpool := &mocks.EvidencePool{}
 	evpool.On("PendingEvidence", mock.Anything).Return([]types.Evidence{}, int64(0))
 
-	txs := test.MakeNTxs(height, 10)
+	txs := test_2.MakeNTxs(height, 10)
 	mp := &mpmocks.Mempool{}
 	mp.On("ReapMaxBytesMaxGas", mock.Anything, mock.Anything).Return(txs)
 

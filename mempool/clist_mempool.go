@@ -10,8 +10,8 @@ import (
 
 	abcicli "github.com/KYVENetwork/cometbft/v100/abci/client"
 	abci "github.com/KYVENetwork/cometbft/v100/abci/types"
+	"github.com/KYVENetwork/cometbft/v100/clist"
 	"github.com/KYVENetwork/cometbft/v100/config"
-	"github.com/KYVENetwork/cometbft/v100/internal/clist"
 	"github.com/KYVENetwork/cometbft/v100/libs/log"
 	cmtmath "github.com/KYVENetwork/cometbft/v100/libs/math"
 	cmtsync "github.com/KYVENetwork/cometbft/v100/libs/sync"

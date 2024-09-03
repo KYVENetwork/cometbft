@@ -8,8 +8,8 @@ import (
 
 	"github.com/KYVENetwork/cometbft/v100/crypto"
 	"github.com/KYVENetwork/cometbft/v100/crypto/ed25519"
-	cmtos "github.com/KYVENetwork/cometbft/v100/internal/os"
 	cmtjson "github.com/KYVENetwork/cometbft/v100/libs/json"
+	cmtos "github.com/KYVENetwork/cometbft/v100/os"
 )
 
 // ID is a hex-encoded crypto.Address.

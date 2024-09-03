@@ -15,7 +15,7 @@ On subsequent starts (node recovery), the `genesis.json` file is ignored.
 ```json
 {
   "genesis_time": "2024-03-01T20:22:57.532998Z",
-  "chain_id": "test-chain-HfdKnD",
+  "chain_id": "test-2-chain-HfdKnD",
   "initial_height": "0",
   "consensus_params": {
     "block": {

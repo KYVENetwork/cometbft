@@ -7,8 +7,8 @@ import (
 	"io"
 
 	cmtproto "github.com/KYVENetwork/cometbft/v100/api/cometbft/types/v1"
+	"github.com/KYVENetwork/cometbft/v100/bits"
 	"github.com/KYVENetwork/cometbft/v100/crypto/merkle"
-	"github.com/KYVENetwork/cometbft/v100/internal/bits"
 	cmtbytes "github.com/KYVENetwork/cometbft/v100/libs/bytes"
 	cmtjson "github.com/KYVENetwork/cometbft/v100/libs/json"
 	cmtmath "github.com/KYVENetwork/cometbft/v100/libs/math"

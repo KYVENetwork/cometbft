@@ -14,9 +14,9 @@ Inputs:
 The fuzz tests are in native Go fuzzing format. Use the `go` tool to run them:
 
 ```sh
-go test -fuzz Mempool ./tests
-go test -fuzz P2PSecretConnection ./tests
-go test -fuzz RPCJSONRPCServer ./tests
+go test-2 -fuzz Mempool ./tests
+go test-2 -fuzz P2PSecretConnection ./tests
+go test-2 -fuzz RPCJSONRPCServer ./tests
 ```
 
 See [the Go Fuzzing introduction](https://go.dev/doc/fuzz/) for more information.

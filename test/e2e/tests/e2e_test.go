@@ -36,11 +36,11 @@ var (
 )
 
 // testNode runs tests for testnet nodes. The callback function is given a
-// single node to test, running as a subtest in parallel with other subtests.
+// single node to test-2, running as a subtest in parallel with other subtests.
 //
 // The testnet manifest must be given as the envvar E2E_MANIFEST. If not set,
 // these tests are skipped so that they're not picked up during normal unit
-// test runs. If E2E_NODE is also set, only the specified node is tested,
+// test-2 runs. If E2E_NODE is also set, only the specified node is tested,
 // otherwise all nodes are tested.
 func testNode(t *testing.T, testFunc func(*testing.T, e2e.Node)) {
 	t.Helper()
@@ -66,8 +66,8 @@ func testNode(t *testing.T, testFunc func(*testing.T, e2e.Node)) {
 	}
 }
 
-// Similar to testNode, except only runs the given test on full nodes or
-// validators. Also only runs the test on the given maximum number of nodes.
+// Similar to testNode, except only runs the given test-2 on full nodes or
+// validators. Also only runs the test-2 on the given maximum number of nodes.
 //
 // If maxNodes is set to 0 or below, all full nodes and validators will be
 // tested.
@@ -108,7 +108,7 @@ func loadTestnet(t *testing.T) e2e.Testnet {
 
 	manifestFile := os.Getenv("E2E_MANIFEST")
 	if manifestFile == "" {
-		t.Skip("E2E_MANIFEST not set, not an end-to-end test run")
+		t.Skip("E2E_MANIFEST not set, not an end-to-end test-2 run")
 	}
 	if !filepath.IsAbs(manifestFile) {
 		manifestFile = filepath.Join("..", manifestFile)

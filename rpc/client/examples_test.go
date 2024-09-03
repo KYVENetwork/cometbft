@@ -15,7 +15,7 @@ import (
 )
 
 func ExampleHTTP_simple() {
-	// Start a CometBFT node (and kvstore) in the background to test against
+	// Start a CometBFT node (and kvstore) in the background to test-2 against
 	app := kvstore.NewInMemoryApplication()
 	node := rpctest.StartCometBFT(app, rpctest.SuppressStdout, rpctest.RecreateConfig)
 	defer rpctest.StopCometBFT(node)
@@ -68,7 +68,7 @@ func ExampleHTTP_simple() {
 }
 
 func ExampleHTTP_batching() {
-	// Start a CometBFT node (and kvstore) in the background to test against
+	// Start a CometBFT node (and kvstore) in the background to test-2 against
 	app := kvstore.NewInMemoryApplication()
 	node := rpctest.StartCometBFT(app, rpctest.SuppressStdout, rpctest.RecreateConfig)
 
@@ -140,7 +140,7 @@ func ExampleHTTP_batching() {
 
 // Test the maximum batch request size middleware.
 func ExampleHTTP_maxBatchSize() {
-	// Start a CometBFT node (and kvstore) in the background to test against
+	// Start a CometBFT node (and kvstore) in the background to test-2 against
 	app := kvstore.NewInMemoryApplication()
 	node := rpctest.StartCometBFT(app, rpctest.RecreateConfig, rpctest.SuppressStdout, rpctest.MaxReqBatchSize)
 

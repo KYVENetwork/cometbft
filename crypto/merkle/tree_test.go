@@ -8,8 +8,8 @@ import (
 	"github.com/stretchr/testify/require"
 
 	"github.com/KYVENetwork/cometbft/v100/crypto/tmhash"
-	cmtrand "github.com/KYVENetwork/cometbft/v100/internal/rand"
 	"github.com/KYVENetwork/cometbft/v100/libs/test"
+	cmtrand "github.com/KYVENetwork/cometbft/v100/rand"
 )
 
 type testItem []byte

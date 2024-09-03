@@ -11,10 +11,10 @@ import (
 	"github.com/spf13/viper"
 
 	cfg "github.com/KYVENetwork/cometbft/v100/config"
-	cmtrand "github.com/KYVENetwork/cometbft/v100/internal/rand"
 	"github.com/KYVENetwork/cometbft/v100/libs/bytes"
 	"github.com/KYVENetwork/cometbft/v100/p2p"
 	"github.com/KYVENetwork/cometbft/v100/privval"
+	cmtrand "github.com/KYVENetwork/cometbft/v100/rand"
 	"github.com/KYVENetwork/cometbft/v100/types"
 	cmttime "github.com/KYVENetwork/cometbft/v100/types/time"
 )

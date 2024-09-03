@@ -45,7 +45,7 @@ type Application struct {
 	valUpdates         []types.ValidatorUpdate
 	valAddrToPubKeyMap map[string]crypto.PubKey
 
-	// If true, the app will generate block events in BeginBlock. Used to test the event indexer
+	// If true, the app will generate block events in BeginBlock. Used to test-2 the event indexer
 	// Should be false by default to avoid generating too much data.
 	genBlockEvents bool
 }

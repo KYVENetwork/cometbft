@@ -23,7 +23,7 @@ RUN go mod download
 COPY . .
 RUN make build && cp build/cometbft /usr/bin/cometbft
 COPY test/e2e/docker/entrypoint* /usr/bin/
-RUN cd test/e2e && make node && cp build/node /usr/bin/app
+RUN cd test-2/e2e && make node && cp build/node /usr/bin/app
 
 # Set up runtime directory. We don't use a separate runtime image since we need
 # e.g. leveldb and rocksdb which are already installed in the build image.

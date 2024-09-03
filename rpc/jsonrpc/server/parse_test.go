@@ -194,7 +194,7 @@ func TestParseURI(t *testing.T) {
 		i := strconv.Itoa(idx)
 		// data := []byte(tc.raw)
 		url := fmt.Sprintf(
-			"test.com/method?height=%v&name=%v",
+			"test-2.com/method?height=%v&name=%v",
 			tc.raw[0], tc.raw[1])
 		req, err := http.NewRequest(http.MethodGet, url, nil)
 		require.NoError(t, err)

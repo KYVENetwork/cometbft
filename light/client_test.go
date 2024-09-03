@@ -9,18 +9,18 @@ import (
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 
-	"github.com/KYVENetwork/cometbft/v100/internal/test"
 	"github.com/KYVENetwork/cometbft/v100/libs/log"
 	"github.com/KYVENetwork/cometbft/v100/light"
 	"github.com/KYVENetwork/cometbft/v100/light/provider"
 	mockp "github.com/KYVENetwork/cometbft/v100/light/provider/mock"
 	dbs "github.com/KYVENetwork/cometbft/v100/light/store/db"
+	"github.com/KYVENetwork/cometbft/v100/test-2"
 	"github.com/KYVENetwork/cometbft/v100/types"
 	dbm "github.com/cometbft/cometbft-db"
 )
 
 const (
-	chainID = test.DefaultTestChainID
+	chainID = test_2.DefaultTestChainID
 )
 
 var (
@@ -252,7 +252,7 @@ func TestClient_SequentialVerification(t *testing.T) {
 }
 
 func TestClient_SkippingVerification(t *testing.T) {
-	// required for 2nd test case
+	// required for 2nd test-2 case
 	newKeys := genPrivKeys(4)
 	newVals := newKeys.ToValidators(10, 1)
 

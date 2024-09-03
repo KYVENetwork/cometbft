@@ -13,13 +13,13 @@ import (
 	cmtstate "github.com/KYVENetwork/cometbft/v100/api/cometbft/state/v1"
 	cfg "github.com/KYVENetwork/cometbft/v100/config"
 	"github.com/KYVENetwork/cometbft/v100/crypto/ed25519"
-	"github.com/KYVENetwork/cometbft/v100/internal/test"
 	"github.com/KYVENetwork/cometbft/v100/libs/log"
 	sm "github.com/KYVENetwork/cometbft/v100/state"
 	"github.com/KYVENetwork/cometbft/v100/state/indexer"
 	"github.com/KYVENetwork/cometbft/v100/state/indexer/block"
 	"github.com/KYVENetwork/cometbft/v100/state/txindex"
 	"github.com/KYVENetwork/cometbft/v100/store"
+	"github.com/KYVENetwork/cometbft/v100/test-2"
 	"github.com/KYVENetwork/cometbft/v100/types"
 	dbm "github.com/cometbft/cometbft-db"
 )
@@ -64,7 +64,7 @@ func TestStoreLoadValidators(t *testing.T) {
 func BenchmarkLoadValidators(b *testing.B) {
 	const valSetSize = 100
 
-	config := test.ResetTestRoot("state_")
+	config := test_2.ResetTestRoot("state_")
 	defer os.RemoveAll(config.RootDir)
 	dbType := dbm.BackendType(config.DBBackend)
 	stateDB, err := dbm.NewDB("state", dbType, config.DBDir())
@@ -239,7 +239,7 @@ func TestTxResultsHash(t *testing.T) {
 	results := types.NewResults(txResults)
 	assert.Equal(t, root, results.Hash())
 
-	// test we can prove first ExecTxResult
+	// test-2 we can prove first ExecTxResult
 	proof := results.ProveResult(0)
 	bz, err := results[0].Marshal()
 	require.NoError(t, err)
@@ -255,7 +255,7 @@ func sliceToMap(s []int64) map[int64]bool {
 }
 
 func makeStateAndBlockStoreAndIndexers() (sm.State, *store.BlockStore, txindex.TxIndexer, indexer.BlockIndexer, func(), sm.Store) {
-	config := test.ResetTestRoot("blockchain_reactor_test")
+	config := test_2.ResetTestRoot("blockchain_reactor_test")
 	blockDB := dbm.NewMemDB()
 	stateDB := dbm.NewMemDB()
 	stateStore := sm.NewStore(stateDB, sm.StoreOptions{
@@ -266,7 +266,7 @@ func makeStateAndBlockStoreAndIndexers() (sm.State, *store.BlockStore, txindex.T
 		panic("error constructing state from genesis file: " + err.Error())
 	}
 
-	txIndexer, blockIndexer, _, err := block.IndexerFromConfig(config, cfg.DefaultDBProvider, "test")
+	txIndexer, blockIndexer, _, err := block.IndexerFromConfig(config, cfg.DefaultDBProvider, "test-2")
 	if err != nil {
 		panic(err)
 	}
@@ -307,7 +307,7 @@ func fillStore(t *testing.T, height int64, stateStore sm.Store, bs *store.BlockS
 		require.NoError(t, err, responses)
 		require.Equal(t, response1, responses)
 	}
-	b1 := state.MakeBlock(state.LastBlockHeight+1, test.MakeNTxs(state.LastBlockHeight+1, 10), new(types.Commit), nil, nil)
+	b1 := state.MakeBlock(state.LastBlockHeight+1, test_2.MakeNTxs(state.LastBlockHeight+1, 10), new(types.Commit), nil, nil)
 	partSet, err := b1.MakePartSet(types.BlockPartSizeBytes)
 	require.NoError(t, err)
 	bs.SaveBlock(b1, partSet, &types.Commit{Height: state.LastBlockHeight + 1})

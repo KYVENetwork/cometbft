@@ -11,8 +11,8 @@ import (
 	"google.golang.org/grpc/credentials/insecure"
 
 	"github.com/KYVENetwork/cometbft/v100/abci/types"
-	cmtnet "github.com/KYVENetwork/cometbft/v100/internal/net"
 	"github.com/KYVENetwork/cometbft/v100/libs/service"
+	cmtnet "github.com/KYVENetwork/cometbft/v100/net"
 )
 
 var _ Client = (*grpcClient)(nil)

@@ -29,8 +29,8 @@ func TestBlock_Header(t *testing.T) {
 		if node.RetainBlocks > 0 {
 			// This was done in case pruning is activated.
 			// As it happens in the background this lowers the chances
-			// that the block at height=first will be pruned by the time we test
-			// this. If this test starts to fail often, it is worth revisiting this logic.
+			// that the block at height=first will be pruned by the time we test-2
+			// this. If this test-2 starts to fail often, it is worth revisiting this logic.
 			// To reproduce this failure locally, it is advised to set the storage.pruning.interval
 			// to 1s instead of 10s.
 			first += int64(node.RetainBlocks) // avoid race conditions with block pruning
@@ -60,7 +60,7 @@ func TestBlock_Range(t *testing.T) {
 	t.Helper()
 	testNode(t, func(t *testing.T, node e2e.Node) {
 		t.Helper()
-		// We do not run this test on seed nodes or nodes with data
+		// We do not run this test-2 on seed nodes or nodes with data
 		// companion-related pruning enabled.
 		if node.Mode == e2e.ModeSeed || node.EnableCompanionPruning {
 			return

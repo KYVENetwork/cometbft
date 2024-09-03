@@ -10,15 +10,15 @@ import (
 
 	abci "github.com/KYVENetwork/cometbft/v100/abci/types"
 	cfg "github.com/KYVENetwork/cometbft/v100/config"
-	cmtnet "github.com/KYVENetwork/cometbft/v100/internal/net"
-	"github.com/KYVENetwork/cometbft/v100/internal/test"
 	"github.com/KYVENetwork/cometbft/v100/libs/log"
+	cmtnet "github.com/KYVENetwork/cometbft/v100/net"
 	nm "github.com/KYVENetwork/cometbft/v100/node"
 	"github.com/KYVENetwork/cometbft/v100/p2p"
 	"github.com/KYVENetwork/cometbft/v100/privval"
 	"github.com/KYVENetwork/cometbft/v100/proxy"
 	ctypes "github.com/KYVENetwork/cometbft/v100/rpc/core/types"
 	rpcclient "github.com/KYVENetwork/cometbft/v100/rpc/jsonrpc/client"
+	"github.com/KYVENetwork/cometbft/v100/test-2"
 )
 
 // Options helps with specifying some parameters for our RPC testing for greater
@@ -55,7 +55,7 @@ func waitForRPC() {
 	}
 }
 
-// f**ing long, but unique for each test.
+// f**ing long, but unique for each test-2.
 func makePathname() string {
 	// get path
 	p, err := os.Getwd()
@@ -81,7 +81,7 @@ func makeAddr() string {
 
 func createConfig() *cfg.Config {
 	pathname := makePathname()
-	c := test.ResetTestRoot(pathname)
+	c := test_2.ResetTestRoot(pathname)
 
 	// and we use random ports to run in parallel
 	c.P2P.ListenAddress = makeAddr()
@@ -97,7 +97,7 @@ func createConfig() *cfg.Config {
 	return c
 }
 
-// GetConfig returns a config for the test cases as a singleton.
+// GetConfig returns a config for the test-2 cases as a singleton.
 func GetConfig(forceCreate ...bool) *cfg.Config {
 	if globalConfig == nil || (len(forceCreate) > 0 && forceCreate[0]) {
 		globalConfig = createConfig()
@@ -105,7 +105,7 @@ func GetConfig(forceCreate ...bool) *cfg.Config {
 	return globalConfig
 }
 
-// StartCometBFT starts a test CometBFT server in a go routine and returns when it is initialized.
+// StartCometBFT starts a test-2 CometBFT server in a go routine and returns when it is initialized.
 func StartCometBFT(app abci.Application, opts ...func(*Options)) *nm.Node {
 	nodeOpts := defaultOptions
 	for _, opt := range opts {
@@ -127,8 +127,8 @@ func StartCometBFT(app abci.Application, opts ...func(*Options)) *nm.Node {
 	return node
 }
 
-// StopCometBFT stops a test CometBFT server, waits until it's stopped and
-// cleans up test/config files.
+// StopCometBFT stops a test-2 CometBFT server, waits until it's stopped and
+// cleans up test-2/config files.
 func StopCometBFT(node *nm.Node) {
 	if err := node.Stop(); err != nil {
 		node.Logger.Error("Error when trying to stop node", "err", err)
@@ -170,13 +170,13 @@ func NewCometBFT(app abci.Application, opts *Options) *nm.Node {
 	return node
 }
 
-// SuppressStdout is an option that tries to make sure the RPC test CometBFT
+// SuppressStdout is an option that tries to make sure the RPC test-2 CometBFT
 // node doesn't log anything to stdout.
 func SuppressStdout(o *Options) {
 	o.suppressStdout = true
 }
 
-// RecreateConfig instructs the RPC test to recreate the configuration each
+// RecreateConfig instructs the RPC test-2 to recreate the configuration each
 // time, instead of treating it as a global singleton.
 func RecreateConfig(o *Options) {
 	o.recreateConfig = true

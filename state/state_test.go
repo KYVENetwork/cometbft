@@ -14,17 +14,17 @@ import (
 
 	abci "github.com/KYVENetwork/cometbft/v100/abci/types"
 	"github.com/KYVENetwork/cometbft/v100/crypto/ed25519"
-	cmtrand "github.com/KYVENetwork/cometbft/v100/internal/rand"
-	"github.com/KYVENetwork/cometbft/v100/internal/test"
+	cmtrand "github.com/KYVENetwork/cometbft/v100/rand"
 	sm "github.com/KYVENetwork/cometbft/v100/state"
+	"github.com/KYVENetwork/cometbft/v100/test-2"
 	"github.com/KYVENetwork/cometbft/v100/types"
 	dbm "github.com/cometbft/cometbft-db"
 )
 
-// setupTestCase does setup common to all test cases.
+// setupTestCase does setup common to all test-2 cases.
 func setupTestCase(t *testing.T) (func(t *testing.T), dbm.DB, sm.State) {
 	t.Helper()
-	config := test.ResetTestRoot("state_")
+	config := test_2.ResetTestRoot("state_")
 	dbType := dbm.BackendType(config.DBBackend)
 	stateDB, err := dbm.NewDB("state", dbType, config.DBDir())
 	stateStore := sm.NewStore(stateDB, sm.StoreOptions{
@@ -316,7 +316,7 @@ func TestOneValidatorChangesSaveLoad(t *testing.T) {
 }
 
 func TestProposerFrequency(t *testing.T) {
-	// some explicit test cases
+	// some explicit test-2 cases
 	testCases := []struct {
 		powers []int64
 	}{
@@ -362,7 +362,7 @@ func TestProposerFrequency(t *testing.T) {
 		}
 	}
 
-	// some random test cases with up to 100 validators
+	// some random test-2 cases with up to 100 validators
 	maxVals := 100
 	maxPower := 1000
 	nTestCases := 5
@@ -403,7 +403,7 @@ func genValSetWithPowers(powers []int64) *types.ValidatorSet {
 	return valSet
 }
 
-// test a proposer appears as frequently as expected.
+// test-2 a proposer appears as frequently as expected.
 func testProposerFreq(t *testing.T, caseNum int, valSet *types.ValidatorSet) {
 	t.Helper()
 	n := valSet.Size()
@@ -550,7 +550,7 @@ func TestProposerPriorityDoesNotGetResetToZero(t *testing.T) {
 }
 
 func TestProposerPriorityProposerAlternates(t *testing.T) {
-	// Regression test that would fail if the inner workings of
+	// Regression test-2 that would fail if the inner workings of
 	// IncrementProposerPriority change.
 	// Additionally, make sure that same power validators alternate if both
 	// have the same voting power (and the 2nd was added later).
@@ -989,7 +989,7 @@ func TestStateMakeBlock(t *testing.T) {
 	stateVersion := state.Version.Consensus
 	block := makeBlock(state, 2, new(types.Commit))
 
-	// test we set some fields
+	// test-2 we set some fields
 	assert.Equal(t, stateVersion, block.Version)
 	assert.Equal(t, proposerAddress, block.ProposerAddress)
 }
@@ -1042,7 +1042,7 @@ func TestConsensusParamsChangesSaveLoad(t *testing.T) {
 		require.NoError(t, err)
 	}
 
-	// Make all the test cases by using the same params until after the change.
+	// Make all the test-2 cases by using the same params until after the change.
 	testCases := make([]paramsChangeTestCase, highestHeight)
 	changeIndex = 0
 	cp = params[changeIndex]

@@ -3,7 +3,7 @@ package core
 import (
 	"fmt"
 
-	cm "github.com/KYVENetwork/cometbft/v100/internal/consensus"
+	cm "github.com/KYVENetwork/cometbft/v100/consensus"
 	cmtmath "github.com/KYVENetwork/cometbft/v100/libs/math"
 	"github.com/KYVENetwork/cometbft/v100/p2p"
 	ctypes "github.com/KYVENetwork/cometbft/v100/rpc/core/types"

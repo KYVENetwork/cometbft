@@ -12,8 +12,8 @@ import (
 var node *nm.Node
 
 func TestMain(m *testing.M) {
-	// start a CometBFT node (and kvstore) in the background to test against
-	dir, err := os.MkdirTemp("/tmp", "rpc-client-test")
+	// start a CometBFT node (and kvstore) in the background to test-2 against
+	dir, err := os.MkdirTemp("/tmp", "rpc-client-test-2")
 	if err != nil {
 		panic(err)
 	}

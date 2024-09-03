@@ -19,10 +19,10 @@ import (
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 
-	"github.com/KYVENetwork/cometbft/v100/internal/net"
-	cmtrand "github.com/KYVENetwork/cometbft/v100/internal/rand"
 	cmtbytes "github.com/KYVENetwork/cometbft/v100/libs/bytes"
 	"github.com/KYVENetwork/cometbft/v100/libs/log"
+	"github.com/KYVENetwork/cometbft/v100/net"
+	cmtrand "github.com/KYVENetwork/cometbft/v100/rand"
 	"github.com/KYVENetwork/cometbft/v100/rpc/jsonrpc/client"
 	"github.com/KYVENetwork/cometbft/v100/rpc/jsonrpc/server"
 	"github.com/KYVENetwork/cometbft/v100/rpc/jsonrpc/types"

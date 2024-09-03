@@ -12,11 +12,11 @@ import (
 	cmtproto "github.com/KYVENetwork/cometbft/v100/api/cometbft/types/v1"
 	"github.com/KYVENetwork/cometbft/v100/crypto"
 	"github.com/KYVENetwork/cometbft/v100/crypto/ed25519"
-	cmtos "github.com/KYVENetwork/cometbft/v100/internal/os"
-	"github.com/KYVENetwork/cometbft/v100/internal/tempfile"
 	cmtbytes "github.com/KYVENetwork/cometbft/v100/libs/bytes"
 	cmtjson "github.com/KYVENetwork/cometbft/v100/libs/json"
 	"github.com/KYVENetwork/cometbft/v100/libs/protoio"
+	cmtos "github.com/KYVENetwork/cometbft/v100/os"
+	"github.com/KYVENetwork/cometbft/v100/tempfile"
 	"github.com/KYVENetwork/cometbft/v100/types"
 	cmttime "github.com/KYVENetwork/cometbft/v100/types/time"
 )

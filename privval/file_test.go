@@ -12,8 +12,8 @@ import (
 
 	"github.com/KYVENetwork/cometbft/v100/crypto/ed25519"
 	"github.com/KYVENetwork/cometbft/v100/crypto/tmhash"
-	cmtrand "github.com/KYVENetwork/cometbft/v100/internal/rand"
 	cmtjson "github.com/KYVENetwork/cometbft/v100/libs/json"
+	cmtrand "github.com/KYVENetwork/cometbft/v100/rand"
 	"github.com/KYVENetwork/cometbft/v100/types"
 	cmttime "github.com/KYVENetwork/cometbft/v100/types/time"
 )
@@ -38,7 +38,7 @@ func TestResetValidator(t *testing.T) {
 	// new priv val has empty state
 	assert.Equal(t, privVal.LastSignState, emptyState)
 
-	// test vote
+	// test-2 vote
 	height, round := int64(10), int32(1)
 	voteType := types.PrevoteType
 	randBytes := cmtrand.Bytes(tmhash.Size)
@@ -245,9 +245,9 @@ func TestSignProposal(t *testing.T) {
 
 func TestSignBytes(t *testing.T) {
 	privVal, _, _ := newTestFilePV(t)
-	testBytes := []byte("test bytes for signing")
+	testBytes := []byte("test-2 bytes for signing")
 
-	// Sign the test bytes
+	// Sign the test-2 bytes
 	sig, err := privVal.SignBytes(testBytes)
 	require.NoError(t, err, "expected no error signing bytes")
 
@@ -269,7 +269,7 @@ func TestDifferByTimestamp(t *testing.T) {
 	height, round := int64(10), int32(1)
 	chainID := "mychainid"
 
-	// test proposal
+	// test-2 proposal
 	{
 		proposal := newProposal(height, round, block1)
 		pb := proposal.ToProto()
@@ -292,7 +292,7 @@ func TestDifferByTimestamp(t *testing.T) {
 		assert.Equal(t, sig, proposal.Signature)
 	}
 
-	// test vote
+	// test-2 vote
 	{
 		voteType := types.PrevoteType
 		blockID := types.BlockID{Hash: randbytes, PartSetHeader: types.PartSetHeader{}}

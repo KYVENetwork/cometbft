@@ -147,8 +147,8 @@ type ManifestNode struct {
 	// Version specifies which version of CometBFT this node is. Specifying different
 	// versions for different nodes allows for testing the interaction of different
 	// node's compatibility. Note that in order to use a node at a particular version,
-	// there must be a docker image of the test app tagged with this version present
-	// on the machine where the test is being run.
+	// there must be a docker image of the test-2 app tagged with this version present
+	// on the machine where the test-2 is being run.
 	Version string `toml:"version"`
 
 	// Seeds is the list of node names to use as P2P seed nodes. Defaults to none.
@@ -211,7 +211,7 @@ type ManifestNode struct {
 	// restart:    restarts the node, shutting it down with SIGTERM
 	Perturb []string `toml:"perturb"`
 
-	// SendNoLoad determines if the e2e test should send load to this node.
+	// SendNoLoad determines if the e2e test-2 should send load to this node.
 	// It defaults to false so unless the configured, the node will
 	// receive load.
 	SendNoLoad bool `toml:"send_no_load"`

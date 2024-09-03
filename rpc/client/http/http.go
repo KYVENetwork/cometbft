@@ -25,7 +25,7 @@ JSON RPC and WebSockets.
 
 This is the main implementation you probably want to use in production code.
 There are other implementations when calling the CometBFT node in-process
-(Local), or when you want to mock out the server for test code (mock).
+(Local), or when you want to mock out the server for test-2 code (mock).
 
 You can subscribe for any event published by CometBFT using Subscribe method.
 Note delivery is best-effort. If you don't read events fast enough or network is

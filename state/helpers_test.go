@@ -9,9 +9,9 @@ import (
 	cmtproto "github.com/KYVENetwork/cometbft/v100/api/cometbft/types/v1"
 	"github.com/KYVENetwork/cometbft/v100/crypto"
 	"github.com/KYVENetwork/cometbft/v100/crypto/ed25519"
-	"github.com/KYVENetwork/cometbft/v100/internal/test"
 	"github.com/KYVENetwork/cometbft/v100/proxy"
 	sm "github.com/KYVENetwork/cometbft/v100/state"
+	"github.com/KYVENetwork/cometbft/v100/test-2"
 	"github.com/KYVENetwork/cometbft/v100/types"
 	cmttime "github.com/KYVENetwork/cometbft/v100/types/time"
 	dbm "github.com/cometbft/cometbft-db"
@@ -54,7 +54,7 @@ func makeAndCommitGoodBlock(
 func makeAndApplyGoodBlock(state sm.State, height int64, lastCommit *types.Commit, proposerAddr []byte,
 	blockExec *sm.BlockExecutor, evidence []types.Evidence,
 ) (sm.State, types.BlockID, error) {
-	block := state.MakeBlock(height, test.MakeNTxs(height, 10), lastCommit, evidence, proposerAddr)
+	block := state.MakeBlock(height, test_2.MakeNTxs(height, 10), lastCommit, evidence, proposerAddr)
 	partSet, err := block.MakePartSet(types.BlockPartSizeBytes)
 	if err != nil {
 		return state, types.BlockID{}, err
@@ -77,7 +77,7 @@ func makeAndApplyGoodBlock(state sm.State, height int64, lastCommit *types.Commi
 func makeBlock(state sm.State, height int64, c *types.Commit) *types.Block {
 	return state.MakeBlock(
 		height,
-		test.MakeNTxs(state.LastBlockHeight, 10),
+		test_2.MakeNTxs(state.LastBlockHeight, 10),
 		c,
 		nil,
 		state.Validators.GetProposer().Address,
@@ -260,7 +260,7 @@ func (*testApp) ProcessProposal(
 }
 
 func makeStateWithParams(nVals, height int, params *types.ConsensusParams, chainID string) (sm.State, dbm.DB, map[string]types.PrivValidator) {
-	vals, privVals := test.GenesisValidatorSet(nVals)
+	vals, privVals := test_2.GenesisValidatorSet(nVals)
 
 	s, _ := sm.MakeGenesisState(&types.GenesisDoc{
 		ChainID:         chainID,
@@ -289,5 +289,5 @@ func makeStateWithParams(nVals, height int, params *types.ConsensusParams, chain
 }
 
 func makeState(nVals, height int, chainID string) (sm.State, dbm.DB, map[string]types.PrivValidator) {
-	return makeStateWithParams(nVals, height, test.ConsensusParams(), chainID)
+	return makeStateWithParams(nVals, height, test_2.ConsensusParams(), chainID)
 }

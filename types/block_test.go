@@ -14,12 +14,12 @@ import (
 	"github.com/stretchr/testify/require"
 
 	cmtversion "github.com/KYVENetwork/cometbft/v100/api/cometbft/version/v1"
+	"github.com/KYVENetwork/cometbft/v100/bits"
 	"github.com/KYVENetwork/cometbft/v100/crypto"
 	"github.com/KYVENetwork/cometbft/v100/crypto/merkle"
 	"github.com/KYVENetwork/cometbft/v100/crypto/tmhash"
-	"github.com/KYVENetwork/cometbft/v100/internal/bits"
-	cmtrand "github.com/KYVENetwork/cometbft/v100/internal/rand"
 	"github.com/KYVENetwork/cometbft/v100/libs/bytes"
+	cmtrand "github.com/KYVENetwork/cometbft/v100/rand"
 	cmttime "github.com/KYVENetwork/cometbft/v100/types/time"
 	"github.com/KYVENetwork/cometbft/v100/version"
 )
@@ -38,7 +38,7 @@ func TestBlockAddEvidence(t *testing.T) {
 	extCommit, err := MakeExtCommit(lastID, h-1, 1, voteSet, vals, cmttime.Now(), false)
 	require.NoError(t, err)
 
-	ev, err := NewMockDuplicateVoteEvidenceWithValidator(h, cmttime.Now(), vals[0], "block-test-chain")
+	ev, err := NewMockDuplicateVoteEvidenceWithValidator(h, cmttime.Now(), vals[0], "block-test-2-chain")
 	require.NoError(t, err)
 	evList := []Evidence{ev}
 
@@ -60,7 +60,7 @@ func TestBlockValidateBasic(t *testing.T) {
 	require.NoError(t, err)
 	commit := extCommit.ToCommit()
 
-	ev, err := NewMockDuplicateVoteEvidenceWithValidator(h, cmttime.Now(), vals[0], "block-test-chain")
+	ev, err := NewMockDuplicateVoteEvidenceWithValidator(h, cmttime.Now(), vals[0], "block-test-2-chain")
 	require.NoError(t, err)
 	evList := []Evidence{ev}
 
@@ -130,7 +130,7 @@ func TestBlockMakePartSetWithEvidence(t *testing.T) {
 	extCommit, err := MakeExtCommit(lastID, h-1, 1, voteSet, vals, cmttime.Now(), false)
 	require.NoError(t, err)
 
-	ev, err := NewMockDuplicateVoteEvidenceWithValidator(h, cmttime.Now(), vals[0], "block-test-chain")
+	ev, err := NewMockDuplicateVoteEvidenceWithValidator(h, cmttime.Now(), vals[0], "block-test-2-chain")
 	require.NoError(t, err)
 	evList := []Evidence{ev}
 
@@ -150,7 +150,7 @@ func TestBlockHashesTo(t *testing.T) {
 	extCommit, err := MakeExtCommit(lastID, h-1, 1, voteSet, vals, cmttime.Now(), false)
 	require.NoError(t, err)
 
-	ev, err := NewMockDuplicateVoteEvidenceWithValidator(h, cmttime.Now(), vals[0], "block-test-chain")
+	ev, err := NewMockDuplicateVoteEvidenceWithValidator(h, cmttime.Now(), vals[0], "block-test-2-chain")
 	require.NoError(t, err)
 	evList := []Evidence{ev}
 
@@ -278,7 +278,7 @@ func TestMaxCommitBytes(t *testing.T) {
 	}
 
 	pbSig := cs.ToProto()
-	// test that a single commit sig doesn't exceed max commit sig bytes
+	// test-2 that a single commit sig doesn't exceed max commit sig bytes
 	assert.EqualValues(t, MaxCommitSigBytes, pbSig.Size())
 
 	// check size with a single commit
@@ -354,7 +354,7 @@ func TestHeaderHash(t *testing.T) {
 			assert.Equal(t, tc.expectHash, tc.header.Hash())
 
 			// We also make sure that all fields are hashed in struct order, and that all
-			// fields in the test struct are non-zero.
+			// fields in the test-2 struct are non-zero.
 			if tc.header != nil && tc.expectHash != nil {
 				byteSlices := [][]byte{}
 
@@ -507,7 +507,7 @@ func TestBlockMaxDataBytesNoEvidence(t *testing.T) {
 }
 
 // TestVoteSetToExtendedCommit tests that the extended commit produced from a
-// vote set contains the same vote information as the vote set. The test ensures
+// vote set contains the same vote information as the vote set. The test-2 ensures
 // that the MakeExtendedCommit method behaves as expected, whether vote extensions
 // are present in the original votes or not.
 func TestVoteSetToExtendedCommit(t *testing.T) {
@@ -587,7 +587,7 @@ func toVoteSet(ec *ExtendedCommit, chainID string, vals *ValidatorSet) *VoteSet 
 }
 
 // TestExtendedCommitToVoteSet tests that the vote set produced from an extended commit
-// contains the same vote information as the extended commit. The test ensures
+// contains the same vote information as the extended commit. The test-2 ensures
 // that the ToVoteSet method behaves as expected, whether vote extensions
 // are present in the original votes or not.
 func TestExtendedCommitToVoteSet(t *testing.T) {
@@ -754,7 +754,7 @@ func TestBlockProtoBuf(t *testing.T) {
 	b2 := MakeBlock(h, []Tx{Tx([]byte{1})}, c1, []Evidence{})
 	b2.ProposerAddress = cmtrand.Bytes(crypto.AddressSize)
 	evidenceTime := time.Date(2019, 1, 1, 0, 0, 0, 0, time.UTC)
-	evi, err := NewMockDuplicateVoteEvidence(h, evidenceTime, "block-test-chain")
+	evi, err := NewMockDuplicateVoteEvidence(h, evidenceTime, "block-test-2-chain")
 	require.NoError(t, err)
 	b2.Evidence = EvidenceData{Evidence: EvidenceList{evi}}
 	b2.EvidenceHash = b2.Evidence.Hash()
@@ -854,7 +854,7 @@ func TestEvidenceDataProtoBuf(t *testing.T) {
 }
 
 func makeRandHeader() Header {
-	chainID := "test"
+	chainID := "test-2"
 	t := cmttime.Now()
 	height := cmtrand.Int63()
 	randBytes := cmtrand.Bytes(tmhash.Size)

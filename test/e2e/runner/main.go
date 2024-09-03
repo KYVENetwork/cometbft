@@ -38,7 +38,7 @@ func NewCLI() *CLI {
 	cli := &CLI{}
 	cli.root = &cobra.Command{
 		Use:           "runner",
-		Short:         "End-to-end test runner",
+		Short:         "End-to-end test-2 runner",
 		SilenceUsage:  true,
 		SilenceErrors: true, // we'll output them ourselves in Run()
 		PersistentPreRunE: func(cmd *cobra.Command, _ []string) error {
@@ -187,7 +187,7 @@ func NewCLI() *CLI {
 	cli.root.PersistentFlags().StringP("infrastructure-data", "", "", "path to the json file containing the infrastructure data. Only used if the 'infrastructure-type' is set to a value other than 'docker'")
 
 	cli.root.Flags().BoolVarP(&cli.preserve, "preserve", "p", false,
-		"Preserves the running of the test net after tests are completed")
+		"Preserves the running of the test-2 net after tests are completed")
 
 	cli.root.AddCommand(&cobra.Command{
 		Use:   "setup",
@@ -269,8 +269,8 @@ func NewCLI() *CLI {
 	})
 
 	cli.root.AddCommand(&cobra.Command{
-		Use:   "test",
-		Short: "Runs test cases against a running testnet",
+		Use:   "test-2",
+		Short: "Runs test-2 cases against a running testnet",
 		RunE: func(_ *cobra.Command, _ []string) error {
 			return Test(cli.testnet, cli.infp.GetInfrastructureData())
 		},

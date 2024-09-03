@@ -77,7 +77,7 @@ func TestApp_Tx(t *testing.T) {
 		require.NoError(t, err)
 
 		// Generate a random value, to prevent duplicate tx errors when
-		// manually running the test multiple times for a testnet.
+		// manually running the test-2 multiple times for a testnet.
 		r := rand.New(rand.NewSource(time.Now().UnixNano()))
 		bz := make([]byte, 32)
 		_, err = r.Read(bz)
@@ -102,7 +102,7 @@ func TestApp_Tx(t *testing.T) {
 			"submitted tx wasn't committed after %v", waitTime,
 		)
 
-		// NOTE: we don't test abci query of the light client
+		// NOTE: we don't test-2 abci query of the light client
 		if node.Mode == e2e.ModeLight {
 			return
 		}

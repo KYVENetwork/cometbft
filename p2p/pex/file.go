@@ -5,7 +5,7 @@ import (
 	"fmt"
 	"os"
 
-	"github.com/KYVENetwork/cometbft/v100/internal/tempfile"
+	"github.com/KYVENetwork/cometbft/v100/tempfile"
 )
 
 /* Loading & Saving */

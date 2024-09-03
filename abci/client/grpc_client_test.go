@@ -15,14 +15,14 @@ import (
 
 	abciserver "github.com/KYVENetwork/cometbft/v100/abci/server"
 	"github.com/KYVENetwork/cometbft/v100/abci/types"
-	cmtnet "github.com/KYVENetwork/cometbft/v100/internal/net"
 	"github.com/KYVENetwork/cometbft/v100/libs/log"
+	cmtnet "github.com/KYVENetwork/cometbft/v100/net"
 )
 
 func TestGRPC(t *testing.T) {
 	app := types.NewBaseApplication()
 	numCheckTxs := 2000
-	socketFile := fmt.Sprintf("/tmp/test-%08x.sock", rand.Int31n(1<<30))
+	socketFile := fmt.Sprintf("/tmp/test-2-%08x.sock", rand.Int31n(1<<30))
 	defer os.Remove(socketFile)
 	socket := fmt.Sprintf("unix://%v", socketFile)
 
@@ -56,7 +56,7 @@ func TestGRPC(t *testing.T) {
 		response, err := client.CheckTx(
 			context.Background(),
 			&types.CheckTxRequest{
-				Tx:   []byte("test"),
+				Tx:   []byte("test-2"),
 				Type: types.CHECK_TX_TYPE_CHECK,
 			})
 		require.NoError(t, err)

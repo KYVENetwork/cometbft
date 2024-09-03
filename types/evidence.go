@@ -13,8 +13,8 @@ import (
 	cmtproto "github.com/KYVENetwork/cometbft/v100/api/cometbft/types/v1"
 	"github.com/KYVENetwork/cometbft/v100/crypto/merkle"
 	"github.com/KYVENetwork/cometbft/v100/crypto/tmhash"
-	cmtrand "github.com/KYVENetwork/cometbft/v100/internal/rand"
 	cmtjson "github.com/KYVENetwork/cometbft/v100/libs/json"
+	cmtrand "github.com/KYVENetwork/cometbft/v100/rand"
 	cmterrors "github.com/KYVENetwork/cometbft/v100/types/errors"
 )
 

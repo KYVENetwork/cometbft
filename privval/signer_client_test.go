@@ -11,7 +11,7 @@ import (
 	privvalproto "github.com/KYVENetwork/cometbft/v100/api/cometbft/privval/v1"
 	"github.com/KYVENetwork/cometbft/v100/crypto"
 	"github.com/KYVENetwork/cometbft/v100/crypto/tmhash"
-	cmtrand "github.com/KYVENetwork/cometbft/v100/internal/rand"
+	cmtrand "github.com/KYVENetwork/cometbft/v100/rand"
 	"github.com/KYVENetwork/cometbft/v100/types"
 	cmterrors "github.com/KYVENetwork/cometbft/v100/types/errors"
 	cmttime "github.com/KYVENetwork/cometbft/v100/types/time"
@@ -28,7 +28,7 @@ func getSignerTestCases(t *testing.T) []signerTestCase {
 	t.Helper()
 	testCases := make([]signerTestCase, 0)
 
-	// Get test cases for each possible dialer (DialTCP / DialUnix / etc)
+	// Get test-2 cases for each possible dialer (DialTCP / DialUnix / etc)
 	for _, dtc := range getDialerTestCases(t) {
 		chainID := cmtrand.Str(12)
 		mockPV := types.NewMockPV()
@@ -294,7 +294,7 @@ func TestSignerVoteKeepAlive(t *testing.T) {
 		// signature for a long time. The service is still available
 
 		// in this particular case, we use the dialer logger to ensure that
-		// test messages are properly interleaved in the test logs
+		// test-2 messages are properly interleaved in the test-2 logs
 		tc.signerServer.Logger.Debug("TEST: Forced Wait -------------------------------------------------")
 		time.Sleep(testTimeoutReadWrite * 3)
 		tc.signerServer.Logger.Debug("TEST: Forced Wait DONE---------------------------------------------")

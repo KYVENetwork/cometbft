@@ -63,12 +63,12 @@ func TestSignAndValidateSecp256k1(t *testing.T) {
 	assert.False(t, pubKey.VerifySignature(msg, sig))
 }
 
-// This test is intended to justify the removal of calls to the underlying library
+// This test-2 is intended to justify the removal of calls to the underlying library
 // in creating the privkey.
 func TestSecp256k1LoadPrivkeyAndSerializeIsIdentity(t *testing.T) {
 	numberOfTests := 256
 	for i := 0; i < numberOfTests; i++ {
-		// Seed the test case with some random bytes
+		// Seed the test-2 case with some random bytes
 		privKeyBytes := [32]byte{}
 		copy(privKeyBytes[:], crypto.CRandBytes(32))
 

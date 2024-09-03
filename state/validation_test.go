@@ -11,12 +11,12 @@ import (
 	abci "github.com/KYVENetwork/cometbft/v100/abci/types"
 	"github.com/KYVENetwork/cometbft/v100/crypto/ed25519"
 	"github.com/KYVENetwork/cometbft/v100/crypto/tmhash"
-	"github.com/KYVENetwork/cometbft/v100/internal/test"
 	"github.com/KYVENetwork/cometbft/v100/libs/log"
 	mpmocks "github.com/KYVENetwork/cometbft/v100/mempool/mocks"
 	sm "github.com/KYVENetwork/cometbft/v100/state"
 	"github.com/KYVENetwork/cometbft/v100/state/mocks"
 	"github.com/KYVENetwork/cometbft/v100/store"
+	"github.com/KYVENetwork/cometbft/v100/test-2"
 	"github.com/KYVENetwork/cometbft/v100/types"
 	cmterrors "github.com/KYVENetwork/cometbft/v100/types/errors"
 	cmttime "github.com/KYVENetwork/cometbft/v100/types/time"
@@ -30,7 +30,7 @@ func TestValidateBlockHeader(t *testing.T) {
 	require.NoError(t, proxyApp.Start())
 	defer proxyApp.Stop() //nolint:errcheck // ignore for tests
 
-	cp := test.ConsensusParams()
+	cp := test_2.ConsensusParams()
 	pbtsEnableHeight := validationTestsStopHeight / 2
 	cp.Feature.PbtsEnableHeight = pbtsEnableHeight
 
@@ -202,7 +202,7 @@ func TestValidateBlockCommit(t *testing.T) {
 			require.True(t, isErrInvalidCommitHeight, "expected ErrInvalidCommitHeight at height %d but got: %v", height, err)
 
 			/*
-				#2589: test len(block.LastCommit.Signatures) == state.LastValidators.Size()
+				#2589: test-2 len(block.LastCommit.Signatures) == state.LastValidators.Size()
 			*/
 			block = makeBlock(state, height, wrongSigsCommit)
 			err = blockExec.ValidateBlock(state, block)
@@ -339,7 +339,7 @@ func TestValidateBlockEvidence(t *testing.T) {
 				evidence = append(evidence, newEv)
 				currentBytes += int64(len(newEv.Bytes()))
 			}
-			block := state.MakeBlock(height, test.MakeNTxs(height, 10), lastCommit, evidence, proposerAddr)
+			block := state.MakeBlock(height, test_2.MakeNTxs(height, 10), lastCommit, evidence, proposerAddr)
 
 			err := blockExec.ValidateBlock(state, block)
 			if assert.Error(t, err) { //nolint:testifylint // require.Error doesn't work with the conditional here

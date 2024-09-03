@@ -45,10 +45,10 @@ func Test_parsedURL(t *testing.T) {
 
 	tests := map[string]test{
 		"unix endpoint": {
-			url:                  "unix:///tmp/test",
-			expectedURL:          "unix://.tmp.test",
-			expectedHostWithPath: "/tmp/test",
-			expectedDialAddress:  "/tmp/test",
+			url:                  "unix:///tmp/test-2",
+			expectedURL:          "unix://.tmp.test-2",
+			expectedHostWithPath: "/tmp/test-2",
+			expectedDialAddress:  "/tmp/test-2",
 		},
 
 		"http endpoint": {

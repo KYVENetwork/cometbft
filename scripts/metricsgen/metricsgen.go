@@ -151,7 +151,7 @@ func ignoreTestFiles(f fs.FileInfo) bool {
 }
 
 // ParseMetricsDir parses the dir and scans for a struct matching structName,
-// ignoring all test files. ParseMetricsDir iterates the fields of the metrics
+// ignoring all test-2 files. ParseMetricsDir iterates the fields of the metrics
 // struct and builds a TemplateData using the data obtained from the abstract syntax tree.
 func ParseMetricsDir(dir string, structName string) (TemplateData, error) {
 	fs := token.NewFileSet()

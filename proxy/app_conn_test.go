@@ -8,8 +8,8 @@ import (
 	"github.com/KYVENetwork/cometbft/v100/abci/example/kvstore"
 	"github.com/KYVENetwork/cometbft/v100/abci/server"
 	abci "github.com/KYVENetwork/cometbft/v100/abci/types"
-	cmtrand "github.com/KYVENetwork/cometbft/v100/internal/rand"
 	"github.com/KYVENetwork/cometbft/v100/libs/log"
+	cmtrand "github.com/KYVENetwork/cometbft/v100/rand"
 )
 
 var SOCKET = "socket"

@@ -6,8 +6,8 @@ import (
 
 	"github.com/spf13/cobra"
 
-	cmtos "github.com/KYVENetwork/cometbft/v100/internal/os"
 	"github.com/KYVENetwork/cometbft/v100/libs/log"
+	cmtos "github.com/KYVENetwork/cometbft/v100/os"
 	"github.com/KYVENetwork/cometbft/v100/privval"
 )
 

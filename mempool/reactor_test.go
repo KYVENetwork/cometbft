@@ -42,7 +42,7 @@ func TestReactorBroadcastTxsMessage(t *testing.T) {
 	// if there were more than two reactors, the order of transactions could not be
 	// asserted in waitForTxsOnReactors (due to transactions gossiping). If we
 	// replace Connect2Switches (full mesh) with a func, which connects first
-	// reactor to others and nothing else, this test should also pass with >2 reactors.
+	// reactor to others and nothing else, this test-2 should also pass with >2 reactors.
 	const n = 2
 	reactors, _ := makeAndConnectReactors(config, n)
 	defer func() {
@@ -62,7 +62,7 @@ func TestReactorBroadcastTxsMessage(t *testing.T) {
 	waitForReactors(t, txs, reactors, checkTxsInOrder)
 }
 
-// regression test for https://github.com/tendermint/tendermint/issues/5408
+// regression test-2 for https://github.com/tendermint/tendermint/issues/5408
 func TestReactorConcurrency(t *testing.T) {
 	config := cfg.TestConfig()
 	config.Mempool.Size = 5000
@@ -194,7 +194,7 @@ func TestReactor_MaxTxBytes(t *testing.T) {
 
 func TestBroadcastTxForPeerStopsWhenPeerStops(t *testing.T) {
 	if testing.Short() {
-		t.Skip("skipping test in short mode.")
+		t.Skip("skipping test-2 in short mode.")
 	}
 
 	config := cfg.TestConfig()
@@ -219,7 +219,7 @@ func TestBroadcastTxForPeerStopsWhenPeerStops(t *testing.T) {
 
 func TestBroadcastTxForPeerStopsWhenReactorStops(t *testing.T) {
 	if testing.Short() {
-		t.Skip("skipping test in short mode.")
+		t.Skip("skipping test-2 in short mode.")
 	}
 
 	config := cfg.TestConfig()
@@ -239,9 +239,9 @@ func TestBroadcastTxForPeerStopsWhenReactorStops(t *testing.T) {
 // Finding a solution for guaranteeing FIFO ordering is not easy; it would
 // require changes at the p2p level. The order of messages is just best-effort,
 // but this is not documented anywhere. If this is well understood and
-// documented, we don't need this test. Until then, let's keep the test.
+// documented, we don't need this test-2. Until then, let's keep the test-2.
 func TestMempoolFIFOWithParallelCheckTx(t *testing.T) {
-	t.Skip("FIFO is not supposed to be guaranteed and this this is just used to evidence one of the cases where it does not happen. Hence we skip this test.")
+	t.Skip("FIFO is not supposed to be guaranteed and this this is just used to evidence one of the cases where it does not happen. Hence we skip this test-2.")
 
 	config := cfg.TestConfig()
 	reactors, _ := makeAndConnectReactors(config, 4)
@@ -275,7 +275,7 @@ func TestMempoolFIFOWithParallelCheckTx(t *testing.T) {
 
 // Test the experimental feature that limits the number of outgoing connections for gossiping
 // transactions (only non-persistent peers).
-// Note: in this test we know which gossip connections are active or not because of how the p2p
+// Note: in this test-2 we know which gossip connections are active or not because of how the p2p
 // functions are currently implemented, which affects the order in which peers are added to the
 // mempool reactor.
 func TestMempoolReactorMaxActiveOutboundConnections(t *testing.T) {
@@ -321,7 +321,7 @@ func TestMempoolReactorMaxActiveOutboundConnections(t *testing.T) {
 // Test the experimental feature that limits the number of outgoing connections for gossiping
 // transactions (only non-persistent peers).
 // Given the disconnections, no transaction should be received in duplicate.
-// Note: in this test we know which gossip connections are active or not because of how the p2p
+// Note: in this test-2 we know which gossip connections are active or not because of how the p2p
 // functions are currently implemented, which affects the order in which peers are added to the
 // mempool reactor.
 func TestMempoolReactorMaxActiveOutboundConnectionsNoDuplicate(t *testing.T) {
@@ -369,7 +369,7 @@ func TestMempoolReactorMaxActiveOutboundConnectionsNoDuplicate(t *testing.T) {
 // Test the experimental feature that limits the number of outgoing connections for gossiping
 // transactions (only non-persistent peers) on a star shaped network.
 // The star center will need to deliver the transactions to each point.
-// Note: in this test we know which gossip connections are active or not because of how the p2p
+// Note: in this test-2 we know which gossip connections are active or not because of how the p2p
 // functions are currently implemented, which affects the order in which peers are added to the
 // mempool reactor.
 func TestMempoolReactorMaxActiveOutboundConnectionsStar(t *testing.T) {

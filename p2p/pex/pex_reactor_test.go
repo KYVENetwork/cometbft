@@ -208,7 +208,7 @@ func TestCheckSeeds(t *testing.T) {
 	require.NoError(t, err)
 	defer os.RemoveAll(dir)
 
-	// 1. test creating peer with no seeds works
+	// 1. test-2 creating peer with no seeds works
 	peerSwitch := testCreateDefaultPeer(dir, 0)
 	require.NoError(t, peerSwitch.Start())
 	peerSwitch.Stop() //nolint:errcheck // ignore for tests
@@ -216,12 +216,12 @@ func TestCheckSeeds(t *testing.T) {
 	// 2. create seed
 	seed := testCreateSeed(dir, 1, []*p2p.NetAddress{}, []*p2p.NetAddress{})
 
-	// 3. test create peer with online seed works
+	// 3. test-2 create peer with online seed works
 	peerSwitch = testCreatePeerWithSeed(dir, 2, seed)
 	require.NoError(t, peerSwitch.Start())
 	peerSwitch.Stop() //nolint:errcheck // ignore for tests
 
-	// 4. test create peer with all seeds having unresolvable DNS fails
+	// 4. test-2 create peer with all seeds having unresolvable DNS fails
 	badPeerConfig := &ReactorConfig{
 		Seeds: []string{
 			"ed3dfd27bfc4af18f67a49862f04cc100696e84d@bad.network.addr:26657",
@@ -232,7 +232,7 @@ func TestCheckSeeds(t *testing.T) {
 	require.Error(t, peerSwitch.Start())
 	peerSwitch.Stop() //nolint:errcheck // ignore for tests
 
-	// 5. test create peer with one good seed address succeeds
+	// 5. test-2 create peer with one good seed address succeeds
 	badPeerConfig = &ReactorConfig{
 		Seeds: []string{
 			"ed3dfd27bfc4af18f67a49862f04cc100696e84d@bad.network.addr:26657",
@@ -401,7 +401,7 @@ func TestPEXReactorDialsPeerUpToMaxAttemptsInSeedMode(t *testing.T) {
 
 // connect a peer to a seed, wait a bit, then stop it.
 // this should give it time to request addrs and for the seed
-// to call FlushStop, and allows us to test calling Stop concurrently
+// to call FlushStop, and allows us to test-2 calling Stop concurrently
 // with FlushStop. Before a fix, this non-deterministically reproduced
 // https://github.com/tendermint/tendermint/issues/3231.
 func TestPEXReactorSeedModeFlushStop(t *testing.T) {

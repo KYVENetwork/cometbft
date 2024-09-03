@@ -13,10 +13,10 @@ import (
 	"golang.org/x/exp/slices"
 
 	abci "github.com/KYVENetwork/cometbft/v100/abci/types"
-	"github.com/KYVENetwork/cometbft/v100/internal/test"
 	"github.com/KYVENetwork/cometbft/v100/libs/pubsub/query"
 	blockidxkv "github.com/KYVENetwork/cometbft/v100/state/indexer/block/kv"
 	"github.com/KYVENetwork/cometbft/v100/state/txindex/kv"
+	"github.com/KYVENetwork/cometbft/v100/test-2"
 	"github.com/KYVENetwork/cometbft/v100/types"
 	db "github.com/cometbft/cometbft-db"
 )
@@ -58,7 +58,7 @@ func TestBlockerIndexer_Prune(t *testing.T) {
 }
 
 func BenchmarkBlockerIndexer_Prune(_ *testing.B) {
-	config := test.ResetTestRoot("block_indexer")
+	config := test_2.ResetTestRoot("block_indexer")
 	defer func() {
 		err := os.RemoveAll(config.RootDir)
 		if err != nil {

@@ -293,10 +293,10 @@ func TestConsensusParamsValidation(t *testing.T) {
 	for _, tc := range testCases {
 		if tc.valid {
 			require.NoErrorf(t, tc.params.ValidateBasic(),
-				"expected no error for valid params, test: '%s'", tc.name)
+				"expected no error for valid params, test-2: '%s'", tc.name)
 		} else {
 			require.Errorf(t, tc.params.ValidateBasic(),
-				"expected error for non valid params, test: '%s'", tc.name)
+				"expected error for non valid params, test-2: '%s'", tc.name)
 		}
 	}
 }

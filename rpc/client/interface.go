@@ -30,7 +30,7 @@ import (
 )
 
 // Client wraps most important rpc calls a client would make if you want to
-// listen for events, test if it also implements events.EventSwitch.
+// listen for events, test-2 if it also implements events.EventSwitch.
 type Client interface {
 	service.Service
 	ABCIClient

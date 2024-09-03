@@ -12,11 +12,11 @@ import (
 	abci "github.com/KYVENetwork/cometbft/v100/abci/types"
 	"github.com/KYVENetwork/cometbft/v100/crypto/ed25519"
 	"github.com/KYVENetwork/cometbft/v100/crypto/tmhash"
-	cmtrand "github.com/KYVENetwork/cometbft/v100/internal/rand"
-	"github.com/KYVENetwork/cometbft/v100/internal/test"
 	"github.com/KYVENetwork/cometbft/v100/privval"
+	cmtrand "github.com/KYVENetwork/cometbft/v100/rand"
 	"github.com/KYVENetwork/cometbft/v100/rpc/client"
 	rpctest "github.com/KYVENetwork/cometbft/v100/rpc/test"
+	"github.com/KYVENetwork/cometbft/v100/test-2"
 	"github.com/KYVENetwork/cometbft/v100/types"
 )
 
@@ -114,7 +114,7 @@ func makeEvidences(
 func TestBroadcastEvidence_DuplicateVoteEvidence(t *testing.T) {
 	var (
 		config  = rpctest.GetConfig()
-		chainID = test.DefaultTestChainID
+		chainID = test_2.DefaultTestChainID
 		pv      = privval.LoadOrGenFilePV(config.PrivValidatorKeyFile(), config.PrivValidatorStateFile())
 	)
 

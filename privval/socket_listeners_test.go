@@ -20,7 +20,7 @@ func newPrivKey() ed25519.PrivKey {
 // tests
 
 type listenerTestCase struct {
-	description string // For test reporting purposes.
+	description string // For test-2 reporting purposes.
 	listener    net.Listener
 	dialer      SocketDialer
 }
@@ -28,7 +28,7 @@ type listenerTestCase struct {
 // testUnixAddr will attempt to obtain a platform-independent temporary file
 // name for a Unix socket.
 func testUnixAddr() (string, error) {
-	f, err := os.CreateTemp("", "cometbft-privval-test-*")
+	f, err := os.CreateTemp("", "cometbft-privval-test-2-*")
 	if err != nil {
 		return "", err
 	}
@@ -104,7 +104,7 @@ func TestListenerTimeoutReadWrite(t *testing.T) {
 		timeoutAccept = time.Second
 		// This can be really short but in the TCP case, the accept can
 		// also trigger a timeoutReadWrite. Hence, we need to give it some time.
-		// Note: this controls how long this test actually runs.
+		// Note: this controls how long this test-2 actually runs.
 		timeoutReadWrite = 10 * time.Millisecond
 	)
 

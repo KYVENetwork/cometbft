@@ -9,9 +9,9 @@ import (
 
 	blocksvc "github.com/KYVENetwork/cometbft/v100/api/cometbft/services/block/v1"
 	ptypes "github.com/KYVENetwork/cometbft/v100/api/cometbft/types/v1"
-	"github.com/KYVENetwork/cometbft/v100/internal/rpctrace"
 	"github.com/KYVENetwork/cometbft/v100/libs/log"
 	cmtpubsub "github.com/KYVENetwork/cometbft/v100/libs/pubsub"
+	"github.com/KYVENetwork/cometbft/v100/rpctrace"
 	"github.com/KYVENetwork/cometbft/v100/store"
 	"github.com/KYVENetwork/cometbft/v100/types"
 )

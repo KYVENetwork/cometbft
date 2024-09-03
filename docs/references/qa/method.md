@@ -177,7 +177,7 @@ For generating images on latency, run from the `qa-infra` repository:
 ```sh
 ./script/reports/latencies-gen-images.sh <experiments-blockstore-dir>
 ```
-As above, `<experiments-blockstore-dir>` should contain the file `blockstore.db.zip`. 
+As above, `<experiments-blockstore-dir>` should contain the file `blockstore.db.zip`.
 The script will automatically:
 1. Unzip `blockstore.db.zip`, if not already.
 2. Generate a file with raw results `results/raw.csv` using the tool `test/loadtime/cmd/report`.
@@ -208,7 +208,7 @@ The script will automatically:
    time and duration of the window.
 3. Run:
     ```sh
-    ./script/reports/prometheus-gen-images.sh <experiments-prometheus-dir> <start-time> <duration> [<test-case>] [<release-name>]
+    ./script/reports/prometheus-gen-images.sh <experiments-prometheus-dir> <start-time> <duration> [<test-2-case>] [<release-name>]
     ```
     where `<start-time>` is in the format `'%Y-%m-%dT%H:%M:%SZ'` and `<duration>` is in seconds.
     This will download, set up a Python virtual environment with required dependencies, and execute

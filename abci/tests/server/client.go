@@ -8,7 +8,7 @@ import (
 
 	abcicli "github.com/KYVENetwork/cometbft/v100/abci/client"
 	"github.com/KYVENetwork/cometbft/v100/abci/types"
-	cmtrand "github.com/KYVENetwork/cometbft/v100/internal/rand"
+	cmtrand "github.com/KYVENetwork/cometbft/v100/rand"
 )
 
 func InitChain(ctx context.Context, client abcicli.Client) error {
@@ -23,21 +23,21 @@ func InitChain(ctx context.Context, client abcicli.Client) error {
 		Validators: vals,
 	})
 	if err != nil {
-		fmt.Printf("Failed test: InitChain - %v\n", err)
+		fmt.Printf("Failed test-2: InitChain - %v\n", err)
 		return err
 	}
-	fmt.Println("Passed test: InitChain")
+	fmt.Println("Passed test-2: InitChain")
 	return nil
 }
 
 func Commit(ctx context.Context, client abcicli.Client) error {
 	_, err := client.Commit(ctx, &types.CommitRequest{})
 	if err != nil {
-		fmt.Println("Failed test: Commit")
+		fmt.Println("Failed test-2: Commit")
 		fmt.Printf("error while committing: %v\n", err)
 		return err
 	}
-	fmt.Println("Passed test: Commit")
+	fmt.Println("Passed test-2: Commit")
 	return nil
 }
 
@@ -47,24 +47,24 @@ func FinalizeBlock(ctx context.Context, client abcicli.Client, txBytes [][]byte,
 	for i, tx := range res.TxResults {
 		code, data, log := tx.Code, tx.Data, tx.Log
 		if code != codeExp[i] {
-			fmt.Println("Failed test: FinalizeBlock")
+			fmt.Println("Failed test-2: FinalizeBlock")
 			fmt.Printf("FinalizeBlock response code was unexpected. Got %v expected %v. Log: %v\n",
 				code, codeExp, log)
 			return errors.New("FinalizeBlock error")
 		}
 		if !bytes.Equal(data, dataExp) {
-			fmt.Println("Failed test:  FinalizeBlock")
+			fmt.Println("Failed test-2:  FinalizeBlock")
 			fmt.Printf("FinalizeBlock response data was unexpected. Got %X expected %X\n",
 				data, dataExp)
 			return errors.New("FinalizeBlock  error")
 		}
 	}
 	if !bytes.Equal(appHash, hashExp) {
-		fmt.Println("Failed test: FinalizeBlock")
+		fmt.Println("Failed test-2: FinalizeBlock")
 		fmt.Printf("Application hash was unexpected. Got %X expected %X\n", appHash, hashExp)
 		return errors.New("FinalizeBlock  error")
 	}
-	fmt.Println("Passed test: FinalizeBlock")
+	fmt.Println("Passed test-2: FinalizeBlock")
 	return nil
 }
 
@@ -72,25 +72,25 @@ func PrepareProposal(ctx context.Context, client abcicli.Client, txBytes [][]byt
 	res, _ := client.PrepareProposal(ctx, &types.PrepareProposalRequest{Txs: txBytes})
 	for i, tx := range res.Txs {
 		if !bytes.Equal(tx, txExpected[i]) {
-			fmt.Println("Failed test: PrepareProposal")
+			fmt.Println("Failed test-2: PrepareProposal")
 			fmt.Printf("PrepareProposal transaction was unexpected. Got %x expected %x.",
 				tx, txExpected[i])
 			return errors.New("PrepareProposal error")
 		}
 	}
-	fmt.Println("Passed test: PrepareProposal")
+	fmt.Println("Passed test-2: PrepareProposal")
 	return nil
 }
 
 func ProcessProposal(ctx context.Context, client abcicli.Client, txBytes [][]byte, statusExp types.ProcessProposalStatus) error {
 	res, _ := client.ProcessProposal(ctx, &types.ProcessProposalRequest{Txs: txBytes})
 	if res.Status != statusExp {
-		fmt.Println("Failed test: ProcessProposal")
+		fmt.Println("Failed test-2: ProcessProposal")
 		fmt.Printf("ProcessProposal response status was unexpected. Got %v expected %v.",
 			res.Status, statusExp)
 		return errors.New("ProcessProposal error")
 	}
-	fmt.Println("Passed test: ProcessProposal")
+	fmt.Println("Passed test-2: ProcessProposal")
 	return nil
 }
 
@@ -98,17 +98,17 @@ func CheckTx(ctx context.Context, client abcicli.Client, txBytes []byte, codeExp
 	res, _ := client.CheckTx(ctx, &types.CheckTxRequest{Tx: txBytes, Type: types.CHECK_TX_TYPE_CHECK})
 	code, data, log := res.Code, res.Data, res.Log
 	if code != codeExp {
-		fmt.Println("Failed test: CheckTx")
+		fmt.Println("Failed test-2: CheckTx")
 		fmt.Printf("CheckTx response code was unexpected. Got %v expected %v. Log: %v\n",
 			code, codeExp, log)
 		return errors.New("checkTx")
 	}
 	if !bytes.Equal(data, dataExp) {
-		fmt.Println("Failed test: CheckTx")
+		fmt.Println("Failed test-2: CheckTx")
 		fmt.Printf("CheckTx response data was unexpected. Got %X expected %X\n",
 			data, dataExp)
 		return errors.New("checkTx")
 	}
-	fmt.Println("Passed test: CheckTx")
+	fmt.Println("Passed test-2: CheckTx")
 	return nil
 }

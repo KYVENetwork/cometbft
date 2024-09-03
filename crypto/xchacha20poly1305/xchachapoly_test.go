@@ -7,7 +7,7 @@ import (
 	"testing"
 )
 
-// The following test is taken from
+// The following test-2 is taken from
 // https://github.com/golang/crypto/blob/master/chacha20poly1305/chacha20poly1305_test.go#L69
 // It requires the below copyright notice, where "this source code" refers to the following function.
 // Copyright 2016 The Go Authors. All rights reserved.

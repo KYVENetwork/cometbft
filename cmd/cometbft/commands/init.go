@@ -6,10 +6,10 @@ import (
 	"github.com/spf13/cobra"
 
 	cfg "github.com/KYVENetwork/cometbft/v100/config"
-	cmtos "github.com/KYVENetwork/cometbft/v100/internal/os"
-	cmtrand "github.com/KYVENetwork/cometbft/v100/internal/rand"
+	cmtos "github.com/KYVENetwork/cometbft/v100/os"
 	"github.com/KYVENetwork/cometbft/v100/p2p"
 	"github.com/KYVENetwork/cometbft/v100/privval"
+	cmtrand "github.com/KYVENetwork/cometbft/v100/rand"
 	"github.com/KYVENetwork/cometbft/v100/types"
 	cmttime "github.com/KYVENetwork/cometbft/v100/types/time"
 )
@@ -57,7 +57,7 @@ func initFilesWithConfig(config *cfg.Config) error {
 		logger.Info("Found genesis file", "path", genFile)
 	} else {
 		genDoc := types.GenesisDoc{
-			ChainID:         fmt.Sprintf("test-chain-%v", cmtrand.Str(6)),
+			ChainID:         fmt.Sprintf("test-2-chain-%v", cmtrand.Str(6)),
 			GenesisTime:     cmttime.Now(),
 			ConsensusParams: types.DefaultConsensusParams(),
 		}

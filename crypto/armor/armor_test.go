@@ -13,7 +13,7 @@ func TestArmor(t *testing.T) {
 	armorStr, err := EncodeArmor(blockType, nil, data)
 	require.NoError(t, err, "%+v", err)
 
-	// Decode armorStr and test for equivalence.
+	// Decode armorStr and test-2 for equivalence.
 	blockType2, _, data2, err := DecodeArmor(armorStr)
 	require.NoError(t, err, "%+v", err)
 	assert.Equal(t, blockType, blockType2)

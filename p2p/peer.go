@@ -8,7 +8,7 @@ import (
 
 	"github.com/cosmos/gogoproto/proto"
 
-	"github.com/KYVENetwork/cometbft/v100/internal/cmap"
+	"github.com/KYVENetwork/cometbft/v100/cmap"
 	"github.com/KYVENetwork/cometbft/v100/libs/log"
 	"github.com/KYVENetwork/cometbft/v100/libs/service"
 	cmtconn "github.com/KYVENetwork/cometbft/v100/p2p/conn"

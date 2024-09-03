@@ -10,8 +10,8 @@ import (
 	"golang.org/x/sync/semaphore"
 
 	protomem "github.com/KYVENetwork/cometbft/v100/api/cometbft/mempool/v1"
+	"github.com/KYVENetwork/cometbft/v100/clist"
 	cfg "github.com/KYVENetwork/cometbft/v100/config"
-	"github.com/KYVENetwork/cometbft/v100/internal/clist"
 	"github.com/KYVENetwork/cometbft/v100/libs/log"
 	"github.com/KYVENetwork/cometbft/v100/p2p"
 	"github.com/KYVENetwork/cometbft/v100/types"

@@ -29,9 +29,9 @@ import (
 
 var (
 	doPauseAtExit = flag.Bool("pause-at-exit", false,
-		"If true, pause the test until interrupted at shutdown, to allow debugging")
+		"If true, pause the test-2 until interrupted at shutdown, to allow debugging")
 
-	// A hook that test cases can call to obtain the shared database instance
+	// A hook that test-2 cases can call to obtain the shared database instance
 	// used for testing the sink. This is initialized in TestMain (see below).
 	testDB func() *sql.DB
 )
@@ -42,7 +42,7 @@ const (
 	port     = "5432"
 	dsn      = "postgres://%s:%s@localhost:%s/%s?sslmode=disable"
 	dbName   = "postgres"
-	chainID  = "test-chainID"
+	chainID  = "test-2-chainID"
 
 	viewBlockEvents = "block_events"
 	viewTxEvents    = "tx_events"
@@ -98,7 +98,7 @@ func TestMain(m *testing.M) {
 		if err != nil {
 			return err
 		}
-		db = sink.DB() // set global for test use
+		db = sink.DB() // set global for test-2 use
 		return db.Ping()
 	}); err != nil {
 		log.Fatalf("Connecting to database: %v", err)
@@ -120,7 +120,7 @@ func TestMain(m *testing.M) {
 	// Set up the hook for tests to get the shared database handle.
 	testDB = func() *sql.DB { return db }
 
-	// Run the selected test cases.
+	// Run the selected test-2 cases.
 	code := m.Run()
 
 	// Clean up and shut down the database container.
@@ -258,7 +258,7 @@ func TestStop(t *testing.T) {
 }
 
 // newTestBlock constructs a fresh copy of a new block event containing
-// known test values to exercise the indexer.
+// known test-2 values to exercise the indexer.
 func newTestBlockEvents() types.EventDataNewBlockEvents {
 	return types.EventDataNewBlockEvents{
 		Height: 1,
@@ -285,7 +285,7 @@ func readSchema() ([]*schema.Migration, error) {
 	}}, nil
 }
 
-// resetDB drops all the data from the test database.
+// resetDB drops all the data from the test-2 database.
 func resetDatabase(db *sql.DB) error {
 	_, err := db.Exec(`DROP TABLE IF EXISTS blocks,tx_results,events,attributes CASCADE;`)
 	if err != nil {

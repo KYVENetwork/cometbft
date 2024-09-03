@@ -9,7 +9,7 @@ import (
 
 	"github.com/google/orderedcode"
 
-	idxutil "github.com/KYVENetwork/cometbft/v100/internal/indexer"
+	idxutil "github.com/KYVENetwork/cometbft/v100/indexer"
 	"github.com/KYVENetwork/cometbft/v100/libs/pubsub/query/syntax"
 	"github.com/KYVENetwork/cometbft/v100/state/indexer"
 	"github.com/KYVENetwork/cometbft/v100/types"

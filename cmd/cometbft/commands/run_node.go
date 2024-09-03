@@ -6,8 +6,8 @@ import (
 
 	"github.com/spf13/cobra"
 
-	cmtos "github.com/KYVENetwork/cometbft/v100/internal/os"
 	nm "github.com/KYVENetwork/cometbft/v100/node"
+	cmtos "github.com/KYVENetwork/cometbft/v100/os"
 )
 
 var genesisHash []byte

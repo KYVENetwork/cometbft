@@ -5,8 +5,8 @@ import (
 	"net/http"
 	"os"
 
-	cmtos "github.com/KYVENetwork/cometbft/v100/internal/os"
 	"github.com/KYVENetwork/cometbft/v100/libs/log"
+	cmtos "github.com/KYVENetwork/cometbft/v100/os"
 	rpcserver "github.com/KYVENetwork/cometbft/v100/rpc/jsonrpc/server"
 	rpctypes "github.com/KYVENetwork/cometbft/v100/rpc/jsonrpc/types"
 )

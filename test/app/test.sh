@@ -19,7 +19,7 @@ function kvstore_over_socket(){
     sleep 5
 
     echo "running test"
-    bash test/app/kvstore_test.sh "KVStore over Socket"
+    bash test-2/app/kvstore_test.sh "KVStore over Socket"
 
     kill -9 $pid_kvstore $pid_cometbft
 }
@@ -37,12 +37,12 @@ function kvstore_over_socket_reorder(){
     sleep 5
 
     echo "running test"
-    bash test/app/kvstore_test.sh "KVStore over Socket"
+    bash test-2/app/kvstore_test.sh "KVStore over Socket"
 
     kill -9 $pid_kvstore $pid_cometbft
 }
 
-case "$1" in 
+case "$1" in
     "kvstore_over_socket")
     kvstore_over_socket
     ;;

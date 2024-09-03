@@ -13,7 +13,7 @@ import (
 	"io"
 	"os"
 
-	cs "github.com/KYVENetwork/cometbft/v100/internal/consensus"
+	cs "github.com/KYVENetwork/cometbft/v100/consensus"
 	cmtjson "github.com/KYVENetwork/cometbft/v100/libs/json"
 )
 

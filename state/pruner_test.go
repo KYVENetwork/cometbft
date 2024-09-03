@@ -11,7 +11,6 @@ import (
 	"golang.org/x/exp/slices"
 
 	abci "github.com/KYVENetwork/cometbft/v100/abci/types"
-	"github.com/KYVENetwork/cometbft/v100/internal/test"
 	"github.com/KYVENetwork/cometbft/v100/libs/log"
 	"github.com/KYVENetwork/cometbft/v100/libs/pubsub/query"
 	sm "github.com/KYVENetwork/cometbft/v100/state"
@@ -19,6 +18,7 @@ import (
 	"github.com/KYVENetwork/cometbft/v100/state/txindex"
 	"github.com/KYVENetwork/cometbft/v100/state/txindex/kv"
 	"github.com/KYVENetwork/cometbft/v100/store"
+	"github.com/KYVENetwork/cometbft/v100/test-2"
 	"github.com/KYVENetwork/cometbft/v100/types"
 	db "github.com/cometbft/cometbft-db"
 )
@@ -154,7 +154,7 @@ func containsAllTxs(results []*abci.TxResult, txs []string) bool {
 
 func createTestSetup(t *testing.T) (*sm.Pruner, *kv.TxIndex, blockidxkv.BlockerIndexer) {
 	t.Helper()
-	config := test.ResetTestRoot("pruner_test")
+	config := test_2.ResetTestRoot("pruner_test")
 	t.Cleanup(func() {
 		err := os.RemoveAll(config.RootDir)
 		if err != nil {
@@ -228,7 +228,7 @@ func getEventsAndResults(height int64) (types.EventDataNewBlockEvents, *abci.TxR
 // When trying to prune the only block in the store it should not succeed
 // State should also not be pruned.
 func TestPruningWithHeight1(t *testing.T) {
-	config := test.ResetTestRoot("blockchain_reactor_pruning_test")
+	config := test_2.ResetTestRoot("blockchain_reactor_pruning_test")
 	defer os.RemoveAll(config.RootDir)
 	state, bs, txIndexer, blockIndexer, cleanup, stateStore := makeStateAndBlockStoreAndIndexers()
 	defer cleanup()
@@ -257,7 +257,7 @@ func TestPruningWithHeight1(t *testing.T) {
 	err = pruner.SetApplicationBlockRetainHeight(0)
 	require.NoError(t, err)
 
-	block := state.MakeBlock(1, test.MakeNTxs(1, 10), new(types.Commit), nil, state.Validators.GetProposer().Address)
+	block := state.MakeBlock(1, test_2.MakeNTxs(1, 10), new(types.Commit), nil, state.Validators.GetProposer().Address)
 	partSet, err := block.MakePartSet(2)
 	require.NoError(t, err)
 

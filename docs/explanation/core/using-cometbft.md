@@ -88,7 +88,7 @@ definition](https://github.com/cometbft/cometbft/blob/main/types/genesis.go)).
 ```json
 {
   "genesis_time": "2023-01-21T11:17:42.341227868Z",
-  "chain_id": "test-chain-ROp9KF",
+  "chain_id": "test-2-chain-ROp9KF",
   "initial_height": "0",
   "consensus_params": {
     "block": {
@@ -359,7 +359,7 @@ When `cometbft init` is run, both a `genesis.json` and
     }
   ],
   "app_hash" : "",
-  "chain_id" : "test-chain-rDlYSN",
+  "chain_id" : "test-2-chain-rDlYSN",
   "genesis_time" : "0001-01-01T00:00:00Z"
 }
 ```
@@ -533,7 +533,7 @@ then the new `genesis.json` will be:
     }
   ],
   "app_hash" : "",
-  "chain_id" : "test-chain-rDlYSN",
+  "chain_id" : "test-2-chain-rDlYSN",
   "genesis_time" : "0001-01-01T00:00:00Z"
 }
 ```

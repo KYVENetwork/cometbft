@@ -13,9 +13,9 @@ import (
 	abci "github.com/KYVENetwork/cometbft/v100/abci/types"
 	cmtstate "github.com/KYVENetwork/cometbft/v100/api/cometbft/state/v1"
 	cmtproto "github.com/KYVENetwork/cometbft/v100/api/cometbft/types/v1"
-	cmtos "github.com/KYVENetwork/cometbft/v100/internal/os"
 	"github.com/KYVENetwork/cometbft/v100/libs/log"
 	cmtmath "github.com/KYVENetwork/cometbft/v100/libs/math"
+	cmtos "github.com/KYVENetwork/cometbft/v100/os"
 	"github.com/KYVENetwork/cometbft/v100/types"
 	dbm "github.com/cometbft/cometbft-db"
 )

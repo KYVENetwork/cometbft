@@ -3,8 +3,8 @@ package p2p
 import (
 	"net"
 
-	cmtrand "github.com/KYVENetwork/cometbft/v100/internal/rand"
 	cmtsync "github.com/KYVENetwork/cometbft/v100/libs/sync"
+	cmtrand "github.com/KYVENetwork/cometbft/v100/rand"
 )
 
 // IPeerSet has a (immutable) subset of the methods of PeerSet.

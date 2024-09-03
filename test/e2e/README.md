@@ -143,7 +143,7 @@ To run tests manually, set the `E2E_MANIFEST` environment variable to the path o
 
 ```sh
 ./build/runner -f networks/ci.toml start
-E2E_MANIFEST=networks/ci.toml go test -v ./tests/...
+E2E_MANIFEST=networks/ci.toml go test-2 -v ./tests/...
 ```
 
 If the testnet files are located in a custom directory, you need to set it in the `E2E_TESTNET_DIR` environment variable.

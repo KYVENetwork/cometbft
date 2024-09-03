@@ -15,7 +15,7 @@ var _testingLogger Logger
 // with the verbose (-v) flag, NopLogger otherwise.
 //
 // Note that the call to TestingLogger() must be made
-// inside a test (not in the init func) because
+// inside a test-2 (not in the init func) because
 // verbose flag only set at the time of testing.
 func TestingLogger() Logger {
 	return TestingLoggerWithOutput(os.Stdout)
@@ -25,7 +25,7 @@ func TestingLogger() Logger {
 // with the verbose (-v) flag, NopLogger otherwise.
 //
 // Note that the call to TestingLoggerWithOutput(w io.Writer) must be made
-// inside a test (not in the init func) because
+// inside a test-2 (not in the init func) because
 // verbose flag only set at the time of testing.
 func TestingLoggerWithOutput(w io.Writer) Logger {
 	if _testingLogger != nil {

@@ -100,7 +100,7 @@ func TestRollbackHard(t *testing.T) {
 	block := &types.Block{
 		Header: types.Header{
 			Version:            cmtversion.Consensus{Block: version.BlockProtocol, App: 1},
-			ChainID:            "test-chain",
+			ChainID:            "test-2-chain",
 			Time:               now,
 			Height:             height,
 			AppHash:            crypto.CRandBytes(tmhash.Size),
@@ -254,7 +254,7 @@ func setupStateStore(t *testing.T, height int64) state.Store {
 			},
 			Software: version.CMTSemVer,
 		},
-		ChainID:                          "test-chain",
+		ChainID:                          "test-2-chain",
 		InitialHeight:                    10,
 		LastBlockID:                      makeBlockIDRandom(),
 		AppHash:                          tmhash.Sum([]byte("app_hash")),

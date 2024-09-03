@@ -6,9 +6,9 @@ import (
 	"time"
 
 	"github.com/KYVENetwork/cometbft/v100/crypto/ed25519"
-	cmtnet "github.com/KYVENetwork/cometbft/v100/internal/net"
-	cmtos "github.com/KYVENetwork/cometbft/v100/internal/os"
 	"github.com/KYVENetwork/cometbft/v100/libs/log"
+	cmtnet "github.com/KYVENetwork/cometbft/v100/net"
+	cmtos "github.com/KYVENetwork/cometbft/v100/os"
 	"github.com/KYVENetwork/cometbft/v100/privval"
 )
 

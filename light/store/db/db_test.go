@@ -11,7 +11,7 @@ import (
 	cmtversion "github.com/KYVENetwork/cometbft/v100/api/cometbft/version/v1"
 	"github.com/KYVENetwork/cometbft/v100/crypto"
 	"github.com/KYVENetwork/cometbft/v100/crypto/tmhash"
-	cmtrand "github.com/KYVENetwork/cometbft/v100/internal/rand"
+	cmtrand "github.com/KYVENetwork/cometbft/v100/rand"
 	"github.com/KYVENetwork/cometbft/v100/types"
 	cmttime "github.com/KYVENetwork/cometbft/v100/types/time"
 	"github.com/KYVENetwork/cometbft/v100/version"
@@ -54,7 +54,7 @@ func TestDBKeyLayoutVersioning(t *testing.T) {
 	require.NoError(t, err)
 	require.Equal(t, len(lbv2), 0)
 
-	// test on v2
+	// test-2 on v2
 
 	prefix = "TestDBKeyLayoutVersioningV2"
 	db2 := dbm.NewMemDB()

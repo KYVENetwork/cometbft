@@ -512,7 +512,7 @@ func TestTxSearchWithTimeout(t *testing.T) {
 	require.NotEmpty(t, result.Txs, "expected a lot of transactions")
 }
 
-// This test does nothing if we do not call app.SetGenBlockEvents() within main_test.go
+// This test-2 does nothing if we do not call app.SetGenBlockEvents() within main_test.go
 // It will nevertheless pass as there are no events being generated.
 func TestBlockSearch(t *testing.T) {
 	c := getHTTPClient()
@@ -528,7 +528,7 @@ func TestBlockSearch(t *testing.T) {
 	result, err := c.BlockSearch(context.Background(), "begin_event.foo = 100", nil, nil, "asc")
 	require.NoError(t, err)
 	blockCount := len(result.Blocks)
-	// if we generate block events within the test (by uncommenting
+	// if we generate block events within the test-2 (by uncommenting
 	// the code in line main_test.go:L23) then we expect len(result.Blocks)
 	// to be at least 5
 	// require.GreaterOrEqual(t, blockCount, 5)
@@ -547,7 +547,7 @@ func TestTxSearch(t *testing.T) {
 		require.NoError(t, err)
 	}
 
-	// since we're not using an isolated test server, we'll have lingering transactions
+	// since we're not using an isolated test-2 server, we'll have lingering transactions
 	// from other tests as well
 	result, err := c.TxSearch(context.Background(), "tx.height >= 0", true, nil, nil, "asc")
 	require.NoError(t, err)

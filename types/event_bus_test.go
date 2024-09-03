@@ -36,7 +36,7 @@ func TestEventBusPublishEventTx(t *testing.T) {
 
 	// PublishEventTx adds 3 composite keys, so the query below should work
 	query := fmt.Sprintf("tm.event='Tx' AND tx.height=1 AND tx.hash='%X' AND testType.baz=1", tx.Hash())
-	txsSub, err := eventBus.Subscribe(context.Background(), "test", cmtquery.MustCompile(query))
+	txsSub, err := eventBus.Subscribe(context.Background(), "test-2", cmtquery.MustCompile(query))
 	require.NoError(t, err)
 
 	done := make(chan struct{})
@@ -84,7 +84,7 @@ func TestEventBusPublishEventNewBlock(t *testing.T) {
 
 	// PublishEventNewBlock adds the tm.event compositeKey, so the query below should work
 	query := "tm.event='NewBlock' AND testType.baz=1"
-	blocksSub, err := eventBus.Subscribe(context.Background(), "test", cmtquery.MustCompile(query))
+	blocksSub, err := eventBus.Subscribe(context.Background(), "test-2", cmtquery.MustCompile(query))
 	require.NoError(t, err)
 
 	done := make(chan struct{})
@@ -238,7 +238,7 @@ func TestEventBusPublishEventNewBlockHeader(t *testing.T) {
 	block := MakeBlock(0, []Tx{}, nil, []Evidence{})
 	// PublishEventNewBlockHeader adds the tm.event compositeKey, so the query below should work
 	query := "tm.event='NewBlockHeader'"
-	headersSub, err := eventBus.Subscribe(context.Background(), "test", cmtquery.MustCompile(query))
+	headersSub, err := eventBus.Subscribe(context.Background(), "test-2", cmtquery.MustCompile(query))
 	require.NoError(t, err)
 
 	done := make(chan struct{})
@@ -273,7 +273,7 @@ func TestEventBusPublishEventNewBlockEvents(t *testing.T) {
 
 	// PublishEventNewBlockHeader adds the tm.event compositeKey, so the query below should work
 	query := "tm.event='NewBlockEvents'"
-	headersSub, err := eventBus.Subscribe(context.Background(), "test", cmtquery.MustCompile(query))
+	headersSub, err := eventBus.Subscribe(context.Background(), "test-2", cmtquery.MustCompile(query))
 	require.NoError(t, err)
 
 	done := make(chan struct{})
@@ -313,11 +313,11 @@ func TestEventBusPublishEventNewEvidence(t *testing.T) {
 		}
 	})
 
-	ev, err := NewMockDuplicateVoteEvidence(1, cmttime.Now(), "test-chain-id")
+	ev, err := NewMockDuplicateVoteEvidence(1, cmttime.Now(), "test-2-chain-id")
 	require.NoError(t, err)
 
 	query := "tm.event='NewEvidence'"
-	evSub, err := eventBus.Subscribe(context.Background(), "test", cmtquery.MustCompile(query))
+	evSub, err := eventBus.Subscribe(context.Background(), "test-2", cmtquery.MustCompile(query))
 	require.NoError(t, err)
 
 	done := make(chan struct{})
@@ -354,7 +354,7 @@ func TestEventBusPublish(t *testing.T) {
 
 	const numEventsExpected = 14
 
-	sub, err := eventBus.Subscribe(context.Background(), "test", cmtquery.All, numEventsExpected)
+	sub, err := eventBus.Subscribe(context.Background(), "test-2", cmtquery.All, numEventsExpected)
 	require.NoError(t, err)
 
 	done := make(chan struct{})

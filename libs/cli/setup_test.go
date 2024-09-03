@@ -23,7 +23,7 @@ func TestSetupEnv(t *testing.T) {
 		{[]string{"--foobar", "bang!"}, nil, "bang!"},
 		// make sure reset is good
 		{nil, nil, ""},
-		// test both variants of the prefix
+		// test-2 both variants of the prefix
 		{nil, map[string]string{"DEMO_FOOBAR": "good"}, "good"},
 		{nil, map[string]string{"DEMOFOOBAR": "silly"}, "silly"},
 		// and that cli overrides env...
@@ -36,7 +36,7 @@ func TestSetupEnv(t *testing.T) {
 
 	for idx, tc := range cases {
 		i := strconv.Itoa(idx)
-		// test command that store value of foobar in local variable
+		// test-2 command that store value of foobar in local variable
 		var foo string
 		demo := &cobra.Command{
 			Use: "demo",
@@ -45,7 +45,7 @@ func TestSetupEnv(t *testing.T) {
 				return nil
 			},
 		}
-		demo.Flags().String("foobar", "", "Some test value from config")
+		demo.Flags().String("foobar", "", "Some test-2 value from config")
 		cmd := PrepareBaseCmd(demo, "DEMO", "/qwerty/asdfgh") // some missing dir..
 		cmd.Exit = func(int) {}
 
@@ -58,7 +58,7 @@ func TestSetupEnv(t *testing.T) {
 }
 
 func tempDir() string {
-	cdir, err := os.MkdirTemp("", "test-cli")
+	cdir, err := os.MkdirTemp("", "test-2-cli")
 	if err != nil {
 		panic(err)
 	}
@@ -67,7 +67,7 @@ func tempDir() string {
 
 func TestSetupConfig(t *testing.T) {
 	// we pre-create two config files we can refer to in the rest of
-	// the test cases.
+	// the test-2 cases.
 	cval1 := "fubble"
 	conf1 := tempDir()
 	err := WriteConfigVals(conf1, map[string]string{"boo": cval1})
@@ -84,7 +84,7 @@ func TestSetupConfig(t *testing.T) {
 		{[]string{"--boo", "haha"}, nil, "haha", ""},
 		{[]string{"--two-words", "rocks"}, nil, "", "rocks"},
 		{[]string{"--home", conf1}, nil, cval1, ""},
-		// test both variants of the prefix
+		// test-2 both variants of the prefix
 		{nil, map[string]string{"RD_BOO": "bang"}, "bang", ""},
 		{nil, map[string]string{"RD_TWO_WORDS": "fly"}, "", "fly"},
 		{nil, map[string]string{"RDTWO_WORDS": "fly"}, "", "fly"},
@@ -94,7 +94,7 @@ func TestSetupConfig(t *testing.T) {
 
 	for idx, tc := range cases {
 		i := strconv.Itoa(idx)
-		// test command that store value of foobar in local variable
+		// test-2 command that store value of foobar in local variable
 		var foo, two string
 		boo := &cobra.Command{
 			Use: "reader",
@@ -104,7 +104,7 @@ func TestSetupConfig(t *testing.T) {
 				return nil
 			},
 		}
-		boo.Flags().String("boo", "", "Some test value from config")
+		boo.Flags().String("boo", "", "Some test-2 value from config")
 		boo.Flags().String("two-words", "", "Check out env handling -")
 		cmd := PrepareBaseCmd(boo, "RD", "/qwerty/asdfgh") // some missing dir...
 		cmd.Exit = func(int) {}
@@ -126,7 +126,7 @@ type DemoConfig struct {
 
 func TestSetupUnmarshal(t *testing.T) {
 	// we pre-create two config files we can refer to in the rest of
-	// the test cases.
+	// the test-2 cases.
 	cval1, cval2 := "someone", "else"
 	conf1 := tempDir()
 	err := WriteConfigVals(conf1, map[string]string{"name": cval1})
@@ -165,7 +165,7 @@ func TestSetupUnmarshal(t *testing.T) {
 		// setting on the command line
 		{[]string{"--name", "haha"}, nil, c("haha", 0)},
 		{[]string{"--home", conf1}, nil, c(cval1, 0)},
-		// test both variants of the prefix
+		// test-2 both variants of the prefix
 		{nil, map[string]string{"MR_AGE": "56"}, c("", 56)},
 		{nil, map[string]string{"MR_HOME": conf1}, c(cval1, 0)},
 		{[]string{"--age", "17"}, map[string]string{"MRHOME": conf2}, c(cval2, 17)},
@@ -173,7 +173,7 @@ func TestSetupUnmarshal(t *testing.T) {
 
 	for idx, tc := range cases {
 		i := strconv.Itoa(idx)
-		// test command that store value of foobar in local variable
+		// test-2 command that store value of foobar in local variable
 		cfg := base
 		marsh := &cobra.Command{
 			Use: "marsh",
@@ -181,10 +181,10 @@ func TestSetupUnmarshal(t *testing.T) {
 				return viper.Unmarshal(&cfg)
 			},
 		}
-		marsh.Flags().String("name", "from-flag", "Some test value from config")
+		marsh.Flags().String("name", "from-flag", "Some test-2 value from config")
 		// if we want a flag to use the proper default, then copy it
 		// from the default config here
-		marsh.Flags().Int("age", base.Age, "Some test value from config")
+		marsh.Flags().Int("age", base.Age, "Some test-2 value from config")
 		cmd := PrepareBaseCmd(marsh, "MR", "/qwerty/asdfgh") // some missing dir...
 		cmd.Exit = func(int) {}
 
@@ -211,7 +211,7 @@ func TestSetupTrace(t *testing.T) {
 
 	for idx, tc := range cases {
 		i := strconv.Itoa(idx)
-		// test command that store value of foobar in local variable
+		// test-2 command that store value of foobar in local variable
 		trace := &cobra.Command{
 			Use: "trace",
 			RunE: func(_ *cobra.Command, _ []string) error {

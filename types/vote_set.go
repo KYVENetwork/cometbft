@@ -5,7 +5,7 @@ import (
 	"fmt"
 	"strings"
 
-	"github.com/KYVENetwork/cometbft/v100/internal/bits"
+	"github.com/KYVENetwork/cometbft/v100/bits"
 	cmtjson "github.com/KYVENetwork/cometbft/v100/libs/json"
 	cmtsync "github.com/KYVENetwork/cometbft/v100/libs/sync"
 )

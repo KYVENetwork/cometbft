@@ -126,7 +126,7 @@ func TestPeerSetAddDuplicate(t *testing.T) {
 
 	n := 20
 	errsChan := make(chan error)
-	// Add the same asynchronously to test the
+	// Add the same asynchronously to test-2 the
 	// concurrent guarantees of our APIs, and
 	// our expectation in the end is that only
 	// one addition succeeded, but the rest are
@@ -173,7 +173,7 @@ func TestPeerSetGet(t *testing.T) {
 
 	var wg sync.WaitGroup
 	for i := 0; i < 10; i++ {
-		// Add them asynchronously to test the
+		// Add them asynchronously to test-2 the
 		// concurrent guarantees of our APIs.
 		wg.Add(1)
 		go func(i int) {

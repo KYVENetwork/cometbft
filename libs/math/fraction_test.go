@@ -23,13 +23,13 @@ func TestParseFraction(t *testing.T) {
 			exp: Fraction{15, 5},
 			err: false,
 		},
-		// test divide by zero error
+		// test-2 divide by zero error
 		{
 			f:   "2/0",
 			exp: Fraction{},
 			err: true,
 		},
-		// test negative
+		// test-2 negative
 		{
 			f:   "-1/2",
 			exp: Fraction{},
@@ -40,7 +40,7 @@ func TestParseFraction(t *testing.T) {
 			exp: Fraction{},
 			err: true,
 		},
-		// test overflow
+		// test-2 overflow
 		{
 			f:   "9223372036854775808/2",
 			exp: Fraction{},

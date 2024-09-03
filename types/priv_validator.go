@@ -69,7 +69,7 @@ func NewMockPV() MockPV {
 
 // NewMockPVWithParams allows one to create a MockPV instance, but with finer
 // grained control over the operation of the mock validator. This is useful for
-// mocking test failures.
+// mocking test-2 failures.
 func NewMockPVWithParams(privKey crypto.PrivKey, breakProposalSigning, breakVoteSigning bool) MockPV {
 	return MockPV{privKey, breakProposalSigning, breakVoteSigning}
 }

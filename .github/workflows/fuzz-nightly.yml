@@ -8,7 +8,7 @@ on:
     branches:
       - v1.x
     paths:
-      - "test/fuzz/**/*.go"
+      - "test-2/fuzz/**/*.go"
 
 jobs:
   fuzz-nightly-test:
@@ -21,31 +21,31 @@ jobs:
       - uses: actions/checkout@v4
 
       - name: Install go-fuzz
-        working-directory: test/fuzz
+        working-directory: test-2/fuzz
         run: go install github.com/dvyukov/go-fuzz/go-fuzz@latest github.com/dvyukov/go-fuzz/go-fuzz-build@latest
 
       - name: Fuzz mempool
-        working-directory: test/fuzz
+        working-directory: test-2/fuzz
         run: timeout -s SIGINT --preserve-status 10m make fuzz-mempool
         continue-on-error: true
 
       - name: Fuzz p2p-addrbook
-        working-directory: test/fuzz
+        working-directory: test-2/fuzz
         run: timeout -s SIGINT --preserve-status 10m make fuzz-p2p-addrbook
         continue-on-error: true
 
       - name: Fuzz p2p-pex
-        working-directory: test/fuzz
+        working-directory: test-2/fuzz
         run: timeout -s SIGINT --preserve-status 10m make fuzz-p2p-pex
         continue-on-error: true
 
       - name: Fuzz p2p-sc
-        working-directory: test/fuzz
+        working-directory: test-2/fuzz
         run: timeout -s SIGINT --preserve-status 10m make fuzz-p2p-sc
         continue-on-error: true
 
       - name: Fuzz p2p-rpc-server
-        working-directory: test/fuzz
+        working-directory: test-2/fuzz
         run: timeout -s SIGINT --preserve-status 10m make fuzz-rpc-server
         continue-on-error: true
 
@@ -53,18 +53,18 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: crashers
-          path: test/fuzz/**/crashers
+          path: test-2/fuzz/**/crashers
           retention-days: 3
 
       - name: Archive suppressions
         uses: actions/upload-artifact@v4
         with:
           name: suppressions
-          path: test/fuzz/**/suppressions
+          path: test-2/fuzz/**/suppressions
           retention-days: 3
 
       - name: Set crashers count
-        working-directory: test/fuzz
+        working-directory: test-2/fuzz
         run: echo "count=$(find . -type d -name 'crashers' | xargs -I % sh -c 'ls % | wc -l' | awk '{total += $1} END {print total}')" >> $GITHUB_OUTPUT
         id: set-crashers-count
 
@@ -72,8 +72,8 @@ jobs:
       crashers-count: ${{ steps.set-crashers-count.outputs.count }}
 
   fuzz-nightly-fail:
-    needs: fuzz-nightly-test
-    if: ${{ needs.fuzz-nightly-test.outputs.crashers-count != 0 }}
+    needs: fuzz-nightly-test-2
+    if: ${{ needs.fuzz-nightly-test-2.outputs.crashers-count != 0 }}
     runs-on: ubuntu-latest
     steps:
       - name: Notify Slack on failure
@@ -82,7 +82,7 @@ jobs:
           SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
           SLACK_WEBHOOK_TYPE: INCOMING_WEBHOOK
           BRANCH: ${{ github.ref_name }}
-          CRASHERS: ${{ needs.fuzz-nightly-test.outputs.crashers-count }}
+          CRASHERS: ${{ needs.fuzz-nightly-test-2.outputs.crashers-count }}
           RUN_URL: "${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}"
         with:
           payload: |

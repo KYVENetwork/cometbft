@@ -139,7 +139,7 @@ func TestNewNetAddressIPPort(t *testing.T) {
 }
 
 func TestNetAddressProperties(t *testing.T) {
-	// TODO add more test cases
+	// TODO add more test-2 cases
 	testCases := []struct {
 		addr     string
 		valid    bool
@@ -166,7 +166,7 @@ func TestNetAddressProperties(t *testing.T) {
 }
 
 func TestNetAddressReachabilityTo(t *testing.T) {
-	// TODO add more test cases
+	// TODO add more test-2 cases
 	testCases := []struct {
 		addr         string
 		other        string

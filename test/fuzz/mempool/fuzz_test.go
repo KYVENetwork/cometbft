@@ -22,7 +22,7 @@ func TestMempoolTestdataCases(t *testing.T) {
 		t.Run(entry.Name(), func(t *testing.T) {
 			defer func() {
 				r := recover()
-				require.Nilf(t, r, "testdata/cases test panic")
+				require.Nilf(t, r, "testdata/cases test-2 panic")
 			}()
 			f, err := os.Open(filepath.Join(testdataCasesDir, entry.Name()))
 			require.NoError(t, err)

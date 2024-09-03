@@ -6,8 +6,8 @@ import (
 	"net"
 
 	"github.com/KYVENetwork/cometbft/v100/crypto/ed25519"
-	cmtnet "github.com/KYVENetwork/cometbft/v100/internal/net"
 	"github.com/KYVENetwork/cometbft/v100/libs/log"
+	cmtnet "github.com/KYVENetwork/cometbft/v100/net"
 )
 
 // IsConnTimeout returns a boolean indicating whether the error is known to

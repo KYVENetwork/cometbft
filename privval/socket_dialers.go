@@ -6,7 +6,7 @@ import (
 	"time"
 
 	"github.com/KYVENetwork/cometbft/v100/crypto"
-	cmtnet "github.com/KYVENetwork/cometbft/v100/internal/net"
+	cmtnet "github.com/KYVENetwork/cometbft/v100/net"
 	p2pconn "github.com/KYVENetwork/cometbft/v100/p2p/conn"
 )
 

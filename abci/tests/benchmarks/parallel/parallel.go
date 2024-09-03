@@ -6,11 +6,11 @@ import (
 	"log"
 
 	"github.com/KYVENetwork/cometbft/v100/abci/types"
-	cmtnet "github.com/KYVENetwork/cometbft/v100/internal/net"
+	cmtnet "github.com/KYVENetwork/cometbft/v100/net"
 )
 
 func main() {
-	conn, err := cmtnet.Connect("unix://test.sock")
+	conn, err := cmtnet.Connect("unix://test-2.sock")
 	if err != nil {
 		log.Fatal(err.Error())
 	}

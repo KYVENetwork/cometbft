@@ -16,12 +16,12 @@ import (
 	_ "github.com/lib/pq" //nolint: gci // provide the psql db driver.
 
 	abci "github.com/KYVENetwork/cometbft/v100/abci/types"
+	"github.com/KYVENetwork/cometbft/v100/blocksync"
 	cfg "github.com/KYVENetwork/cometbft/v100/config"
+	cs "github.com/KYVENetwork/cometbft/v100/consensus"
 	"github.com/KYVENetwork/cometbft/v100/crypto"
 	"github.com/KYVENetwork/cometbft/v100/crypto/tmhash"
-	"github.com/KYVENetwork/cometbft/v100/internal/blocksync"
-	cs "github.com/KYVENetwork/cometbft/v100/internal/consensus"
-	"github.com/KYVENetwork/cometbft/v100/internal/evidence"
+	"github.com/KYVENetwork/cometbft/v100/evidence"
 	"github.com/KYVENetwork/cometbft/v100/libs/log"
 	"github.com/KYVENetwork/cometbft/v100/light"
 	mempl "github.com/KYVENetwork/cometbft/v100/mempool"

@@ -16,10 +16,10 @@ import (
 
 	_ "net/http/pprof" //nolint: gosec
 
+	bc "github.com/KYVENetwork/cometbft/v100/blocksync"
 	cfg "github.com/KYVENetwork/cometbft/v100/config"
-	bc "github.com/KYVENetwork/cometbft/v100/internal/blocksync"
-	cs "github.com/KYVENetwork/cometbft/v100/internal/consensus"
-	"github.com/KYVENetwork/cometbft/v100/internal/evidence"
+	cs "github.com/KYVENetwork/cometbft/v100/consensus"
+	"github.com/KYVENetwork/cometbft/v100/evidence"
 	"github.com/KYVENetwork/cometbft/v100/libs/log"
 	cmtpubsub "github.com/KYVENetwork/cometbft/v100/libs/pubsub"
 	"github.com/KYVENetwork/cometbft/v100/libs/service"

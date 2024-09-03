@@ -12,7 +12,7 @@ import (
 
 	cmtstore "github.com/KYVENetwork/cometbft/v100/api/cometbft/store/v1"
 	cmtproto "github.com/KYVENetwork/cometbft/v100/api/cometbft/types/v1"
-	"github.com/KYVENetwork/cometbft/v100/internal/evidence"
+	"github.com/KYVENetwork/cometbft/v100/evidence"
 	cmtsync "github.com/KYVENetwork/cometbft/v100/libs/sync"
 	sm "github.com/KYVENetwork/cometbft/v100/state"
 	"github.com/KYVENetwork/cometbft/v100/types"

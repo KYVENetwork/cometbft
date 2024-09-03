@@ -9,7 +9,7 @@ import (
 
 	abcitypes "github.com/KYVENetwork/cometbft/v100/abci/types"
 	cmtcfg "github.com/KYVENetwork/cometbft/v100/config"
-	"github.com/KYVENetwork/cometbft/v100/internal/progressbar"
+	"github.com/KYVENetwork/cometbft/v100/progressbar"
 	"github.com/KYVENetwork/cometbft/v100/state"
 	"github.com/KYVENetwork/cometbft/v100/state/indexer"
 	blockidxkv "github.com/KYVENetwork/cometbft/v100/state/indexer/block/kv"

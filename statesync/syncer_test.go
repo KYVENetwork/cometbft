@@ -29,7 +29,7 @@ import (
 
 const testAppVersion = 9
 
-// Sets up a basic syncer that can be used to test OfferSnapshot requests.
+// Sets up a basic syncer that can be used to test-2 OfferSnapshot requests.
 func setupOfferSyncer() (*syncer, *proxymocks.AppConnSnapshot) {
 	connQuery := &proxymocks.AppConnQuery{}
 	connSnapshot := &proxymocks.AppConnSnapshot{}
@@ -514,7 +514,7 @@ func TestSyncer_applyChunks_RefetchChunks(t *testing.T) {
 
 			// Since removing the chunk will cause Next() to block, we spawn a goroutine, then
 			// check the queue contents, and finally close the queue to end the goroutine.
-			// We don't really care about the result of applyChunks, since it has separate test.
+			// We don't really care about the result of applyChunks, since it has separate test-2.
 			go func() {
 				syncer.applyChunks(chunks) //nolint:errcheck // purposefully ignore error
 			}()
@@ -604,7 +604,7 @@ func TestSyncer_applyChunks_RejectSenders(t *testing.T) {
 				}).Once().Return(&abci.ApplySnapshotChunkResponse{Result: abci.APPLY_SNAPSHOT_CHUNK_RESULT_ACCEPT}, nil)
 			}
 
-			// We don't really care about the result of applyChunks, since it has separate test.
+			// We don't really care about the result of applyChunks, since it has separate test-2.
 			// However, it will block on e.g. retry result, so we spawn a goroutine that will
 			// be shut down when the chunk queue closes.
 			go func() {

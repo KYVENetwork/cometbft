@@ -14,8 +14,8 @@ import (
 	abcicli "github.com/KYVENetwork/cometbft/v100/abci/client"
 	"github.com/KYVENetwork/cometbft/v100/abci/server"
 	"github.com/KYVENetwork/cometbft/v100/abci/types"
-	cmtrand "github.com/KYVENetwork/cometbft/v100/internal/rand"
 	"github.com/KYVENetwork/cometbft/v100/libs/service"
+	cmtrand "github.com/KYVENetwork/cometbft/v100/rand"
 )
 
 func TestCalls(t *testing.T) {
@@ -78,7 +78,7 @@ func TestHangingAsyncCalls(t *testing.T) {
 func TestBulk(t *testing.T) {
 	const numTxs = 700000
 	// use a socket instead of a port
-	socketFile := fmt.Sprintf("test-%08x.sock", rand.Int31n(1<<30))
+	socketFile := fmt.Sprintf("test-2-%08x.sock", rand.Int31n(1<<30))
 	defer os.Remove(socketFile)
 	socket := fmt.Sprintf("unix://%v", socketFile)
 	app := types.NewBaseApplication()
@@ -107,7 +107,7 @@ func TestBulk(t *testing.T) {
 	// Construct request
 	rfb := &types.FinalizeBlockRequest{Txs: make([][]byte, numTxs)}
 	for counter := 0; counter < numTxs; counter++ {
-		rfb.Txs[counter] = []byte("test")
+		rfb.Txs[counter] = []byte("test-2")
 	}
 	// Send bulk request
 	res, err := client.FinalizeBlock(context.Background(), rfb)
@@ -165,7 +165,7 @@ func (slowApp) CheckTx(context.Context, *types.CheckTxRequest) (*types.CheckTxRe
 
 // TestCallbackInvokedWhenSetLaet ensures that the callback is invoked when
 // set after the client completes the call into the app. Currently this
-// test relies on the callback being allowed to be invoked twice if set multiple
+// test-2 relies on the callback being allowed to be invoked twice if set multiple
 // times, once when set early and once when set late.
 func TestCallbackInvokedWhenSetLate(t *testing.T) {
 	ctx, cancel := context.WithCancel(context.Background())

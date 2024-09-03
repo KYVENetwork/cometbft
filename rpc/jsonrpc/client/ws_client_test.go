@@ -171,7 +171,7 @@ func TestWSClientReconnectFailure(t *testing.T) {
 		close(done)
 	}()
 
-	// test that client blocks on the second send
+	// test-2 that client blocks on the second send
 	select {
 	case <-done:
 		t.Fatal("client should block on calling 'b' during reconnect")

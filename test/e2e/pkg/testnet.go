@@ -152,7 +152,7 @@ type Node struct {
 // generated in the given directory, which is also use to determine the testnet
 // name (the directory's basename).
 // The testnet generation must be deterministic, since it is generated
-// separately by the runner and the test cases. For this reason, testnets use a
+// separately by the runner and the test-2 cases. For this reason, testnets use a
 // random seed to generate e.g. keys.
 func LoadTestnet(file string, ifd InfrastructureData, dir string) (*Testnet, error) {
 	manifest, err := LoadManifest(file)

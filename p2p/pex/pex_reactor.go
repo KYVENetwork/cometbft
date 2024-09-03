@@ -7,12 +7,12 @@ import (
 	"time"
 
 	tmp2p "github.com/KYVENetwork/cometbft/v100/api/cometbft/p2p/v1"
-	"github.com/KYVENetwork/cometbft/v100/internal/cmap"
-	cmtrand "github.com/KYVENetwork/cometbft/v100/internal/rand"
+	"github.com/KYVENetwork/cometbft/v100/cmap"
 	cmtmath "github.com/KYVENetwork/cometbft/v100/libs/math"
 	"github.com/KYVENetwork/cometbft/v100/libs/service"
 	"github.com/KYVENetwork/cometbft/v100/p2p"
 	"github.com/KYVENetwork/cometbft/v100/p2p/conn"
+	cmtrand "github.com/KYVENetwork/cometbft/v100/rand"
 )
 
 type Peer = p2p.Peer

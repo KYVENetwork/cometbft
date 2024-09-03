@@ -13,7 +13,7 @@ import (
 	"github.com/google/orderedcode"
 
 	abci "github.com/KYVENetwork/cometbft/v100/abci/types"
-	idxutil "github.com/KYVENetwork/cometbft/v100/internal/indexer"
+	idxutil "github.com/KYVENetwork/cometbft/v100/indexer"
 	"github.com/KYVENetwork/cometbft/v100/libs/log"
 	"github.com/KYVENetwork/cometbft/v100/libs/pubsub/query"
 	"github.com/KYVENetwork/cometbft/v100/libs/pubsub/query/syntax"

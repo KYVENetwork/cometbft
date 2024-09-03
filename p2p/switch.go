@@ -9,11 +9,11 @@ import (
 
 	"github.com/cosmos/gogoproto/proto"
 
+	"github.com/KYVENetwork/cometbft/v100/cmap"
 	"github.com/KYVENetwork/cometbft/v100/config"
-	"github.com/KYVENetwork/cometbft/v100/internal/cmap"
-	"github.com/KYVENetwork/cometbft/v100/internal/rand"
 	"github.com/KYVENetwork/cometbft/v100/libs/service"
 	"github.com/KYVENetwork/cometbft/v100/p2p/conn"
+	"github.com/KYVENetwork/cometbft/v100/rand"
 )
 
 const (
@@ -733,7 +733,7 @@ func (sw *Switch) addOutboundPeerWithConfig(
 ) error {
 	sw.Logger.Debug("Dialing peer", "address", addr)
 
-	// XXX(xla): Remove the leakage of test concerns in implementation.
+	// XXX(xla): Remove the leakage of test-2 concerns in implementation.
 	if cfg.TestDialFail {
 		go sw.reconnectToPeer(addr)
 		return errors.New("dial err (peerConfig.DialFail == true)")

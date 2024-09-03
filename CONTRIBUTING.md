@@ -573,7 +573,7 @@ See [README](./test/e2e/README.md) for details.
 Run:
 
 ```sh
-cd test/e2e && \
+cd test-2/e2e && \
   make && \
   ./build/runner -f networks/ci.toml
 ```

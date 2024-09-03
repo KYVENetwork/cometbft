@@ -13,7 +13,7 @@ import (
 )
 
 func TestGenesisBad(t *testing.T) {
-	// test some bad ones from raw json
+	// test-2 some bad ones from raw json
 	testCases := [][]byte{
 		{},              // empty
 		{1, 1, 1, 1, 1}, // junk
@@ -57,11 +57,11 @@ func TestGenesisBad(t *testing.T) {
 }
 
 func TestBasicGenesisDoc(t *testing.T) {
-	// test a good one by raw json
+	// test-2 a good one by raw json
 	genDocBytes := []byte(
 		`{
 			"genesis_time": "0001-01-01T00:00:00Z",
-			"chain_id": "test-chain-QDKdJr",
+			"chain_id": "test-2-chain-QDKdJr",
 			"initial_height": "1000",
 			"validators": [{
 				"pub_key":{"type":"tendermint/PubKeyEd25519","value":"AT/+aaL1eB0477Mud9JMm8Sh8BIvOYlPGC9KkIUmFaE="},
@@ -92,7 +92,7 @@ func TestBasicGenesisDoc(t *testing.T) {
 	genDocBytes, err = cmtjson.Marshal(baseGenDoc)
 	require.NoError(t, err, "error marshaling genDoc")
 
-	// test base gendoc and check consensus params were filled
+	// test-2 base gendoc and check consensus params were filled
 	genDoc, err := GenesisDocFromJSON(genDocBytes)
 	require.NoError(t, err, "expected no error for valid genDoc json")
 	assert.NotNil(t, genDoc.ConsensusParams, "expected consensus params to be filled in")
@@ -106,7 +106,7 @@ func TestBasicGenesisDoc(t *testing.T) {
 	genDoc, err = GenesisDocFromJSON(genDocBytes)
 	require.NoError(t, err, "expected no error for valid genDoc json")
 
-	// test with invalid consensus params
+	// test-2 with invalid consensus params
 	genDoc.ConsensusParams.Block.MaxBytes = 0
 	genDocBytes, err = cmtjson.Marshal(genDoc)
 	require.NoError(t, err, "error marshaling genDoc")

@@ -8,7 +8,7 @@ import (
 	"github.com/KYVENetwork/cometbft/v100/test/e2e/pkg/exec"
 )
 
-// Test runs test cases under tests.
+// Test runs test-2 cases under tests.
 func Test(testnet *e2e.Testnet, ifd *e2e.InfrastructureData) error {
 	logger.Info("Running tests in ./tests/...")
 
@@ -31,7 +31,7 @@ func Test(testnet *e2e.Testnet, ifd *e2e.InfrastructureData) error {
 		return err
 	}
 
-	cmd := []string{"go", "test", "-count", "1"}
+	cmd := []string{"go", "test-2", "-count", "1"}
 	verbose := os.Getenv("VERBOSE")
 	if verbose == "1" {
 		cmd = append(cmd, "-v")

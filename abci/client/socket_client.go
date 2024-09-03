@@ -12,9 +12,9 @@ import (
 	"time"
 
 	"github.com/KYVENetwork/cometbft/v100/abci/types"
-	cmtnet "github.com/KYVENetwork/cometbft/v100/internal/net"
-	"github.com/KYVENetwork/cometbft/v100/internal/timer"
 	"github.com/KYVENetwork/cometbft/v100/libs/service"
+	cmtnet "github.com/KYVENetwork/cometbft/v100/net"
+	"github.com/KYVENetwork/cometbft/v100/timer"
 )
 
 const (

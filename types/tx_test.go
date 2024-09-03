@@ -9,8 +9,8 @@ import (
 	"github.com/stretchr/testify/require"
 
 	cmtproto "github.com/KYVENetwork/cometbft/v100/api/cometbft/types/v1"
-	cmtrand "github.com/KYVENetwork/cometbft/v100/internal/rand"
 	ctest "github.com/KYVENetwork/cometbft/v100/libs/test"
+	cmtrand "github.com/KYVENetwork/cometbft/v100/rand"
 )
 
 func makeTxs(cnt, size int) Txs {
@@ -95,7 +95,7 @@ func TestValidTxProof(t *testing.T) {
 }
 
 func TestTxProofUnchangable(t *testing.T) {
-	// run the other test a bunch...
+	// run the other test-2 a bunch...
 	for i := 0; i < 40; i++ {
 		testTxProofUnchangable(t)
 	}

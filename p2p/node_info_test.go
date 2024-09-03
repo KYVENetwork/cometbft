@@ -69,7 +69,7 @@ func TestNodeInfoValidate(t *testing.T) {
 	nodeKey := NodeKey{PrivKey: ed25519.GenPrivKey()}
 	name := "testing"
 
-	// test case passes
+	// test-2 case passes
 	ni = testNodeInfo(nodeKey.ID(), name).(DefaultNodeInfo)
 	ni.Channels = channels
 	require.NoError(t, ni.Validate())
@@ -94,7 +94,7 @@ func TestNodeInfoCompatible(t *testing.T) {
 
 	var newTestChannel byte = 0x2
 
-	// test NodeInfo is compatible
+	// test-2 NodeInfo is compatible
 	ni1 := testNodeInfo(nodeKey1.ID(), name).(DefaultNodeInfo)
 	ni2 := testNodeInfo(nodeKey2.ID(), name).(DefaultNodeInfo)
 	require.NoError(t, ni1.CompatibleWith(ni2))

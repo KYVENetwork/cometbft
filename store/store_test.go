@@ -18,13 +18,13 @@ import (
 	cfg "github.com/KYVENetwork/cometbft/v100/config"
 	"github.com/KYVENetwork/cometbft/v100/crypto"
 	"github.com/KYVENetwork/cometbft/v100/crypto/ed25519"
-	cmtrand "github.com/KYVENetwork/cometbft/v100/internal/rand"
-	"github.com/KYVENetwork/cometbft/v100/internal/test"
 	"github.com/KYVENetwork/cometbft/v100/libs/log"
+	cmtrand "github.com/KYVENetwork/cometbft/v100/rand"
 	sm "github.com/KYVENetwork/cometbft/v100/state"
 	"github.com/KYVENetwork/cometbft/v100/state/indexer"
 	"github.com/KYVENetwork/cometbft/v100/state/indexer/block"
 	"github.com/KYVENetwork/cometbft/v100/state/txindex"
+	"github.com/KYVENetwork/cometbft/v100/test-2"
 	"github.com/KYVENetwork/cometbft/v100/types"
 	cmttime "github.com/KYVENetwork/cometbft/v100/types/time"
 	"github.com/KYVENetwork/cometbft/v100/version"
@@ -61,7 +61,7 @@ func makeTestExtCommitWithNumSigs(height int64, timestamp time.Time, numSigs int
 }
 
 func makeStateAndBlockStoreAndIndexers() (sm.State, *BlockStore, txindex.TxIndexer, indexer.BlockIndexer, func(), sm.Store) {
-	config := test.ResetTestRoot("blockchain_reactor_test")
+	config := test_2.ResetTestRoot("blockchain_reactor_test")
 	blockDB := dbm.NewMemDB()
 	stateDB := dbm.NewMemDB()
 	stateStore := sm.NewStore(stateDB, sm.StoreOptions{
@@ -72,7 +72,7 @@ func makeStateAndBlockStoreAndIndexers() (sm.State, *BlockStore, txindex.TxIndex
 		panic(fmt.Errorf("error constructing state from genesis file: %w", err))
 	}
 
-	txIndexer, blockIndexer, _, err := block.IndexerFromConfig(config, cfg.DefaultDBProvider, "test")
+	txIndexer, blockIndexer, _, err := block.IndexerFromConfig(config, cfg.DefaultDBProvider, "test-2")
 	if err != nil {
 		panic(err)
 	}
@@ -150,7 +150,7 @@ func newInMemoryBlockStore() (*BlockStore, dbm.DB) {
 	return NewBlockStore(db), db
 }
 
-// TODO: This test should be simplified ...
+// TODO: This test-2 should be simplified ...
 
 func TestBlockStoreSaveLoadBlock(t *testing.T) {
 	state, bs, _, _, cleanup, _ := makeStateAndBlockStoreAndIndexers()
@@ -192,7 +192,7 @@ func TestBlockStoreSaveLoadBlock(t *testing.T) {
 		ProposerAddress: cmtrand.Bytes(crypto.AddressSize),
 	}
 
-	// End of setup, test data
+	// End of setup, test-2 data
 
 	commitAtH10 := makeTestExtCommit(10, cmttime.Now()).ToCommit()
 	tuples := []struct {
@@ -408,7 +408,7 @@ func TestSaveBlockWithExtendedCommitPanicOnAbsentExtension(t *testing.T) {
 			state, bs, _, _, cleanup, _ := makeStateAndBlockStoreAndIndexers()
 			defer cleanup()
 			h := bs.Height() + 1
-			block := state.MakeBlock(h, test.MakeNTxs(h, 10), new(types.Commit), nil, state.Validators.GetProposer().Address)
+			block := state.MakeBlock(h, test_2.MakeNTxs(h, 10), new(types.Commit), nil, state.Validators.GetProposer().Address)
 
 			seenCommit := makeTestExtCommit(block.Header.Height, cmttime.Now())
 			ps, err := block.MakePartSet(types.BlockPartSizeBytes)
@@ -449,7 +449,7 @@ func TestLoadBlockExtendedCommit(t *testing.T) {
 			state, bs, _, _, cleanup, _ := makeStateAndBlockStoreAndIndexers()
 			defer cleanup()
 			h := bs.Height() + 1
-			block := state.MakeBlock(h, test.MakeNTxs(h, 10), new(types.Commit), nil, state.Validators.GetProposer().Address)
+			block := state.MakeBlock(h, test_2.MakeNTxs(h, 10), new(types.Commit), nil, state.Validators.GetProposer().Address)
 			seenCommit := makeTestExtCommit(block.Header.Height, cmttime.Now())
 			ps, err := block.MakePartSet(types.BlockPartSizeBytes)
 			require.NoError(t, err)
@@ -469,7 +469,7 @@ func TestLoadBlockExtendedCommit(t *testing.T) {
 }
 
 func TestLoadBaseMeta(t *testing.T) {
-	config := test.ResetTestRoot("blockchain_reactor_test")
+	config := test_2.ResetTestRoot("blockchain_reactor_test")
 	defer os.RemoveAll(config.RootDir)
 	stateStore := sm.NewStore(dbm.NewMemDB(), sm.StoreOptions{
 		DiscardABCIResponses: false,
@@ -479,7 +479,7 @@ func TestLoadBaseMeta(t *testing.T) {
 	bs := NewBlockStore(dbm.NewMemDB())
 
 	for h := int64(1); h <= 10; h++ {
-		block := state.MakeBlock(h, test.MakeNTxs(h, 10), new(types.Commit), nil, state.Validators.GetProposer().Address)
+		block := state.MakeBlock(h, test_2.MakeNTxs(h, 10), new(types.Commit), nil, state.Validators.GetProposer().Address)
 		partSet, err := block.MakePartSet(types.BlockPartSizeBytes)
 		require.NoError(t, err)
 		seenCommit := makeTestExtCommit(h, cmttime.Now())
@@ -498,7 +498,7 @@ func TestLoadBaseMeta(t *testing.T) {
 }
 
 func TestLoadBlockPart(t *testing.T) {
-	config := test.ResetTestRoot("blockchain_reactor_test")
+	config := test_2.ResetTestRoot("blockchain_reactor_test")
 
 	bs, db := newInMemoryBlockStore()
 	const height, index = 10, 1
@@ -567,12 +567,12 @@ func (o *prunerObserver) PrunerPrunedBlocks(info *sm.BlocksPrunedInfo) {
 	o.prunedBlocksResInfoCh <- info
 }
 
-// This test tests the pruning service and its pruning of the blockstore
+// This test-2 tests the pruning service and its pruning of the blockstore
 // The state store cannot be pruned here because we do not have proper
-// state stored. The test is expected to pass even though the log should
+// state stored. The test-2 is expected to pass even though the log should
 // inform about the inability to prune the state store.
 func TestPruningService(t *testing.T) {
-	config := test.ResetTestRoot("blockchain_reactor_pruning_test")
+	config := test_2.ResetTestRoot("blockchain_reactor_pruning_test")
 	defer os.RemoveAll(config.RootDir)
 	state, bs, txIndexer, blockIndexer, cleanup, stateStore := makeStateAndBlockStoreAndIndexers()
 	defer cleanup()
@@ -601,9 +601,9 @@ func TestPruningService(t *testing.T) {
 	err = pruner.SetApplicationBlockRetainHeight(0)
 	require.NoError(t, err)
 
-	// make more than 1000 blocks, to test batch deletions
+	// make more than 1000 blocks, to test-2 batch deletions
 	for h := int64(1); h <= 1500; h++ {
-		block := state.MakeBlock(h, test.MakeNTxs(h, 10), new(types.Commit), nil, state.Validators.GetProposer().Address)
+		block := state.MakeBlock(h, test_2.MakeNTxs(h, 10), new(types.Commit), nil, state.Validators.GetProposer().Address)
 		partSet, err := block.MakePartSet(types.BlockPartSizeBytes)
 		require.NoError(t, err)
 		seenCommit := makeTestExtCommit(h, cmttime.Now())
@@ -742,7 +742,7 @@ func TestPruningService(t *testing.T) {
 }
 
 func TestPruneBlocks(t *testing.T) {
-	config := test.ResetTestRoot("blockchain_reactor_test")
+	config := test_2.ResetTestRoot("blockchain_reactor_test")
 	defer os.RemoveAll(config.RootDir)
 	stateStore := sm.NewStore(dbm.NewMemDB(), sm.StoreOptions{
 		DiscardABCIResponses: false,
@@ -762,9 +762,9 @@ func TestPruneBlocks(t *testing.T) {
 	_, _, err = bs.PruneBlocks(0, state)
 	require.Error(t, err)
 
-	// make more than 1000 blocks, to test batch deletions
+	// make more than 1000 blocks, to test-2 batch deletions
 	for h := int64(1); h <= 1500; h++ {
-		block := state.MakeBlock(h, test.MakeNTxs(h, 10), new(types.Commit), nil, state.Validators.GetProposer().Address)
+		block := state.MakeBlock(h, test_2.MakeNTxs(h, 10), new(types.Commit), nil, state.Validators.GetProposer().Address)
 		partSet, err := block.MakePartSet(types.BlockPartSizeBytes)
 		require.NoError(t, err)
 		seenCommit := makeTestExtCommit(h, cmttime.Now())
@@ -898,7 +898,7 @@ func TestLoadBlockMeta(t *testing.T) {
 }
 
 func TestLoadBlockMetaByHash(t *testing.T) {
-	config := test.ResetTestRoot("blockchain_reactor_test")
+	config := test_2.ResetTestRoot("blockchain_reactor_test")
 	defer os.RemoveAll(config.RootDir)
 	stateStore := sm.NewStore(dbm.NewMemDB(), sm.StoreOptions{
 		DiscardABCIResponses: false,
@@ -907,7 +907,7 @@ func TestLoadBlockMetaByHash(t *testing.T) {
 	require.NoError(t, err)
 	bs := NewBlockStore(dbm.NewMemDB())
 
-	b1 := state.MakeBlock(state.LastBlockHeight+1, test.MakeNTxs(state.LastBlockHeight+1, 10), new(types.Commit), nil, state.Validators.GetProposer().Address)
+	b1 := state.MakeBlock(state.LastBlockHeight+1, test_2.MakeNTxs(state.LastBlockHeight+1, 10), new(types.Commit), nil, state.Validators.GetProposer().Address)
 	partSet, err := b1.MakePartSet(types.BlockPartSizeBytes)
 	require.NoError(t, err)
 	seenCommit := makeTestExtCommit(1, cmttime.Now())

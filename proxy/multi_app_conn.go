@@ -4,9 +4,9 @@ import (
 	"fmt"
 
 	abcicli "github.com/KYVENetwork/cometbft/v100/abci/client"
-	cmtos "github.com/KYVENetwork/cometbft/v100/internal/os"
 	cmtlog "github.com/KYVENetwork/cometbft/v100/libs/log"
 	"github.com/KYVENetwork/cometbft/v100/libs/service"
+	cmtos "github.com/KYVENetwork/cometbft/v100/os"
 )
 
 const (

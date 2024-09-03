@@ -7,7 +7,7 @@ import (
 
 	abci "github.com/KYVENetwork/cometbft/v100/abci/types"
 	cmtproto "github.com/KYVENetwork/cometbft/v100/api/cometbft/types/v1"
-	"github.com/KYVENetwork/cometbft/v100/internal/fail"
+	"github.com/KYVENetwork/cometbft/v100/fail"
 	"github.com/KYVENetwork/cometbft/v100/libs/log"
 	"github.com/KYVENetwork/cometbft/v100/mempool"
 	"github.com/KYVENetwork/cometbft/v100/proxy"

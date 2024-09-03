@@ -20,16 +20,16 @@ jobs:
       - uses: actions/checkout@v4
 
       - name: Build
-        working-directory: test/e2e
+        working-directory: test-2/e2e
         # Run make jobs in parallel, since we can't run steps in parallel.
         run: make -j2 docker runner
 
       - name: Run testnet
-        working-directory: test/e2e
+        working-directory: test-2/e2e
         run: ./run-multiple.sh networks/long.toml
 
   e2e-long-fail:
-    needs: e2e-long-test
+    needs: e2e-long-test-2
     if: ${{ failure() }}
     runs-on: ubuntu-latest
     steps:

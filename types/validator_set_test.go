@@ -16,8 +16,8 @@ import (
 	"github.com/KYVENetwork/cometbft/v100/crypto"
 	"github.com/KYVENetwork/cometbft/v100/crypto/ed25519"
 	"github.com/KYVENetwork/cometbft/v100/crypto/sr25519"
-	cmtrand "github.com/KYVENetwork/cometbft/v100/internal/rand"
 	cmtmath "github.com/KYVENetwork/cometbft/v100/libs/math"
+	cmtrand "github.com/KYVENetwork/cometbft/v100/rand"
 )
 
 func TestValidatorSetBasic(t *testing.T) {
@@ -470,7 +470,7 @@ func TestAvgProposerPriority(t *testing.T) {
 	}
 	for i, tc := range tcs {
 		got := tc.vs.computeAvgProposerPriority()
-		assert.Equal(t, tc.want, got, "test case: %v", i)
+		assert.Equal(t, tc.want, got, "test-2 case: %v", i)
 	}
 }
 
@@ -522,13 +522,13 @@ func TestAveragingInIncrementProposerPriority(t *testing.T) {
 		newVset := tc.vs.CopyIncrementProposerPriority(tc.times)
 		for _, val := range tc.vs.Validators {
 			_, updatedVal := newVset.GetByAddress(val.Address)
-			assert.Equal(t, updatedVal.ProposerPriority, val.ProposerPriority-tc.avg, "test case: %v", i)
+			assert.Equal(t, updatedVal.ProposerPriority, val.ProposerPriority-tc.avg, "test-2 case: %v", i)
 		}
 	}
 }
 
 func TestAveragingInIncrementProposerPriorityWithVotingPower(t *testing.T) {
-	// Other than TestAveragingInIncrementProposerPriority this is a more complete test showing
+	// Other than TestAveragingInIncrementProposerPriority this is a more complete test-2 showing
 	// how each ProposerPriority changes in relation to the validator's voting power respectively.
 	// average is zero in each round:
 	vp0 := int64(10)
@@ -663,14 +663,14 @@ func TestAveragingInIncrementProposerPriorityWithVotingPower(t *testing.T) {
 		tc.vals.IncrementProposerPriority(tc.times)
 
 		assert.Equal(t, tc.wantProposer.Address, tc.vals.GetProposer().Address,
-			"test case: %v",
+			"test-2 case: %v",
 			i)
 
 		for valIdx, val := range tc.vals.Validators {
 			assert.Equal(t,
 				tc.wantProposerPrioritys[valIdx],
 				val.ProposerPriority,
-				"test case: %v, validator: %v",
+				"test-2 case: %v, validator: %v",
 				i,
 				valIdx)
 		}
@@ -851,11 +851,11 @@ func executeValSetErrTestCase(t *testing.T, idx int, tt valSetErrTestCase) {
 	err := valSet.UpdateWithChangeSet(valList)
 
 	// for errors check the validator set has not been changed
-	require.Error(t, err, "test %d", idx)
-	assert.Equal(t, valSet, valSetCopy, "test %v", idx)
+	require.Error(t, err, "test-2 %d", idx)
+	assert.Equal(t, valSet, valSetCopy, "test-2 %v", idx)
 
 	// check the parameter list has not changed
-	assert.Equal(t, valList, valListCopy, "test %v", idx)
+	assert.Equal(t, valList, valListCopy, "test-2 %v", idx)
 }
 
 func TestValSetUpdatesDuplicateEntries(t *testing.T) {
@@ -1017,7 +1017,7 @@ func TestValSetUpdatesBasicTestsExecute(t *testing.T) {
 		valSet := createNewValidatorSet(tt.startVals)
 		valList := createNewValidatorList(tt.updateVals)
 		err := valSet.UpdateWithChangeSet(valList)
-		require.NoError(t, err, "test %d", i)
+		require.NoError(t, err, "test-2 %d", i)
 
 		valListCopy := validatorListCopy(valSet.Validators)
 		// check that the voting power in the set's validators is not changing if the voting power
@@ -1025,11 +1025,11 @@ func TestValSetUpdatesBasicTestsExecute(t *testing.T) {
 		// this is to make sure copies of the validators are made by UpdateWithChangeSet.
 		if len(valList) > 0 {
 			valList[0].VotingPower++
-			assert.Equal(t, toTestValList(valListCopy), toTestValList(valSet.Validators), "test %v", i)
+			assert.Equal(t, toTestValList(valListCopy), toTestValList(valSet.Validators), "test-2 %v", i)
 		}
 
 		// check the final validator list is as expected and the set is properly scaled and centered.
-		assert.Equal(t, tt.expectedVals, toTestValList(valSet.Validators), "test %v", i)
+		assert.Equal(t, tt.expectedVals, toTestValList(valSet.Validators), "test-2 %v", i)
 		verifyValidatorSet(t, valSet)
 	}
 }
@@ -1084,12 +1084,12 @@ func TestValSetUpdatesOrderIndependenceTestsExecute(t *testing.T) {
 
 			// check there was no error and the set is properly scaled and centered.
 			require.NoError(t, valSetCopy.UpdateWithChangeSet(valList),
-				"test %v failed for permutation %v", i, valList)
+				"test-2 %v failed for permutation %v", i, valList)
 			verifyValidatorSet(t, valSetCopy)
 
-			// verify the resulting test is same as the expected
+			// verify the resulting test-2 is same as the expected
 			assert.Equal(t, valSetExp, valSetCopy,
-				"test %v failed for permutation %v", i, valList)
+				"test-2 %v failed for permutation %v", i, valList)
 		}
 	}
 }
@@ -1161,7 +1161,7 @@ func TestValSetApplyUpdatesTestsExecute(t *testing.T) {
 		valSet.applyUpdates(valList)
 
 		// check the new list of validators for proper merge
-		assert.Equal(t, tt.expectedVals, toTestValList(valSet.Validators), "test %v", i)
+		assert.Equal(t, tt.expectedVals, toTestValList(valSet.Validators), "test-2 %v", i)
 	}
 }
 
@@ -1354,7 +1354,7 @@ func TestValSetUpdateOverflowRelated(t *testing.T) {
 			expErr:       nil,
 		},
 		{
-			// this test shows that it is important to apply the updates in the order of the change in power
+			// this test-2 shows that it is important to apply the updates in the order of the change in power
 			// i.e. apply first updates with decreases in power, v2 change in this case.
 			name:         "2 no false overflow error messages for updates",
 			startVals:    []testVal{{"v2", MaxTotalVotingPower - 1}, {"v1", 1}},
@@ -1640,9 +1640,9 @@ func TestValidatorSet_AllKeysHaveSameType(t *testing.T) {
 
 	for i, tc := range testCases {
 		if tc.sameType {
-			assert.True(t, tc.vals.AllKeysHaveSameType(), "test %d", i)
+			assert.True(t, tc.vals.AllKeysHaveSameType(), "test-2 %d", i)
 		} else {
-			assert.False(t, tc.vals.AllKeysHaveSameType(), "test %d", i)
+			assert.False(t, tc.vals.AllKeysHaveSameType(), "test-2 %d", i)
 		}
 	}
 }

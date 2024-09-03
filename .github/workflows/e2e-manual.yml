@@ -22,22 +22,22 @@ jobs:
       - uses: actions/checkout@v4
 
       - name: Build
-        working-directory: test/e2e
+        working-directory: test-2/e2e
         # Run make jobs in parallel, since we can't run steps in parallel.
         run: make -j2 docker generator runner tests
 
       - name: Generate testnets
         if: matrix.group != 5
-        working-directory: test/e2e
+        working-directory: test-2/e2e
         # When changing -g, also change the matrix groups above
         run: ./build/generator -g 5 -d networks/nightly/ -p
 
       - name: Run p2p testnets (${{ matrix.group }})
         if: matrix.group != 5
-        working-directory: test/e2e
+        working-directory: test-2/e2e
         run: ./run-multiple.sh networks/nightly/*-group${{ matrix.group }}-*.toml
 
       - name: Run p2p testnets (regression)
         if: matrix.group == 5
-        working-directory: test/e2e
+        working-directory: test-2/e2e
         run: ./run-multiple.sh networks_regressions/*.toml

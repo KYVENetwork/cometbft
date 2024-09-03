@@ -9,7 +9,7 @@ import (
 	"github.com/stretchr/testify/require"
 
 	"github.com/KYVENetwork/cometbft/v100/config"
-	"github.com/KYVENetwork/cometbft/v100/internal/test"
+	"github.com/KYVENetwork/cometbft/v100/test-2"
 )
 
 func ensureFiles(t *testing.T, rootDir string, files ...string) {
@@ -24,8 +24,8 @@ func ensureFiles(t *testing.T, rootDir string, files ...string) {
 func TestEnsureRoot(t *testing.T) {
 	require := require.New(t)
 
-	// setup temp dir for test
-	tmpDir, err := os.MkdirTemp("", "config-test")
+	// setup temp dir for test-2
+	tmpDir, err := os.MkdirTemp("", "config-test-2")
 	require.NoError(err)
 	defer os.RemoveAll(tmpDir)
 
@@ -45,7 +45,7 @@ func TestEnsureTestRoot(t *testing.T) {
 	require := require.New(t)
 
 	// create root dir
-	cfg := test.ResetTestRoot("ensureTestRoot")
+	cfg := test_2.ResetTestRoot("ensureTestRoot")
 	defer os.RemoveAll(cfg.RootDir)
 	rootDir := cfg.RootDir
 

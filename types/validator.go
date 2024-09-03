@@ -9,7 +9,7 @@ import (
 	cmtproto "github.com/KYVENetwork/cometbft/v100/api/cometbft/types/v1"
 	"github.com/KYVENetwork/cometbft/v100/crypto"
 	ce "github.com/KYVENetwork/cometbft/v100/crypto/encoding"
-	cmtrand "github.com/KYVENetwork/cometbft/v100/internal/rand"
+	cmtrand "github.com/KYVENetwork/cometbft/v100/rand"
 )
 
 // Volatile state for each Validator

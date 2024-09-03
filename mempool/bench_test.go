@@ -10,10 +10,10 @@ import (
 
 	"github.com/KYVENetwork/cometbft/v100/abci/example/kvstore"
 	abciserver "github.com/KYVENetwork/cometbft/v100/abci/server"
-	cmtrand "github.com/KYVENetwork/cometbft/v100/internal/rand"
-	"github.com/KYVENetwork/cometbft/v100/internal/test"
 	"github.com/KYVENetwork/cometbft/v100/libs/log"
 	"github.com/KYVENetwork/cometbft/v100/proxy"
+	cmtrand "github.com/KYVENetwork/cometbft/v100/rand"
+	"github.com/KYVENetwork/cometbft/v100/test-2"
 )
 
 func BenchmarkReap(b *testing.B) {
@@ -120,7 +120,7 @@ func BenchmarkUpdateRemoteClient(b *testing.B) {
 			b.Error(err)
 		}
 	})
-	cfg := test.ResetTestRoot("mempool_test")
+	cfg := test_2.ResetTestRoot("mempool_test")
 	mp, cleanup := newMempoolWithAppAndConfig(proxy.NewRemoteClientCreator(sockPath, "socket", true), cfg)
 	defer cleanup()
 

@@ -16,12 +16,12 @@ import (
 
 	tmp2p "github.com/KYVENetwork/cometbft/v100/api/cometbft/p2p/v1"
 	"github.com/KYVENetwork/cometbft/v100/config"
-	flow "github.com/KYVENetwork/cometbft/v100/internal/flowrate"
-	"github.com/KYVENetwork/cometbft/v100/internal/timer"
+	flow "github.com/KYVENetwork/cometbft/v100/flowrate"
 	"github.com/KYVENetwork/cometbft/v100/libs/log"
 	"github.com/KYVENetwork/cometbft/v100/libs/protoio"
 	"github.com/KYVENetwork/cometbft/v100/libs/service"
 	cmtsync "github.com/KYVENetwork/cometbft/v100/libs/sync"
+	"github.com/KYVENetwork/cometbft/v100/timer"
 )
 
 const (

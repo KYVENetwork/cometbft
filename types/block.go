@@ -12,10 +12,10 @@ import (
 
 	cmtproto "github.com/KYVENetwork/cometbft/v100/api/cometbft/types/v1"
 	cmtversion "github.com/KYVENetwork/cometbft/v100/api/cometbft/version/v1"
+	"github.com/KYVENetwork/cometbft/v100/bits"
 	"github.com/KYVENetwork/cometbft/v100/crypto"
 	"github.com/KYVENetwork/cometbft/v100/crypto/merkle"
 	"github.com/KYVENetwork/cometbft/v100/crypto/tmhash"
-	"github.com/KYVENetwork/cometbft/v100/internal/bits"
 	cmtbytes "github.com/KYVENetwork/cometbft/v100/libs/bytes"
 	cmtmath "github.com/KYVENetwork/cometbft/v100/libs/math"
 	cmtsync "github.com/KYVENetwork/cometbft/v100/libs/sync"
