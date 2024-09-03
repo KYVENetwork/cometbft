@@ -10,14 +10,14 @@ import (
 	"github.com/stretchr/testify/mock"
 	"github.com/stretchr/testify/require"
 
-	"github.com/cometbft/cometbft/abci/example/kvstore"
-	abci "github.com/cometbft/cometbft/abci/types"
-	abcimocks "github.com/cometbft/cometbft/abci/types/mocks"
-	"github.com/cometbft/cometbft/internal/test"
-	cmtpubsub "github.com/cometbft/cometbft/libs/pubsub"
-	"github.com/cometbft/cometbft/types"
-	cmttime "github.com/cometbft/cometbft/types/time"
-	cmttimemocks "github.com/cometbft/cometbft/types/time/mocks"
+	"github.com/KYVENetwork/cometbft/v100/abci/example/kvstore"
+	abci "github.com/KYVENetwork/cometbft/v100/abci/types"
+	abcimocks "github.com/KYVENetwork/cometbft/v100/abci/types/mocks"
+	"github.com/KYVENetwork/cometbft/v100/internal/test"
+	cmtpubsub "github.com/KYVENetwork/cometbft/v100/libs/pubsub"
+	"github.com/KYVENetwork/cometbft/v100/types"
+	cmttime "github.com/KYVENetwork/cometbft/v100/types/time"
+	cmttimemocks "github.com/KYVENetwork/cometbft/v100/types/time/mocks"
 )
 
 const (

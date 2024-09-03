@@ -8,17 +8,17 @@ import (
 	"regexp"
 	"time"
 
-	"github.com/cometbft/cometbft/crypto/merkle"
-	cmtbytes "github.com/cometbft/cometbft/libs/bytes"
-	cmtmath "github.com/cometbft/cometbft/libs/math"
-	"github.com/cometbft/cometbft/libs/service"
-	rpcclient "github.com/cometbft/cometbft/rpc/client"
-	ctypes "github.com/cometbft/cometbft/rpc/core/types"
-	rpctypes "github.com/cometbft/cometbft/rpc/jsonrpc/types"
-	"github.com/cometbft/cometbft/state"
-	"github.com/cometbft/cometbft/types"
-	cmterrors "github.com/cometbft/cometbft/types/errors"
-	cmttime "github.com/cometbft/cometbft/types/time"
+	"github.com/KYVENetwork/cometbft/v100/crypto/merkle"
+	cmtbytes "github.com/KYVENetwork/cometbft/v100/libs/bytes"
+	cmtmath "github.com/KYVENetwork/cometbft/v100/libs/math"
+	"github.com/KYVENetwork/cometbft/v100/libs/service"
+	rpcclient "github.com/KYVENetwork/cometbft/v100/rpc/client"
+	ctypes "github.com/KYVENetwork/cometbft/v100/rpc/core/types"
+	rpctypes "github.com/KYVENetwork/cometbft/v100/rpc/jsonrpc/types"
+	"github.com/KYVENetwork/cometbft/v100/state"
+	"github.com/KYVENetwork/cometbft/v100/types"
+	cmterrors "github.com/KYVENetwork/cometbft/v100/types/errors"
+	cmttime "github.com/KYVENetwork/cometbft/v100/types/time"
 )
 
 var errNegOrZeroHeight = errors.New("negative or zero height")

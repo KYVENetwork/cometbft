@@ -1,0 +1,13 @@
+syntax = "proto3";
+package tendermint.v100.types;
+
+import "gogoproto/gogo.proto";
+import "tendermint/v100/types/types.proto";
+import "tendermint/v100/types/evidence.proto";
+
+message Block {
+  Header                        header      = 1 [(gogoproto.nullable) = false];
+  Data                          data        = 2 [(gogoproto.nullable) = false];
+  tendermint.v100.types.EvidenceList evidence    = 3 [(gogoproto.nullable) = false];
+  Commit                        last_commit = 4;
+}

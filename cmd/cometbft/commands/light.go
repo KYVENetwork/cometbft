@@ -13,15 +13,15 @@ import (
 
 	"github.com/spf13/cobra"
 
+	cmtos "github.com/KYVENetwork/cometbft/v100/internal/os"
+	"github.com/KYVENetwork/cometbft/v100/libs/log"
+	cmtmath "github.com/KYVENetwork/cometbft/v100/libs/math"
+	"github.com/KYVENetwork/cometbft/v100/light"
+	lproxy "github.com/KYVENetwork/cometbft/v100/light/proxy"
+	lrpc "github.com/KYVENetwork/cometbft/v100/light/rpc"
+	dbs "github.com/KYVENetwork/cometbft/v100/light/store/db"
+	rpcserver "github.com/KYVENetwork/cometbft/v100/rpc/jsonrpc/server"
 	dbm "github.com/cometbft/cometbft-db"
-	cmtos "github.com/cometbft/cometbft/internal/os"
-	"github.com/cometbft/cometbft/libs/log"
-	cmtmath "github.com/cometbft/cometbft/libs/math"
-	"github.com/cometbft/cometbft/light"
-	lproxy "github.com/cometbft/cometbft/light/proxy"
-	lrpc "github.com/cometbft/cometbft/light/rpc"
-	dbs "github.com/cometbft/cometbft/light/store/db"
-	rpcserver "github.com/cometbft/cometbft/rpc/jsonrpc/server"
 )
 
 // LightCmd represents the base command when called without any subcommands.

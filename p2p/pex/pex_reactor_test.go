@@ -12,12 +12,12 @@ import (
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 
-	tmp2p "github.com/cometbft/cometbft/api/cometbft/p2p/v1"
-	"github.com/cometbft/cometbft/config"
-	"github.com/cometbft/cometbft/libs/log"
-	"github.com/cometbft/cometbft/p2p"
-	"github.com/cometbft/cometbft/p2p/mock"
-	"github.com/cometbft/cometbft/types"
+	tmp2p "github.com/KYVENetwork/cometbft/v100/api/cometbft/p2p/v1"
+	"github.com/KYVENetwork/cometbft/v100/config"
+	"github.com/KYVENetwork/cometbft/v100/libs/log"
+	"github.com/KYVENetwork/cometbft/v100/p2p"
+	"github.com/KYVENetwork/cometbft/v100/p2p/mock"
+	"github.com/KYVENetwork/cometbft/v100/types"
 )
 
 var cfg *config.P2PConfig

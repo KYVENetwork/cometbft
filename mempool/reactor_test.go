@@ -12,14 +12,14 @@ import (
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 
-	"github.com/cometbft/cometbft/abci/example/kvstore"
-	abci "github.com/cometbft/cometbft/abci/types"
-	memproto "github.com/cometbft/cometbft/api/cometbft/mempool/v1"
-	cfg "github.com/cometbft/cometbft/config"
-	"github.com/cometbft/cometbft/libs/log"
-	"github.com/cometbft/cometbft/p2p"
-	"github.com/cometbft/cometbft/proxy"
-	"github.com/cometbft/cometbft/types"
+	"github.com/KYVENetwork/cometbft/v100/abci/example/kvstore"
+	abci "github.com/KYVENetwork/cometbft/v100/abci/types"
+	memproto "github.com/KYVENetwork/cometbft/v100/api/cometbft/mempool/v1"
+	cfg "github.com/KYVENetwork/cometbft/v100/config"
+	"github.com/KYVENetwork/cometbft/v100/libs/log"
+	"github.com/KYVENetwork/cometbft/v100/p2p"
+	"github.com/KYVENetwork/cometbft/v100/proxy"
+	"github.com/KYVENetwork/cometbft/v100/types"
 )
 
 const (

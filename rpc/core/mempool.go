@@ -6,10 +6,10 @@ import (
 	"fmt"
 	"time"
 
-	abci "github.com/cometbft/cometbft/abci/types"
-	ctypes "github.com/cometbft/cometbft/rpc/core/types"
-	rpctypes "github.com/cometbft/cometbft/rpc/jsonrpc/types"
-	"github.com/cometbft/cometbft/types"
+	abci "github.com/KYVENetwork/cometbft/v100/abci/types"
+	ctypes "github.com/KYVENetwork/cometbft/v100/rpc/core/types"
+	rpctypes "github.com/KYVENetwork/cometbft/v100/rpc/jsonrpc/types"
+	"github.com/KYVENetwork/cometbft/v100/types"
 )
 
 var ErrEndpointClosedCatchingUp = errors.New("endpoint is closed while node is catching up")

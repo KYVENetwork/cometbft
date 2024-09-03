@@ -13,7 +13,7 @@ import (
 
 	"github.com/stretchr/testify/require"
 
-	metricsgen "github.com/cometbft/cometbft/scripts/metricsgen" //nolint:revive // this only works with metricsgen in front
+	metricsgen "github.com/KYVENetwork/cometbft/v100/scripts/metricsgen" //nolint:revive // this only works with metricsgen in front
 )
 
 const testDataDir = "./testdata"

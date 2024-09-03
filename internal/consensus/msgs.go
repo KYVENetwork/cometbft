@@ -6,14 +6,14 @@ import (
 
 	"github.com/cosmos/gogoproto/proto"
 
-	cmtcons "github.com/cometbft/cometbft/api/cometbft/consensus/v1"
-	cmtproto "github.com/cometbft/cometbft/api/cometbft/types/v1"
-	"github.com/cometbft/cometbft/internal/bits"
-	cstypes "github.com/cometbft/cometbft/internal/consensus/types"
-	cmtmath "github.com/cometbft/cometbft/libs/math"
-	"github.com/cometbft/cometbft/p2p"
-	"github.com/cometbft/cometbft/types"
-	cmterrors "github.com/cometbft/cometbft/types/errors"
+	cmtcons "github.com/KYVENetwork/cometbft/v100/api/cometbft/consensus/v1"
+	cmtproto "github.com/KYVENetwork/cometbft/v100/api/cometbft/types/v1"
+	"github.com/KYVENetwork/cometbft/v100/internal/bits"
+	cstypes "github.com/KYVENetwork/cometbft/v100/internal/consensus/types"
+	cmtmath "github.com/KYVENetwork/cometbft/v100/libs/math"
+	"github.com/KYVENetwork/cometbft/v100/p2p"
+	"github.com/KYVENetwork/cometbft/v100/types"
+	cmterrors "github.com/KYVENetwork/cometbft/v100/types/errors"
 )
 
 // TODO: This needs to be removed, but WALToProto depends on this.

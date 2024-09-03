@@ -4,12 +4,12 @@ import (
 	"encoding/binary"
 	"fmt"
 
+	cmtproto "github.com/KYVENetwork/cometbft/v100/api/cometbft/types/v1"
+	cmtsync "github.com/KYVENetwork/cometbft/v100/libs/sync"
+	"github.com/KYVENetwork/cometbft/v100/light/store"
+	"github.com/KYVENetwork/cometbft/v100/types"
+	cmterrors "github.com/KYVENetwork/cometbft/v100/types/errors"
 	dbm "github.com/cometbft/cometbft-db"
-	cmtproto "github.com/cometbft/cometbft/api/cometbft/types/v1"
-	cmtsync "github.com/cometbft/cometbft/libs/sync"
-	"github.com/cometbft/cometbft/light/store"
-	"github.com/cometbft/cometbft/types"
-	cmterrors "github.com/cometbft/cometbft/types/errors"
 )
 
 type dbs struct {

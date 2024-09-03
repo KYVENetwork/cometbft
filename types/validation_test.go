@@ -7,8 +7,8 @@ import (
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 
-	cmtmath "github.com/cometbft/cometbft/libs/math"
-	cmttime "github.com/cometbft/cometbft/types/time"
+	cmtmath "github.com/KYVENetwork/cometbft/v100/libs/math"
+	cmttime "github.com/KYVENetwork/cometbft/v100/types/time"
 )
 
 // Check VerifyCommit, VerifyCommitLight and VerifyCommitLightTrusting basic

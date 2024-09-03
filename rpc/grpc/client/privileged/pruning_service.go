@@ -5,7 +5,7 @@ import (
 
 	"github.com/cosmos/gogoproto/grpc"
 
-	pbsvc "github.com/cometbft/cometbft/api/cometbft/services/pruning/v1"
+	pbsvc "github.com/KYVENetwork/cometbft/v100/api/cometbft/services/pruning/v1"
 )
 
 // RetainHeights provides information on which block height limits have been

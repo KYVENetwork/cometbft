@@ -6,11 +6,11 @@ import (
 
 	"github.com/spf13/cobra"
 
+	cfg "github.com/KYVENetwork/cometbft/v100/config"
+	"github.com/KYVENetwork/cometbft/v100/internal/os"
+	"github.com/KYVENetwork/cometbft/v100/state"
+	"github.com/KYVENetwork/cometbft/v100/store"
 	dbm "github.com/cometbft/cometbft-db"
-	cfg "github.com/cometbft/cometbft/config"
-	"github.com/cometbft/cometbft/internal/os"
-	"github.com/cometbft/cometbft/state"
-	"github.com/cometbft/cometbft/store"
 )
 
 var removeBlock = false

@@ -3,13 +3,13 @@ package consensus
 import (
 	"context"
 
-	abcicli "github.com/cometbft/cometbft/abci/client"
-	abci "github.com/cometbft/cometbft/abci/types"
-	"github.com/cometbft/cometbft/internal/clist"
-	mempl "github.com/cometbft/cometbft/mempool"
-	"github.com/cometbft/cometbft/p2p"
-	"github.com/cometbft/cometbft/proxy"
-	"github.com/cometbft/cometbft/types"
+	abcicli "github.com/KYVENetwork/cometbft/v100/abci/client"
+	abci "github.com/KYVENetwork/cometbft/v100/abci/types"
+	"github.com/KYVENetwork/cometbft/v100/internal/clist"
+	mempl "github.com/KYVENetwork/cometbft/v100/mempool"
+	"github.com/KYVENetwork/cometbft/v100/p2p"
+	"github.com/KYVENetwork/cometbft/v100/proxy"
+	"github.com/KYVENetwork/cometbft/v100/types"
 )
 
 // -----------------------------------------------------------------------------

@@ -10,14 +10,14 @@ import (
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 
-	cmtcons "github.com/cometbft/cometbft/api/cometbft/consensus/v1"
-	cmtproto "github.com/cometbft/cometbft/api/cometbft/types/v1"
-	"github.com/cometbft/cometbft/crypto/merkle"
-	"github.com/cometbft/cometbft/internal/bits"
-	cmtrand "github.com/cometbft/cometbft/internal/rand"
-	"github.com/cometbft/cometbft/p2p"
-	"github.com/cometbft/cometbft/types"
-	cmttime "github.com/cometbft/cometbft/types/time"
+	cmtcons "github.com/KYVENetwork/cometbft/v100/api/cometbft/consensus/v1"
+	cmtproto "github.com/KYVENetwork/cometbft/v100/api/cometbft/types/v1"
+	"github.com/KYVENetwork/cometbft/v100/crypto/merkle"
+	"github.com/KYVENetwork/cometbft/v100/internal/bits"
+	cmtrand "github.com/KYVENetwork/cometbft/v100/internal/rand"
+	"github.com/KYVENetwork/cometbft/v100/p2p"
+	"github.com/KYVENetwork/cometbft/v100/types"
+	cmttime "github.com/KYVENetwork/cometbft/v100/types/time"
 )
 
 func TestMsgToProto(t *testing.T) {

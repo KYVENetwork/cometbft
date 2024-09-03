@@ -9,8 +9,8 @@ import (
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 
-	"github.com/cometbft/cometbft/crypto/ed25519"
-	cmtrand "github.com/cometbft/cometbft/internal/rand"
+	"github.com/KYVENetwork/cometbft/v100/crypto/ed25519"
+	cmtrand "github.com/KYVENetwork/cometbft/v100/internal/rand"
 )
 
 func TestLoadOrGenNodeKey(t *testing.T) {

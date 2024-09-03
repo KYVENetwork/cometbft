@@ -7,12 +7,12 @@ import (
 	"sort"
 	"time"
 
-	flow "github.com/cometbft/cometbft/internal/flowrate"
-	"github.com/cometbft/cometbft/libs/log"
-	"github.com/cometbft/cometbft/libs/service"
-	cmtsync "github.com/cometbft/cometbft/libs/sync"
-	"github.com/cometbft/cometbft/p2p"
-	"github.com/cometbft/cometbft/types"
+	flow "github.com/KYVENetwork/cometbft/v100/internal/flowrate"
+	"github.com/KYVENetwork/cometbft/v100/libs/log"
+	"github.com/KYVENetwork/cometbft/v100/libs/service"
+	cmtsync "github.com/KYVENetwork/cometbft/v100/libs/sync"
+	"github.com/KYVENetwork/cometbft/v100/p2p"
+	"github.com/KYVENetwork/cometbft/v100/types"
 )
 
 /*

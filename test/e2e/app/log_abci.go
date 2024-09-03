@@ -7,7 +7,7 @@ import (
 
 	"github.com/cosmos/gogoproto/proto"
 
-	abci "github.com/cometbft/cometbft/abci/types"
+	abci "github.com/KYVENetwork/cometbft/v100/abci/types"
 )
 
 const AbciReq = "abci-req"

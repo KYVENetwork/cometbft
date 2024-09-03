@@ -1,9 +1,9 @@
 package state
 
 import (
+	abci "github.com/KYVENetwork/cometbft/v100/abci/types"
+	"github.com/KYVENetwork/cometbft/v100/types"
 	dbm "github.com/cometbft/cometbft-db"
-	abci "github.com/cometbft/cometbft/abci/types"
-	"github.com/cometbft/cometbft/types"
 )
 
 //

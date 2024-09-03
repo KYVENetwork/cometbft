@@ -21,13 +21,13 @@ import (
 	"golang.org/x/crypto/hkdf"
 	"golang.org/x/crypto/nacl/box"
 
-	tmp2p "github.com/cometbft/cometbft/api/cometbft/p2p/v1"
-	"github.com/cometbft/cometbft/crypto"
-	"github.com/cometbft/cometbft/crypto/ed25519"
-	cryptoenc "github.com/cometbft/cometbft/crypto/encoding"
-	"github.com/cometbft/cometbft/internal/async"
-	"github.com/cometbft/cometbft/libs/protoio"
-	cmtsync "github.com/cometbft/cometbft/libs/sync"
+	tmp2p "github.com/KYVENetwork/cometbft/v100/api/cometbft/p2p/v1"
+	"github.com/KYVENetwork/cometbft/v100/crypto"
+	"github.com/KYVENetwork/cometbft/v100/crypto/ed25519"
+	cryptoenc "github.com/KYVENetwork/cometbft/v100/crypto/encoding"
+	"github.com/KYVENetwork/cometbft/v100/internal/async"
+	"github.com/KYVENetwork/cometbft/v100/libs/protoio"
+	cmtsync "github.com/KYVENetwork/cometbft/v100/libs/sync"
 )
 
 // 4 + 1024 == 1028 total frame size.
@@ -53,7 +53,7 @@ var (
 
 // SecretConnection implements net.Conn.
 // It is an implementation of the STS protocol.
-// See https://github.com/cometbft/cometbft/blob/0.1/docs/sts-final.pdf for
+// See https://github.com/KYVENetwork/cometbft/v100/blob/0.1/docs/sts-final.pdf for
 // details on the protocol.
 //
 // Consumers of the SecretConnection are responsible for authenticating

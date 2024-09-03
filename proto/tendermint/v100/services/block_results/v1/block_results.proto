@@ -1,0 +1,18 @@
+syntax = "proto3";
+package tendermint.v100.services.block_results.v1;
+
+import "tendermint/v100/abci/types.proto";
+import "tendermint/v100/types/params.proto";
+
+message GetBlockResultsRequest {
+  int64 height = 1;
+}
+
+message GetBlockResultsResponse {
+  int64    height                                                  = 1;
+  repeated tendermint.v100.abci.ExecTxResult txs_results                = 2;
+  repeated tendermint.v100.abci.Event finalize_block_events             = 3;
+  repeated tendermint.v100.abci.ValidatorUpdate validator_updates       = 4;
+  tendermint.v100.types.ConsensusParams         consensus_param_updates = 5;
+  bytes                                    app_hash                = 6;
+}

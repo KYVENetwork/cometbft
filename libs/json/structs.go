@@ -6,7 +6,7 @@ import (
 	"strings"
 	"unicode"
 
-	cmtsync "github.com/cometbft/cometbft/libs/sync"
+	cmtsync "github.com/KYVENetwork/cometbft/v100/libs/sync"
 )
 
 // cache caches struct info.

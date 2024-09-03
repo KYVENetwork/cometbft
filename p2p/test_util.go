@@ -5,13 +5,13 @@ import (
 	"net"
 	"time"
 
-	"github.com/cometbft/cometbft/config"
-	"github.com/cometbft/cometbft/crypto"
-	"github.com/cometbft/cometbft/crypto/ed25519"
-	cmtnet "github.com/cometbft/cometbft/internal/net"
-	cmtrand "github.com/cometbft/cometbft/internal/rand"
-	"github.com/cometbft/cometbft/libs/log"
-	"github.com/cometbft/cometbft/p2p/conn"
+	"github.com/KYVENetwork/cometbft/v100/config"
+	"github.com/KYVENetwork/cometbft/v100/crypto"
+	"github.com/KYVENetwork/cometbft/v100/crypto/ed25519"
+	cmtnet "github.com/KYVENetwork/cometbft/v100/internal/net"
+	cmtrand "github.com/KYVENetwork/cometbft/v100/internal/rand"
+	"github.com/KYVENetwork/cometbft/v100/libs/log"
+	"github.com/KYVENetwork/cometbft/v100/p2p/conn"
 )
 
 const testCh = 0x01

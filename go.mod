@@ -1,4 +1,4 @@
-module github.com/cometbft/cometbft
+module github.com/KYVENetwork/cometbft/v100
 
 go 1.22.2
 
@@ -146,13 +146,4 @@ require (
 	gopkg.in/warnings.v0 v0.1.2 // indirect
 	gopkg.in/yaml.v3 v3.0.1 // indirect
 	gotest.tools v2.2.0+incompatible // indirect
-)
-
-retract (
-	// a regression was introduced
-	v0.38.4
-	// a breaking change was introduced
-	v0.38.3
-	// superseeded by v0.38.3 because of ASA-2024-001
-	[v0.38.0, v0.38.2]
 )

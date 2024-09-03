@@ -8,10 +8,10 @@ import (
 	"google.golang.org/grpc/codes"
 	"google.golang.org/grpc/status"
 
-	pbsvc "github.com/cometbft/cometbft/api/cometbft/services/pruning/v1"
-	"github.com/cometbft/cometbft/internal/rpctrace"
-	"github.com/cometbft/cometbft/libs/log"
-	sm "github.com/cometbft/cometbft/state"
+	pbsvc "github.com/KYVENetwork/cometbft/v100/api/cometbft/services/pruning/v1"
+	"github.com/KYVENetwork/cometbft/v100/internal/rpctrace"
+	"github.com/KYVENetwork/cometbft/v100/libs/log"
+	sm "github.com/KYVENetwork/cometbft/v100/state"
 )
 
 type pruningServiceServer struct {

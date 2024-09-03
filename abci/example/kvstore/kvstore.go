@@ -10,12 +10,12 @@ import (
 	"strconv"
 	"strings"
 
+	"github.com/KYVENetwork/cometbft/v100/abci/types"
+	"github.com/KYVENetwork/cometbft/v100/crypto"
+	cryptoenc "github.com/KYVENetwork/cometbft/v100/crypto/encoding"
+	"github.com/KYVENetwork/cometbft/v100/libs/log"
+	"github.com/KYVENetwork/cometbft/v100/version"
 	dbm "github.com/cometbft/cometbft-db"
-	"github.com/cometbft/cometbft/abci/types"
-	"github.com/cometbft/cometbft/crypto"
-	cryptoenc "github.com/cometbft/cometbft/crypto/encoding"
-	"github.com/cometbft/cometbft/libs/log"
-	"github.com/cometbft/cometbft/version"
 )
 
 var (

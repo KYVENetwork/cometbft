@@ -7,13 +7,13 @@ import (
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 
+	"github.com/KYVENetwork/cometbft/v100/libs/log"
+	"github.com/KYVENetwork/cometbft/v100/light"
+	"github.com/KYVENetwork/cometbft/v100/light/provider"
+	mockp "github.com/KYVENetwork/cometbft/v100/light/provider/mock"
+	dbs "github.com/KYVENetwork/cometbft/v100/light/store/db"
+	"github.com/KYVENetwork/cometbft/v100/types"
 	dbm "github.com/cometbft/cometbft-db"
-	"github.com/cometbft/cometbft/libs/log"
-	"github.com/cometbft/cometbft/light"
-	"github.com/cometbft/cometbft/light/provider"
-	mockp "github.com/cometbft/cometbft/light/provider/mock"
-	dbs "github.com/cometbft/cometbft/light/store/db"
-	"github.com/cometbft/cometbft/types"
 )
 
 func TestLightClientAttackEvidence_Lunatic(t *testing.T) {

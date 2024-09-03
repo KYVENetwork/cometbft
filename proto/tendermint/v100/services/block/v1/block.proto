@@ -1,0 +1,25 @@
+syntax = "proto3";
+package tendermint.v100.services.block.v1;
+
+import "tendermint/v100/types/block.proto";
+import "tendermint/v100/types/types.proto";
+
+message GetByHeightRequest {
+  // The height of the block requested.
+  int64 height = 1;
+}
+
+message GetByHeightResponse {
+  tendermint.v100.types.BlockID block_id = 1;
+  tendermint.v100.types.Block   block    = 2;
+}
+
+// GetLatestHeightRequest - empty message since no parameter is required
+message GetLatestHeightRequest {}
+
+// GetLatestHeightResponse provides the height of the latest committed block.
+message GetLatestHeightResponse {
+  // The height of the latest committed block. Will be 0 if no data has been
+  // committed yet.
+  int64 height = 1;
+}

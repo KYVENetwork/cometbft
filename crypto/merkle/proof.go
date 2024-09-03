@@ -5,8 +5,8 @@ import (
 	"errors"
 	"fmt"
 
-	cmtcrypto "github.com/cometbft/cometbft/api/cometbft/crypto/v1"
-	"github.com/cometbft/cometbft/crypto/tmhash"
+	cmtcrypto "github.com/KYVENetwork/cometbft/v100/api/cometbft/crypto/v1"
+	"github.com/KYVENetwork/cometbft/v100/crypto/tmhash"
 )
 
 const (

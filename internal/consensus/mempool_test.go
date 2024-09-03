@@ -10,13 +10,13 @@ import (
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 
+	"github.com/KYVENetwork/cometbft/v100/abci/example/kvstore"
+	abci "github.com/KYVENetwork/cometbft/v100/abci/types"
+	mempl "github.com/KYVENetwork/cometbft/v100/mempool"
+	"github.com/KYVENetwork/cometbft/v100/proxy"
+	sm "github.com/KYVENetwork/cometbft/v100/state"
+	"github.com/KYVENetwork/cometbft/v100/types"
 	dbm "github.com/cometbft/cometbft-db"
-	"github.com/cometbft/cometbft/abci/example/kvstore"
-	abci "github.com/cometbft/cometbft/abci/types"
-	mempl "github.com/cometbft/cometbft/mempool"
-	"github.com/cometbft/cometbft/proxy"
-	sm "github.com/cometbft/cometbft/state"
-	"github.com/cometbft/cometbft/types"
 )
 
 // for testing.

@@ -6,11 +6,11 @@ import (
 	"bytes"
 	"crypto/sha256"
 
-	"github.com/cometbft/cometbft/crypto"
+	"github.com/KYVENetwork/cometbft/v100/crypto"
 	bls12381 "github.com/cosmos/crypto/curves/bls12381"
 
-	"github.com/cometbft/cometbft/crypto/tmhash"
-	cmtjson "github.com/cometbft/cometbft/libs/json"
+	"github.com/KYVENetwork/cometbft/v100/crypto/tmhash"
+	cmtjson "github.com/KYVENetwork/cometbft/v100/libs/json"
 )
 
 const (

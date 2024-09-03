@@ -18,12 +18,12 @@ import (
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 
-	"github.com/cometbft/cometbft/crypto"
-	"github.com/cometbft/cometbft/crypto/ed25519"
-	"github.com/cometbft/cometbft/crypto/sr25519"
-	"github.com/cometbft/cometbft/internal/async"
-	cmtos "github.com/cometbft/cometbft/internal/os"
-	cmtrand "github.com/cometbft/cometbft/internal/rand"
+	"github.com/KYVENetwork/cometbft/v100/crypto"
+	"github.com/KYVENetwork/cometbft/v100/crypto/ed25519"
+	"github.com/KYVENetwork/cometbft/v100/crypto/sr25519"
+	"github.com/KYVENetwork/cometbft/v100/internal/async"
+	cmtos "github.com/KYVENetwork/cometbft/v100/internal/os"
+	cmtrand "github.com/KYVENetwork/cometbft/v100/internal/rand"
 )
 
 // Run go test -update from within this module

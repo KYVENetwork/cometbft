@@ -9,9 +9,9 @@ import (
 	"strconv"
 	"strings"
 
+	"github.com/KYVENetwork/cometbft/v100/store"
+	"github.com/KYVENetwork/cometbft/v100/test/loadtime/report"
 	dbm "github.com/cometbft/cometbft-db"
-	"github.com/cometbft/cometbft/store"
-	"github.com/cometbft/cometbft/test/loadtime/report"
 )
 
 var (

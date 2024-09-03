@@ -7,8 +7,8 @@ import (
 	"log"
 	"reflect"
 
-	"github.com/cometbft/cometbft/abci/types"
-	cmtnet "github.com/cometbft/cometbft/internal/net"
+	"github.com/KYVENetwork/cometbft/v100/abci/types"
+	cmtnet "github.com/KYVENetwork/cometbft/v100/internal/net"
 )
 
 func main() {

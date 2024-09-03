@@ -8,11 +8,11 @@ import (
 
 	gogo "github.com/cosmos/gogoproto/types"
 
-	cmtproto "github.com/cometbft/cometbft/api/cometbft/types/v1"
-	"github.com/cometbft/cometbft/crypto/bls12381"
-	"github.com/cometbft/cometbft/crypto/ed25519"
-	"github.com/cometbft/cometbft/crypto/secp256k1"
-	"github.com/cometbft/cometbft/crypto/tmhash"
+	cmtproto "github.com/KYVENetwork/cometbft/v100/api/cometbft/types/v1"
+	"github.com/KYVENetwork/cometbft/v100/crypto/bls12381"
+	"github.com/KYVENetwork/cometbft/v100/crypto/ed25519"
+	"github.com/KYVENetwork/cometbft/v100/crypto/secp256k1"
+	"github.com/KYVENetwork/cometbft/v100/crypto/tmhash"
 )
 
 const (
@@ -115,7 +115,7 @@ func featureEnabled(enableHeight int64, currentHeight int64, f string) bool {
 // These parameters are part of the Proposer-Based Timestamps (PBTS) algorithm.
 // For more information on the relationship of the synchrony parameters to
 // block timestamps validity, refer to the PBTS specification:
-// // https://github.com/cometbft/cometbft/tree/main/spec/consensus/proposer-based-timestamp
+// // https://github.com/KYVENetwork/cometbft/v100/tree/main/spec/consensus/proposer-based-timestamp
 type SynchronyParams struct {
 	Precision    time.Duration `json:"precision,string"`
 	MessageDelay time.Duration `json:"message_delay,string"`
@@ -131,7 +131,7 @@ type SynchronyParams struct {
 //
 // The goal is facilitate the progression of consensus when improper synchrony
 // parameters are set or become insufficient to preserve liveness. Refer to
-// https://github.com/cometbft/cometbft/issues/2184 for more details.
+// https://github.com/KYVENetwork/cometbft/v100/issues/2184 for more details.
 func (sp SynchronyParams) InRound(round int32) SynchronyParams {
 	return SynchronyParams{
 		Precision:    sp.Precision,

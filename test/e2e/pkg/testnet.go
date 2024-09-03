@@ -19,14 +19,14 @@ import (
 
 	_ "embed"
 
-	"github.com/cometbft/cometbft/crypto"
-	"github.com/cometbft/cometbft/crypto/ed25519"
-	"github.com/cometbft/cometbft/crypto/secp256k1"
-	"github.com/cometbft/cometbft/crypto/sr25519"
-	rpchttp "github.com/cometbft/cometbft/rpc/client/http"
-	grpcclient "github.com/cometbft/cometbft/rpc/grpc/client"
-	grpcprivileged "github.com/cometbft/cometbft/rpc/grpc/client/privileged"
-	"github.com/cometbft/cometbft/types"
+	"github.com/KYVENetwork/cometbft/v100/crypto"
+	"github.com/KYVENetwork/cometbft/v100/crypto/ed25519"
+	"github.com/KYVENetwork/cometbft/v100/crypto/secp256k1"
+	"github.com/KYVENetwork/cometbft/v100/crypto/sr25519"
+	rpchttp "github.com/KYVENetwork/cometbft/v100/rpc/client/http"
+	grpcclient "github.com/KYVENetwork/cometbft/v100/rpc/grpc/client"
+	grpcprivileged "github.com/KYVENetwork/cometbft/v100/rpc/grpc/client/privileged"
+	"github.com/KYVENetwork/cometbft/v100/types"
 )
 
 const (

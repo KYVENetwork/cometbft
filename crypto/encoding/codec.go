@@ -3,12 +3,12 @@ package encoding
 import (
 	"fmt"
 
-	pc "github.com/cometbft/cometbft/api/cometbft/crypto/v1"
-	"github.com/cometbft/cometbft/crypto"
-	"github.com/cometbft/cometbft/crypto/bls12381"
-	"github.com/cometbft/cometbft/crypto/ed25519"
-	"github.com/cometbft/cometbft/crypto/secp256k1"
-	"github.com/cometbft/cometbft/libs/json"
+	pc "github.com/KYVENetwork/cometbft/v100/api/cometbft/crypto/v1"
+	"github.com/KYVENetwork/cometbft/v100/crypto"
+	"github.com/KYVENetwork/cometbft/v100/crypto/bls12381"
+	"github.com/KYVENetwork/cometbft/v100/crypto/ed25519"
+	"github.com/KYVENetwork/cometbft/v100/crypto/secp256k1"
+	"github.com/KYVENetwork/cometbft/v100/libs/json"
 )
 
 // ErrUnsupportedKey describes an error resulting from the use of an

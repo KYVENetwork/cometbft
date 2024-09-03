@@ -5,8 +5,8 @@ import (
 	"os"
 	"path/filepath"
 
-	"github.com/cometbft/cometbft/config"
-	cmtos "github.com/cometbft/cometbft/internal/os"
+	"github.com/KYVENetwork/cometbft/v100/config"
+	cmtos "github.com/KYVENetwork/cometbft/v100/internal/os"
 )
 
 func ResetTestRoot(testName string) *config.Config {

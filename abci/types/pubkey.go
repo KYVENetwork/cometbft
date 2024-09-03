@@ -1,7 +1,7 @@
 package types
 
 import (
-	"github.com/cometbft/cometbft/crypto"
+	"github.com/KYVENetwork/cometbft/v100/crypto"
 )
 
 // NewValidatorUpdate creates a new ValidatorUpdate from the given public

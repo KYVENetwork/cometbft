@@ -10,17 +10,17 @@ import (
 	"github.com/stretchr/testify/require"
 	"golang.org/x/exp/slices"
 
+	abci "github.com/KYVENetwork/cometbft/v100/abci/types"
+	"github.com/KYVENetwork/cometbft/v100/internal/test"
+	"github.com/KYVENetwork/cometbft/v100/libs/log"
+	"github.com/KYVENetwork/cometbft/v100/libs/pubsub/query"
+	sm "github.com/KYVENetwork/cometbft/v100/state"
+	blockidxkv "github.com/KYVENetwork/cometbft/v100/state/indexer/block/kv"
+	"github.com/KYVENetwork/cometbft/v100/state/txindex"
+	"github.com/KYVENetwork/cometbft/v100/state/txindex/kv"
+	"github.com/KYVENetwork/cometbft/v100/store"
+	"github.com/KYVENetwork/cometbft/v100/types"
 	db "github.com/cometbft/cometbft-db"
-	abci "github.com/cometbft/cometbft/abci/types"
-	"github.com/cometbft/cometbft/internal/test"
-	"github.com/cometbft/cometbft/libs/log"
-	"github.com/cometbft/cometbft/libs/pubsub/query"
-	sm "github.com/cometbft/cometbft/state"
-	blockidxkv "github.com/cometbft/cometbft/state/indexer/block/kv"
-	"github.com/cometbft/cometbft/state/txindex"
-	"github.com/cometbft/cometbft/state/txindex/kv"
-	"github.com/cometbft/cometbft/store"
-	"github.com/cometbft/cometbft/types"
 )
 
 func TestPruneBlockIndexerToRetainHeight(t *testing.T) {

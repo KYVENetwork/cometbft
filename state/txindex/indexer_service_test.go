@@ -7,14 +7,14 @@ import (
 
 	"github.com/stretchr/testify/require"
 
+	abci "github.com/KYVENetwork/cometbft/v100/abci/types"
+	"github.com/KYVENetwork/cometbft/v100/libs/log"
+	"github.com/KYVENetwork/cometbft/v100/state/indexer"
+	blockidxkv "github.com/KYVENetwork/cometbft/v100/state/indexer/block/kv"
+	"github.com/KYVENetwork/cometbft/v100/state/txindex"
+	"github.com/KYVENetwork/cometbft/v100/state/txindex/kv"
+	"github.com/KYVENetwork/cometbft/v100/types"
 	db "github.com/cometbft/cometbft-db"
-	abci "github.com/cometbft/cometbft/abci/types"
-	"github.com/cometbft/cometbft/libs/log"
-	"github.com/cometbft/cometbft/state/indexer"
-	blockidxkv "github.com/cometbft/cometbft/state/indexer/block/kv"
-	"github.com/cometbft/cometbft/state/txindex"
-	"github.com/cometbft/cometbft/state/txindex/kv"
-	"github.com/cometbft/cometbft/types"
 )
 
 func TestIndexerServiceIndexesBlocks(t *testing.T) {

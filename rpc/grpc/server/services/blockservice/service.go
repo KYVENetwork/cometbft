@@ -7,13 +7,13 @@ import (
 	"google.golang.org/grpc/codes"
 	"google.golang.org/grpc/status"
 
-	blocksvc "github.com/cometbft/cometbft/api/cometbft/services/block/v1"
-	ptypes "github.com/cometbft/cometbft/api/cometbft/types/v1"
-	"github.com/cometbft/cometbft/internal/rpctrace"
-	"github.com/cometbft/cometbft/libs/log"
-	cmtpubsub "github.com/cometbft/cometbft/libs/pubsub"
-	"github.com/cometbft/cometbft/store"
-	"github.com/cometbft/cometbft/types"
+	blocksvc "github.com/KYVENetwork/cometbft/v100/api/cometbft/services/block/v1"
+	ptypes "github.com/KYVENetwork/cometbft/v100/api/cometbft/types/v1"
+	"github.com/KYVENetwork/cometbft/v100/internal/rpctrace"
+	"github.com/KYVENetwork/cometbft/v100/libs/log"
+	cmtpubsub "github.com/KYVENetwork/cometbft/v100/libs/pubsub"
+	"github.com/KYVENetwork/cometbft/v100/store"
+	"github.com/KYVENetwork/cometbft/v100/types"
 )
 
 type blockServiceServer struct {
