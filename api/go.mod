@@ -1,4 +1,4 @@
-module github.com/KYVENetwork/cometbft/api
+module github.com/KYVENetwork/cometbft/v100/api
 
 go 1.22
 
