@@ -48,6 +48,7 @@ require (
 	github.com/cosmos/gogoproto v1.4.11
 	github.com/go-git/go-git/v5 v5.11.0
 	github.com/gofrs/uuid v4.4.0+incompatible
+	github.com/gogo/protobuf v1.3.2
 	github.com/google/uuid v1.4.0
 	github.com/oasisprotocol/curve25519-voi v0.0.0-20220708102147-0a8a51822cae
 	github.com/vektra/mockery/v2 v2.23.1
@@ -137,7 +138,6 @@ require (
 	github.com/gobwas/glob v0.2.3 // indirect
 	github.com/gofrs/flock v0.8.1 // indirect
 	github.com/gofrs/uuid/v5 v5.0.0 // indirect
-	github.com/gogo/protobuf v1.3.2 // indirect
 	github.com/golang/glog v1.1.2 // indirect
 	github.com/golang/groupcache v0.0.0-20210331224755-41bb18bfe9da // indirect
 	github.com/golang/snappy v0.0.4 // indirect
