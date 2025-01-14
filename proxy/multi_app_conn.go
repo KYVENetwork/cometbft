@@ -3,9 +3,9 @@ package proxy
 import (
 	"fmt"
 
-	abcicli "github.com/tendermint/tendermint/abci/client"
-	cmtlog "github.com/tendermint/tendermint/libs/log"
-	"github.com/tendermint/tendermint/libs/service"
+	abcicli "github.com/KYVENetwork/cometbft/v34/abci/client"
+	cmtlog "github.com/KYVENetwork/cometbft/v34/libs/log"
+	"github.com/KYVENetwork/cometbft/v34/libs/service"
 )
 
 const (

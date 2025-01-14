@@ -5,12 +5,12 @@ import (
 	"fmt"
 	"sort"
 
-	cmtmath "github.com/tendermint/tendermint/libs/math"
-	cmtquery "github.com/tendermint/tendermint/libs/pubsub/query"
-	ctypes "github.com/tendermint/tendermint/rpc/core/types"
-	rpctypes "github.com/tendermint/tendermint/rpc/jsonrpc/types"
-	blockidxnull "github.com/tendermint/tendermint/state/indexer/block/null"
-	"github.com/tendermint/tendermint/types"
+	cmtmath "github.com/KYVENetwork/cometbft/v34/libs/math"
+	cmtquery "github.com/KYVENetwork/cometbft/v34/libs/pubsub/query"
+	ctypes "github.com/KYVENetwork/cometbft/v34/rpc/core/types"
+	rpctypes "github.com/KYVENetwork/cometbft/v34/rpc/jsonrpc/types"
+	blockidxnull "github.com/KYVENetwork/cometbft/v34/state/indexer/block/null"
+	"github.com/KYVENetwork/cometbft/v34/types"
 )
 
 // BlockchainInfo gets block headers for minHeight <= height <= maxHeight.

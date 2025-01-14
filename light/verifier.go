@@ -6,8 +6,8 @@ import (
 	"fmt"
 	"time"
 
-	cmtmath "github.com/tendermint/tendermint/libs/math"
-	"github.com/tendermint/tendermint/types"
+	cmtmath "github.com/KYVENetwork/cometbft/v34/libs/math"
+	"github.com/KYVENetwork/cometbft/v34/types"
 )
 
 var (

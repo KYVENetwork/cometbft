@@ -12,8 +12,8 @@ import (
 	"io"
 	"os"
 
-	cs "github.com/tendermint/tendermint/consensus"
-	cmtjson "github.com/tendermint/tendermint/libs/json"
+	cs "github.com/KYVENetwork/cometbft/v34/consensus"
+	cmtjson "github.com/KYVENetwork/cometbft/v34/libs/json"
 )
 
 func main() {

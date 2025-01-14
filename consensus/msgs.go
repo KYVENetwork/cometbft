@@ -4,14 +4,14 @@ import (
 	"errors"
 	"fmt"
 
+	cstypes "github.com/KYVENetwork/cometbft/v34/consensus/types"
+	"github.com/KYVENetwork/cometbft/v34/libs/bits"
+	cmtmath "github.com/KYVENetwork/cometbft/v34/libs/math"
+	"github.com/KYVENetwork/cometbft/v34/p2p"
+	cmtcons "github.com/KYVENetwork/cometbft/v34/proto/cometbft/v34/consensus"
+	cmtproto "github.com/KYVENetwork/cometbft/v34/proto/cometbft/v34/types"
+	"github.com/KYVENetwork/cometbft/v34/types"
 	"github.com/gogo/protobuf/proto"
-	cstypes "github.com/tendermint/tendermint/consensus/types"
-	"github.com/tendermint/tendermint/libs/bits"
-	cmtmath "github.com/tendermint/tendermint/libs/math"
-	"github.com/tendermint/tendermint/p2p"
-	cmtcons "github.com/tendermint/tendermint/proto/tendermint/consensus"
-	cmtproto "github.com/tendermint/tendermint/proto/tendermint/types"
-	"github.com/tendermint/tendermint/types"
 )
 
 // MsgToProto takes a consensus message type and returns the proto defined consensus message.

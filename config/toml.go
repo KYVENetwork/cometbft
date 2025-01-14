@@ -8,7 +8,7 @@ import (
 	"strings"
 	"text/template"
 
-	cmtos "github.com/tendermint/tendermint/libs/os"
+	cmtos "github.com/KYVENetwork/cometbft/v34/libs/os"
 )
 
 // DefaultDirPerm is the default permissions used when creating directories.
@@ -627,7 +627,7 @@ var testGenesisFmt = `{
   "validators": [
     {
       "pub_key": {
-        "type": "tendermint/PubKeyEd25519",
+        "type": "cometbft/v34/PubKeyEd25519",
         "value":"AT/+aaL1eB0477Mud9JMm8Sh8BIvOYlPGC9KkIUmFaE="
       },
       "power": "10",
@@ -640,11 +640,11 @@ var testGenesisFmt = `{
 var testPrivValidatorKey = `{
   "address": "A3258DCBF45DCA0DF052981870F2D1441A36D145",
   "pub_key": {
-    "type": "tendermint/PubKeyEd25519",
+    "type": "cometbft/v34/PubKeyEd25519",
     "value": "AT/+aaL1eB0477Mud9JMm8Sh8BIvOYlPGC9KkIUmFaE="
   },
   "priv_key": {
-    "type": "tendermint/PrivKeyEd25519",
+    "type": "cometbft/v34/PrivKeyEd25519",
     "value": "EVkqJO/jIXp3rkASXfh9YnyToYXRXhBr6g9cQVxPFnQBP/5povV4HTjvsy530kybxKHwEi85iU8YL0qQhSYVoQ=="
   }
 }`

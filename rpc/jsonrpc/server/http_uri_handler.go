@@ -8,9 +8,9 @@ import (
 	"regexp"
 	"strings"
 
-	cmtjson "github.com/tendermint/tendermint/libs/json"
-	"github.com/tendermint/tendermint/libs/log"
-	types "github.com/tendermint/tendermint/rpc/jsonrpc/types"
+	cmtjson "github.com/KYVENetwork/cometbft/v34/libs/json"
+	"github.com/KYVENetwork/cometbft/v34/libs/log"
+	types "github.com/KYVENetwork/cometbft/v34/rpc/jsonrpc/types"
 )
 
 // HTTP + URI handler

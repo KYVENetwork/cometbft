@@ -7,9 +7,9 @@ import (
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 
-	cmtrand "github.com/tendermint/tendermint/libs/rand"
-	ctest "github.com/tendermint/tendermint/libs/test"
-	cmtproto "github.com/tendermint/tendermint/proto/tendermint/types"
+	cmtrand "github.com/KYVENetwork/cometbft/v34/libs/rand"
+	ctest "github.com/KYVENetwork/cometbft/v34/libs/test"
+	cmtproto "github.com/KYVENetwork/cometbft/v34/proto/cometbft/v34/types"
 )
 
 func makeTxs(cnt, size int) Txs {

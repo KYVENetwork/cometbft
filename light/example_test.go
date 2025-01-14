@@ -10,13 +10,13 @@ import (
 
 	dbm "github.com/cometbft/cometbft-db"
 
-	"github.com/tendermint/tendermint/abci/example/kvstore"
-	"github.com/tendermint/tendermint/libs/log"
-	"github.com/tendermint/tendermint/light"
-	"github.com/tendermint/tendermint/light/provider"
-	httpp "github.com/tendermint/tendermint/light/provider/http"
-	dbs "github.com/tendermint/tendermint/light/store/db"
-	rpctest "github.com/tendermint/tendermint/rpc/test"
+	"github.com/KYVENetwork/cometbft/v34/abci/example/kvstore"
+	"github.com/KYVENetwork/cometbft/v34/libs/log"
+	"github.com/KYVENetwork/cometbft/v34/light"
+	"github.com/KYVENetwork/cometbft/v34/light/provider"
+	httpp "github.com/KYVENetwork/cometbft/v34/light/provider/http"
+	dbs "github.com/KYVENetwork/cometbft/v34/light/store/db"
+	rpctest "github.com/KYVENetwork/cometbft/v34/rpc/test"
 )
 
 // Automatically getting new headers and verifying them.

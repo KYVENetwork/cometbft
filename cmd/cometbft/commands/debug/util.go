@@ -9,8 +9,8 @@ import (
 	"path"
 	"path/filepath"
 
-	cfg "github.com/tendermint/tendermint/config"
-	rpchttp "github.com/tendermint/tendermint/rpc/client/http"
+	cfg "github.com/KYVENetwork/cometbft/v34/config"
+	rpchttp "github.com/KYVENetwork/cometbft/v34/rpc/client/http"
 )
 
 // dumpStatus gets node status state dump from the CometBFT RPC and writes it

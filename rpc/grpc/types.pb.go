@@ -7,7 +7,7 @@ import (
 	context "context"
 	fmt "fmt"
 	proto "github.com/gogo/protobuf/proto"
-	types "github.com/tendermint/tendermint/abci/types"
+	types "github.com/KYVENetwork/cometbft/v34/abci/types"
 	grpc "google.golang.org/grpc"
 	codes "google.golang.org/grpc/codes"
 	status "google.golang.org/grpc/status"
@@ -202,7 +202,7 @@ func init() {
 	proto.RegisterType((*ResponseBroadcastTx)(nil), "tendermint.rpc.grpc.ResponseBroadcastTx")
 }
 
-func init() { proto.RegisterFile("tendermint/rpc/grpc/types.proto", fileDescriptor_0ffff5682c662b95) }
+func init() { proto.RegisterFile("cometbft/v34/rpc/grpc/types.proto", fileDescriptor_0ffff5682c662b95) }
 
 var fileDescriptor_0ffff5682c662b95 = []byte{
 	// 316 bytes of a gzipped FileDescriptorProto
@@ -341,7 +341,7 @@ var _BroadcastAPI_serviceDesc = grpc.ServiceDesc{
 		},
 	},
 	Streams:  []grpc.StreamDesc{},
-	Metadata: "tendermint/rpc/grpc/types.proto",
+	Metadata: "cometbft/v34/rpc/grpc/types.proto",
 }
 
 func (m *RequestPing) Marshal() (dAtA []byte, err error) {

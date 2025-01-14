@@ -6,7 +6,7 @@ import (
 	"strings"
 	"unicode"
 
-	cmtsync "github.com/tendermint/tendermint/libs/sync"
+	cmtsync "github.com/KYVENetwork/cometbft/v34/libs/sync"
 )
 
 var (

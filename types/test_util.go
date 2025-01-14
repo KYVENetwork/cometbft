@@ -4,9 +4,9 @@ import (
 	"fmt"
 	"time"
 
-	cmtproto "github.com/tendermint/tendermint/proto/tendermint/types"
-	cmtversion "github.com/tendermint/tendermint/proto/tendermint/version"
-	"github.com/tendermint/tendermint/version"
+	cmtproto "github.com/KYVENetwork/cometbft/v34/proto/cometbft/v34/types"
+	cmtversion "github.com/KYVENetwork/cometbft/v34/proto/cometbft/v34/version"
+	"github.com/KYVENetwork/cometbft/v34/version"
 )
 
 func MakeCommit(blockID BlockID, height int64, round int32,

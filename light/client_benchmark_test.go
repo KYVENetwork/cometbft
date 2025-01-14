@@ -7,11 +7,11 @@ import (
 
 	dbm "github.com/cometbft/cometbft-db"
 
-	"github.com/tendermint/tendermint/libs/log"
-	"github.com/tendermint/tendermint/light"
-	"github.com/tendermint/tendermint/light/provider"
-	mockp "github.com/tendermint/tendermint/light/provider/mock"
-	dbs "github.com/tendermint/tendermint/light/store/db"
+	"github.com/KYVENetwork/cometbft/v34/libs/log"
+	"github.com/KYVENetwork/cometbft/v34/light"
+	"github.com/KYVENetwork/cometbft/v34/light/provider"
+	mockp "github.com/KYVENetwork/cometbft/v34/light/provider/mock"
+	dbs "github.com/KYVENetwork/cometbft/v34/light/store/db"
 )
 
 // NOTE: block is produced every minute. Make sure the verification time

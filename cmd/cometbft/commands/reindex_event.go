@@ -8,16 +8,16 @@ import (
 	dbm "github.com/cometbft/cometbft-db"
 	"github.com/spf13/cobra"
 
-	abcitypes "github.com/tendermint/tendermint/abci/types"
-	cmtcfg "github.com/tendermint/tendermint/config"
-	"github.com/tendermint/tendermint/libs/progressbar"
-	"github.com/tendermint/tendermint/state"
-	"github.com/tendermint/tendermint/state/indexer"
-	blockidxkv "github.com/tendermint/tendermint/state/indexer/block/kv"
-	"github.com/tendermint/tendermint/state/indexer/sink/psql"
-	"github.com/tendermint/tendermint/state/txindex"
-	"github.com/tendermint/tendermint/state/txindex/kv"
-	"github.com/tendermint/tendermint/types"
+	abcitypes "github.com/KYVENetwork/cometbft/v34/abci/types"
+	cmtcfg "github.com/KYVENetwork/cometbft/v34/config"
+	"github.com/KYVENetwork/cometbft/v34/libs/progressbar"
+	"github.com/KYVENetwork/cometbft/v34/state"
+	"github.com/KYVENetwork/cometbft/v34/state/indexer"
+	blockidxkv "github.com/KYVENetwork/cometbft/v34/state/indexer/block/kv"
+	"github.com/KYVENetwork/cometbft/v34/state/indexer/sink/psql"
+	"github.com/KYVENetwork/cometbft/v34/state/txindex"
+	"github.com/KYVENetwork/cometbft/v34/state/txindex/kv"
+	"github.com/KYVENetwork/cometbft/v34/types"
 )
 
 const (
@@ -37,8 +37,8 @@ var ReIndexEventCmd = &cobra.Command{
 	Long: `
 reindex-event is an offline tooling to re-index block and tx events to the eventsinks.
 You can run this command when the event store backend dropped/disconnected or you want to
-replace the backend. The default start-height is 0, meaning the tooling will start 
-reindex from the base block height(inclusive); and the default end-height is 0, meaning 
+replace the backend. The default start-height is 0, meaning the tooling will start
+reindex from the base block height(inclusive); and the default end-height is 0, meaning
 the tooling will reindex until the latest block height(inclusive). User can omit
 either or both arguments.
 

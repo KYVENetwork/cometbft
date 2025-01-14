@@ -4,8 +4,8 @@ import (
 	"math/big"
 	"time"
 
-	"github.com/tendermint/tendermint/libs/pubsub/query"
-	"github.com/tendermint/tendermint/types"
+	"github.com/KYVENetwork/cometbft/v34/libs/pubsub/query"
+	"github.com/KYVENetwork/cometbft/v34/types"
 )
 
 // QueryRanges defines a mapping between a composite event key and a QueryRange.

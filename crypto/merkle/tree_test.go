@@ -7,10 +7,10 @@ import (
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 
-	cmtrand "github.com/tendermint/tendermint/libs/rand"
-	. "github.com/tendermint/tendermint/libs/test"
+	cmtrand "github.com/KYVENetwork/cometbft/v34/libs/rand"
+	. "github.com/KYVENetwork/cometbft/v34/libs/test"
 
-	"github.com/tendermint/tendermint/crypto/tmhash"
+	"github.com/KYVENetwork/cometbft/v34/crypto/tmhash"
 )
 
 type testItem []byte

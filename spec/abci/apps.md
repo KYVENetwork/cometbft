@@ -259,7 +259,7 @@ Updates to the CometBFT validator set can be made by returning
 
 ```protobuf
 message ValidatorUpdate {
-  tendermint.crypto.keys.PublicKey pub_key
+  cometbft.v34.crypto.keys.PublicKey pub_key
   int64 power
 }
 

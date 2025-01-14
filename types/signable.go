@@ -1,8 +1,8 @@
 package types
 
 import (
-	"github.com/tendermint/tendermint/crypto/ed25519"
-	cmtmath "github.com/tendermint/tendermint/libs/math"
+	"github.com/KYVENetwork/cometbft/v34/crypto/ed25519"
+	cmtmath "github.com/KYVENetwork/cometbft/v34/libs/math"
 )
 
 var (

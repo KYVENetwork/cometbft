@@ -12,9 +12,9 @@ import (
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 
-	cfg "github.com/tendermint/tendermint/config"
-	"github.com/tendermint/tendermint/libs/cli"
-	cmtos "github.com/tendermint/tendermint/libs/os"
+	cfg "github.com/KYVENetwork/cometbft/v34/config"
+	"github.com/KYVENetwork/cometbft/v34/libs/cli"
+	cmtos "github.com/KYVENetwork/cometbft/v34/libs/os"
 )
 
 // clearConfig clears env vars, the given root dir, and resets viper.

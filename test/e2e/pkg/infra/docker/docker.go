@@ -7,8 +7,8 @@ import (
 	"strconv"
 	"text/template"
 
-	e2e "github.com/tendermint/tendermint/test/e2e/pkg"
-	"github.com/tendermint/tendermint/test/e2e/pkg/infra"
+	e2e "github.com/KYVENetwork/cometbft/v34/test/e2e/pkg"
+	"github.com/KYVENetwork/cometbft/v34/test/e2e/pkg/infra"
 )
 
 var _ infra.Provider = &Provider{}

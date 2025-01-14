@@ -8,18 +8,18 @@ import (
 	"strings"
 	"time"
 
-	abci "github.com/tendermint/tendermint/abci/types"
-	"github.com/tendermint/tendermint/libs/log"
+	abci "github.com/KYVENetwork/cometbft/v34/abci/types"
+	"github.com/KYVENetwork/cometbft/v34/libs/log"
 
-	cfg "github.com/tendermint/tendermint/config"
-	cmtnet "github.com/tendermint/tendermint/libs/net"
-	nm "github.com/tendermint/tendermint/node"
-	"github.com/tendermint/tendermint/p2p"
-	"github.com/tendermint/tendermint/privval"
-	"github.com/tendermint/tendermint/proxy"
-	ctypes "github.com/tendermint/tendermint/rpc/core/types"
-	core_grpc "github.com/tendermint/tendermint/rpc/grpc"
-	rpcclient "github.com/tendermint/tendermint/rpc/jsonrpc/client"
+	cfg "github.com/KYVENetwork/cometbft/v34/config"
+	cmtnet "github.com/KYVENetwork/cometbft/v34/libs/net"
+	nm "github.com/KYVENetwork/cometbft/v34/node"
+	"github.com/KYVENetwork/cometbft/v34/p2p"
+	"github.com/KYVENetwork/cometbft/v34/privval"
+	"github.com/KYVENetwork/cometbft/v34/proxy"
+	ctypes "github.com/KYVENetwork/cometbft/v34/rpc/core/types"
+	core_grpc "github.com/KYVENetwork/cometbft/v34/rpc/grpc"
+	rpcclient "github.com/KYVENetwork/cometbft/v34/rpc/jsonrpc/client"
 )
 
 // Options helps with specifying some parameters for our RPC testing for greater

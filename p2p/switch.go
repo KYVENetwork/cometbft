@@ -6,12 +6,12 @@ import (
 	"sync"
 	"time"
 
+	"github.com/KYVENetwork/cometbft/v34/config"
+	"github.com/KYVENetwork/cometbft/v34/libs/cmap"
+	"github.com/KYVENetwork/cometbft/v34/libs/rand"
+	"github.com/KYVENetwork/cometbft/v34/libs/service"
+	"github.com/KYVENetwork/cometbft/v34/p2p/conn"
 	"github.com/gogo/protobuf/proto"
-	"github.com/tendermint/tendermint/config"
-	"github.com/tendermint/tendermint/libs/cmap"
-	"github.com/tendermint/tendermint/libs/rand"
-	"github.com/tendermint/tendermint/libs/service"
-	"github.com/tendermint/tendermint/p2p/conn"
 )
 
 const (

@@ -8,11 +8,11 @@ import (
 
 	"golang.org/x/net/netutil"
 
+	"github.com/KYVENetwork/cometbft/v34/crypto"
+	"github.com/KYVENetwork/cometbft/v34/libs/protoio"
+	"github.com/KYVENetwork/cometbft/v34/p2p/conn"
+	tmp2p "github.com/KYVENetwork/cometbft/v34/proto/cometbft/v34/p2p"
 	"github.com/gogo/protobuf/proto"
-	"github.com/tendermint/tendermint/crypto"
-	"github.com/tendermint/tendermint/libs/protoio"
-	"github.com/tendermint/tendermint/p2p/conn"
-	tmp2p "github.com/tendermint/tendermint/proto/tendermint/p2p"
 )
 
 const (

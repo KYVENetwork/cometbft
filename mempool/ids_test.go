@@ -4,7 +4,7 @@ package mempool
 // 	"testing"
 
 // 	"github.com/stretchr/testify/require"
-// 	"github.com/tendermint/tendermint/types"
+// 	"github.com/KYVENetwork/cometbft/v34/types"
 // )
 
 // func TestMempoolIDsBasic(t *testing.T) {

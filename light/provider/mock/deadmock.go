@@ -3,8 +3,8 @@ package mock
 import (
 	"context"
 
-	"github.com/tendermint/tendermint/light/provider"
-	"github.com/tendermint/tendermint/types"
+	"github.com/KYVENetwork/cometbft/v34/light/provider"
+	"github.com/KYVENetwork/cometbft/v34/types"
 )
 
 type deadMock struct {
